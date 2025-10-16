@@ -1,2 +1,3 @@
-fastapifastapi==0.119.0
-pathlib==1.0.1
+fastapi
+pathlib
+uvicorn
