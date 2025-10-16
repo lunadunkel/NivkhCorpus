@@ -43,6 +43,12 @@ input[type="text"] {
 	font-size: 14px;
 }
 
+img[src="/static/images/logo.svg"] {
+	width: 170px;
+	height: auto;
+	display: block;
+}
+
 .main-header {
 	display: flex;
 	flex-direction: row;
