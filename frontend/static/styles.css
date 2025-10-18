@@ -288,22 +288,11 @@ input[type="search"] {
 
 input[type="image"],
 input[type="image"]:focus {
-	width: 100%;
-	height: 100%;
+	/* width: 100%; */
+	/* height: 100%; */
 	border-color: var(--100);
 	border: none;
 }
-/* .search-button {
-	min-width: 80px;
-	border-radius: 0px 12px 12px 0px;
-	height: 56px;
-	background-color: rgba(49, 126, 47, 0.1);
-	justify-content: center;
-}
-
-.search-btn {
-	margin: 16px 28px 16px 28px;
-} */
 
 .language-selection-containter {
 	position: relative;
@@ -561,6 +550,7 @@ dialog:focus {
 	background-color: var(--200);
 	border-radius: 12px;
 	text-align: center;
+	cursor: pointer;
 }
 
 .simple-buttons {

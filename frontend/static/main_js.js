@@ -52,6 +52,43 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const dialogs = document.querySelectorAll("dialog");
+    dialogs.forEach((dialog) => {
+        const button = dialog.querySelector('.modal-buttons');
+		button.addEventListener('click', function() {
+			const checkboxes = dialog.querySelectorAll('input[type="checkbox"]');
+			checkboxes.forEach(checkbox => {
+					checkbox.checked = true;
+			})
+		})
+    })
+});
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkboxes = document.querySelectorAll('.my-checkbox');
+//     const button = document.getElementById('myButton');
+
+//     function updateButtonState() {
+//         let anyCheckboxChecked = false;
+//         checkboxes.forEach(checkbox => {
+//             if (checkbox.checked) {
+//                 anyCheckboxChecked = true;
+//             }
+//         });
+//         button.disabled = !anyCheckboxChecked;
+//     }
+
+//     // Initial state check
+//     updateButtonState();
+
+//     // Add event listener to each checkbox
+//     checkboxes.forEach(checkbox => {
+//         checkbox.addEventListener('change', updateButtonState);
+//     });
+// });
+
 
 document.addEventListener("DOMContentLoaded", function () {
 	const resetButton = document.querySelectorAll(".underline-button");
@@ -68,6 +105,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+	const dialogs = document.querySelectorAll("dialog");
+	dialogs.forEach((dialog) => {
+		const buttons = dialog.querySelectorAll('.modal-buton');
+
+		buttons.forEach((button) => {
+			button.addEventListener('click', function() {
+				const checkboxes = dialog.querySelectorAll('input[type="image"]');
+				checkboxes.forEach(checkbox => {
+					if (checkbox.checked) {
+						checkbox.checked = true;
+					}
+        		});	
+
+			})
+		})
+	})
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
 	const dialogs = document.querySelectorAll("dialog");
@@ -641,6 +698,46 @@ function createDiv(value) {
 	const newDialog = oldDialog.cloneNode(true);
 	newDialog.id = "pop-up" + value;
 	updateIds(newDialog, "0", value);
+
+	const allNewCheckboxes = newDialog.querySelectorAll('input[type="checkbox"]');
+	allNewCheckboxes.forEach(checkbox => {
+		checkbox.checked = false
+	});
+
+	newResetButtonDialog = newDialog.querySelector('.modal-top > .left-buttons > .simple-buttons');
+	newResetButtonDialog.addEventListener("click", function () {
+
+		var checkboxes = newDialog.getElementsByTagName("input");
+		for (var i=0; i < checkboxes.length; i++){
+			if (checkboxes[i].type == 'checkbox')
+				checkboxes[i].checked = false;
+		}
+	});
+
+	for (let elem of newDialog.children) {
+		const checkboxes = elem.getElementsByTagName("input");
+
+		for (let checkbox of checkboxes) {
+			if (checkbox.value === 'all') {
+				checkbox.addEventListener('change', () => {
+					const baseName = checkbox.name.replace('[]', '');
+					const related = elem.querySelectorAll(`input[name="${baseName}[]"]`);
+
+					for (let r of related) {
+						r.checked = checkbox.checked;
+					}
+				});
+			}
+		}
+	}
+	const selectAllCheckDialog =  newDialog.querySelector('.modal-buttons');
+
+	selectAllCheckDialog.addEventListener("click", function() {
+		const checkboxes = newDialog.getElementsByTagName("input");
+		for (let checkbox of checkboxes) {
+			checkbox.checked = true;
+		}
+	});
 
 	const closeButton = newDialog.querySelector('input[type="image"]');
 	if (closeButton) {
