@@ -469,6 +469,7 @@ function createDiv(value) {
 	newInputField.id = "correct_placeholder" + value;
 	newInputField.classList = "input-panel";
 	newInputField.type = "search";
+	newInputField.name = "input_word" + value;
 	newInputField.placeholder = "Найти по словоформе";
 
 	newSearchInput.appendChild(newInputField);
