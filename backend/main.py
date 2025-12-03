@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
+from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from api import search
+import json
 
 app = FastAPI()
 
@@ -26,3 +28,13 @@ app.mount("/static", StaticFiles(directory=FRONTEND_DIR / "static"), name="stati
 @app.get("/", response_class=FileResponse)
 def root():
     return FileResponse(FRONTEND_DIR / "index.html")
+
+@app.get("/search_output.html", response_class=FileResponse)
+def search_page():
+    return FileResponse(FRONTEND_DIR / "search_output.html")
+
+@app.get("/get_output", response_class=FileResponse)
+def get_output_data():
+    with open('output.json') as file:
+        content = json.load(file)
+    return JSONResponse(content)

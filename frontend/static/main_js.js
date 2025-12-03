@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	add_frame.addEventListener("click", function () {
 		addWord(add_frame);
-		// createDiv("1");
 	});
 });
 
@@ -177,6 +176,7 @@ document.getElementById("search").addEventListener("click", async () => {
 
     const result = await response.json();
     console.log("Успешный ответ от сервера:", result);
+	window.location.href = "search_output.html";
 
   } catch (error) {
     console.error("Ошибка при запросе:", error);

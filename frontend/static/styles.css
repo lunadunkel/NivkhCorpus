@@ -1,6 +1,27 @@
 @font-face {
-	font-family: Arsenal;
-	src: url(fonts/Arsenal-Regular.ttf);
+	font-family: 'Arsenal';
+	src: url("fonts/Arsenal-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arsenal';
+  font-weight: bold;
+  src: url("fonts/Arsenal-Bold.ttf") format("truetype");
+  font-style: bold;
+}
+
+
+@font-face {
+  font-family: 'Arsenal';
+  font-weight: italic;
+  src: url("fonts/Arsenal-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+
+body {
+	font-family: "Arsenal";
 }
 
 :root {
@@ -721,12 +742,113 @@ footer {
 	color: var(--700);
 }
 
-
-/* .additional-content {
-	margin-left: auto;
-} */
-
 input[type="checkbox"],
 input[type="radio"] {
   accent-color: var(--400);
+}
+
+/* search_output */
+.search_output {
+	margin-top: 80px;
+	width: 100%;
+	max-width: 960px;
+	height: fit-content;
+	/* background-color: red; */
+	justify-self: center;
+
+}
+
+.back_to_search {
+	cursor: pointer;
+	font-size: 16px;
+	color: var(--950);
+	text-decoration: underline;
+}
+
+.statistics { 
+	display: flex;
+	flex-direction: row;
+	gap: 28px;
+}
+
+.word_stat {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+}
+
+.text-output {
+	width: 100%;
+	position: relative;
+	/* background-color: red; */
+	height: 100%;
+	min-height: 250px;
+	line-height: 180%;
+}
+
+.example-output {
+	position: absolute;
+	text-align: center;
+	align-content: center;
+	font-size: 20px;
+	color: var(--950);
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
+.real-output {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	/* background-color: red; */
+	margin-top: 40px;
+}
+
+.text-item {
+	padding: 0px 40px 20px 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	border-bottom: 1px solid var(--200);
+}
+
+.bold-name {
+	font-weight: bold;
+	color: var(--800);
+	font-size: 20px;
+}
+
+.main-text {
+	display: flex;
+	padding: 0px 20px;
+	flex-direction: column;
+	gap: 2px;
+	
+	.nivkh-text {
+		color: var(-800);
+		font-family: inherit;
+		p {
+			margin-top: 0;
+			margin-bottom: 0;
+			color: var(--800);
+		}
+	}
+
+	.rus-text {
+		color: var(-500);
+		font-family: inherit;
+		p {
+			margin-top: 0;
+			margin-bottom: 0;
+			color: var(--500);
+		}
+		}
+}
+
+.additional-info {
+	cursor: pointer;
+	color: var(--600);
+	text-decoration: underline;
 }
