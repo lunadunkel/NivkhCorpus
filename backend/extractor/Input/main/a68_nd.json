@@ -1,0 +1,2333 @@
+[
+      {
+            "id": "0",
+            "text": "к’еӄғе няӻр̌ке",
+            "length": 2,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "Лис и мышонок",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "к’еӄғе",
+                        "lemma": "к’еӄ",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Com",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "лис"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "няӻр̌ке",
+                        "lemma": "няӻр̌",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Com",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Com",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "к’еӄғе"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "к’еӄғе",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Com",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻр̌ке"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻр̌ке",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "1",
+            "text": "няӻра, няӻра, чи ух яӻр̌ ӈалсӄодь (?)",
+            "length": 7,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Мышонок, мышонок, отчего у тебя нос грязный?",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "чи",
+                        "lemma": "чи",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "ты"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "ух",
+                        "lemma": "ух",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "нос"
+                  },
+                  {
+                        "itoken": "5",
+                        "token": "яӻр̌",
+                        "lemma": "яӻр̌",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "почему"
+                  },
+                  {
+                        "itoken": "6",
+                        "token": "ӈалсӄодь",
+                        "lemma": "ӈалсӄо",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "быть.грязным"
+                  },
+                  {
+                        "itoken": "7",
+                        "token": "",
+                        "lemma": "NaN",
+                        "tagsets": [
+                              [
+                                    "PROPN"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "NaN"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "чи"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "чи",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "ух"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ух",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "5",
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "яӻр̌"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "яӻр̌",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "6",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӈалсӄодь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӈалсӄодь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "7",
+                        "tags": [
+                              "PROPN"
+                        ],
+                        "tokens": [
+                              [
+                                    ""
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "2",
+            "text": "ни миф хыздь.",
+            "length": 3,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Землю копал.",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "ни",
+                        "lemma": "ни",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "миф",
+                        "lemma": "миф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "земля"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "хыздь",
+                        "lemma": "хыз",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "копать"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "ни"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ни",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "миф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "миф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "хыздь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "хыздь",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "3",
+            "text": "яӻр̌ миф хыздь (?)",
+            "length": 4,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Для чего землю копал?",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "яӻр̌",
+                        "lemma": "яӻр̌",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "зачем"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "миф",
+                        "lemma": "миф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "земля"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "хыздь",
+                        "lemma": "хыз",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "копать"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "",
+                        "lemma": "NaN",
+                        "tagsets": [
+                              [
+                                    "PROPN"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "NaN"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "яӻр̌"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "яӻр̌",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "миф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "миф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "хыздь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "хыздь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "PROPN"
+                        ],
+                        "tokens": [
+                              [
+                                    ""
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "4",
+            "text": "тыф п’ерӽ ныдь.",
+            "length": 3,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Себе норку делал.",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "тыф",
+                        "lemma": "тыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "п’ерӽ",
+                        "lemma": "None",
+                        "tagsets": [
+                              [
+                                    "None",
+                                    "Reflex=Yes",
+                                    "Case=Dat"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "None"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "ныдь",
+                        "lemma": "ны",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "делать"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "тыф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "тыф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "None",
+                              "Reflex=Yes",
+                              "Case=Dat"
+                        ],
+                        "tokens": [
+                              [
+                                    "п’ерӽ"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "п’ерӽ",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "ныдь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ныдь",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "5",
+            "text": "яӻр̌ тыф ныдь (?)",
+            "length": 4,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Для чего норку делал?",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "яӻр̌",
+                        "lemma": "яӻр̌",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "зачем"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "тыф",
+                        "lemma": "тыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "ныдь",
+                        "lemma": "ны",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "делать"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "",
+                        "lemma": "NaN",
+                        "tagsets": [
+                              [
+                                    "PROPN"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "NaN"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "яӻр̌"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "яӻр̌",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "тыф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "тыф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "ныдь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ныдь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "PROPN"
+                        ],
+                        "tokens": [
+                              [
+                                    ""
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "6",
+            "text": "к’еӄа, чи ни ньр̌ытоӽ ӄ’аугундь.",
+            "length": 5,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Чтобы ты, лис, меня не увидел.",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "к’еӄа",
+                        "lemma": "к’еӄ",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "лис"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "чи",
+                        "lemma": "чи",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "ты"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "ни",
+                        "lemma": "ни",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "ньр̌ытоӽ",
+                        "lemma": "ньр̌ы",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Case=Dat"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "видеть"
+                  },
+                  {
+                        "itoken": "5",
+                        "token": "ӄ’аугундь",
+                        "lemma": "None",
+                        "tagsets": [
+                              [
+                                    "None",
+                                    "VerbType=Aux",
+                                    "Polarity=Neg",
+                                    "Voice=Caus",
+                                    "Tense=Fut",
+                                    "Mood=Ind"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "None"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "к’еӄа"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "к’еӄа",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "чи"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "чи",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "ни"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ни",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "VERB",
+                              "Case=Dat"
+                        ],
+                        "tokens": [
+                              [
+                                    "ньр̌ытоӽ"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ньр̌ытоӽ",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "5",
+                        "tags": [
+                              "None",
+                              "VerbType=Aux",
+                              "Polarity=Neg",
+                              "Voice=Caus",
+                              "Tense=Fut",
+                              "Mood=Ind"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӄ’аугундь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӄ’аугундь",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "7",
+            "text": "няӻра, няӻра, ни чи ньр̌ыныт нют, ч’евныдьра",
+            "length": 7,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Мышонок, мышонок, а я тебя подстерегу!",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "ни",
+                        "lemma": "ни",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "чи",
+                        "lemma": "чи",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "ты"
+                  },
+                  {
+                        "itoken": "5",
+                        "token": "ньр̌ыныт",
+                        "lemma": "ньр̌ы",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Tense=Fut",
+                                    "VerbForm=Conv",
+                                    "Person=1",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "видеть"
+                  },
+                  {
+                        "itoken": "6",
+                        "token": "нют",
+                        "lemma": "ню",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "VerbForm=Conv",
+                                    "Person=1",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "смотреть"
+                  },
+                  {
+                        "itoken": "7",
+                        "token": "ч’",
+                        "lemma": "ч’",
+                        "tagsets": [
+                              [
+                                    "PART",
+                                    "Clitic=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "2.SG"
+                  },
+                  {
+                        "itoken": "8",
+                        "token": "евныдьра",
+                        "lemma": "ев",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Person=2",
+                                    "Number=Sing",
+                                    "Tense=Fut",
+                                    "Mood=Ind",
+                                    "Focus=Yes",
+                                    "Predicative=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "держать"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "ни"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ни",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "чи"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "чи",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "5",
+                        "tags": [
+                              "VERB",
+                              "Tense=Fut",
+                              "VerbForm=Conv",
+                              "Person=1",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "ньр̌ыныт"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ньр̌ыныт",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "6",
+                        "tags": [
+                              "VERB",
+                              "VerbForm=Conv",
+                              "Person=1",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "нют"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "нют",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "7",
+                        "tags": [
+                              "PART",
+                              "Clitic=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "ч’"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ч’",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "8",
+                        "tags": [
+                              "VERB",
+                              "Person=2",
+                              "Number=Sing",
+                              "Tense=Fut",
+                              "Mood=Ind",
+                              "Focus=Yes",
+                              "Predicative=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "евныдьра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "евныдьра",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "8",
+            "text": "ньрыфух ӄ’о тыф йивдь.",
+            "length": 4,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– А у меня в норке спаленка.",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "ньрыфух",
+                        "lemma": "нь",
+                        "tagsets": [
+                              [
+                                    "PRON",
+                                    "Case=Abl"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "ӄ’о",
+                        "lemma": "ӄ’о",
+                        "tagsets": [
+                              [
+                                    "VERB"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "спать"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "тыф",
+                        "lemma": "тыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "йивдь",
+                        "lemma": "йив",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "быть"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "PRON",
+                              "Case=Abl"
+                        ],
+                        "tokens": [
+                              [
+                                    "ньрыфух"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ньрыфух",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "VERB"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӄ’о"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӄ’о",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "тыф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "тыф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "йивдь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "йивдь",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "9",
+            "text": "к’ырӻа (–) п’уныдьра",
+            "length": 3,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Кушать захочешь – вылезешь!",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "к’ырӻа",
+                        "lemma": "к’ыр",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "VerbForm=Conv",
+                                    "Mood=Cnd"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "голодать"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "–",
+                        "lemma": "None",
+                        "tagsets": [
+                              [
+                                    "None"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "None"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "п’уныдьра",
+                        "lemma": "п’у",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Tense=Fut",
+                                    "Mood=Ind",
+                                    "Focus=Yes",
+                                    "Predicative=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "вылезать"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "VERB",
+                              "VerbForm=Conv",
+                              "Mood=Cnd"
+                        ],
+                        "tokens": [
+                              [
+                                    "к’ырӻа"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "к’ырӻа",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "None"
+                        ],
+                        "tokens": [
+                              [
+                                    "–"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "–",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "VERB",
+                              "Tense=Fut",
+                              "Mood=Ind",
+                              "Focus=Yes",
+                              "Predicative=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "п’уныдьра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "п’уныдьра",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "10",
+            "text": "ньрыфух нё йивдь.",
+            "length": 3,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– А у меня в норке кладовочка.",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "нь",
+                        "lemma": "нь",
+                        "tagsets": [
+                              [
+                                    "PART",
+                                    "Clitic=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "1.SG"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "рыфух",
+                        "lemma": "рыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Person[psor]=1",
+                                    "Number[psor]=Sing",
+                                    "Case=Abl",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "нё",
+                        "lemma": "нё",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "амбар"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "йивдь",
+                        "lemma": "йив",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "быть"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "PART",
+                              "Clitic=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "нь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "нь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Person[psor]=1",
+                              "Number[psor]=Sing",
+                              "Case=Abl",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "рыфух"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "рыфух",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "NOUN",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "нё"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "нё",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "йивдь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "йивдь",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "11",
+            "text": "няӻра, няӻра, ни чрыф к’ызӻытныдь (?)",
+            "length": 6,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– Мышонок, мышонок, а ведь я твою норку разрою!",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "няӻра",
+                        "lemma": "няӻр",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Voc",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "мышонок"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "ни",
+                        "lemma": "ни",
+                        "tagsets": [
+                              [
+                                    "PRON"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "ч",
+                        "lemma": "ч",
+                        "tagsets": [
+                              [
+                                    "PART",
+                                    "Clitic=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "2.SG"
+                  },
+                  {
+                        "itoken": "5",
+                        "token": "рыф",
+                        "lemma": "рыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Person[psor]=2",
+                                    "Number[psor]=Sing",
+                                    "Case=Null",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "6",
+                        "token": "к’ызӻытныдь",
+                        "lemma": "к’ыз",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Aspect=Compl",
+                                    "Tense=Fut",
+                                    "Mood=Ind"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "копать"
+                  },
+                  {
+                        "itoken": "7",
+                        "token": "",
+                        "lemma": "NaN",
+                        "tagsets": [
+                              [
+                                    "PROPN"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "NaN"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "NOUN",
+                              "Case=Voc",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "няӻра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "няӻра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "PRON"
+                        ],
+                        "tokens": [
+                              [
+                                    "ни"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ни",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "PART",
+                              "Clitic=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "ч"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ч",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "5",
+                        "tags": [
+                              "NOUN",
+                              "Person[psor]=2",
+                              "Number[psor]=Sing",
+                              "Case=Null",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "рыф"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "рыф",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "6",
+                        "tags": [
+                              "VERB",
+                              "Aspect=Compl",
+                              "Tense=Fut",
+                              "Mood=Ind"
+                        ],
+                        "tokens": [
+                              [
+                                    "к’ызӻытныдь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "к’ызӻытныдь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "7",
+                        "tags": [
+                              "PROPN"
+                        ],
+                        "tokens": [
+                              [
+                                    ""
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      },
+      {
+            "id": "12",
+            "text": "ньат эна тыфтоӽ п’имныдьра ӄ’аутара",
+            "length": 5,
+            "source": "Source unspecified",
+            "sentence_tree": "-",
+            "russian_text": "– А я от тебя в другую норку – и был таков!",
+            "miscellaneous": "",
+            "tokens": [
+                  {
+                        "itoken": "1",
+                        "token": "ньат",
+                        "lemma": "нь",
+                        "tagsets": [
+                              [
+                                    "PRON",
+                                    "Focus=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "я"
+                  },
+                  {
+                        "itoken": "2",
+                        "token": "эна",
+                        "lemma": "эна",
+                        "tagsets": [
+                              [
+                                    "VERB"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "быть.иным"
+                  },
+                  {
+                        "itoken": "3",
+                        "token": "тыфтоӽ",
+                        "lemma": "тыф",
+                        "tagsets": [
+                              [
+                                    "NOUN",
+                                    "Case=Dat",
+                                    "Number=Sing"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "дом"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "п’имныдьра",
+                        "lemma": "п’им",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Tense=Fut",
+                                    "Mood=Ind",
+                                    "Focus=Yes",
+                                    "Predicative=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "убегать"
+                  },
+                  {
+                        "itoken": "5",
+                        "token": "ӄ’аутара",
+                        "lemma": "None",
+                        "tagsets": [
+                              [
+                                    "None",
+                                    "VerbType=Aux",
+                                    "Polarity=Neg",
+                                    "Aspect=Usit",
+                                    "Person=3",
+                                    "Focus=Yes",
+                                    "Predicative=Yes"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "None"
+                  }
+            ],
+            "constituents": [
+                  {
+                        "name": "-",
+                        "id": "1",
+                        "tags": [
+                              "PRON",
+                              "Focus=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "ньат"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ньат",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "2",
+                        "tags": [
+                              "VERB"
+                        ],
+                        "tokens": [
+                              [
+                                    "эна"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "эна",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "3",
+                        "tags": [
+                              "NOUN",
+                              "Case=Dat",
+                              "Number=Sing"
+                        ],
+                        "tokens": [
+                              [
+                                    "тыфтоӽ"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "тыфтоӽ",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
+                        "tags": [
+                              "VERB",
+                              "Tense=Fut",
+                              "Mood=Ind",
+                              "Focus=Yes",
+                              "Predicative=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "п’имныдьра"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "п’имныдьра",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "5",
+                        "tags": [
+                              "None",
+                              "VerbType=Aux",
+                              "Polarity=Neg",
+                              "Aspect=Usit",
+                              "Person=3",
+                              "Focus=Yes",
+                              "Predicative=Yes"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӄ’аутара"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӄ’аутара",
+                        "length": 1
+                  }
+            ],
+            "url": "Webpage unspecified"
+      }
+]

@@ -1,0 +1,16 @@
+ExampleName: SampleExample
+        
+Priority: 1
+        
+SubExamples:
+        
+    - SubExample:            
+        Name: SoleSubExample
+
+        Participants:
+          - Obligatory: Element1
+
+        Items:
+          - A: Element1
+            Morph: NOUN, Number=Plur
+            LexNonHead: нивх
