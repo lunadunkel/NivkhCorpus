@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
+from .jsontoyaml import JsonToYaml
 
 router = APIRouter(prefix="/search", tags=["Search"])
 
@@ -13,4 +14,5 @@ async def search(request: Request):
     data = await request.json()
     query = data
     print("Пришёл запрос:", query)
+    print(JsonToYaml(query))
     return JSONResponse({"status": "ok", "message": f"Вы ввели: {query}"})
