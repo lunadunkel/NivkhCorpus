@@ -26,8 +26,12 @@ fetchData()
   .catch((error) => console.error(error));
 
 function process_output(data) {
-    const documents_data = data["documents"];
-    for (const item of documents_data) {
+    if (data.length == 0) {
+      const placeholder = document.getElementById("no-found-data");
+      placeholder.style.display = "block";
+    };
+
+    for (const item of data) {
         const real_output = document.createElement("div");
         real_output.className = "real-output"
 
@@ -84,13 +88,8 @@ function process_output(data) {
         all_info.appendChild(real_output);
     }
 
-    const words_instances = data["words_instances"];
-    console.log(words_instances);
     const element = document.getElementById('documents');
-    const len_documents = documents_data.length.toString();
-    element.textContent = documents_data.length;
-    const instances = document.getElementById('instances');
-    instances.textContent = words_instances;
-
+    const len_documents = data.length.toString();
+    element.textContent = len_documents;
 
 }

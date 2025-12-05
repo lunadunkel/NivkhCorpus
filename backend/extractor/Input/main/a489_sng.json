@@ -11690,7 +11690,7 @@
             "length": 4,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Ваше\tсело\tкак\tназывается?",
+            "russian_text": "Ваше село как называется?",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -11844,7 +11844,7 @@
             "length": 4,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Какие\tреки\t\tты\tзнаешь?",
+            "russian_text": "Какие реки ты знаешь?",
             "miscellaneous": "",
             "tokens": [
                   {

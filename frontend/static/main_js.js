@@ -142,11 +142,23 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById("search").addEventListener("click", async () => {
   const forms = document.querySelectorAll(".main-searching-frame");
   const allData = [];
+  let hasAnyValue = false;
 
   forms.forEach(form => {
     const formData = new FormData(form);
     const formObj = {};
+
     for (const [key, value] of formData.entries()) {
+      if (key === "language-select" || /^search-type\d*$/.test(key)) {
+        formObj[key] = value;
+        continue;
+      }
+
+      if (value.trim() !== "") {
+		console.log(value);
+        hasAnyValue = true;
+      }
+
       if (formObj[key] !== undefined) {
         if (Array.isArray(formObj[key])) {
           formObj[key].push(value);
@@ -157,8 +169,14 @@ document.getElementById("search").addEventListener("click", async () => {
         formObj[key] = value;
       }
     }
+
     allData.push(formObj);
   });
+
+  if (!hasAnyValue) {
+    alert("Введите хотя бы одно поле для поиска.");
+    return;
+  }
 
   console.log("Отправка данных:", allData);
 
@@ -176,12 +194,14 @@ document.getElementById("search").addEventListener("click", async () => {
 
     const result = await response.json();
     console.log("Успешный ответ от сервера:", result);
-	window.location.href = "search_output.html";
+
+    window.location.href = "search_output.html";
 
   } catch (error) {
     console.error("Ошибка при запросе:", error);
   }
 });
+
 
 document.addEventListener("DOMContentLoaded", function (e) {
 	// e.preventDefault();

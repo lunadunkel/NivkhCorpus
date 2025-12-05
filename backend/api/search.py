@@ -1,6 +1,11 @@
+import os
+import sys
+import subprocess
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
 from .jsontoyaml import JsonToYaml
+from .prepare_for_html import CSVConverter
+
 
 router = APIRouter(prefix="/search", tags=["Search"])
 
@@ -13,6 +18,18 @@ async def search(request: Request):
     """
     data = await request.json()
     query = data
-    print("Пришёл запрос:", query)
-    print(JsonToYaml(query))
+    # print("Пришёл запрос:", query)
+    JsonToYaml(query)
+    current_dir = os.path.dirname(__file__)
+    extractor_dir = os.path.abspath(os.path.join(current_dir, "..", "extractor"))
+    subprocess.run([
+        sys.executable,
+        "EX_tractor_1.4.py",
+        "--rules", "24",
+        "--dir_in", "Input/main",
+        "--output_txt", "Output/search_result.txt",
+        "--verbosity", "1",
+        "--output_csv", "Output/search_result.csv",
+        "--csv_verbosity", "1"], cwd=extractor_dir)
+    CSVConverter('extractor/Output/search_result.csv')
     return JSONResponse({"status": "ok", "message": f"Вы ввели: {query}"})

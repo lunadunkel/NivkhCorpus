@@ -801,7 +801,7 @@ if __name__ == '__main__':
 	directory_in = os.path.join(os.getcwd(), parsing_path)
 
 	if csv_verbosity:
-		csv_out.write('ex_id' + '\t' + 'id' + '\t' + 'example_name' + '\t' + 'subexample_name' + '\t' + 'text' + '\t' + 'tree' + '\t' + 'sent_len' + '\n')
+		csv_out.write('ex_id' + '\t' + 'id' + '\t' + 'example_name' + '\t' + 'subexample_name' + '\t' + 'text' + '\t' + 'rus' + '\t' + 'tree' + '\t' + 'sent_len' + '\n')
 
 
 	for file in os.listdir(directory_in): # перебираем файлы с примерами и разных json'ах
@@ -842,7 +842,7 @@ if __name__ == '__main__':
 
 				slots_json = []
 				if csv_verbosity:
-					co_length, str_csv_tmp, str_csv = 0, [], [str(ex_id), str(sent_data['id']), eexample.get_example_name(), eexample.get_subexample_name(), sent_data['text'], sent_data['sentence_tree'], str(sent_data['length'])]
+					co_length, str_csv_tmp, str_csv = 0, [], [str(ex_id), str(sent_data['id']), eexample.get_example_name(), eexample.get_subexample_name(), sent_data['text'], sent_data['russian_text'], sent_data['sentence_tree'], str(sent_data['length'])]
 				example_json['slots'] = slots_json
 
 				if slots:

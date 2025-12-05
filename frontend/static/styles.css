@@ -755,6 +755,7 @@ input[type="radio"] {
 	height: fit-content;
 	/* background-color: red; */
 	justify-self: center;
+	margin: 80px auto 0;
 
 }
 
@@ -768,7 +769,7 @@ input[type="radio"] {
 .statistics { 
 	display: flex;
 	flex-direction: row;
-	gap: 28px;
+	gap: 14px;
 }
 
 .word_stat {
@@ -777,19 +778,22 @@ input[type="radio"] {
 	gap: 4px;
 }
 
-.text-output {
+/* .text-output {
 	width: 100%;
 	position: relative;
-	/* background-color: red; */
+	/* background-color: red;
 	height: 100%;
 	min-height: 250px;
 	line-height: 180%;
-}
+} */
 
 .example-output {
-	position: absolute;
 	text-align: center;
 	align-content: center;
+
+	height: 100%;
+	min-height: 250px;
+	line-height: 180%;
 	font-size: 20px;
 	color: var(--950);
 	height: 100%;

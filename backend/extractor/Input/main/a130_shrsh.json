@@ -1055,7 +1055,7 @@
             "length": 3,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Это\tдругое.",
+            "russian_text": "Это другое.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -3054,7 +3054,7 @@
             "length": 5,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Плакала\tи шла, так и пришла.",
+            "russian_text": "Плакала и шла, так и пришла.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -4767,7 +4767,7 @@
             "length": 19,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Ай, ай, в углу второго яруса сидит, худая-худая\tсидела, а чёрт всё её сосал.",
+            "russian_text": "Ай, ай, в углу второго яруса сидит, худая-худая сидела, а чёрт всё её сосал.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -7515,7 +7515,7 @@
             "length": 11,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "А чёрт: сбежала\tсестрёнка, побежал за ней.",
+            "russian_text": "А чёрт: сбежала сестрёнка, побежал за ней.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -7971,7 +7971,7 @@
             "length": 10,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Она\tбежала,\tбежала и убежала от чёрта, черт бежал.",
+            "russian_text": "Она бежала, бежала и убежала от чёрта, черт бежал.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -8659,7 +8659,7 @@
             "length": 4,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Эти\tульты?",
+            "russian_text": "Эти ульты?",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -8823,7 +8823,7 @@
             "length": 3,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Так\tона\tспряталась\tот\tчёрта.",
+            "russian_text": "Так она спряталась от чёрта.",
             "miscellaneous": "",
             "tokens": [
                   {
@@ -9151,7 +9151,7 @@
             "length": 12,
             "source": "Source unspecified",
             "sentence_tree": "-",
-            "russian_text": "Дав черту пробежать мимо себя, изнутри выйдя, она\tвышла, прибежала обратно и побежала за сестрой, в летнее жилище.",
+            "russian_text": "Дав черту пробежать мимо себя, изнутри выйдя, она вышла, прибежала обратно и побежала за сестрой, в летнее жилище.",
             "miscellaneous": "",
             "tokens": [
                   {

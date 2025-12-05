@@ -12,5 +12,4 @@ SubExamples:
 
         Items:
           - A: Element1
-            Morph: NOUN, Number=Plur
-            LexNonHead: нивх
+            Morph: Mood=Ind|Mood=Des|Mood=Imp|Mood=Cnd|Mood=Hort|Mood=Jus|Mood=Prob|Mood=Proh|Mood=Indir|Mood=Subj
