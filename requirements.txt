@@ -3,3 +3,4 @@ pathlib
 uvicorn
 pyyaml
 svgling
+pandas

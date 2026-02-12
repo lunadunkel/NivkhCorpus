@@ -149,10 +149,12 @@ SubExamples:
 
         output_yaml = header + printed_participants + items + printed_orders
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        temp_file_path = os.path.join(script_dir, '..', 'extractor', 'Rules', '24', 'temp.yaml')
+        temp_file_path = os.path.join(script_dir, '..', 'extractor', 'Rules', '24')
         temp_file_path = os.path.normpath(temp_file_path)
 
-        with open(temp_file_path, 'w', encoding='utf-8') as f:
+        os.makedirs(temp_file_path, exist_ok=True)
+        dir_to_write = os.path.join(temp_file_path, 'temp.yaml')
+        with open(dir_to_write, 'w', encoding='utf-8') as f:
             f.write(output_yaml)
         
         return output_yaml

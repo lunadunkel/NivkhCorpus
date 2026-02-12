@@ -796,6 +796,7 @@ if __name__ == '__main__':
 			exit(0)
 
 	ex_id, examples_number = 1, set()
+	os.makedirs(os.path.dirname(output_path_txt), exist_ok=True)
 	f_out = open(output_path_txt, mode = 'w', encoding = 'utf-8')
 	csv_out = open(output_csv, mode = 'w', encoding = 'utf-8')
 	directory_in = os.path.join(os.getcwd(), parsing_path)

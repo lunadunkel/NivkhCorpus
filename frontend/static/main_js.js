@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			item.addEventListener("click", function () {
 				add_feats = document.getElementById('add-feat' + item.id.match(/\d+/)[0])
 				var checkboxes = add_feats.getElementsByTagName("input");
-				for (var i=0; i < checkboxes.length; i++){
+				for (var i = 0; i < checkboxes.length; i++) {
 					if (checkboxes[i].type == 'checkbox')
 						checkboxes[i].checked = true;
 				}
@@ -51,17 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dialogs = document.querySelectorAll("dialog");
-    dialogs.forEach((dialog) => {
-        const button = dialog.querySelector('.modal-buttons');
-		button.addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function () {
+	const dialogs = document.querySelectorAll("dialog");
+	dialogs.forEach((dialog) => {
+		const button = dialog.querySelector('.modal-buttons');
+		button.addEventListener('click', function () {
 			const checkboxes = dialog.querySelectorAll('input[type="checkbox"]');
 			checkboxes.forEach(checkbox => {
-					checkbox.checked = true;
+				checkbox.checked = true;
 			})
 		})
-    })
+	})
 });
 
 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			item.addEventListener("click", function () {
 				add_feats = document.getElementById('add-feat' + item.id.match(/\d+/)[0])
 				var checkboxes = add_feats.getElementsByTagName("input");
-				for (var i=0; i < checkboxes.length; i++){
+				for (var i = 0; i < checkboxes.length; i++) {
 					if (checkboxes[i].type == 'checkbox')
 						checkboxes[i].checked = false;
 				}
@@ -105,19 +105,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	const dialogs = document.querySelectorAll("dialog");
 	dialogs.forEach((dialog) => {
 		const buttons = dialog.querySelectorAll('.modal-buton');
 
 		buttons.forEach((button) => {
-			button.addEventListener('click', function() {
+			button.addEventListener('click', function () {
 				const checkboxes = dialog.querySelectorAll('input[type="image"]');
 				checkboxes.forEach(checkbox => {
 					if (checkbox.checked) {
 						checkbox.checked = true;
 					}
-        		});	
+				});
 
 			})
 		})
@@ -140,66 +140,66 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById("search").addEventListener("click", async () => {
-  const forms = document.querySelectorAll(".main-searching-frame");
-  const allData = [];
-  let hasAnyValue = false;
+	const forms = document.querySelectorAll(".main-searching-frame");
+	const allData = [];
+	let hasAnyValue = false;
 
-  forms.forEach(form => {
-    const formData = new FormData(form);
-    const formObj = {};
+	forms.forEach(form => {
+		const formData = new FormData(form);
+		const formObj = {};
 
-    for (const [key, value] of formData.entries()) {
-      if (key === "language-select" || /^search-type\d*$/.test(key)) {
-        formObj[key] = value;
-        continue;
-      }
+		for (const [key, value] of formData.entries()) {
+			if (key === "language-select" || /^search-type\d*$/.test(key)) {
+				formObj[key] = value;
+				continue;
+			}
 
-      if (value.trim() !== "") {
-		console.log(value);
-        hasAnyValue = true;
-      }
+			if (value.trim() !== "") {
+				console.log(value);
+				hasAnyValue = true;
+			}
 
-      if (formObj[key] !== undefined) {
-        if (Array.isArray(formObj[key])) {
-          formObj[key].push(value);
-        } else {
-          formObj[key] = [formObj[key], value];
-        }
-      } else {
-        formObj[key] = value;
-      }
-    }
+			if (formObj[key] !== undefined) {
+				if (Array.isArray(formObj[key])) {
+					formObj[key].push(value);
+				} else {
+					formObj[key] = [formObj[key], value];
+				}
+			} else {
+				formObj[key] = value;
+			}
+		}
 
-    allData.push(formObj);
-  });
+		allData.push(formObj);
+	});
 
-  if (!hasAnyValue) {
-    alert("Введите хотя бы одно поле для поиска.");
-    return;
-  }
+	if (!hasAnyValue) {
+		alert("Введите хотя бы одно поле для поиска.");
+		return;
+	}
 
-  console.log("Отправка данных:", allData);
+	console.log("Отправка данных:", allData);
 
-  try {
-    const response = await fetch("/search", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(allData)
-    });
+	try {
+		const response = await fetch("/search", {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(allData)
+		});
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      throw new Error(`HTTP ${response.status}: ${errorText}`);
-    }
+		if (!response.ok) {
+			const errorText = await response.text();
+			throw new Error(`HTTP ${response.status}: ${errorText}`);
+		}
 
-    const result = await response.json();
-    console.log("Успешный ответ от сервера:", result);
+		const result = await response.json();
+		console.log("Успешный ответ от сервера:", result);
 
-    window.location.href = "search_output.html";
+		window.location.href = "search_output.html";
 
-  } catch (error) {
-    console.error("Ошибка при запросе:", error);
-  }
+	} catch (error) {
+		console.error("Ошибка при запросе:", error);
+	}
 });
 
 
@@ -207,36 +207,36 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	// e.preventDefault();
 	const featureBlock = document.querySelectorAll(".feature-block");
 	featureBlock.forEach((block) => {
-			const selectAll = block.querySelector('h4 > label > input');
-			selectAll.addEventListener('click', function(e){
-				// e.preventDefault();
-				var checkboxes = block.querySelectorAll("label > input");
-				if (selectAll.checked == true) {
-					for (var i=0; i < checkboxes.length; i++) {
-						if (checkboxes[i].type == 'checkbox') {
-							checkboxes[i].checked = true;
-						};
+		const selectAll = block.querySelector('h4 > label > input');
+		selectAll.addEventListener('click', function (e) {
+			// e.preventDefault();
+			var checkboxes = block.querySelectorAll("label > input");
+			if (selectAll.checked == true) {
+				for (var i = 0; i < checkboxes.length; i++) {
+					if (checkboxes[i].type == 'checkbox') {
+						checkboxes[i].checked = true;
 					};
-				}
-				else {
-					for (var i=0; i < checkboxes.length; i++) {
-						if (checkboxes[i].type == 'checkbox') {
-							checkboxes[i].checked = false;
-						}
-					};
-				}
-			});
+				};
+			}
+			else {
+				for (var i = 0; i < checkboxes.length; i++) {
+					if (checkboxes[i].type == 'checkbox') {
+						checkboxes[i].checked = false;
+					}
+				};
+			}
+		});
 
-			const resetButton = document.querySelector(".simple-buttons");
-			if (resetButton) {
-				resetButton.addEventListener("click", function (e) {
-					e.preventDefault();
-					const checkboxes = block.querySelectorAll('input[type="checkbox"]');
-					checkboxes.forEach((cb) => {
-						cb.checked = false;
-        			});
-      		});
-    	}
+		const resetButton = document.querySelector(".simple-buttons");
+		if (resetButton) {
+			resetButton.addEventListener("click", function (e) {
+				e.preventDefault();
+				const checkboxes = block.querySelectorAll('input[type="checkbox"]');
+				checkboxes.forEach((cb) => {
+					cb.checked = false;
+				});
+			});
+		}
 
 	});
 });
@@ -435,16 +435,18 @@ function createDiv(value) {
 	newRegulation.classList = "regulation-adding";
 
 	const newAdd = document.createElement("div");
+	newAdd.id = "add" + value;
 	newAdd.classList = "add-word";
+	newAdd.style.cursor = "pointer";
+	newAdd.onclick = function (e) {
+		e.preventDefault();
+		addWord(newAdd);
+	};
 
 	const newAddImg = document.createElement("input");
-	newAddImg.id = "add" + value;
 	newAddImg.type = "image";
 	newAddImg.setAttribute("src", "/static/images/add.svg");
-	newAddImg.onclick = function (e) {
-		e.preventDefault();
-		addWord(newAddImg);
-	};
+
 	// newAddImg.style.width = "20px";
 	// newAddImg.style.height = "20px";
 
@@ -453,26 +455,32 @@ function createDiv(value) {
 
 	const newClose = document.createElement("div");
 	newClose.classList = "close-word";
+	newClose.id = "closure" + value;
+
+	newClose.onclick = function (e) {
+		e.preventDefault();
+		closeWord(newClose);
+	};
+
+	newClose.style.cursor = "pointer";
+
 	const newCloseImg = document.createElement("input");
-	newCloseImg.id = "closure" + value;
+
 	newCloseImg.type = "image";
 	newCloseImg.setAttribute("src", "/static/images/close.svg");
 
-	newClose.addEventListener('mouseover', (e) => {
-		e.preventDefault();
-        newClose.style.backgroundColor = 'var(--100)';
-        newClose.style.transform = "all 0.2s ease-out";
-    });
+	// newClose.addEventListener('mouseover', (e) => {
+	// 	e.preventDefault();
+	// 	newClose.style.backgroundColor = 'var(--100)';
+	// 	newClose.style.transform = "all 0.2s ease-out";
+	// });
 
-	newClose.addEventListener('mouseouut', () => {
-        newClose.style.backgroundColor = "";
-        newClose.style.transform = "all 0.2s ease-out";
-    });
+	// newClose.addEventListener('mouseouut', () => {
+	// 	newClose.style.backgroundColor = "";
+	// 	newClose.style.transform = "all 0.2s ease-out";
+	// });
 
-	newCloseImg.onclick = function (e) {
-		e.preventDefault();
-		closeWord(newCloseImg);
-	};
+
 	newCloseImg.style.width = "20px";
 	newCloseImg.style.height = "20px";
 
@@ -622,11 +630,11 @@ function createDiv(value) {
 		e.preventDefault();
 		add_feats = document.getElementById('add-feat' + value)
 		var checkboxes = add_feats.getElementsByTagName("input");
-			for (var i=0; i < checkboxes.length; i++){
-				if (checkboxes[i].type == 'checkbox') {
-					checkboxes[i].checked = true;
-				}
+		for (var i = 0; i < checkboxes.length; i++) {
+			if (checkboxes[i].type == 'checkbox') {
+				checkboxes[i].checked = true;
 			}
+		}
 	});
 
 	newAddSelections2.appendChild(newSelectFeaturesAdd2);
@@ -704,7 +712,7 @@ function createDiv(value) {
 	newResetButton.addEventListener("click", function (e) {
 		e.preventDefault();
 		var checkboxes = newSelect.getElementsByTagName("input");
-		for (var i=0; i < checkboxes.length; i++){
+		for (var i = 0; i < checkboxes.length; i++) {
 			if (checkboxes[i].type == 'checkbox')
 				checkboxes[i].checked = false;
 		}
@@ -729,7 +737,7 @@ function createDiv(value) {
 	newResetButtonDialog.addEventListener("click", function () {
 
 		var checkboxes = newDialog.getElementsByTagName("input");
-		for (var i=0; i < checkboxes.length; i++){
+		for (var i = 0; i < checkboxes.length; i++) {
 			if (checkboxes[i].type == 'checkbox')
 				checkboxes[i].checked = false;
 		}
@@ -751,9 +759,9 @@ function createDiv(value) {
 			}
 		}
 	}
-	const selectAllCheckDialog =  newDialog.querySelector('.modal-buttons');
+	const selectAllCheckDialog = newDialog.querySelector('.modal-buttons');
 
-	selectAllCheckDialog.addEventListener("click", function() {
+	selectAllCheckDialog.addEventListener("click", function () {
 		const checkboxes = newDialog.getElementsByTagName("input");
 		for (let checkbox of checkboxes) {
 			checkbox.checked = true;
@@ -764,19 +772,19 @@ function createDiv(value) {
 	if (closeButton) {
 		closeButton.addEventListener("click", function (e) {
 			e.preventDefault();
-				newDialog.close();
+			newDialog.close();
 		});
 	}
 	newSearchFrame.appendChild(newDialog);
 
 	return newSearchFrame;
-} 
+}
 
 document.addEventListener("DOMContentLoaded", (e) => {
 	e.preventDefault();
-  	document.querySelectorAll("form").forEach(form => {
-    form.addEventListener("submit", event => {
-      event.preventDefault();
-    });
-  });
+	document.querySelectorAll("form").forEach(form => {
+		form.addEventListener("submit", event => {
+			event.preventDefault();
+		});
+	});
 });
