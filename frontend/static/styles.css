@@ -255,6 +255,7 @@ input[type="radio"]:checked + label {
 }
 
 input[type="search"]:focus {
+  background: transparent;
   outline: none;
 }
 
@@ -273,6 +274,7 @@ input[type="search"]:focus {
 }
 
 .input-panel {
+  all: unset;
   display: flex;
   min-width: 350px;
   height: 55px;
@@ -282,6 +284,18 @@ input[type="search"]:focus {
   border-right: none;
   font-family: inherit;
 }
+
+input:-webkit-autofill {
+  /* -webkit-text-fill-color: #31b0dd; */
+  -webkit-box-shadow: 0 0 0px 40rem #ffff inset;
+}
+
+/*
+input.input-panel:autofill{
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+} */
+
 
 input[type="search"] {
   /* padding-left: 20px; */

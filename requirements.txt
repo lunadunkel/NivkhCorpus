@@ -4,3 +4,5 @@ uvicorn
 pyyaml
 svgling
 pandas
+pymongo
+dotenv

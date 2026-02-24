@@ -3,13 +3,13 @@ import re
 import csv
 import json
 import pandas as pd
+from backend.core.config import OUTPUT_DIR
 
 class CSVConverter():
-    def __init__(self, path):
-        self.path = path
-        self.convert_to_json()
+    def __init__(self):
+        self.path = os.path.join(OUTPUT_DIR, 'search_result.csv')
     
-    def convert_to_json(self):
+    def convert(self):
         rows = []
         with open(self.path, 'r') as file:
             reader = csv.reader(file, delimiter="\t")
@@ -25,16 +25,20 @@ class CSVConverter():
             sentences = []
             indices = df.loc[:, '1'::3]
             for num, txt in enumerate(texts):
-                selected_words = [int(x) for x in list(indices.loc[num])]
-                txt = re.sub(r'\[.*\] ', '', txt).capitalize()
-                sent = [(lambda num, x: '<strong>' + x + '</strong>' if num in selected_words else x)(num+1, x) 
-                                for num, x in enumerate(txt.split(' '))]
-                sent = ' '.join(sent)
-                sentences.append(sent)
+                try:
+                    selected_words = [int(x) for x in list(indices.loc[num])]
+                    txt = re.sub(r'\[.*\] ', '', txt).capitalize()
+                    sent = [(lambda num, x: '<strong>' + x + '</strong>' if num in selected_words else x)(num+1, x) 
+                                    for num, x in enumerate(txt.split(' '))]
+                    sent = ' '.join(sent)
+                    sentences.append(sent)
+                except Exception as e:
+                    print(f'Ошибка при обработке индексов: {str(e)}')
+                    print(list(indices.loc[num]))
+                    continue
             final_data = [{"id": num+1,
                             "name": "Неизвестный текст",
                             "author": "Неизвестный автор",
                             "text": sent,
                             "translation": trans} for num, (sent, trans) in enumerate(zip(sentences, translations))]
-        with open("output.json", 'w') as file:
-            file.write(json.dumps(final_data, ensure_ascii=False))
+        return final_data

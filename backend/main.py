@@ -1,18 +1,14 @@
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from pathlib import Path
-from api import search
-import json
+from backend.api import search
+from backend.core.config import FRONTEND_DIR, OUTPUT_DIR
+from backend.services.prepare_for_html import CSVConverter
 
 app = FastAPI()
 
 # Подключение маршрутов
 app.include_router(search.router)
-
-# Путь к фронтенду
-FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
 
 # Middleware, чтобы запретить кеширование (пока разработка)
 @app.middleware("http")
@@ -35,6 +31,9 @@ def search_page():
 
 @app.get("/get_output", response_class=FileResponse)
 def get_output_data():
-    with open('output.json') as file:
-        content = json.load(file)
-    return JSONResponse(content)
+    csv_path = OUTPUT_DIR / "search_result.csv"
+    if not csv_path.exists():
+        return JSONResponse({"error": "No output yet"}, status_code=404)
+    converter = CSVConverter()
+    json_data = converter.convert()
+    return JSONResponse(json_data)
