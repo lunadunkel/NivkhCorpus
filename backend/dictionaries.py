@@ -3,7 +3,7 @@ QUERY2DB = {'number[]': 'Number', 'pos[]': 'POS',
             'person[]': 'Person', 'aspect[]': 'Aspect',
             'categories[]': 'Categories', 'verbform[]': 'Verbform',
             'clusivity[]': 'Clusivity', 'nountype[]': 'Nountype',
-            'mood[]': 'Mood'}
+            'mood[]': 'Mood', 'additional[]': 'additional[]'}
 
 GRAMMAR_DICT = {"nfh": "Evident=Nfh", "caus": "Voice=Caus", 
                            "ind": "Definite=Ind", "neg": "Polarity=Neg",
