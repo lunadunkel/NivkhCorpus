@@ -11,7 +11,7 @@ class CSVConverter():
     
     def convert(self):
         rows = []
-        with open(self.path, 'r') as file:
+        with open(self.path, 'r', encoding='utf8') as file:
             reader = csv.reader(file, delimiter="\t")
             for row in reader:
                 rows.append(row)
