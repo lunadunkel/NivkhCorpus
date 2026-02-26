@@ -18,4 +18,5 @@ async def run_search(query):
             "--csv_verbosity", "1"
         ], cwd=EXTRACTOR_DIR, check=True)
     )
+    print(query)
     return {"status": "ok"}

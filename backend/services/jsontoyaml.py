@@ -13,8 +13,8 @@ class SubexampleItem:
             self.search_type = (
                 'LexNonHead' if language == 'nivkh' and search_type_slot == 'lemma' else
                 'RussianLexNonHead' if language == 'russian' and search_type_slot == 'lemma' else
-                'WordformNonHead' if language == 'nivkh' and search_type_slot == 'wordform' else
-                'RussianWordform' if language == 'russian' and search_type_slot == 'wordform' else
+                'WordformNonHead' if language == 'nivkh' and search_type_slot == 'token' else
+                'RussianWordform' if language == 'russian' and search_type_slot == 'token' else
                 None
             )
             self.ConstituentType = None
@@ -83,9 +83,9 @@ SubExamples:
                         
             if item.order is not None:
               if item.order == 'after':
-                orders.append((chr(literal_code), chr(literal_code-1)))
-              else:
                 orders.append((chr(literal_code-1), chr(literal_code)))
+              else:
+                orders.append((chr(literal_code), chr(literal_code-1)))
 
             id += 1
             literal_code += 1

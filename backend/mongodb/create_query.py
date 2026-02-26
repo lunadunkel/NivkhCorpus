@@ -1,110 +1,165 @@
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
-from get_database import get_database
-from backend.dictionaries import GRAMMAR_DICT
+from typing import Any, Dict, List, Optional, cast
+from backend.mongodb.get_database import get_database
+from backend.dictionaries import GRAMMAR_DICT, QUERY2DB
 
-QUERY2DB = {'number[]': 'Number', 'pos[]': 'POS',
-            'case[]': 'Case', 'number[]': 'Number',
-            'person[]': 'Person', 'aspect[]': 'Aspect',
-            'categories[]': 'Categories', 'verbform[]': 'Verbform',
-            'clusivity[]': 'Clusivity', 'nountype[]': 'Nountype'}
+# QUERY2DB = {'number[]': 'Number', 'pos[]': 'POS',
+#             'case[]': 'Case', 'number[]': 'Number',
+#             'person[]': 'Person', 'aspect[]': 'Aspect',
+#             'categories[]': 'Categories', 'verbform[]': 'Verbform',
+#             'clusivity[]': 'Clusivity', 'nountype[]': 'Nountype'}
+
+USE_PROJECTILE = True
 
 @dataclass
 class OriginalQuery:
     language: str = 'niv'
-    search_type: str = 'wordform'
+    search_type: str = 'lemma'
     input_word: Optional[str] = None
-    gram_feats: Optional[dict] = None
-    add_feats: Optional[dict] = None
+    gram_feats: Optional[Dict[str, Any]] = None
+
+    def to_dict(self) -> Dict:
+        return {k: v for k, v in self.__dict__.items() if v is not None}
 
 class QueryBuilder:
     def __init__(self, query: list):
-        self.queries = []
-        language = query[0]['language-select']
+        self.language = query[0]['language-select']
+        self.queries = self.process_queries(query)
+    
+    def extract_gram_feats(self, query: dict) -> Dict:
+        feats = {}
+        for ui_key, db_key in QUERY2DB.items():
+            if ui_key == 'additional[]':
+                continue
+            if value := query.get(ui_key):
+                feats[db_key] = value
+        return feats
+    
+    def extract_add_feats(self, query: dict, gram_feats: dict = {}) -> Dict:
+        additional = query.get('additional[]')
+        if not additional:
+            return gram_feats
 
-        for num, q in enumerate(query):
-            value = str(num) if num != 0 else '' 
-            gram_feats, add_feats = dict(), dict()
-            input_word = None
-            search_type = 'wordform' 
+        if not isinstance(additional, list):
+            additional = [additional]
 
-            if q.get([f'search_type{value}']):
-                search_type = q[f'search_type{value}']
-                search_type = 'token' if search_type == 'wordform' else search_type
+        feats = {}
+        for add in additional:
+            key, value = GRAMMAR_DICT[add].split('=')
+            feats[key] = value
+        if feats:
+            gram_feats.update(feats)
+        return gram_feats
+    
+    def process_queries(self, query: list) -> list:
+        queries = []
+        for q in query:
+            search_type = q.get('search-type')
+            input_word = q.get('input_word') or None
 
-            if query[num].get([f'input_word{value}']):
-                input_word = q[f'input_word{value}']
-
-            if additional := query[num].get([f'additional[]'], None):
-                if isinstance(additional, list):
-                    for add in additional:
-                        key, value = GRAMMAR_DICT[add].split('=')
-                        add_feats[key] = value
-                elif isinstance(additional, str):
-                    key, value = GRAMMAR_DICT[additional].split('=')
-                    add_feats[key] = value
-            
-            for key, db_key in QUERY2DB.items():
-                if value := q.get(key, None):
-                    gram_feats[db_key] = value
+            gram_feats = self.extract_gram_feats(q)
+            gram_feats = self.extract_add_feats(q, gram_feats)
+            if not gram_feats:
+                gram_feats = None
                 
-            self.queries.append(OriginalQuery(language=language,
+            queries.append(OriginalQuery(language=self.language,
                                    search_type=search_type,
                                    input_word=input_word,
-                                   gram_feats=gram_feats,
-                                   add_feats=add_feats))
+                                   gram_feats=gram_feats))
+        return queries
 
-# @dataclass
-# class QueryBuilder:
-#     filters: List[Dict[str, Any]] = field(default_factory=list)
-#     requires_aggregate: bool = False
+class MongoQueryCompiler:
+    def __init__(self, query: List[OriginalQuery]):
+        self.query = query
+        self.final_query = self.basic_compile()
 
-#     def lemma_match(self, word: str):
-#         self.filters.append({"tokens.lemma": word})
+    def _word_compile_match(self, oq: OriginalQuery):
+        language = oq.language
+        search_type = oq.search_type
 
-#     def wordform_match(self, word):
-#         query = {"tokens.lemma": f"{word}"}
-#         QUERY.append(query)
+        base_type, sub_type = 'tokens', search_type
+        basic_query = oq.input_word
+        if language == 'russian': 
+            if search_type == 'token':
+                USE_PROJECTILE = False
+                base_type = 'russian_text'
+                sub_type = None
+                basic_query = f'/{basic_query}/i'
+            else:
+                sub_type = 'translation'
+        if sub_type is not None:
+            query = {f'{base_type}':
+                        {'$elemMatch':
+                            {sub_type: basic_query}
+                        }
+                    }
+        else:
+            query = {f'{base_type}': basic_query}
+        return query
+    
+    def _grammar_compile(self, oq: OriginalQuery, inter_query: dict = dict()):
+        if not inter_query:
+            inter_query['tokens'] = dict()
+            inter_query['tokens']['$elemMatch'] = dict()
 
-#     def disjunction_query(self, tag: str, options: List):
-#         field = f"tokens.tagsets.{tag}"
-#         query = {field: {'$in': options}}
-#         QUERY.append(query)  
+        # gram_query['tokens'] = dict()
+        gram_feats = cast(Dict[str, str], oq.gram_feats)
+        sub_type = 'tagsets'
+        for key, value in gram_feats.items():
+            basic_query = value
+            if isinstance(value, list):
+                basic_query = {f'$in': value}
+            inter_query['tokens']['$elemMatch'][f'{sub_type}.{key}'] = basic_query
+        return inter_query
 
-#     def token_order(self, before: str, after: str):
-#         self.requires_aggregate = True
-#         self.before = before
-#         self.after = after
+    def basic_compile(self):
+        queries = []
+        for q in self.query:
+            inter_query = dict()
+            if q.input_word is not None:
+                inter_query = self._word_compile_match(q)
+            if q.gram_feats is not None:
+                inter_query = self._grammar_compile(q, inter_query)
+            queries.append(inter_query)
+        print(queries)
+        return queries
 
+        # if oq.input_word
+
+
+#         match = {
+#             "language": oq.language
+#         }
+
+#         token_match = {}
+
+#         if oq.input_word:
+#             field = "lemma" if oq.search_type == "lemma" else "token"
+#             token_match[field] = oq.input_word
+
+#         for feats in (oq.gram_feats, oq.add_feats):
+#             if feats:
+#                 token_match.update({f"gram.{k}": v for k, v in feats.items()})
+
+#         if token_match:
+#             match["tokens"] = {"$elemMatch": token_match}
+
+#         return {"$match": match}
+
+
+# query = [{'language-select': 'nivkh', 'search-type': 'token', 'input_word': 'видь', 'added-gram-features': '', 'additional[]': 'foc'}]
+query = [{'language-select': 'nivkh', 'search-type': 'lemma', 'input_word': 'ви', 'added-gram-features': '', 'number[]': ['Sing', 'Pl'], 'mood[]': 'Imp'}]
 db = get_database()
 
-sentences_collection = db['sentences']
+# sentences_collection = db['sentences']
 
-QUERY = []
+# PROJECTION = {
+#     "_id": 1,
+#     "tokens.$": 1,
+#     "russian_text": 1,
+#     "text": 1
+# }
 
-PROJECTION = {
-    "_id": 1,
-    "tokens.$": 1,
-    "russian_text": 1,
-    "text": 1
-}
-
-# def lemma_match(word):
-#     query = {"tokens.lemma": f"{word}"}
-#     QUERY.append(query)
-
-# def wordform(word):
-#     query = {"tokens.lemma": f"{word}"}
-#     QUERY.append(query)
-
-# def disjunction_query(tag: str, options: List):
-#     field = f"tokens.tagsets.{tag}"
-#     query = {field: {'$in': options}}
-#     QUERY.append(query)    
-
-
-# lemma_match('нивх')
-# disjunction_query('POS', ["NOUN", "VERB"])
-# output = sentences_collection.find_one({'$and': QUERY}, PROJECTION)
-# assert isinstance(output, dict)
-# print(output)
+qb = QueryBuilder(query)
+print(qb.queries[0].to_dict())
+compiler = MongoQueryCompiler(qb.queries)

@@ -279,10 +279,10 @@ function updateIds(root, oldIndex, newIndex) {
 			el.htmlFor = el.htmlFor.replace(oldIndex, newIndex);
 		}
 
-		// Переписываем name (если нужно уникализировать input'ы)
-		if (el.name && el.name.includes(oldIndex)) {
-			el.name = el.name.replace(oldIndex, newIndex);
-		}
+		// // Переписываем name (если нужно уникализировать input'ы)
+		// if (el.name && el.name.includes(oldIndex)) {
+		// 	el.name = el.name.replace(oldIndex, newIndex);
+		// }
 	}
 }
 
@@ -361,7 +361,7 @@ function createDiv(value) {
 	newBeforeCheckbox.type = "checkbox";
 	newBeforeCheckbox.id = "before" + value;
 	newBeforeCheckbox.value = 'before';
-	newBeforeCheckbox.name = "search-order1";
+	newBeforeCheckbox.name = "search-order";
 	const newBeforeLabel = document.createElement("label");
 	newBeforeLabel.htmlFor = newBeforeCheckbox.id;
 	newBeforeLabel.textContent = "До";
@@ -399,8 +399,8 @@ function createDiv(value) {
 	const newRadioWordform = document.createElement("input");
 	newRadioWordform.type = "radio";
 	newRadioWordform.id = "wordform" + value;
-	newRadioWordform.name = "search-type" + value;
-	newRadioWordform.value = 'wordform';
+	newRadioWordform.name = "search-type";
+	newRadioWordform.value = 'token';
 	newRadioWordform.addEventListener("click", function (e) {
 		wordformButton(newRadioWordform);
 	});
@@ -416,7 +416,7 @@ function createDiv(value) {
 	const newRadioLemma = document.createElement("input");
 	newRadioLemma.type = "radio";
 	newRadioLemma.id = "lemma" + value;
-	newRadioLemma.name = "search-type" + value;
+	newRadioLemma.name = "search-type" ;
 	newRadioLemma.value = 'lemma'
 	newRadioLemma.addEventListener("click", function () {
 		lemmaButton(newRadioLemma);
@@ -497,7 +497,7 @@ function createDiv(value) {
 	newInputField.id = "correct_placeholder" + value;
 	newInputField.classList = "input-panel";
 	newInputField.type = "search";
-	newInputField.name = "input_word" + value;
+	newInputField.name = "input_word";
 	newInputField.placeholder = "Найти по словоформе";
 
 	newSearchInput.appendChild(newInputField);

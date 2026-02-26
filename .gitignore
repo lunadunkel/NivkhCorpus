@@ -16,3 +16,5 @@ __pycache__/
 .vscode/
 .idea/
 *.yaml
+backend/extractor/Output/search_result.txt
+backend/extractor/Output/search_result.csv
