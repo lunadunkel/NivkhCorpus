@@ -1,8 +1,8 @@
 QUERY2DB = {'number[]': 'Number', 'pos[]': 'POS',
             'case[]': 'Case', 'number[]': 'Number',
             'person[]': 'Person', 'aspect[]': 'Aspect',
-            'categories[]': 'Categories', 'verbform[]': 'Verbform',
-            'clusivity[]': 'Clusivity', 'nountype[]': 'Nountype',
+            'categories[]': 'Categories', 'verbform[]': 'VerbForm',
+            'clusivity[]': 'Clusivity', 'nountype[]': 'NounType',
             'mood[]': 'Mood', 'additional[]': 'additional[]'}
 
 GRAMMAR_DICT = {"nfh": "Evident=Nfh", "caus": "Voice=Caus", 
@@ -13,5 +13,6 @@ GRAMMAR_DICT = {"nfh": "Evident=Nfh", "caus": "Voice=Caus",
                            "qu": "Question=Yes", "coord": "Coordinating=Yes",
                            "refl": "Reflex=Yes", "rec": "Reciprocal=Yes",
                            "conces": "Conces=Yes", "add": "Add=Yes",
-                           "coll": "NumType=Collective", "aux": "VerbType=Aux"
+                           "coll": "NumType=Collective", "aux": "VerbType=Aux",
+                           'conv': 'Conv'
 }

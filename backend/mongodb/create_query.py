@@ -1,15 +1,13 @@
+# TO-DO: переписать для aggregation части pipeline
+# то, что сейчас формируется в MongoQueryCompiler
+
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, cast
 from backend.mongodb.get_database import get_database
 from backend.dictionaries import GRAMMAR_DICT, QUERY2DB
 
-# QUERY2DB = {'number[]': 'Number', 'pos[]': 'POS',
-#             'case[]': 'Case', 'number[]': 'Number',
-#             'person[]': 'Person', 'aspect[]': 'Aspect',
-#             'categories[]': 'Categories', 'verbform[]': 'Verbform',
-#             'clusivity[]': 'Clusivity', 'nountype[]': 'Nountype'}
 
-USE_PROJECTILE = True
+RUSSIAN_WORDFORM = False
 
 @dataclass
 class OriginalQuery:
@@ -20,6 +18,7 @@ class OriginalQuery:
 
     def to_dict(self) -> Dict:
         return {k: v for k, v in self.__dict__.items() if v is not None}
+
 
 class QueryBuilder:
     def __init__(self, query: list):
@@ -73,7 +72,7 @@ class MongoQueryCompiler:
         self.query = query
         self.final_query = self.basic_compile()
 
-    def _word_compile_match(self, oq: OriginalQuery):
+    def _word_compile_match(self, oq: OriginalQuery) -> dict:
         language = oq.language
         search_type = oq.search_type
 
@@ -81,7 +80,7 @@ class MongoQueryCompiler:
         basic_query = oq.input_word
         if language == 'russian': 
             if search_type == 'token':
-                USE_PROJECTILE = False
+                RUSSIAN_WORDFORM = True
                 base_type = 'russian_text'
                 sub_type = None
                 basic_query = f'/{basic_query}/i'
@@ -97,12 +96,11 @@ class MongoQueryCompiler:
             query = {f'{base_type}': basic_query}
         return query
     
-    def _grammar_compile(self, oq: OriginalQuery, inter_query: dict = dict()):
+    def _grammar_compile(self, oq: OriginalQuery, inter_query: dict = dict()) -> dict:
         if not inter_query:
             inter_query['tokens'] = dict()
             inter_query['tokens']['$elemMatch'] = dict()
 
-        # gram_query['tokens'] = dict()
         gram_feats = cast(Dict[str, str], oq.gram_feats)
         sub_type = 'tagsets'
         for key, value in gram_feats.items():
@@ -112,7 +110,7 @@ class MongoQueryCompiler:
             inter_query['tokens']['$elemMatch'][f'{sub_type}.{key}'] = basic_query
         return inter_query
 
-    def basic_compile(self):
+    def basic_compile(self) -> list[dict]:
         queries = []
         for q in self.query:
             inter_query = dict()
@@ -121,45 +119,38 @@ class MongoQueryCompiler:
             if q.gram_feats is not None:
                 inter_query = self._grammar_compile(q, inter_query)
             queries.append(inter_query)
-        print(queries)
         return queries
 
-        # if oq.input_word
+class MongoAggregatePipeline:
+    def __init__(self, queries: list[dict]):
+        self.use_basic_project = True if len(queries) == 1 else False
+        self.queries = queries
+        self.project = self._form_project()
+    
+    def _form_project(self) -> dict[str, int]:
+        project = {
+                "_id": 1,
+                "russian_text": 1,
+                "text": 1
+            }
+        if RUSSIAN_WORDFORM: return project
 
+        index_level = "tokens.$" if self.use_basic_project else "final_indexes"
+        project[index_level] = 1
+        return project
 
-#         match = {
-#             "language": oq.language
-#         }
-
-#         token_match = {}
-
-#         if oq.input_word:
-#             field = "lemma" if oq.search_type == "lemma" else "token"
-#             token_match[field] = oq.input_word
-
-#         for feats in (oq.gram_feats, oq.add_feats):
-#             if feats:
-#                 token_match.update({f"gram.{k}": v for k, v in feats.items()})
-
-#         if token_match:
-#             match["tokens"] = {"$elemMatch": token_match}
-
-#         return {"$match": match}
 
 
 # query = [{'language-select': 'nivkh', 'search-type': 'token', 'input_word': 'видь', 'added-gram-features': '', 'additional[]': 'foc'}]
-query = [{'language-select': 'nivkh', 'search-type': 'lemma', 'input_word': 'ви', 'added-gram-features': '', 'number[]': ['Sing', 'Pl'], 'mood[]': 'Imp'}]
+query = [{'language-select': 'nivkh', 'search-type': 'lemma', 'input_word': 'ви', 
+          'added-gram-features': '', 'number[]': ['Sing', 'Pl'], 'mood[]': 'Imp'},
+          {'language-select': 'nivkh', 'search-type': 'lemma', 'input_word': '', 
+           'added-gram-features': '', 'number[]': ['Sing']}]
 db = get_database()
 
 # sentences_collection = db['sentences']
 
-# PROJECTION = {
-#     "_id": 1,
-#     "tokens.$": 1,
-#     "russian_text": 1,
-#     "text": 1
-# }
-
 qb = QueryBuilder(query)
 print(qb.queries[0].to_dict())
 compiler = MongoQueryCompiler(qb.queries)
+print(compiler.final_query)
