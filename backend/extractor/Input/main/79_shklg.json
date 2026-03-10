@@ -15,7 +15,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -35,7 +35,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -56,7 +56,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -76,7 +76,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -95,7 +95,7 @@
                         "id": "1",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -112,7 +112,7 @@
                         "id": "2",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -130,7 +130,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -147,7 +147,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -195,7 +195,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -215,7 +215,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -272,7 +272,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -291,7 +291,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -326,7 +326,7 @@
                         "id": "2",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -343,7 +343,7 @@
                         "id": "3",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -391,7 +391,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -407,7 +407,7 @@
                         "id": "7",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -425,7 +425,7 @@
       {
             "id": "3-5",
             "text": "мен мифух ныкр̌ немӄа нивӈ ӿунвд, тяй ин ӽомиух ор̌ӈар̌куну, ӄилӈӻуну лавгуну сикм пӈафӄ ӈафӄ ӽомиух ёпут ӿунвдӻун",
-            "length": 18,
+            "length": 19,
             "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "На земле четыре тысячи людей живут, а их часть - ороки, эвенки, нанайцы, все друг с другом, собравшись, жили.",
@@ -496,7 +496,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -516,7 +516,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -613,7 +613,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -633,7 +633,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -653,7 +653,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -691,6 +691,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -710,8 +711,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -731,7 +731,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -772,8 +772,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -793,7 +793,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
-                                    "Number=Plur",
+                                    "Number[subj]=Plur",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -862,7 +862,7 @@
                         "id": "4",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -879,7 +879,7 @@
                         "id": "5",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -961,7 +961,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -978,7 +978,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -995,7 +995,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -1027,6 +1027,7 @@
                         "id": "14",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -1043,8 +1044,7 @@
                         "id": "15",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -1061,7 +1061,7 @@
                         "id": "16",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -1096,8 +1096,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1114,7 +1114,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
-                              "Number=Plur",
+                              "Number[subj]=Plur",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1132,7 +1132,7 @@
       {
             "id": "6-8",
             "text": "ниғвӈгун чо ӈанхт иньта, пуй ӈа хут иньта, иньӈ чӈыр̌ ёпут эвта, орботта, п’эӻлгун паскам тафух ин даута.",
-            "length": 18,
+            "length": 19,
             "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Нивхи пойманной рыбой питались, пойманных птиц ели, они собранную траву держали, работали, детей дома поучали(?)",
@@ -1146,7 +1146,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1165,7 +1165,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -1186,8 +1186,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1207,8 +1207,8 @@
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1245,7 +1245,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -1266,8 +1266,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1287,8 +1287,8 @@
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1325,7 +1325,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -1346,8 +1346,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1361,34 +1361,16 @@
                   },
                   {
                         "itoken": "12",
-                        "token": "э",
-                        "lemma": "э",
-                        "tagsets": [
-                              [
-                                    "PART",
-                                    "Clitic=Yes"
-                              ]
-                        ],
-                        "parent_token_index": "-",
-                        "edge_type": "-",
-                        "constituent": {
-                              "name": "-",
-                              "is_head": false,
-                              "id": "-"
-                        },
-                        "translation": "3.SG"
-                  },
-                  {
-                        "itoken": "13",
-                        "token": "вта",
+                        "token": "эвта",
                         "lemma": "в",
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Person=3",
-                                    "Number=Sing",
+                                    "Person[obj]=3",
+                                    "Number[obj]=Sing",
                                     "Coordinating=Yes",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1401,15 +1383,15 @@
                         "translation": "держать"
                   },
                   {
-                        "itoken": "14",
+                        "itoken": "13",
                         "token": "орботта",
                         "lemma": "орбот",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1428,6 +1410,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -1447,9 +1430,8 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1462,27 +1444,8 @@
                         "translation": "ребёнок"
                   },
                   {
-                        "itoken": "17",
-                        "token": "п",
-                        "lemma": "п",
-                        "tagsets": [
-                              [
-                                    "PART",
-                                    "Clitic=Yes"
-                              ]
-                        ],
-                        "parent_token_index": "-",
-                        "edge_type": "-",
-                        "constituent": {
-                              "name": "-",
-                              "is_head": false,
-                              "id": "-"
-                        },
-                        "translation": "REFL"
-                  },
-                  {
-                        "itoken": "18",
-                        "token": "аскам",
+                        "itoken": "16",
+                        "token": "паскам",
                         "lemma": "аскам",
                         "tagsets": [
                               [
@@ -1538,15 +1501,15 @@
                         "translation": "они"
                   },
                   {
-                        "itoken": "21",
+                        "itoken": "19",
                         "token": "даута",
                         "lemma": "дау",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1566,7 +1529,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -1582,7 +1545,7 @@
                         "id": "2",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -1600,8 +1563,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1618,8 +1581,8 @@
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1650,7 +1613,7 @@
                         "id": "6",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -1668,8 +1631,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1686,8 +1649,8 @@
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1718,7 +1681,7 @@
                         "id": "10",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -1736,8 +1699,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1752,16 +1715,20 @@
                         "name": "-",
                         "id": "12",
                         "tags": [
-                              "PART",
-                              "Clitic=Yes"
+                              "VERB",
+                              "Person[obj]=3",
+                              "Number[obj]=Sing",
+                              "Coordinating=Yes",
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
-                                    "э"
+                                    "эвта"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "э",
+                        "text": "эвта",
                         "length": 1
                   },
                   {
@@ -1769,28 +1736,9 @@
                         "id": "13",
                         "tags": [
                               "VERB",
-                              "Person=3",
-                              "Number=Sing",
                               "Coordinating=Yes",
-                              "Number=Plur"
-                        ],
-                        "tokens": [
-                              [
-                                    "вта"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "вта",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "14",
-                        "tags": [
-                              "VERB",
-                              "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1806,6 +1754,7 @@
                         "id": "15",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -1822,9 +1771,8 @@
                         "id": "16",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -1837,34 +1785,18 @@
                   },
                   {
                         "name": "-",
-                        "id": "17",
-                        "tags": [
-                              "PART",
-                              "Clitic=Yes"
-                        ],
-                        "tokens": [
-                              [
-                                    "п"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "п",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "18",
+                        "id": "16",
                         "tags": [
                               "VERB",
                               "Reflex=Yes"
                         ],
                         "tokens": [
                               [
-                                    "аскам"
+                                    "паскам"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "аскам",
+                        "text": "паскам",
                         "length": 1
                   },
                   {
@@ -1901,12 +1833,12 @@
                   },
                   {
                         "name": "-",
-                        "id": "21",
+                        "id": "19",
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -1923,7 +1855,7 @@
       {
             "id": "9-11",
             "text": "ЮНЕСКО итд ниғвӈ дуғс, эӄур̌ пыкзидра, ниғвӈгун лотя туғскир̌ п’руф мугт ӄ’лайта, п’ниғвӈ дуф т’ӽар̌пта.",
-            "length": 15,
+            "length": 17,
             "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "ЮНЕСКО говорит, что нивхский язык скоро пропадет, нивхи на русском языке, пока их язык умирает, разговаривают, свой язык забывают.",
@@ -1936,7 +1868,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -1976,7 +1908,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -1996,7 +1928,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2018,8 +1950,8 @@
                                     "VERB",
                                     "Voice=Caus",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Sing"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2039,8 +1971,8 @@
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Sing"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2060,7 +1992,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2117,6 +2049,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -2136,8 +2069,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2158,8 +2090,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2179,8 +2111,8 @@
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2199,6 +2131,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -2218,8 +2151,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2239,7 +2171,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2260,8 +2192,8 @@
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2280,7 +2212,7 @@
                         "id": "1",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2314,7 +2246,7 @@
                         "id": "3",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2331,7 +2263,7 @@
                         "id": "4",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2350,8 +2282,8 @@
                               "VERB",
                               "Voice=Caus",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Sing"
+                              "Person[subj]=3",
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -2368,8 +2300,8 @@
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Sing"
+                              "Person[subj]=3",
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -2386,7 +2318,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -2434,6 +2366,7 @@
                         "id": "10",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -2450,8 +2383,7 @@
                         "id": "11",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2469,8 +2401,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -2487,8 +2419,8 @@
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -2504,6 +2436,7 @@
                         "id": "14",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -2520,8 +2453,7 @@
                         "id": "15",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2538,7 +2470,7 @@
                         "id": "16",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -2556,8 +2488,8 @@
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -2574,7 +2506,7 @@
       {
             "id": "12-14",
             "text": "ниғвӈ дуф мор̌ӄагиныт ниғвӈгун к’ыхтит сикмроӽ итд (:) ниғвӈ туғскир̌ ӄ’лайве, п’эӻлгун ниғвӈ дуфтоӽ йаскамве инаӽ п’ниғвӈ иӻр̌ ӄ’лайна, раюна, юр̌уна ӿагуве!",
-            "length": 22,
+            "length": 24,
             "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Хотя нивхский язык будет жить; нивхи, заботясь, всем говорят: нивхскими словами разговаривайте, своих детей нивхскому языку учите, им на своем языке говорить, писать, читать; так поступайте!",
@@ -2587,7 +2519,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2607,7 +2539,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2650,7 +2582,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2670,8 +2602,8 @@
                               [
                                     "VERB",
                                     "VerbForm=Conv",
-                                    "Person=3",
-                                    "Number=Plur"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2748,7 +2680,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2789,8 +2721,8 @@
                               [
                                     "VERB",
                                     "Mood=Imp",
-                                    "Person=2",
-                                    "Number=Plur"
+                                    "Person[subj]=2",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2809,6 +2741,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -2828,9 +2761,8 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
                                     "Number=Plur",
-                                    "Case=Null"
+                                    "Case=Abs"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2849,7 +2781,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2884,35 +2816,16 @@
                   },
                   {
                         "itoken": "16",
-                        "token": "й",
-                        "lemma": "й",
-                        "tagsets": [
-                              [
-                                    "PART",
-                                    "Clitic=Yes"
-                              ]
-                        ],
-                        "parent_token_index": "-",
-                        "edge_type": "-",
-                        "constituent": {
-                              "name": "-",
-                              "is_head": false,
-                              "id": "-"
-                        },
-                        "translation": "3.SG"
-                  },
-                  {
-                        "itoken": "17",
-                        "token": "аскамве",
+                        "token": "йаскамве",
                         "lemma": "аскам",
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Person=3",
-                                    "Number=Sing",
+                                    "Person[obj]=3",
+                                    "Number[obj]=Sing",
                                     "Mood=Imp",
-                                    "Person=2",
-                                    "Number=Plur"
+                                    "Person[subj]=2",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2950,6 +2863,7 @@
                         "tagsets": [
                               [
                                     "PART",
+                                    "Reflex=Yes",
                                     "Clitic=Yes"
                               ]
                         ],
@@ -2969,8 +2883,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Reflex=Yes",
-                                    "Case=Null",
+                                    "Case=Abs",
                                     "Number=Sing"
                               ]
                         ],
@@ -2984,7 +2897,7 @@
                         "translation": "нивх"
                   },
                   {
-                        "itoken": "21",
+                        "itoken": "20",
                         "token": "иӻр̌",
                         "lemma": "иӻр̌",
                         "tagsets": [
@@ -3002,15 +2915,15 @@
                         "translation": "использовать"
                   },
                   {
-                        "itoken": "22",
+                        "itoken": "21",
                         "token": "ӄ’лайна",
                         "lemma": "ӄ’лай",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Sing"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3023,15 +2936,15 @@
                         "translation": "разговаривать"
                   },
                   {
-                        "itoken": "23",
+                        "itoken": "22",
                         "token": "раюна",
                         "lemma": "раю",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Sing"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3044,15 +2957,15 @@
                         "translation": "писать"
                   },
                   {
-                        "itoken": "24",
+                        "itoken": "23",
                         "token": "юр̌уна",
                         "lemma": "юр̌у",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Coordinating=Yes",
-                                    "Person=3",
-                                    "Number=Sing"
+                                    "Person[subj]=3",
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3065,7 +2978,7 @@
                         "translation": "читать"
                   },
                   {
-                        "itoken": "25",
+                        "itoken": "24",
                         "token": "ӿагуве",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -3073,8 +2986,8 @@
                                     "VERB",
                                     "Voice=Caus",
                                     "Mood=Imp",
-                                    "Person=2",
-                                    "Number=Plur"
+                                    "Person[subj]=2",
+                                    "Number[subj]=Plur"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3093,7 +3006,7 @@
                         "id": "1",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -3110,7 +3023,7 @@
                         "id": "2",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -3147,7 +3060,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -3164,8 +3077,8 @@
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
-                              "Person=3",
-                              "Number=Plur"
+                              "Person[subj]=3",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -3230,7 +3143,7 @@
                         "id": "9",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -3265,8 +3178,8 @@
                         "tags": [
                               "VERB",
                               "Mood=Imp",
-                              "Person=2",
-                              "Number=Plur"
+                              "Person[subj]=2",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
@@ -3282,6 +3195,7 @@
                         "id": "12",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -3298,9 +3212,8 @@
                         "id": "13",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
                               "Number=Plur",
-                              "Case=Null"
+                              "Case=Abs"
                         ],
                         "tokens": [
                               [
@@ -3316,7 +3229,7 @@
                         "id": "14",
                         "tags": [
                               "NOUN",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -3349,36 +3262,20 @@
                         "name": "-",
                         "id": "16",
                         "tags": [
-                              "PART",
-                              "Clitic=Yes"
-                        ],
-                        "tokens": [
-                              [
-                                    "й"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "й",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "17",
-                        "tags": [
                               "VERB",
-                              "Person=3",
-                              "Number=Sing",
+                              "Person[obj]=3",
+                              "Number[obj]=Sing",
                               "Mood=Imp",
-                              "Person=2",
-                              "Number=Plur"
+                              "Person[subj]=2",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
-                                    "аскамве"
+                                    "йаскамве"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "аскамве",
+                        "text": "йаскамве",
                         "length": 1
                   },
                   {
@@ -3402,6 +3299,7 @@
                         "id": "19",
                         "tags": [
                               "PART",
+                              "Reflex=Yes",
                               "Clitic=Yes"
                         ],
                         "tokens": [
@@ -3418,8 +3316,7 @@
                         "id": "20",
                         "tags": [
                               "NOUN",
-                              "Reflex=Yes",
-                              "Case=Null",
+                              "Case=Abs",
                               "Number=Sing"
                         ],
                         "tokens": [
@@ -3433,7 +3330,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "21",
+                        "id": "20",
                         "tags": [
                               "VERB"
                         ],
@@ -3448,12 +3345,12 @@
                   },
                   {
                         "name": "-",
-                        "id": "22",
+                        "id": "21",
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Sing"
+                              "Person[subj]=3",
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -3466,12 +3363,12 @@
                   },
                   {
                         "name": "-",
-                        "id": "23",
+                        "id": "22",
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Sing"
+                              "Person[subj]=3",
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -3484,12 +3381,12 @@
                   },
                   {
                         "name": "-",
-                        "id": "24",
+                        "id": "23",
                         "tags": [
                               "VERB",
                               "Coordinating=Yes",
-                              "Person=3",
-                              "Number=Sing"
+                              "Person[subj]=3",
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -3502,13 +3399,13 @@
                   },
                   {
                         "name": "-",
-                        "id": "25",
+                        "id": "24",
                         "tags": [
                               "VERB",
                               "Voice=Caus",
                               "Mood=Imp",
-                              "Person=2",
-                              "Number=Plur"
+                              "Person[subj]=2",
+                              "Number[subj]=Plur"
                         ],
                         "tokens": [
                               [
