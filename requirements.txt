@@ -6,3 +6,4 @@ svgling
 pandas
 pymongo
 dotenv
+pytest
