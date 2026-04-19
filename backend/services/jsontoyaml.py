@@ -1,6 +1,6 @@
 import os
 from backend.core.config import EXTRACTOR_DIR
-from backend.dictionaries import GRAMMAR_DICT, QUERY2DB
+from backend.dictionaries import MISC, QUERY2DB
 
 class SubexampleItem:
     def __init__(self, json_data, literal, name, language):
@@ -21,30 +21,30 @@ class SubexampleItem:
             self.Morph = []
             self.load_item_yaml(json_data, language)
 
-    def load_item_yaml(self, json_data, language):
 
-        ### ConstituentType ###
-        # if 'categories[]' in json_data:
-        #     self.ConstituentType = [('|').join(json_data['categories[]'])] if type(json_data['categories[]']) == list else json_data['categories[]']
-        # elif 'categories' in json_data:
-        #     self.ConstituentType = 'NP|VP|NumP|QP|ADVP'
-        
+    def load_item_yaml(self, json_data, language):      
+        print(json_data)  
         for key, db_key in QUERY2DB.items():
             # итерация по элементам грамматических признаков
             if value := json_data.get(key, None):
-                # проверка наличия в запросе пользователя
                 if isinstance(value, str):
                     value = [value]
+
                 match key:
                     case 'pos[]':
-                        # строение для пос-тегов
                         self.Morph += [('|').join(value)]
-                    case 'additional[]':
-                        # строение для дополнительных признаков
-                        self.Morph += [(', ').join([GRAMMAR_DICT[x] for x in value])]
-                    case _: 
-                        # остальные случаи
-                        self.Morph += [('|').join([f'{db_key}={x}' for x in value])]
+                    case 'misc[]' | 'verb[]':
+                        dictionary = MISC.get(key, None)
+                        if dictionary is not None:
+                            self.Morph += [('|').join([dictionary[x] for x in value])]
+                    case _:
+                        if isinstance(db_key, list):
+                            query = []
+                            for k in db_key:
+                                query.extend([f'{k}={x}' for x in value])
+                            self.Morph += [('|').join(query)]
+                        else:
+                            self.Morph += [('|').join([f'{db_key}={x}' for x in value])]
 
 class JsonToYaml:
     def __init__(self, json_data):

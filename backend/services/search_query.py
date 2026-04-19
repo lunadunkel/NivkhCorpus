@@ -13,7 +13,7 @@ async def run_search(query):
             "--rules", "24",
             "--dir_in", "Input/main",
             "--output_txt", "Output/search_result.txt",
-            "--verbosity", "1",
+            "--verbosity", "0",
             "--output_csv", "Output/search_result.csv",
             "--csv_verbosity", "1"
         ], cwd=EXTRACTOR_DIR, check=True)
