@@ -1,9 +1,19 @@
 [
       {
             "id": "0",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "энагут юрут",
+            "segmented_text": "эна-гу-т юру-т",
+            "glossed_text": "быть.иным-CAUS-CONV.3.PL считать-CONV.3.PL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "По-другому считают",
             "miscellaneous": "",
@@ -95,15 +105,25 @@
       },
       {
             "id": "1-2",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] мер нивхгу итға, ӿыдь, мен ӿыдь нен",
+            "segmented_text": "мер нивх-гу ит-ға ӿыдь м-ен ӿыдь н-ен",
+            "glossed_text": "мы.INCL человек-PL говорить-CONV:COND этот два-CL этот один-CL",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Наши нивхи говорят: \"Эти вдвоём, это один\".",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "мер",
                         "lemma": "мер",
                         "tagsets": [
@@ -122,14 +142,14 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нивхгу",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -162,7 +182,7 @@
                         "translation": "говорить"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿыдь",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -180,7 +200,7 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -199,7 +219,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "ӿыдь",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -239,7 +259,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=In"
@@ -255,11 +275,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -289,7 +309,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "DET"
                         ],
@@ -304,7 +324,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -320,7 +340,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "DET"
                         ],
@@ -354,22 +374,32 @@
       },
       {
             "id": "3-4",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "каӈгу фурғар энагут юрут, нивхгу фурғар энагут юрут",
+            "segmented_text": "каӈ-гу фур-ғар эна-гу-т юру-т нивх-гу фур-ғар эна-гу-т юру-т",
+            "glossed_text": "собака-PL говорить-CONV:SUBJ быть.иным-CAUS-CONV.3.PL считать-CONV.3.PL человек-PL говорить-CONV:SUBJ быть.иным-CAUS-CONV.3.PL считать-CONV.3.PL",
             "length": 8,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Собак считают, ведут счёт иначе, людей считают, - считают по-другому.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "каӈгу",
                         "lemma": "каӈ",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -445,14 +475,14 @@
                         "translation": "считать"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "нивхгу",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -531,11 +561,11 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -602,11 +632,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -676,9 +706,19 @@
       },
       {
             "id": "5",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] энагут юрута,",
+            "segmented_text": "эна-гу-т юру-та",
+            "glossed_text": "быть.иным-CAUS-CONV.3.PL считать-EMPH.3.PL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "По-другому ведут счёт.",
             "miscellaneous": "",
@@ -715,6 +755,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -756,6 +797,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -772,22 +814,32 @@
       },
       {
             "id": "6",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] тыфку п’урғар энагут юрут,",
+            "segmented_text": "тыф-ку п’ур-ғар эна-гу-т юру-т",
+            "glossed_text": "дом-PL говорить-CONV:SUBJ быть.иным-CAUS-CONV.3.PL считать-CONV.3.PL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Если считать дома ведут счёт по-другому,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "тыфку",
                         "lemma": "тыф",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -866,11 +918,11 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -940,9 +992,19 @@
       },
       {
             "id": "7",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] энагут юрут, (ага).",
+            "segmented_text": "эна-гу-т юру-т ага",
+            "glossed_text": "быть.иным-CAUS-CONV.3.PL считать-CONV.3.PL ага",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Да, по-другому считают.",
             "miscellaneous": "",
@@ -1067,9 +1129,19 @@
       },
       {
             "id": "8",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] яғдят ӿоӄот",
+            "segmented_text": "яғ-д-ят ӿоӄо-т",
+            "glossed_text": "что.делать-IND-FOC быть.таким-CONV.3.PL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Почему так?",
             "miscellaneous": "",
@@ -1083,6 +1155,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Focus=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1125,6 +1198,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Focus=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1159,9 +1233,19 @@
       },
       {
             "id": "9-14",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] яӈгут итныдят ағар̌ ӿыдь ырк (это) нен, ӄан нен, ӄан нен, ӄан мор̌, ӿоӈгут ӄаӈге нивхге ӈалагут итныдьля йығзыӈан, яӈгут ӈалагут итныдь, (нет)",
+            "segmented_text": "яӈ-гу-т ит-ны-д-ят ағар̌ ӿыдь ырк это н-ен ӄан н-ен ӄан н-ен ӄан м-ор̌ ӿоӈ-гу-т ӄаӈ-ге нивх-ге ӈала-гу-т ит-ны-дь-ля йығзы-ӈан яӈ-гу-т ӈала-гу-т ит-ны-дь нет",
+            "glossed_text": "что.делать-CAUS-CONV.3.PL говорить-FUT-IND-FOC когда это уже это один-CL собака один-CL собака один-CL собака два-CL быть.таким-CAUS-CONV.3.PL собака-COM человек-COM походить-CAUS-CONV.3.PL говорить-FUT-IND-QU не.знать-CONV:ANT что.делать-CAUS-CONV.3.PL походить-CAUS-CONV.3.PL говорить-FUT-IND нет",
             "length": 23,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Как сказать, собак считают по одному счёту, cобака одна, две собаки, разве вести счёт собак и людей одинаково, - нет.",
             "miscellaneous": "",
@@ -1197,7 +1281,8 @@
                                     "VERB",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Focus=Yes"
+                                    "Focus=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1210,12 +1295,12 @@
                         "translation": "говорить"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ағар̌",
                         "lemma": "ағар̌",
                         "tagsets": [
                               [
-                                    "SCONJ"
+                                    "ADV"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1228,7 +1313,7 @@
                         "translation": "когда"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿыдь",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -1246,7 +1331,7 @@
                         "translation": "это"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "ырк",
                         "lemma": "ырк",
                         "tagsets": [
@@ -1264,7 +1349,7 @@
                         "translation": "уже"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "это",
                         "lemma": "это",
                         "tagsets": [
@@ -1282,7 +1367,7 @@
                         "translation": "это"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -1301,14 +1386,13 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1321,7 +1405,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -1340,14 +1424,13 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1360,7 +1443,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -1379,14 +1462,13 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 12,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1399,7 +1481,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "13",
+                        "itoken": 13,
                         "token": "мор̌",
                         "lemma": "м",
                         "tagsets": [
@@ -1418,7 +1500,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "14",
+                        "itoken": 14,
                         "token": "ӿоӈгут",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -1440,14 +1522,13 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "15",
+                        "itoken": 15,
                         "token": "ӄаӈге",
                         "lemma": "ӄаӈ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1460,14 +1541,13 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "16",
+                        "itoken": 16,
                         "token": "нивхге",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1510,7 +1590,8 @@
                                     "VERB",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Question=Yes"
+                                    "Question=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1594,7 +1675,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1612,7 +1694,9 @@
                         "lemma": "нет",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1652,7 +1736,8 @@
                               "VERB",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Focus=Yes"
+                              "Focus=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1665,9 +1750,9 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
-                              "SCONJ"
+                              "ADV"
                         ],
                         "tokens": [
                               [
@@ -1680,7 +1765,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PRON"
                         ],
@@ -1695,7 +1780,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "ADV"
                         ],
@@ -1710,7 +1795,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "PRON"
                         ],
@@ -1725,7 +1810,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -1741,11 +1826,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1758,7 +1842,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -1774,11 +1858,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1791,7 +1874,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -1807,11 +1890,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1824,7 +1906,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
+                        "id": 13,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -1840,7 +1922,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "14",
+                        "id": 14,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -1859,11 +1941,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "15",
+                        "id": 15,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -1876,11 +1957,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "16",
+                        "id": 16,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -1917,7 +1997,8 @@
                               "VERB",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Question=Yes"
+                              "Question=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1989,7 +2070,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -2004,7 +2086,9 @@
                         "name": "-",
                         "id": "23",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -2020,15 +2104,25 @@
       },
       {
             "id": "15",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "чи нивх ӿаӈан ӄан ӈалагур̌",
+            "segmented_text": "чи нивх ӿа-ӈан ӄан ӈала-гу-р̌",
+            "glossed_text": "ты человек быть.таким-CONV:ANT собака походить-CAUS-CONV.2.SG",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Ты человек и надо вести счёт по-другому,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -2046,14 +2140,13 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нивх",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2066,7 +2159,7 @@
                         "translation": "человек"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ӿаӈан",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -2086,14 +2179,13 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2131,7 +2223,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -2146,11 +2238,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2163,7 +2254,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -2180,11 +2271,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2219,22 +2309,31 @@
       },
       {
             "id": "16",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "ӄан тор̌ тор̌ мундьля лығыр̌",
+            "segmented_text": "ӄан тор̌ тор̌ му-н-дь-ля лығы-р̌",
+            "glossed_text": "собака обычай обычай становиться-FUT-IND-QU AUX:NEG-CONV.3.SG",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Собачий обычай, что ли, нет, конечно.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2247,14 +2346,13 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "тор̌",
                         "lemma": "тор̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2267,14 +2365,13 @@
                         "translation": "обычай"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тор̌",
                         "lemma": "тор̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2295,7 +2392,8 @@
                                     "VERB",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Question=Yes"
+                                    "Question=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2334,11 +2432,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2351,11 +2448,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2368,11 +2464,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2390,7 +2485,8 @@
                               "VERB",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Question=Yes"
+                              "Question=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -2426,9 +2522,19 @@
       },
       {
             "id": "17-19",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "яғдита ӿоӄондь, нен, мен, нынь, ӄан нынь [ГЛ:] ӄан нен,",
+            "segmented_text": "яғ-ди-та ӿоӄон-дь н-ен м-ен н-ынь ӄан н-ынь ӄан н-ен",
+            "glossed_text": "что.делать-NEG:EMPH-EMPH.3.PL быть.таким-IND один-CL два-CL один-CL собака один-CL собака один-CL",
             "length": 9,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Почему так, один, два, одна собака.",
             "miscellaneous": "",
@@ -2444,6 +2550,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2457,7 +2564,7 @@
                         "translation": "что.делать"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ӿоӄондь",
                         "lemma": "ӿоӄон",
                         "tagsets": [
@@ -2476,7 +2583,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -2495,7 +2602,7 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -2514,7 +2621,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "нынь",
                         "lemma": "н",
                         "tagsets": [
@@ -2533,14 +2640,13 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2553,7 +2659,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "нынь",
                         "lemma": "н",
                         "tagsets": [
@@ -2572,14 +2678,13 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2621,6 +2726,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2634,7 +2740,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "DET",
                               "Mood=Ind"
@@ -2650,7 +2756,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -2666,7 +2772,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -2682,7 +2788,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -2698,11 +2804,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2715,7 +2820,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -2731,11 +2836,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2767,15 +2871,25 @@
       },
       {
             "id": "20",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] чи ӄан ла (?)",
+            "segmented_text": "чи ӄан ла ",
+            "glossed_text": "ты собака QU ",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Ты разве собака?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -2793,14 +2907,13 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2813,7 +2926,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ла",
                         "lemma": "None",
                         "tagsets": [
@@ -2853,7 +2966,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -2868,11 +2981,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2885,7 +2997,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "None",
                               "Question=Yes"
@@ -2919,15 +3031,25 @@
       },
       {
             "id": "21",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "нынь ӿат итныдь,",
+            "segmented_text": "н-ынь ӿа-т ит-ны-дь",
+            "glossed_text": "один-CL так.делать-CONV.3.PL говорить-FUT-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Нужно сказать \"одна собака\",",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нынь",
                         "lemma": "н",
                         "tagsets": [
@@ -2974,7 +3096,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2990,7 +3113,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3028,7 +3151,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -3044,9 +3168,19 @@
       },
       {
             "id": "22",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "(нет), нен ӿагит лыр̌",
+            "segmented_text": "нет н-ен ӿа-гит лы-р̌",
+            "glossed_text": "нет один-CL быть.таким-COMPL делать-CONV.2.SG",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "(нет,) \"Один человек\" - так надо.",
             "miscellaneous": "",
@@ -3057,7 +3191,9 @@
                         "lemma": "нет",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3070,7 +3206,7 @@
                         "translation": "нет"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -3089,7 +3225,7 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ӿагит",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -3134,7 +3270,9 @@
                         "name": "-",
                         "id": "1",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -3147,7 +3285,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3163,7 +3301,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "DET",
                               "Aspect=Compl"
@@ -3200,15 +3338,25 @@
       },
       {
             "id": "23",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] а, нивх нен,",
+            "segmented_text": "а нивх н-ен",
+            "glossed_text": "а человек один-CL",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Один человек\",",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "а",
                         "lemma": "а",
                         "tagsets": [
@@ -3226,14 +3374,13 @@
                         "translation": "а"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нивх",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3268,7 +3415,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "CCONJ"
                         ],
@@ -3283,11 +3430,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3319,22 +3465,31 @@
       },
       {
             "id": "24",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] нивх нен,",
+            "segmented_text": "нивх н-ен",
+            "glossed_text": "человек один-CL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Один человек\",",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нивх",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3369,11 +3524,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3405,22 +3559,31 @@
       },
       {
             "id": "25",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] умгу нен,",
+            "segmented_text": "умгу н-ен",
+            "glossed_text": "женщина один-CL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Одна женщина\",",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3455,11 +3618,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3491,22 +3653,31 @@
       },
       {
             "id": "26",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] умгу нен,",
+            "segmented_text": "умгу н-ен",
+            "glossed_text": "женщина один-CL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Одна женщина\",",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3541,11 +3712,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3577,22 +3747,31 @@
       },
       {
             "id": "27",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] умгу мор",
+            "segmented_text": "умгу м-ор",
+            "glossed_text": "женщина два-CL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Два женщина\" (так не говорят).",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3627,11 +3806,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3663,22 +3841,31 @@
       },
       {
             "id": "28",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] умгу, мен мен, мен мен,",
+            "segmented_text": "умгу м-ен м-ен м-ен м-ен",
+            "glossed_text": "женщина два-CL два-CL два-CL два-CL",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "А говорят \"две женщины\".",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3691,7 +3878,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3710,7 +3897,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3729,7 +3916,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3770,11 +3957,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3787,7 +3973,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3803,7 +3989,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3819,7 +4005,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3854,15 +4040,25 @@
       },
       {
             "id": "29",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "мен мен, мор̌, умгу мен мен",
+            "segmented_text": "м-ен м-ен м-ор̌ умгу м-ен м-ен",
+            "glossed_text": "два-CL два-CL два-CL женщина два-CL два-CL",
             "length": 6,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Две женщины.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3881,7 +4077,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3900,7 +4096,7 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "мор̌",
                         "lemma": "м",
                         "tagsets": [
@@ -3919,14 +4115,13 @@
                         "translation": "два"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3939,7 +4134,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -3980,7 +4175,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -3996,7 +4191,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4012,7 +4207,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4028,11 +4223,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4045,7 +4239,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4080,22 +4274,31 @@
       },
       {
             "id": "30",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЯ:] ӄан мор ӿағар.",
+            "segmented_text": "ӄан м-ор ӿа-ғар",
+            "glossed_text": "собака два-CL быть.таким-IND:EMPH",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Две собаки\", так.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӄан",
                         "lemma": "ӄан",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4108,7 +4311,7 @@
                         "translation": "собака"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "мор",
                         "lemma": "м",
                         "tagsets": [
@@ -4150,11 +4353,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4167,7 +4369,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4203,15 +4405,25 @@
       },
       {
             "id": "31",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] ӄаукра. умгу мен мен.",
+            "segmented_text": "ӄау-к-ра умгу м-ен м-ен",
+            "glossed_text": "AUX:NEG-IND-FOC:PRED женщина два-CL два-CL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Нет, \"две женщины\".",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӄаукра",
                         "lemma": "None",
                         "tagsets": [
@@ -4234,14 +4446,13 @@
                         "translation": "None"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4254,7 +4465,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -4295,7 +4506,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "None",
                               "VerbType=Aux",
@@ -4315,11 +4526,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4332,7 +4542,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4367,22 +4577,31 @@
       },
       {
             "id": "32",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "умгу ӿоӈгур тяӄр̌ тяӄр̌,",
+            "segmented_text": "умгу ӿоӈ-гу-р т-яӄр̌ т-яӄр̌",
+            "glossed_text": "женщина быть.таким-CAUS-CONV.2.SG три-CL три-CL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Три женщины\", - так.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4395,7 +4614,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -4417,7 +4636,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тяӄр̌",
                         "lemma": "т",
                         "tagsets": [
@@ -4458,11 +4677,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4475,7 +4693,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -4494,7 +4712,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4529,15 +4747,25 @@
       },
       {
             "id": "33",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "ни ӿат ир̌ть.",
+            "segmented_text": "ни ӿа-т ир̌-ть",
+            "glossed_text": "я так.делать-CONV.1.SG говорить-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Я так говорю.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ни",
                         "lemma": "ни",
                         "tagsets": [
@@ -4583,6 +4811,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -4599,7 +4828,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -4636,6 +4865,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -4652,22 +4882,32 @@
       },
       {
             "id": "34",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "умгугу тяӄр̌ тяӄр̌ п’р̌ыдьғу",
+            "segmented_text": "умгу-гу т-яӄр̌ т-яӄр̌ п’р̌ы-дь-ғу",
+            "glossed_text": "женщина-PL три-CL три-CL приходить-IND-PL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Три женщины пришли.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгугу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4680,7 +4920,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "тяӄр̌",
                         "lemma": "т",
                         "tagsets": [
@@ -4699,7 +4939,7 @@
                         "translation": "три"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тяӄр̌",
                         "lemma": "т",
                         "tagsets": [
@@ -4726,6 +4966,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -4742,11 +4983,11 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4759,7 +5000,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4775,7 +5016,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -4796,6 +5037,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -4812,15 +5054,25 @@
       },
       {
             "id": "35",
-            "text": "[ГЛ:] наф р̌аӈс умгугу туӈк ӿуртивт (?)",
-            "length": 6,
-            "source": "Source unspecified",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
+            "text": "[ГЛ:] наф р̌аӈс умгугу туӈк ӿур тивт (?)",
+            "segmented_text": "наф р̌аӈс умгу-гу туӈк ӿур тив-т ",
+            "glossed_text": "сейчас сколько женщина-PL здесь здесь сидеть-CONV.3.PL ",
+            "length": 7,
             "sentence_tree": "-",
             "russian_text": "Сейчас сколько женщин сидят здесь?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "наф",
                         "lemma": "наф",
                         "tagsets": [
@@ -4838,7 +5090,7 @@
                         "translation": "сейчас"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "р̌аӈс",
                         "lemma": "р̌аӈс",
                         "tagsets": [
@@ -4856,14 +5108,14 @@
                         "translation": "сколько"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "умгугу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4876,7 +5128,7 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "туӈк",
                         "lemma": "туӈк",
                         "tagsets": [
@@ -4894,9 +5146,27 @@
                         "translation": "здесь"
                   },
                   {
-                        "itoken": "5",
-                        "token": "ӿуртивт",
-                        "lemma": "ӿуртив",
+                        "itoken": 5,
+                        "token": "ӿур",
+                        "lemma": "ӿур",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "здесь"
+                  },
+                  {
+                        "itoken": "6",
+                        "token": "тивт",
+                        "lemma": "тив",
                         "tagsets": [
                               [
                                     "VERB",
@@ -4912,10 +5182,10 @@
                               "is_head": false,
                               "id": "-"
                         },
-                        "translation": "садиться"
+                        "translation": "сидеть"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": "7",
                         "token": "",
                         "lemma": "NaN",
                         "tagsets": [
@@ -4936,7 +5206,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -4951,7 +5221,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM"
                         ],
@@ -4966,11 +5236,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4983,7 +5253,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "ADV"
                         ],
@@ -4998,7 +5268,22 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӿур"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӿур",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "6",
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
@@ -5007,16 +5292,16 @@
                         ],
                         "tokens": [
                               [
-                                    "ӿуртивт"
+                                    "тивт"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "ӿуртивт",
+                        "text": "тивт",
                         "length": 1
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": "7",
                         "tags": [
                               "PROPN"
                         ],
@@ -5034,15 +5319,25 @@
       },
       {
             "id": "36",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] (ну) тутух, ныр умгугу,",
+            "segmented_text": "ну тут-ух н-ыр умгу-гу",
+            "glossed_text": "ну тут-ABL четыре-CL женщина-PL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Здесь четверо женщин,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ну",
                         "lemma": "ну",
                         "tagsets": [
@@ -5060,7 +5355,7 @@
                         "translation": "ну"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "тутух",
                         "lemma": "тут",
                         "tagsets": [
@@ -5079,7 +5374,7 @@
                         "translation": "тут"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ныр",
                         "lemma": "н",
                         "tagsets": [
@@ -5105,7 +5400,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5121,7 +5416,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PART"
                         ],
@@ -5136,7 +5431,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "ADV",
                               "Case=Abl"
@@ -5152,7 +5447,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -5172,7 +5467,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5188,15 +5483,25 @@
       },
       {
             "id": "37",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "ныр умгугу.",
+            "segmented_text": "н-ыр умгу-гу",
+            "glossed_text": "четыре-CL женщина-PL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "четыре женщины,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ныр",
                         "lemma": "н",
                         "tagsets": [
@@ -5222,7 +5527,7 @@
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5238,7 +5543,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -5258,7 +5563,7 @@
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5274,15 +5579,25 @@
       },
       {
             "id": "38",
-            "text": "[ГЛ:] ныр умгугу ӿуртивт’ умдь,",
-            "length": 4,
-            "source": "Source unspecified",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
+            "text": "[ГЛ:] ныр умгугу ӿур тивт’ умдь,",
+            "segmented_text": "н-ыр умгу-гу ӿур тив-т’ ум-дь",
+            "glossed_text": "четыре-CL женщина-PL здесь сидеть-CONV.3.PL быть-IND",
+            "length": 5,
             "sentence_tree": "-",
             "russian_text": "Четыре женщин здесь сидят,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ныр",
                         "lemma": "н",
                         "tagsets": [
@@ -5301,14 +5616,14 @@
                         "translation": "четыре"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "умгугу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5321,9 +5636,27 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "3",
-                        "token": "ӿуртивт’",
-                        "lemma": "ӿуртив",
+                        "itoken": 3,
+                        "token": "ӿур",
+                        "lemma": "ӿур",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "здесь"
+                  },
+                  {
+                        "itoken": "4",
+                        "token": "тивт’",
+                        "lemma": "тив",
                         "tagsets": [
                               [
                                     "VERB",
@@ -5339,16 +5672,17 @@
                               "is_head": false,
                               "id": "-"
                         },
-                        "translation": "садиться"
+                        "translation": "сидеть"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": "5",
                         "token": "умдь",
                         "lemma": "ум",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -5365,7 +5699,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -5381,11 +5715,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5398,7 +5732,22 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӿур"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӿур",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "4",
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
@@ -5407,19 +5756,20 @@
                         ],
                         "tokens": [
                               [
-                                    "ӿуртивт’"
+                                    "тивт’"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "ӿуртивт’",
+                        "text": "тивт’",
                         "length": 1
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": "5",
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -5436,15 +5786,25 @@
       },
       {
             "id": "39",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "а уткуку (?)",
+            "segmented_text": "а утку-ку ",
+            "glossed_text": "а мужчина-PL ",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "А мужчин?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "а",
                         "lemma": "а",
                         "tagsets": [
@@ -5462,14 +5822,14 @@
                         "translation": "а"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "уткуку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5503,7 +5863,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "CCONJ"
                         ],
@@ -5518,11 +5878,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5553,22 +5913,31 @@
       },
       {
             "id": "40",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] утку нен пиир̌к.",
+            "segmented_text": "утку н-ен пиир̌к",
+            "glossed_text": "мужчина один-CL только",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Только один мужчина.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "утку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5581,7 +5950,7 @@
                         "translation": "мужчина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -5621,11 +5990,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5638,7 +6006,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -5672,22 +6040,31 @@
       },
       {
             "id": "41",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] утку, утку оғла нен,",
+            "segmented_text": "утку утку оғла н-ен",
+            "glossed_text": "мужчина мужчина ребёнок один-CL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Один молодой мужчина,",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "утку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5700,14 +6077,13 @@
                         "translation": "мужчина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "утку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5720,14 +6096,13 @@
                         "translation": "мужчина"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "оғла",
                         "lemma": "оғла",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5762,11 +6137,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5779,11 +6153,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5796,11 +6169,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5832,15 +6204,25 @@
       },
       {
             "id": "42",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] нен пиир̌к.",
+            "segmented_text": "н-ен пиир̌к",
+            "glossed_text": "один-CL только",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Только один.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -5880,7 +6262,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -5914,9 +6296,19 @@
       },
       {
             "id": "43",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ХС:] нира.",
+            "segmented_text": "ни-ра",
+            "glossed_text": "я-FOC:PRED",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Это я.",
             "miscellaneous": "",
@@ -5965,15 +6357,25 @@
       },
       {
             "id": "44",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] чира, утку оғла нен пиир̌к.",
+            "segmented_text": "чи-ра утку оғла н-ен пиир̌к",
+            "glossed_text": "ты-FOC:PRED мужчина ребёнок один-CL только",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Да, ты мальчик один.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "чира",
                         "lemma": "чи",
                         "tagsets": [
@@ -5993,14 +6395,13 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "утку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6013,14 +6414,13 @@
                         "translation": "мужчина"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "оғла",
                         "lemma": "оғла",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6033,7 +6433,7 @@
                         "translation": "ребёнок"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -6073,7 +6473,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Focus=Yes",
@@ -6090,11 +6490,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6107,11 +6506,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6124,7 +6522,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -6158,9 +6556,19 @@
       },
       {
             "id": "45",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] чфурт ӿумдьра",
+            "segmented_text": "ч-фур-т ӿум-дь-ра",
+            "glossed_text": "2.SG-говорить-CONV.1.PL быть-IND-FOC:PRED",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим.",
             "miscellaneous": "",
@@ -6198,6 +6606,7 @@
                                     "Mood=Ind",
                                     "Focus=Yes",
                                     "Predicative=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6240,6 +6649,7 @@
                               "Mood=Ind",
                               "Focus=Yes",
                               "Predicative=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6256,15 +6666,25 @@
       },
       {
             "id": "46-47",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "чи фурт ӿумдьра чфурт ӿумдьра",
+            "segmented_text": "чи фур-т ӿум-дь-ра ч-фур-т ӿум-дь-ра",
+            "glossed_text": "ты говорить-CONV.1.PL быть-IND-FOC:PRED 2.SG-говорить-CONV.1.PL быть-IND-EMPH.3.SG",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим, говорим про тебя.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -6312,6 +6732,7 @@
                                     "Mood=Ind",
                                     "Focus=Yes",
                                     "Predicative=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6358,6 +6779,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6374,7 +6796,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -6413,6 +6835,7 @@
                               "Mood=Ind",
                               "Focus=Yes",
                               "Predicative=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6453,6 +6876,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6469,9 +6893,19 @@
       },
       {
             "id": "48",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЯ:] чир̌т’ умдьра",
+            "segmented_text": "ч-ир̌-т’ ум-дь-ра",
+            "glossed_text": "2.SG-говорить-CONV.1.PL быть-IND-FOC:PRED",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим.",
             "miscellaneous": "",
@@ -6509,6 +6943,7 @@
                                     "Mood=Ind",
                                     "Focus=Yes",
                                     "Predicative=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6551,6 +6986,7 @@
                               "Mood=Ind",
                               "Focus=Yes",
                               "Predicative=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6567,9 +7003,19 @@
       },
       {
             "id": "49",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] чир̌т’ умдьра, чир̌т’ умдьра, (да),",
+            "segmented_text": "ч-ир̌-т’ ум-дь-ра ч-ир̌-т’ ум-дь-ра да",
+            "glossed_text": "2.SG-говорить-CONV.1.PL быть-IND-FOC:PRED 2.SG-говорить-CONV.1.PL быть-IND-FOC:PRED да",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим, да.",
             "miscellaneous": "",
@@ -6607,6 +7053,7 @@
                                     "Mood=Ind",
                                     "Focus=Yes",
                                     "Predicative=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6652,6 +7099,7 @@
                                     "Mood=Ind",
                                     "Focus=Yes",
                                     "Predicative=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6712,6 +7160,7 @@
                               "Mood=Ind",
                               "Focus=Yes",
                               "Predicative=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6751,6 +7200,7 @@
                               "Mood=Ind",
                               "Focus=Yes",
                               "Predicative=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6782,15 +7232,25 @@
       },
       {
             "id": "50",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "ньыӈ чир̌тьғу (да)",
+            "segmented_text": "ньыӈ ч-ир̌-ть-ғу да",
+            "glossed_text": "мы.EXCL 2.SG-говорить-IND-PL да",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Мы про тебя говорим.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ньыӈ",
                         "lemma": "ньыӈ",
                         "tagsets": [
@@ -6819,6 +7279,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6853,7 +7314,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -6876,6 +7337,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6907,22 +7369,31 @@
       },
       {
             "id": "51",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "утку оғла нен пиир̌кра",
+            "segmented_text": "утку оғла н-ен пиир̌к-ра",
+            "glossed_text": "мужчина ребёнок один-CL только-FOC:PRED",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Только один мальчик.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "утку",
                         "lemma": "утку",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6935,14 +7406,13 @@
                         "translation": "мужчина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "оғла",
                         "lemma": "оғла",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6955,7 +7425,7 @@
                         "translation": "ребёнок"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нен",
                         "lemma": "н",
                         "tagsets": [
@@ -6997,11 +7467,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -7014,11 +7483,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -7031,7 +7499,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -7067,9 +7535,19 @@
       },
       {
             "id": "52",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "чир̌тьғу",
+            "segmented_text": "ч-ир̌-ть-ғу",
+            "glossed_text": "2.SG-говорить-IND-PL",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим.",
             "miscellaneous": "",
@@ -7085,6 +7563,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7108,6 +7587,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7124,9 +7604,19 @@
       },
       {
             "id": "53",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "чфурдьлян, чир̌тьғу",
+            "segmented_text": "ч-фур-дь-лян ч-ир̌-ть-ғу",
+            "glossed_text": "2.SG-говорить-IND- 2.SG-говорить-IND-PL",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Про тебя говорим.",
             "miscellaneous": "",
@@ -7141,6 +7631,7 @@
                                     "Person[obj]=2",
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7164,6 +7655,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7186,6 +7678,7 @@
                               "Person[obj]=2",
                               "Number[obj]=Sing",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7206,6 +7699,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7222,9 +7716,19 @@
       },
       {
             "id": "54",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] чир̌тьғу, а, ӿыдьғу, ӿыдьғу",
+            "segmented_text": "ч-ир̌-ть-ғу а ӿыдь-ғу ӿыдь-ғу",
+            "glossed_text": "2.SG-говорить-IND-PL а этот-PL этот-PL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Они, они про тебя говорят.",
             "miscellaneous": "",
@@ -7240,6 +7744,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7253,7 +7758,7 @@
                         "translation": "говорить"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "а",
                         "lemma": "а",
                         "tagsets": [
@@ -7271,7 +7776,7 @@
                         "translation": "а"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿыдьғу",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -7319,6 +7824,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7332,7 +7838,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "CCONJ"
                         ],
@@ -7347,7 +7853,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "DET",
                               "Number=Plur"
@@ -7382,15 +7888,25 @@
       },
       {
             "id": "55",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] ӿы умгуғу чир̌тьғу, чир̌тьғу.",
+            "segmented_text": "ӿы умгу-ғу ч-ир̌-ть-ғу ч-ир̌-ть-ғу",
+            "glossed_text": "этот женщина-PL 2.SG-говорить-IND-PL 2.SG-говорить-IND-PL",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Эти женщины про тебя говорят.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -7408,14 +7924,14 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "умгуғу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7438,6 +7954,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7461,6 +7978,7 @@
                                     "Number[obj]=Sing",
                                     "Mood=Ind",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7477,7 +7995,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -7492,11 +8010,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -7516,6 +8034,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7536,6 +8055,7 @@
                               "Number[obj]=Sing",
                               "Mood=Ind",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7552,15 +8072,25 @@
       },
       {
             "id": "56-59",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] иф, иф наф мер к’еспурдь мырор п’вох тутх п’рыр̌ ӿоӈгур итныдьра",
+            "segmented_text": "иф иф наф мер к’ес-пур-дь мы-рор п’-во-х тут-х п’ры-р̌ ӿоӈ-гу-р ит-ны-дь-ра",
+            "glossed_text": "он он сейчас мы.INCL известие-говорить-IND слышать-CONV:ANT.3.SG REFL-стойбище-ABL тут-ABL приходить-CONV.3.SG быть.таким-CAUS-CONV.3.SG говорить-FUT-IND-FOC:PRED",
             "length": 12,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Он сейчас послушает о чём мы говорим, поедет к себе в своё село и так будет говорить.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "иф",
                         "lemma": "иф",
                         "tagsets": [
@@ -7578,7 +8108,7 @@
                         "translation": "он"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "иф",
                         "lemma": "иф",
                         "tagsets": [
@@ -7596,7 +8126,7 @@
                         "translation": "он"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "наф",
                         "lemma": "наф",
                         "tagsets": [
@@ -7614,7 +8144,7 @@
                         "translation": "сейчас"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "мер",
                         "lemma": "мер",
                         "tagsets": [
@@ -7633,15 +8163,14 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "к’еспурдь",
                         "lemma": "к’ес",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Mood=Ind",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7676,7 +8205,7 @@
                         "translation": "слышать"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -7696,14 +8225,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "вох",
                         "lemma": "во",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7716,7 +8244,7 @@
                         "translation": "стойбище"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "тутх",
                         "lemma": "тут",
                         "tagsets": [
@@ -7756,7 +8284,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -7787,7 +8315,8 @@
                                     "Tense=Fut",
                                     "Mood=Ind",
                                     "Focus=Yes",
-                                    "Predicative=Yes"
+                                    "Predicative=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7803,7 +8332,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -7818,7 +8347,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PRON"
                         ],
@@ -7833,7 +8362,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "ADV"
                         ],
@@ -7848,7 +8377,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PRON",
                               "Clusivity=In"
@@ -7864,12 +8393,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
                               "Mood=Ind",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -7901,7 +8429,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -7918,11 +8446,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -7935,7 +8462,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "ADV",
                               "Case=Abl"
@@ -7969,7 +8496,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -7994,7 +8521,8 @@
                               "Tense=Fut",
                               "Mood=Ind",
                               "Focus=Yes",
-                              "Predicative=Yes"
+                              "Predicative=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -8010,9 +8538,19 @@
       },
       {
             "id": "60",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ХС:] сизм воух, п’рыудь",
+            "segmented_text": "сизм во-ух п’рыу-дь",
+            "glossed_text": "японский стойбище-ABL учиться-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "В Японии учусь.",
             "miscellaneous": "",
@@ -8023,7 +8561,9 @@
                         "lemma": "сизм",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8036,14 +8576,13 @@
                         "translation": "японский"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "воух",
                         "lemma": "во",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8063,6 +8602,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -8081,7 +8621,9 @@
                         "name": "-",
                         "id": "1",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -8094,11 +8636,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -8115,6 +8656,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -8131,9 +8673,19 @@
       },
       {
             "id": "61",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] сизм воух п’рыуныдь",
+            "segmented_text": "сизм во-ух п’рыу-ны-дь",
+            "glossed_text": "японский стойбище-ABL учиться-FUT-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "В Японии будешь учиться,",
             "miscellaneous": "",
@@ -8144,7 +8696,9 @@
                         "lemma": "сизм",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8157,14 +8711,13 @@
                         "translation": "японский"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "воух",
                         "lemma": "во",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8184,7 +8737,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8202,7 +8756,9 @@
                         "name": "-",
                         "id": "1",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -8215,11 +8771,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -8236,7 +8791,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -8252,9 +8808,19 @@
       },
       {
             "id": "62",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ХС:] п’рыуныдь",
+            "segmented_text": "п’рыу-ны-дь",
+            "glossed_text": "учиться-FUT-IND",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Буду учиться.",
             "miscellaneous": "",
@@ -8267,7 +8833,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8287,7 +8854,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -8303,15 +8871,25 @@
       },
       {
             "id": "63-64",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] ӿоӄоӈан ньр̌ак мерах п’ситр̌ к’еспургуйныр̌,",
+            "segmented_text": "ӿоӄо-ӈан нь-р̌ак мер-ах п’-сит-р̌ к’ес-пур-гу-йны-р̌",
+            "glossed_text": "быть.таким-CONV:ANT один-раз мы.INCL-CAUSEE REFL-что-CONV.3.SG новость-говорить-CAUS-DES-CONV.3.SG",
             "length": 6,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Чтобы мы всегда говорили по-своему.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿоӄоӈан",
                         "lemma": "ӿоӄо",
                         "tagsets": [
@@ -8331,7 +8909,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ньр̌ак",
                         "lemma": "нь",
                         "tagsets": [
@@ -8349,7 +8927,7 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "мерах",
                         "lemma": "мер",
                         "tagsets": [
@@ -8369,7 +8947,7 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -8389,7 +8967,7 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "ситр̌",
                         "lemma": "сит",
                         "tagsets": [
@@ -8421,8 +8999,7 @@
                                     "VerbForm=Conv",
                                     "Person[psor]=3",
                                     "Number[psor]=Sing",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8438,7 +9015,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -8455,7 +9032,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NUM"
                         ],
@@ -8470,7 +9047,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON",
                               "Case=Cau",
@@ -8487,7 +9064,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -8504,7 +9081,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "PRON",
                               "VerbForm=Conv",
@@ -8530,8 +9107,7 @@
                               "VerbForm=Conv",
                               "Person[psor]=3",
                               "Number[psor]=Sing",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8547,15 +9123,25 @@
       },
       {
             "id": "65-66",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЯ:] ыкыкы п’рыуғытға мер т’хырпғыртӈан п’р̌ыныдьля (?)",
+            "segmented_text": "ыкыкы п’рыу-ғыт-ға мер т’хырп-ғырт-ӈан п’р̌ы-ны-дь-ля ",
+            "glossed_text": "наконец учиться-COMPL-CONV:COND мы.INCL забывать-COMPL?-CONV:ANT приходить-FUT-IND-QU ",
             "length": 6,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Как закончит учёбу, забудет нас, приедет ли к нам?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ыкыкы",
                         "lemma": "ыкыкы",
                         "tagsets": [
@@ -8594,7 +9180,7 @@
                         "translation": "учиться"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "мер",
                         "lemma": "мер",
                         "tagsets": [
@@ -8641,7 +9227,8 @@
                                     "VERB",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Question=Yes"
+                                    "Question=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8675,7 +9262,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -8708,7 +9295,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON",
                               "Clusivity=In"
@@ -8746,7 +9333,8 @@
                               "VERB",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Question=Yes"
+                              "Question=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -8777,9 +9365,19 @@
       },
       {
             "id": "67",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] п’р̌ынин",
+            "segmented_text": "п’р̌ы-нин",
+            "glossed_text": "приходить-FUT",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Приедет.",
             "miscellaneous": "",
@@ -8791,7 +9389,8 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Tense=Fut"
+                                    "Tense=Fut",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8810,7 +9409,8 @@
                         "id": "1",
                         "tags": [
                               "VERB",
-                              "Tense=Fut"
+                              "Tense=Fut",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -8826,15 +9426,25 @@
       },
       {
             "id": "68-69",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] а ыкыкы п’рыуғытға, ырк [ВХ:] ньыӈ т’хырпғытныдьля (?)",
+            "segmented_text": "а ыкыкы п’рыу-ғыт-ға ырк ньыӈ т’хырп-ғыт-ны-дь-ля ",
+            "glossed_text": "а наконец учиться-COMPL-CONV:COND уже мы.EXCL забывать-COMPL-FUT-IND-QU ",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Как закончит учёбу, нас забудет, что ли?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "а",
                         "lemma": "а",
                         "tagsets": [
@@ -8852,7 +9462,7 @@
                         "translation": "а"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ыкыкы",
                         "lemma": "ыкыкы",
                         "tagsets": [
@@ -8891,7 +9501,7 @@
                         "translation": "учиться"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ырк",
                         "lemma": "ырк",
                         "tagsets": [
@@ -8909,7 +9519,7 @@
                         "translation": "уже"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "ньыӈ",
                         "lemma": "ньыӈ",
                         "tagsets": [
@@ -8937,7 +9547,8 @@
                                     "Aspect=Compl",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Question=Yes"
+                                    "Question=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8971,7 +9582,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "CCONJ"
                         ],
@@ -8986,7 +9597,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "ADV"
                         ],
@@ -9019,7 +9630,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "ADV"
                         ],
@@ -9034,7 +9645,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -9056,7 +9667,8 @@
                               "Aspect=Compl",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Question=Yes"
+                              "Question=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -9087,15 +9699,25 @@
       },
       {
             "id": "70-71",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] тукр̌ п’ин нивхгу сык [ВХ:] т’хырпғыр̌тох (?)",
+            "segmented_text": "тукр̌ п’и-н нивх-гу сык т’хырп-ғыр̌-тох ",
+            "glossed_text": "здесь жить- человек-PL все забывать-COMPL-DAT ",
             "length": 6,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Здешних людей всех забудет?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "тукр̌",
                         "lemma": "тукр̌",
                         "tagsets": [
@@ -9118,7 +9740,9 @@
                         "lemma": "п’и",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9131,14 +9755,14 @@
                         "translation": "жить"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нивхгу",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9151,7 +9775,7 @@
                         "translation": "человек"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "сык",
                         "lemma": "сык",
                         "tagsets": [
@@ -9176,7 +9800,9 @@
                               [
                                     "VERB",
                                     "Aspect=Compl",
-                                    "Case=Dat"
+                                    "Case=Dat",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9210,7 +9836,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -9227,7 +9853,9 @@
                         "name": "-",
                         "id": "2",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -9240,11 +9868,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9257,7 +9885,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PRON"
                         ],
@@ -9276,7 +9904,9 @@
                         "tags": [
                               "VERB",
                               "Aspect=Compl",
-                              "Case=Dat"
+                              "Case=Dat",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -9307,22 +9937,31 @@
       },
       {
             "id": "72",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] нивх дитр̌ к’еспурта ӄ’ауныӄан",
+            "segmented_text": "нивх дитр̌ к’ес-пур-та ӄ’ау-ны-ӄан",
+            "glossed_text": "человек язык новость-говорить-EMPH.3.PL AUX:NEG-FUT-IND",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "По-нивхски разговаривать не будут.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нивх",
                         "lemma": "нивх",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9335,14 +9974,13 @@
                         "translation": "человек"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "дитр̌",
                         "lemma": "дитр̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9355,7 +9993,7 @@
                         "translation": "язык"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "к’еспурта",
                         "lemma": "к’ес",
                         "tagsets": [
@@ -9364,8 +10002,7 @@
                                     "Emphatic=Yes",
                                     "Person[psor]=3",
                                     "Number[psor]=Plur",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9403,11 +10040,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9420,11 +10056,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9437,14 +10072,13 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
                               "Emphatic=Yes",
                               "Person[psor]=3",
                               "Number[psor]=Plur",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9479,9 +10113,19 @@
       },
       {
             "id": "73",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] т’хырпғытныдьля (?)",
+            "segmented_text": "т’хырп-ғыт-ны-дь-ля ",
+            "glossed_text": "забывать-COMPL-FUT-IND-QU ",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Забудет, что ли?",
             "miscellaneous": "",
@@ -9496,7 +10140,8 @@
                                     "Aspect=Compl",
                                     "Tense=Fut",
                                     "Mood=Ind",
-                                    "Question=Yes"
+                                    "Question=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9536,7 +10181,8 @@
                               "Aspect=Compl",
                               "Tense=Fut",
                               "Mood=Ind",
-                              "Question=Yes"
+                              "Question=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -9567,15 +10213,25 @@
       },
       {
             "id": "74",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "ньыӈ т’хырпғытра (?)",
+            "segmented_text": "ньыӈ т’хырп-ғыт-ра ",
+            "glossed_text": "мы.EXCL забывать-COMPL-EMPH.3.SG ",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "И нас забудет?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ньыӈ",
                         "lemma": "ньыӈ",
                         "tagsets": [
@@ -9604,6 +10260,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -9638,7 +10295,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -9661,6 +10318,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -9692,15 +10350,25 @@
       },
       {
             "id": "75",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] мер ырк муғытныӄан",
+            "segmented_text": "мер ырк му-ғыт-ны-ӄан",
+            "glossed_text": "мы.INCL уже умирать-COMPL-FUT-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Нас уже не будет.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "мер",
                         "lemma": "мер",
                         "tagsets": [
@@ -9719,7 +10387,7 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ырк",
                         "lemma": "ырк",
                         "tagsets": [
@@ -9745,7 +10413,8 @@
                                     "VERB",
                                     "Aspect=Compl",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9761,7 +10430,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=In"
@@ -9777,7 +10446,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "ADV"
                         ],
@@ -9797,7 +10466,8 @@
                               "VERB",
                               "Aspect=Compl",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -9813,15 +10483,25 @@
       },
       {
             "id": "76",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ГЛ:] мер муғытныӄан",
+            "segmented_text": "мер му-ғыт-ны-ӄан",
+            "glossed_text": "мы.INCL умирать-COMPL-FUT-IND",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Мы уже умрём.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "мер",
                         "lemma": "мер",
                         "tagsets": [
@@ -9848,7 +10528,8 @@
                                     "VERB",
                                     "Aspect=Compl",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9864,7 +10545,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=In"
@@ -9885,7 +10566,8 @@
                               "VERB",
                               "Aspect=Compl",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -9901,9 +10583,19 @@
       },
       {
             "id": "77-78",
+            "metadata": {
+                  "title_n": "Энагут юрут",
+                  "title_r": "По-другому считают",
+                  "genre": "Диалог",
+                  "dialect": "Амурский",
+                  "author": "В.Е. Xейн, Г.Ф. Ялина, Г.Д. Лок, А.П. Латун",
+                  "interviewer": "Шираиши",
+                  "date": "19.10.2001"
+            },
             "text": "[ВХ:] муғытғитлыр тьык тьык мор̌ӄанд ӿумндлян (?)",
+            "segmented_text": "му-ғыт-ғитлы-р тьык тьык мор̌ӄа-нд ӿум-нд-ля-н ",
+            "glossed_text": "умирать-COMPL-EMPH-CONV.3.SG долго долго быть.живым-IND быть-IND-QU- ",
             "length": 6,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Конечно умрём, разве долго будем жить?",
             "miscellaneous": "",
@@ -9919,8 +10611,7 @@
                                     "Emphatic=Yes",
                                     "VerbForm=Conv",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing",
-                                    "Tense=Pres_Aor"
+                                    "Number[subj]=Sing"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9933,7 +10624,7 @@
                         "translation": "умирать"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "тьык",
                         "lemma": "тьык",
                         "tagsets": [
@@ -9951,7 +10642,7 @@
                         "translation": "долго"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тьык",
                         "lemma": "тьык",
                         "tagsets": [
@@ -9976,6 +10667,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -9997,6 +10689,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Question=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -10038,8 +10731,7 @@
                               "Emphatic=Yes",
                               "VerbForm=Conv",
                               "Person[subj]=3",
-                              "Number[subj]=Sing",
-                              "Tense=Pres_Aor"
+                              "Number[subj]=Sing"
                         ],
                         "tokens": [
                               [
@@ -10052,7 +10744,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "ADV"
                         ],
@@ -10067,7 +10759,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "ADV"
                         ],
@@ -10086,6 +10778,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -10104,6 +10797,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Question=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [

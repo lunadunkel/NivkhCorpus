@@ -1,15 +1,25 @@
 [
       {
             "id": "1",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "тапракут меӻравe (:)",
+            "segmented_text": "тапра-ку-т меӻра-вe :",
+            "glossed_text": "быть.таким-CAUS-CONV.2.PL молиться-IMP.2.PL :",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Молитесь так:",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "тапракут",
                         "lemma": "тапра",
                         "tagsets": [
@@ -39,7 +49,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=2",
-                                    "Number[subj]=Plur"
+                                    "Number[subj]=Plur",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -73,7 +84,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -97,7 +108,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=2",
-                              "Number[subj]=Plur"
+                              "Number[subj]=Plur",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -128,22 +140,31 @@
       },
       {
             "id": "2",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "т’лы фи нин Ытык, Чи ӄ’а маӈӄӻаро (!)",
+            "segmented_text": "т’лы фи нин Ытык Чи ӄ’а маӈӄ-ӻаро ",
+            "glossed_text": "небо находиться мы.EXCL Отец Ты имя быть.ценным-IMP.3.SG ",
             "length": 8,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Отец наш на Небесах, пусть прославится Твое имя!",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "т’лы",
                         "lemma": "т’лы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -161,7 +182,9 @@
                         "lemma": "фи",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -174,7 +197,7 @@
                         "translation": "находиться"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -193,14 +216,13 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "Ытык",
                         "lemma": "Ытык",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -213,7 +235,7 @@
                         "translation": "Отец"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "Чи",
                         "lemma": "Чи",
                         "tagsets": [
@@ -231,14 +253,13 @@
                         "translation": "Ты"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "ӄ’а",
                         "lemma": "ӄ’а",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -259,7 +280,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -293,11 +315,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -312,7 +333,9 @@
                         "name": "-",
                         "id": "2",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -325,7 +348,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -341,11 +364,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -358,7 +380,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "PRON"
                         ],
@@ -373,11 +395,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -395,7 +416,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=3",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -426,15 +448,25 @@
       },
       {
             "id": "3-4",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "Чи Чхыму ыр п’рыӻаро, мивух, т’лыух ӈалакур̌, Чи ӄ’оӻа весӄарлаф нығытӻаро.",
+            "segmented_text": "Чи Чхыму ыр п’ры-ӻаро мив-ух т’лы-ух ӈала-ку-р̌ Чи ӄ’оӻа весӄар-ла-ф ны-ғыт-ӻаро",
+            "glossed_text": "Ты Царство время приходить-IMP.3.SG земля-ABL небо-ABL походить-CAUS-CONV.3.SG Ты воля быть.сильным-ATR-NMN:L делать-COMPL-IMP.3.SG",
             "length": 11,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Пусть придет Твое Царство и исполнится Твоя воля на земле, как и на небесах.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "Чи",
                         "lemma": "Чи",
                         "tagsets": [
@@ -452,14 +484,13 @@
                         "translation": "Ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "Чхыму",
                         "lemma": "Чхыму",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -472,14 +503,13 @@
                         "translation": "Царство"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ыр",
                         "lemma": "ыр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -500,7 +530,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -513,14 +544,13 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "мивух",
                         "lemma": "мив",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -533,14 +563,13 @@
                         "translation": "земля"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "т’лыух",
                         "lemma": "т’лы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -575,7 +604,7 @@
                         "translation": "походить"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "Чи",
                         "lemma": "Чи",
                         "tagsets": [
@@ -593,14 +622,13 @@
                         "translation": "Ты"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "ӄ’оӻа",
                         "lemma": "ӄ’оӻа",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -644,7 +672,8 @@
                                     "Aspect=Compl",
                                     "Mood=Imp",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -660,7 +689,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -675,11 +704,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -692,11 +720,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -714,7 +741,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=3",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -727,11 +755,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -744,11 +771,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -780,7 +806,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "PRON"
                         ],
@@ -795,11 +821,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -837,7 +862,8 @@
                               "Aspect=Compl",
                               "Mood=Imp",
                               "Person[subj]=3",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -853,15 +879,25 @@
       },
       {
             "id": "5",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "ныух нин иньнык нин химйа.",
+            "segmented_text": "ныух нин инь-ны-к нин хим-йа",
+            "glossed_text": "сегодня мы.EXCL есть-FUT-NMN:A мы.EXCL давать-IMP.2.SG",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Дай нам пропитание на сегодняшний день.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ныух",
                         "lemma": "ныух",
                         "tagsets": [
@@ -879,7 +915,7 @@
                         "translation": "сегодня"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -919,7 +955,7 @@
                         "translation": "есть"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -946,7 +982,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=2",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -962,7 +999,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -977,7 +1014,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1011,7 +1048,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1032,7 +1069,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=2",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1048,15 +1086,25 @@
       },
       {
             "id": "6-8",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "нин п’ух наӈр̌ во нивхкунтоӽ урр̌кир̌ т’хыпт ӈалакур̌, нин наӈр̌кун Ӄ’оӻа урр̌кир̌ т’хыр̌ғытйа.",
+            "segmented_text": "нин п’-ух наӈр̌ во нивх-кун-тоӽ ур-р̌-кир̌ т’хып-т ӈала-ку-р̌ нин наӈр̌-кун Ӄ’оӻа ур-р̌-кир̌ т’хыр̌-ғыт-йа",
+            "glossed_text": "мы.EXCL REFL-ABL долг стойбище человек-PL-DAT быть.хорошим-NMN:I-INST забывать-CONV.1.PL походить-CAUS-CONV.3.SG мы.EXCL долг-PL воля быть.хорошим-NMN:I-INST забывать-COMPL-IMP.2.SG",
             "length": 13,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Прости нам наши долги, как и мы прощаем нашим должникам.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -1075,7 +1123,7 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "п’ух",
                         "lemma": "None",
                         "tagsets": [
@@ -1095,14 +1143,13 @@
                         "translation": "None"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "наӈр̌",
                         "lemma": "наӈр̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1115,14 +1162,13 @@
                         "translation": "долг"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "во",
                         "lemma": "во",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1135,7 +1181,7 @@
                         "translation": "стойбище"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "нивхкунтоӽ",
                         "lemma": "нивх",
                         "tagsets": [
@@ -1220,7 +1266,7 @@
                         "translation": "походить"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -1239,14 +1285,14 @@
                         "translation": "мы"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "наӈр̌кун",
                         "lemma": "наӈр̌",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1259,14 +1305,13 @@
                         "translation": "долг"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "Ӄ’оӻа",
                         "lemma": "Ӄ’оӻа",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1310,7 +1355,8 @@
                                     "Aspect=Compl",
                                     "Mood=Imp",
                                     "Person[subj]=2",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1326,7 +1372,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1342,7 +1388,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "None",
                               "Reflex=Yes",
@@ -1359,11 +1405,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1376,11 +1421,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1393,7 +1437,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
@@ -1466,7 +1510,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1482,11 +1526,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1499,11 +1543,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1541,7 +1584,8 @@
                               "Aspect=Compl",
                               "Mood=Imp",
                               "Person[subj]=2",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1557,15 +1601,25 @@
       },
       {
             "id": "9-11",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "нин р̌утлу ыкис аӻньтоӽ, ныныфтоӽ нин ытӈуя, наквур милкроӽлу, орӻлакроӽлу нин хылӻуйа.",
+            "segmented_text": "нин р̌у-т-лу ыки-с аӻнь-тоӽ ны-ны-ф-тоӽ нин ытӈу-я нак-вур милк-роӽ-лу орӻлак-роӽ-лу нин хыл-ӻу-йа",
+            "glossed_text": "мы.EXCL следовать-CONV.2.PL-INDEF быть.плохим-NMN:I хотеть-DAT делать-делать-NMN:L-DAT мы.EXCL оберегать-IMP.2.SG быть.таким-ISP.3.SG злой.дух-DAT-INDEF сатана-DAT-INDEF мы.EXCL быть.свободным-CAUS-IMP.2.SG",
             "length": 12,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Не дай нам поддаться искушению, но избавь нас от зла.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -1633,7 +1687,9 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Case=Dat"
+                                    "Case=Dat",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1668,7 +1724,7 @@
                         "translation": "делать"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -1695,7 +1751,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=2",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1708,7 +1765,7 @@
                         "translation": "оберегать"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "наквур",
                         "lemma": "нак",
                         "tagsets": [
@@ -1729,15 +1786,14 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "милкроӽлу",
                         "lemma": "милк",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Case=Dat",
-                                    "Definite=Ind",
-                                    "Number=Sing"
+                                    "Definite=Ind"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1750,15 +1806,14 @@
                         "translation": "злой.дух"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "орӻлакроӽлу",
                         "lemma": "орӻлак",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Case=Dat",
-                                    "Definite=Ind",
-                                    "Number=Sing"
+                                    "Definite=Ind"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1771,7 +1826,7 @@
                         "translation": "сатана"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "нин",
                         "lemma": "нин",
                         "tagsets": [
@@ -1799,7 +1854,8 @@
                                     "Voice=Caus",
                                     "Mood=Imp",
                                     "Person[subj]=2",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1815,7 +1871,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1871,7 +1927,9 @@
                         "id": "4",
                         "tags": [
                               "VERB",
-                              "Case=Dat"
+                              "Case=Dat",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -1903,7 +1961,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -1924,7 +1982,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=2",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1937,7 +1996,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "DET",
                               "Mood=Indir",
@@ -1955,12 +2014,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
                               "Case=Dat",
-                              "Definite=Ind",
-                              "Number=Sing"
+                              "Definite=Ind"
                         ],
                         "tokens": [
                               [
@@ -1973,12 +2031,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "NOUN",
                               "Case=Dat",
-                              "Definite=Ind",
-                              "Number=Sing"
+                              "Definite=Ind"
                         ],
                         "tokens": [
                               [
@@ -1991,7 +2048,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "PRON",
                               "Clusivity=Ex"
@@ -2013,7 +2070,8 @@
                               "Voice=Caus",
                               "Mood=Imp",
                               "Person[subj]=2",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -2029,15 +2087,25 @@
       },
       {
             "id": "12",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "Чи чхыму ыр по Курӈ маӈӷла Ызык, Чи тьыӈғе, славағе полти ыр морӄаӻаро.",
+            "segmented_text": "Чи чхыму ыр по Курӈ маӈӷ-ла Ызык Чи тьыӈ-ғе слава-ғе полти ыр морӄа-ӻаро",
+            "glossed_text": "Ты царство время UNK Вселенная быть.сильным-ATR Хозяин Ты сила-COM слава-COM быть.вечным время жить-IMP.3.SG",
             "length": 13,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Ты царствуешь над всем, у Тебя вся сила, и Тебе принадлежит вся слава вовеки.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "Чи",
                         "lemma": "Чи",
                         "tagsets": [
@@ -2055,14 +2123,13 @@
                         "translation": "Ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "чхыму",
                         "lemma": "чхыму",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2075,14 +2142,13 @@
                         "translation": "царство"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ыр",
                         "lemma": "ыр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2095,12 +2161,12 @@
                         "translation": "время"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "по",
-                        "lemma": "NaN",
+                        "lemma": "None",
                         "tagsets": [
                               [
-                                    "PROPN"
+                                    "None"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2110,17 +2176,16 @@
                               "is_head": false,
                               "id": "-"
                         },
-                        "translation": "NaN"
+                        "translation": "None"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "Курӈ",
                         "lemma": "Курӈ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2152,14 +2217,13 @@
                         "translation": "быть.сильным"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "Ызык",
                         "lemma": "Ызык",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2172,7 +2236,7 @@
                         "translation": "Хозяин"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "Чи",
                         "lemma": "Чи",
                         "tagsets": [
@@ -2190,14 +2254,13 @@
                         "translation": "Ты"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "тьыӈғе",
                         "lemma": "тьыӈ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2210,14 +2273,13 @@
                         "translation": "сила"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "славағе",
                         "lemma": "слава",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2235,7 +2297,9 @@
                         "lemma": "полти",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2248,14 +2312,13 @@
                         "translation": "быть.вечным"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 12,
                         "token": "ыр",
                         "lemma": "ыр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2276,7 +2339,8 @@
                                     "VERB",
                                     "Mood=Imp",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2292,7 +2356,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -2307,11 +2371,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2324,11 +2387,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2341,9 +2403,9 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
-                              "PROPN"
+                              "None"
                         ],
                         "tokens": [
                               [
@@ -2356,11 +2418,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2389,11 +2450,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2406,7 +2466,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "PRON"
                         ],
@@ -2421,11 +2481,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -2438,11 +2497,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -2457,7 +2515,9 @@
                         "name": "-",
                         "id": "11",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -2470,11 +2530,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2492,7 +2551,8 @@
                               "VERB",
                               "Mood=Imp",
                               "Person[subj]=3",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -2508,9 +2568,19 @@
       },
       {
             "id": "13",
+            "metadata": {
+                  "title_n": "Тʼлы фи ньыӈ Ытыка",
+                  "title_r": "Молитва «Отче наш»",
+                  "genre": "Священный текст",
+                  "dialect": "Шмидтовский",
+                  "author": "Н. Г. Бессонова",
+                  "interviewer": "Н. Г. Бессонова",
+                  "date": "2018"
+            },
             "text": "тапраӻаро».",
+            "segmented_text": "тапра-ӻаро",
+            "glossed_text": "быть.таким-IMP.3.SG",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Аминь».",
             "miscellaneous": "",

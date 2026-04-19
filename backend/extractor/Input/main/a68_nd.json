@@ -1,22 +1,31 @@
 [
       {
             "id": "0",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "к’еӄғе няӻр̌ке",
+            "segmented_text": "к’еӄ-ғе няӻр̌-ке",
+            "glossed_text": "лис-COM мышонок-COM",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Лис и мышонок",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "к’еӄғе",
                         "lemma": "к’еӄ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -35,8 +44,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -52,11 +60,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -72,8 +79,7 @@
                         "id": "2",
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -89,22 +95,31 @@
       },
       {
             "id": "1",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "няӻра, няӻра, чи ух яӻр̌ ӈалсӄодь (?)",
+            "segmented_text": "няӻр-а няӻр-а чи ух яӻр̌ ӈалсӄо-дь ",
+            "glossed_text": "мышонок-VOC мышонок-VOC ты нос почему быть.грязным-IND ",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Мышонок, мышонок, отчего у тебя нос грязный?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -117,14 +132,13 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -137,7 +151,7 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -155,14 +169,13 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ух",
                         "lemma": "ух",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -175,7 +188,7 @@
                         "translation": "нос"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "яӻр̌",
                         "lemma": "яӻр̌",
                         "tagsets": [
@@ -200,6 +213,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -234,11 +248,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -251,11 +264,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -268,7 +280,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON"
                         ],
@@ -283,11 +295,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -300,7 +311,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "ADV"
                         ],
@@ -319,6 +330,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -350,15 +362,25 @@
       },
       {
             "id": "2",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "ни миф хыздь.",
+            "segmented_text": "ни миф хыз-дь",
+            "glossed_text": "я земля копать-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Землю копал.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ни",
                         "lemma": "ни",
                         "tagsets": [
@@ -376,14 +398,13 @@
                         "translation": "я"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "миф",
                         "lemma": "миф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -403,6 +424,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -419,7 +441,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -434,11 +456,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -455,6 +476,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -471,15 +493,25 @@
       },
       {
             "id": "3",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "яӻр̌ миф хыздь (?)",
+            "segmented_text": "яӻр̌ миф хыз-дь ",
+            "glossed_text": "зачем земля копать-IND ",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Для чего землю копал?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "яӻр̌",
                         "lemma": "яӻр̌",
                         "tagsets": [
@@ -497,14 +529,13 @@
                         "translation": "зачем"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "миф",
                         "lemma": "миф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -524,6 +555,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -558,7 +590,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -573,11 +605,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -594,6 +625,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -625,22 +657,31 @@
       },
       {
             "id": "4",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "тыф п’ерӽ ныдь.",
+            "segmented_text": "тыф п’е-рӽ ны-дь",
+            "glossed_text": "дом REFL-DAT делать-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Себе норку делал.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "тыф",
                         "lemma": "тыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -653,7 +694,7 @@
                         "translation": "дом"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "п’ерӽ",
                         "lemma": "None",
                         "tagsets": [
@@ -680,6 +721,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -696,11 +738,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -713,7 +754,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "None",
                               "Reflex=Yes",
@@ -734,6 +775,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -750,15 +792,25 @@
       },
       {
             "id": "5",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "яӻр̌ тыф ныдь (?)",
+            "segmented_text": "яӻр̌ тыф ны-дь ",
+            "glossed_text": "зачем дом делать-IND ",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Для чего норку делал?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "яӻр̌",
                         "lemma": "яӻр̌",
                         "tagsets": [
@@ -776,14 +828,13 @@
                         "translation": "зачем"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "тыф",
                         "lemma": "тыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -803,6 +854,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -837,7 +889,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -852,11 +904,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -873,6 +924,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -904,22 +956,31 @@
       },
       {
             "id": "6",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "к’еӄа, чи ни ньр̌ытоӽ ӄ’аугундь.",
+            "segmented_text": "к’еӄ-а чи ни ньр̌ы-тоӽ ӄ’ау-гу-н-дь",
+            "glossed_text": "лис-VOC ты я видеть-DAT AUX:NEG-CAUS-FUT-IND",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Чтобы ты, лис, меня не увидел.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "к’еӄа",
                         "lemma": "к’еӄ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -932,7 +993,7 @@
                         "translation": "лис"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -950,7 +1011,7 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ни",
                         "lemma": "ни",
                         "tagsets": [
@@ -974,7 +1035,9 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Case=Dat"
+                                    "Case=Dat",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1013,11 +1076,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -1030,7 +1092,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PRON"
                         ],
@@ -1045,7 +1107,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON"
                         ],
@@ -1063,7 +1125,9 @@
                         "id": "4",
                         "tags": [
                               "VERB",
-                              "Case=Dat"
+                              "Case=Dat",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -1099,22 +1163,31 @@
       },
       {
             "id": "7",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "няӻра, няӻра, ни чи ньр̌ыныт нют, ч’евныдьра",
+            "segmented_text": "няӻр-а няӻр-а ни чи ньр̌ы-ны-т ню-т ч’-ев-ны-дь-ра",
+            "glossed_text": "мышонок-VOC мышонок-VOC я ты видеть-FUT-CONV.1.SG смотреть-CONV.1.SG 2.SG-держать-FUT-IND-FOC:PRED",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Мышонок, мышонок, а я тебя подстерегу!",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1127,14 +1200,13 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1147,7 +1219,7 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ни",
                         "lemma": "ни",
                         "tagsets": [
@@ -1165,7 +1237,7 @@
                         "translation": "я"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -1237,7 +1309,8 @@
                                     "Tense=Fut",
                                     "Mood=Ind",
                                     "Focus=Yes",
-                                    "Predicative=Yes"
+                                    "Predicative=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1253,11 +1326,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -1270,11 +1342,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -1287,7 +1358,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON"
                         ],
@@ -1302,7 +1373,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PRON"
                         ],
@@ -1362,7 +1433,8 @@
                               "Tense=Fut",
                               "Mood=Ind",
                               "Focus=Yes",
-                              "Predicative=Yes"
+                              "Predicative=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1378,15 +1450,25 @@
       },
       {
             "id": "8",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "ньрыфух ӄ’о тыф йивдь.",
+            "segmented_text": "нь-рыф-ух ӄ’о тыф йив-дь",
+            "glossed_text": "я-дом-ABL спать дом быть-IND",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– А у меня в норке спаленка.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ньрыфух",
                         "lemma": "нь",
                         "tagsets": [
@@ -1410,7 +1492,9 @@
                         "lemma": "ӄ’о",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1423,14 +1507,13 @@
                         "translation": "спать"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тыф",
                         "lemma": "тыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1450,6 +1533,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1466,7 +1550,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Case=Abl"
@@ -1484,7 +1568,9 @@
                         "name": "-",
                         "id": "2",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -1497,11 +1583,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1518,6 +1603,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1534,9 +1620,19 @@
       },
       {
             "id": "9",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "к’ырӻа (–) п’уныдьра",
+            "segmented_text": "к’ыр-ӻа – п’у-ны-дь-ра",
+            "glossed_text": "голодать-CONV:COND – вылезать-FUT-IND-FOC:PRED",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Кушать захочешь – вылезешь!",
             "miscellaneous": "",
@@ -1562,7 +1658,7 @@
                         "translation": "голодать"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "–",
                         "lemma": "None",
                         "tagsets": [
@@ -1589,7 +1685,8 @@
                                     "Tense=Fut",
                                     "Mood=Ind",
                                     "Focus=Yes",
-                                    "Predicative=Yes"
+                                    "Predicative=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1622,7 +1719,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "None"
                         ],
@@ -1643,7 +1740,8 @@
                               "Tense=Fut",
                               "Mood=Ind",
                               "Focus=Yes",
-                              "Predicative=Yes"
+                              "Predicative=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -1659,15 +1757,25 @@
       },
       {
             "id": "10",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "ньрыфух нё йивдь.",
+            "segmented_text": "нь-рыф-ух нё йив-дь",
+            "glossed_text": "1.SG-дом-ABL амбар быть-IND",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– А у меня в норке кладовочка.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "нь",
                         "lemma": "нь",
                         "tagsets": [
@@ -1688,14 +1796,13 @@
                         "translation": "1.SG"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "рыфух",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1708,14 +1815,13 @@
                         "translation": "дом"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нё",
                         "lemma": "нё",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1735,6 +1841,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1751,7 +1858,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PART",
                               "Person=1",
@@ -1769,11 +1876,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -1786,11 +1892,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1807,6 +1912,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1823,22 +1929,31 @@
       },
       {
             "id": "11",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "няӻра, няӻра, ни чрыф к’ызӻытныдь (?)",
+            "segmented_text": "няӻр-а няӻр-а ни ч-рыф к’ыз-ӻыт-ны-дь ",
+            "glossed_text": "мышонок-VOC мышонок-VOC я 2.SG-дом копать-COMPL-FUT-IND ",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– Мышонок, мышонок, а ведь я твою норку разрою!",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1851,14 +1966,13 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "няӻра",
                         "lemma": "няӻр",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Voc",
-                                    "Number=Sing"
+                                    "Case=Voc"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1871,7 +1985,7 @@
                         "translation": "мышонок"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ни",
                         "lemma": "ни",
                         "tagsets": [
@@ -1889,7 +2003,7 @@
                         "translation": "я"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ч",
                         "lemma": "ч",
                         "tagsets": [
@@ -1910,14 +2024,13 @@
                         "translation": "2.SG"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "рыф",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1938,7 +2051,8 @@
                                     "VERB",
                                     "Aspect=Compl",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1972,11 +2086,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -1989,11 +2102,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Voc",
-                              "Number=Sing"
+                              "Case=Voc"
                         ],
                         "tokens": [
                               [
@@ -2006,7 +2118,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PRON"
                         ],
@@ -2021,7 +2133,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PART",
                               "Person=2",
@@ -2039,11 +2151,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2061,7 +2172,8 @@
                               "VERB",
                               "Aspect=Compl",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -2092,15 +2204,25 @@
       },
       {
             "id": "12",
+            "metadata": {
+                  "title_n": "К‘еӄғе, няӻр̌ке",
+                  "title_r": "Лис и мышонок",
+                  "genre": "Предание",
+                  "dialect": "",
+                  "author": "",
+                  "interviewer": "",
+                  "date": ""
+            },
             "text": "ньат эна тыфтоӽ п’имныдьра ӄ’аутара",
+            "segmented_text": "нь-ат эна тыф-тоӽ п’им-ны-дь-ра ӄ’ау-та-ра",
+            "glossed_text": "я-FOC быть.иным дом-DAT убегать-FUT-IND-FOC:PRED AUX:NEG-USIT.3.PL?-FOC:PRED",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "– А я от тебя в другую норку – и был таков!",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ньат",
                         "lemma": "нь",
                         "tagsets": [
@@ -2124,7 +2246,9 @@
                         "lemma": "эна",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2137,14 +2261,13 @@
                         "translation": "быть.иным"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тыфтоӽ",
                         "lemma": "тыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2166,7 +2289,8 @@
                                     "Tense=Fut",
                                     "Mood=Ind",
                                     "Focus=Yes",
-                                    "Predicative=Yes"
+                                    "Predicative=Yes",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2206,7 +2330,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Focus=Yes"
@@ -2224,7 +2348,9 @@
                         "name": "-",
                         "id": "2",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -2237,11 +2363,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -2260,7 +2385,8 @@
                               "Tense=Fut",
                               "Mood=Ind",
                               "Focus=Yes",
-                              "Predicative=Yes"
+                              "Predicative=Yes",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [

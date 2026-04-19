@@ -1,22 +1,31 @@
 [
       {
             "id": "0",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "атик ғе кинс",
+            "segmented_text": "атик ғе кинс",
+            "glossed_text": "младший.родственник брать чёрт",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Сестренка, которую забрал чёрт.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -34,7 +43,9 @@
                         "lemma": "ғе",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -53,8 +64,7 @@
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -70,11 +80,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -89,7 +98,9 @@
                         "name": "-",
                         "id": "2",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -105,8 +116,7 @@
                         "id": "3",
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -122,9 +132,19 @@
       },
       {
             "id": "1",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] яӈгут сидь фурныдь.",
+            "segmented_text": "яӈ-гу-т сидь фур-ны-дь",
+            "glossed_text": "что.делать-CAUS-CONV.3.PL что говорить-FUT-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "О чём говорить.",
             "miscellaneous": "",
@@ -152,7 +172,7 @@
                         "translation": "что.делать"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "сидь",
                         "lemma": "сидь",
                         "tagsets": [
@@ -177,7 +197,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -212,7 +233,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PRON"
                         ],
@@ -231,7 +252,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
@@ -247,9 +269,19 @@
       },
       {
             "id": "2",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] т’хырпть.",
+            "segmented_text": "т’хырп-ть",
+            "glossed_text": "забывать-IND",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Забыла.",
             "miscellaneous": "",
@@ -262,6 +294,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -282,6 +315,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -298,9 +332,19 @@
       },
       {
             "id": "3",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ЗЛ:] итрур̌, лур̌тыр̌.",
+            "segmented_text": "ит-ру-р̌ лу-р̌ты-р̌",
+            "glossed_text": "говорить-?-CONV.2.SG петь-?-CONV.2.SG",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Рассказывать и петь.",
             "miscellaneous": "",
@@ -390,22 +434,31 @@
       },
       {
             "id": "4-5",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] умгу оғлағу п’нанакғе п’атикғе мен вывт ӿумдь.",
+            "segmented_text": "умгу оғла-ғу п’-нанак-ғе п’-атик-ғе м-ен выв-т ӿум-дь",
+            "glossed_text": "женщина ребёнок-PL REFL-старшая.сестра-COM REFL-младший.родственник-COM два-CL жить.вместе-CONV.3.PL быть-IND",
             "length": 9,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Две девушки, старшая и младшая сестры, жили вместе.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -418,14 +471,14 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "оғлағу",
                         "lemma": "оғла",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -438,7 +491,7 @@
                         "translation": "ребёнок"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -458,14 +511,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "нанакғе",
                         "lemma": "нанак",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -478,7 +530,7 @@
                         "translation": "старшая.сестра"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -498,14 +550,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "атикғе",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -518,7 +569,7 @@
                         "translation": "младший.родственник"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "мен",
                         "lemma": "м",
                         "tagsets": [
@@ -565,6 +616,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -581,11 +633,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -598,11 +649,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -615,7 +666,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -632,11 +683,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -649,7 +699,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -666,11 +716,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -683,7 +732,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "NUM",
                               "Classifier=Yes"
@@ -721,6 +770,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -737,15 +787,25 @@
       },
       {
             "id": "6",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "имӈ ытыкғе ымыкғе ыр̌к муғырта.",
+            "segmented_text": "имӈ ытык-ғе ымык-ғе ыр̌к му-ғыр-та",
+            "glossed_text": "они отец-COM мать-COM уже умирать-COMPL-EMPH.3.PL",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Их отец и мать давно умерли.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "имӈ",
                         "lemma": "имӈ",
                         "tagsets": [
@@ -763,14 +823,13 @@
                         "translation": "они"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ытыкғе",
                         "lemma": "ытык",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -783,14 +842,13 @@
                         "translation": "отец"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ымыкғе",
                         "lemma": "ымык",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Com",
-                                    "Number=Sing"
+                                    "Case=Com"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -803,7 +861,7 @@
                         "translation": "мать"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ыр̌к",
                         "lemma": "ыр̌к",
                         "tagsets": [
@@ -831,6 +889,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Plur",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -847,7 +906,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -862,11 +921,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -879,11 +937,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Com",
-                              "Number=Sing"
+                              "Case=Com"
                         ],
                         "tokens": [
                               [
@@ -896,7 +953,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "ADV"
                         ],
@@ -918,6 +975,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Plur",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -934,15 +992,25 @@
       },
       {
             "id": "7",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ГЛ:] чи нымр̌ итк.",
+            "segmented_text": "чи нымр̌ ит-к",
+            "glossed_text": "ты вчера говорить-IND",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Ты вчера рассказывала это?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "чи",
                         "lemma": "чи",
                         "tagsets": [
@@ -960,7 +1028,7 @@
                         "translation": "ты"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "нымр̌",
                         "lemma": "нымр̌",
                         "tagsets": [
@@ -985,6 +1053,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1001,7 +1070,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -1016,7 +1085,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "ADV"
                         ],
@@ -1035,6 +1104,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1051,15 +1121,25 @@
       },
       {
             "id": "8",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] ӿыдь энак.",
+            "segmented_text": "ӿыдь эна-к",
+            "glossed_text": "это быть.иным-NMN:A",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Это другое.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿыдь",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -1101,7 +1181,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -1137,15 +1217,25 @@
       },
       {
             "id": "9-10",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿоӈгур̌, инанак, п’хирох вийт’ағс кинс п’рыр̌ йатик ғер̌ р̌ор видь.",
+            "segmented_text": "ӿоӈ-гу-р̌ и-нанак п’хи-рох вий-т’ағс кинс п’ры-р̌ й-атик ғе-р̌ р̌о-р ви-дь",
+            "glossed_text": "быть.таким-CAUS-CONV.3.SG 3.SG-старшая.сестра тайга-DAT идти- чёрт приходить-CONV.3.SG 3.SG-младший.родственник брать-CONV.3.SG нести-CONV.3.SG идти-IND",
             "length": 12,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Пока сестра ушла в тайгу, чёрт пришёл, забрал её сестрёнку.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿоӈгур̌",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -1167,7 +1257,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "и",
                         "lemma": "и",
                         "tagsets": [
@@ -1188,14 +1278,13 @@
                         "translation": "3.SG"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нанак",
                         "lemma": "нанак",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1208,14 +1297,13 @@
                         "translation": "старшая.сестра"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "п’хирох",
                         "lemma": "п’хи",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1233,7 +1321,9 @@
                         "lemma": "вий",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1246,14 +1336,13 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1287,7 +1376,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "й",
                         "lemma": "й",
                         "tagsets": [
@@ -1308,14 +1397,13 @@
                         "translation": "3.SG"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1377,6 +1465,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1393,7 +1482,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -1412,7 +1501,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PART",
                               "Person=3",
@@ -1430,11 +1519,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1447,11 +1535,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -1466,7 +1553,9 @@
                         "name": "-",
                         "id": "5",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -1479,11 +1568,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1514,7 +1602,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "PART",
                               "Person=3",
@@ -1532,11 +1620,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1589,6 +1676,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1605,9 +1693,19 @@
       },
       {
             "id": "11",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "п’р̌ыр п’атик ӈыӈирут’ездь.",
+            "segmented_text": "п’р̌ы-р п’-атик ӈыӈ-ирут’ез-дь",
+            "glossed_text": "приходить-CONV.3.SG REFL-младший.родственник обнаруживать-AVERT-IND",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Сестра, вернувшись, не смогла обнаружить сестрёнки.",
             "miscellaneous": "",
@@ -1634,7 +1732,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -1654,14 +1752,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1682,6 +1779,7 @@
                                     "VERB",
                                     "Aspect=Avert",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1716,7 +1814,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -1733,11 +1831,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -1755,6 +1852,7 @@
                               "VERB",
                               "Aspect=Avert",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -1771,15 +1869,25 @@
       },
       {
             "id": "12-18",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿогур, п’атик ӈыӈирут’езр̌, п’и р̌о иныкху гер̌ р̌ора, иныдь ғери, ма ғери, ӿар тифтох вииныр̌, тифух инык р̌ора ӿар, ӿарор вири, тори, ӿоӈгур, ӿыдьғу \"уи, уи, тодьра, ӈалаӈала к’содьра уи, уи, тодьра\"",
+            "segmented_text": "ӿо-гу-р п’-атик ӈыӈ-ирут’ез-р̌ п’и р̌о ины-к-ху ге-р̌ р̌о-ра ины-дь ғе-ри ма ғе-ри ӿа-р тиф-тох ви-ины-р̌ тиф-ух ины-к р̌о-ра ӿа-р ӿа-рор ви-ри то-ри ӿоӈ-гу-р ӿыдь-ғу уи уи то-дь-ра ӈала-ӈала к’со-дь-ра уи уи то-дь-ра",
+            "glossed_text": "быть.таким-CAUS-CONV.3.SG REFL-младший.родственник обнаруживать-AVERT-CONV.3.SG REFL нести есть-NMN:A-PL брать-CONV.3.SG нести-EMPH.3.SG есть-NMN:P брать-EMPH.3.SG юколу брать-EMPH.3.SG так.делать-CONV.3.SG дорога-DAT идти-DES-CONV.3.SG дорога-ABL есть-NMN:A нести-EMPH.3.SG так.делать-CONV.3.SG быть.таким-CONV:ANT.3.SG идти-EMPH.3.SG плакать-EMPH.3.SG быть.таким-CAUS-CONV.3.SG этот-PL уи уи плакать-IND-FOC бухта-бухта подниматься-IND-FOC уи уи плакать-IND-EMPH.3.SG",
             "length": 33,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Тогда, не обнаружив сестрёнку, взяла с собой еду, юколу взяла, и так отправилась в дорогу, в дороге еду неся, затем идёт и плачет: \"Уи, уи плачу, поднимаясь по бухте, уи, уи, плачу.\"",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿогур",
                         "lemma": "ӿо",
                         "tagsets": [
@@ -1801,7 +1909,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -1821,14 +1929,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1863,7 +1970,7 @@
                         "translation": "обнаруживать"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "п’и",
                         "lemma": "None",
                         "tagsets": [
@@ -1887,7 +1994,9 @@
                         "lemma": "р̌о",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -1952,6 +2061,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -1995,6 +2105,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2008,14 +2119,13 @@
                         "translation": "брать"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 12,
                         "token": "ма",
                         "lemma": "ма",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2037,6 +2147,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2071,14 +2182,13 @@
                         "translation": "так.делать"
                   },
                   {
-                        "itoken": "15",
+                        "itoken": 15,
                         "token": "тифтох",
                         "lemma": "тиф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2113,14 +2223,13 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "17",
+                        "itoken": 17,
                         "token": "тифух",
                         "lemma": "тиф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2163,6 +2272,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2197,7 +2307,7 @@
                         "translation": "так.делать"
                   },
                   {
-                        "itoken": "21",
+                        "itoken": 21,
                         "token": "ӿарор",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -2228,6 +2338,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2250,6 +2361,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2263,7 +2375,7 @@
                         "translation": "плакать"
                   },
                   {
-                        "itoken": "24",
+                        "itoken": 24,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -2285,7 +2397,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "25",
+                        "itoken": 25,
                         "token": "ӿыдьғу",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -2304,7 +2416,7 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "26",
+                        "itoken": 26,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -2322,7 +2434,7 @@
                         "translation": "уи"
                   },
                   {
-                        "itoken": "27",
+                        "itoken": 27,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -2348,6 +2460,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Focus=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2361,14 +2474,13 @@
                         "translation": "плакать"
                   },
                   {
-                        "itoken": "29",
+                        "itoken": 29,
                         "token": "ӈалаӈала",
                         "lemma": "ӈала",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -2389,6 +2501,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Focus=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2402,7 +2515,7 @@
                         "translation": "подниматься"
                   },
                   {
-                        "itoken": "31",
+                        "itoken": 31,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -2420,7 +2533,7 @@
                         "translation": "уи"
                   },
                   {
-                        "itoken": "32",
+                        "itoken": 32,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -2448,6 +2561,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -2464,7 +2578,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -2483,7 +2597,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -2500,11 +2614,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2536,7 +2649,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "None",
                               "Reflex=Yes"
@@ -2554,7 +2667,9 @@
                         "name": "-",
                         "id": "6",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -2610,6 +2725,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2647,6 +2763,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2660,11 +2777,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2683,6 +2799,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2714,11 +2831,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "15",
+                        "id": 15,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -2750,11 +2866,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "17",
+                        "id": 17,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -2791,6 +2906,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2822,7 +2938,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "21",
+                        "id": 21,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -2847,6 +2963,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2866,6 +2983,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2879,7 +2997,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "24",
+                        "id": 24,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -2898,7 +3016,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "25",
+                        "id": 25,
                         "tags": [
                               "DET",
                               "Number=Plur"
@@ -2914,7 +3032,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "26",
+                        "id": 26,
                         "tags": [
                               "INTJ"
                         ],
@@ -2929,7 +3047,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "27",
+                        "id": 27,
                         "tags": [
                               "INTJ"
                         ],
@@ -2949,6 +3067,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Focus=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2962,11 +3081,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "29",
+                        "id": 29,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -2984,6 +3102,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Focus=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -2997,7 +3116,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "31",
+                        "id": 31,
                         "tags": [
                               "INTJ"
                         ],
@@ -3012,7 +3131,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "32",
+                        "id": 32,
                         "tags": [
                               "INTJ"
                         ],
@@ -3034,6 +3153,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -3050,15 +3170,25 @@
       },
       {
             "id": "19",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿоӈгур тори, вири, ӿаке п’р̌ыдь.",
+            "segmented_text": "ӿоӈ-гу-р то-ри ви-ри ӿа-ке п’р̌ы-дь",
+            "glossed_text": "быть.таким-CAUS-CONV.3.SG плакать-EMPH.3.SG идти-EMPH.3.SG быть.таким-CONV:SIM приходить-IND",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Плакала и шла, так и пришла.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -3089,6 +3219,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -3111,6 +3242,7 @@
                                     "Emphatic=Yes",
                                     "Person[subj]=3",
                                     "Number[subj]=Sing",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -3124,7 +3256,7 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿаке",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -3151,6 +3283,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -3167,7 +3300,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -3192,6 +3325,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -3211,6 +3345,7 @@
                               "Emphatic=Yes",
                               "Person[subj]=3",
                               "Number[subj]=Sing",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -3224,7 +3359,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -3245,6 +3380,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -3261,15 +3397,25 @@
       },
       {
             "id": "20-22",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "сидь рыф, сидь рыфтох торыфтохлу тяндьрыфтох п’р̌ыр̌ тывғдь п’р̌ыӈан ӿаӈан, аӈ аӄир̌к ӻаврғыр̌ть.",
+            "segmented_text": "сидь рыф сидь рыф-тох то-рыф-тох-лу тяндь-рыф-тох п’р̌ы-р̌ тывғ-дь п’р̌ы-ӈан ӿа-ӈан аӈ а-ӄир̌к ӻавр-ғыр̌-ть",
+            "glossed_text": "этот дом этот дом-DAT землянка-дом-DAT-INDEF -дом-DAT приходить-CONV.3.SG заходить-IND приходить-CONV:ANT быть.таким-CONV:ANT кто так.делать-CONV:CONC AUX:NEG-COMPL-IND",
             "length": 13,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "К этому дому, то ли дом, то ли зимник, то ли летник, зашла она в летний дом, там никого нет.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "сидь",
                         "lemma": "сидь",
                         "tagsets": [
@@ -3287,14 +3433,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "рыф",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3307,7 +3452,7 @@
                         "translation": "дом"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "сидь",
                         "lemma": "сидь",
                         "tagsets": [
@@ -3325,14 +3470,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "рыфтох",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3345,15 +3489,14 @@
                         "translation": "дом"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "торыфтохлу",
                         "lemma": "то",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Case=Dat",
-                                    "Definite=Ind",
-                                    "Number=Sing"
+                                    "Definite=Ind"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3366,14 +3509,13 @@
                         "translation": "землянка"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "тяндьрыфтох",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3414,6 +3556,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -3447,7 +3590,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "ӿаӈан",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -3467,7 +3610,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "аӈ",
                         "lemma": "аӈ",
                         "tagsets": [
@@ -3530,7 +3673,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -3545,11 +3688,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3562,7 +3704,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "DET"
                         ],
@@ -3577,11 +3719,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -3594,12 +3735,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
                               "Case=Dat",
-                              "Definite=Ind",
-                              "Number=Sing"
+                              "Definite=Ind"
                         ],
                         "tokens": [
                               [
@@ -3612,11 +3752,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -3651,6 +3790,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -3681,7 +3821,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -3698,7 +3838,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "PRON"
                         ],
@@ -3752,15 +3892,25 @@
       },
       {
             "id": "23-24",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "тый п’ур̌ торыф лаӄвлаӄвр̌ кмыйғар̌ аӈ акир̌к ӻаврғыр̌дь.",
+            "segmented_text": "тый п’у-р̌ то-рыф лаӄв-лаӄв-р̌ кмый-ғар̌ аӈ а-кир̌к ӻавр-ғыр̌-дь",
+            "glossed_text": "затем выходить-CONV.3.SG землянка-дом быть.вокруг-быть.вокруг-CONV.3.SG гулять-COMPL кто так.делать-CONV:CONC AUX:NEG-COMPL-IND",
             "length": 8,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Вышла, обошла дом, - никого не было.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "тый",
                         "lemma": "тый",
                         "tagsets": [
@@ -3799,14 +3949,13 @@
                         "translation": "выходить"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "торыф",
                         "lemma": "то",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3846,7 +3995,9 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Aspect=Compl"
+                                    "Aspect=Compl",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -3859,7 +4010,7 @@
                         "translation": "гулять"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "аӈ",
                         "lemma": "аӈ",
                         "tagsets": [
@@ -3922,7 +4073,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -3955,11 +4106,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -3993,7 +4143,9 @@
                         "id": "5",
                         "tags": [
                               "VERB",
-                              "Aspect=Compl"
+                              "Aspect=Compl",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -4006,7 +4158,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "PRON"
                         ],
@@ -4060,15 +4212,25 @@
       },
       {
             "id": "25-29",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "анти тывғба, йатик к’игылы фир̌ ӿур̌тивр̌ умдь, к’игылы (это второй ярус) торыф, (этот) наӽ, (второй) наӽ, к’игылы ӽаудь.",
+            "segmented_text": "анти тывғ-ба й-атик к’игылы фи-р̌ ӿур̌-тив-р̌ ум-дь к’игылы это второй ярус то-рыф этот наӽ второй наӽ к’игылы ӽау-дь",
+            "glossed_text": "опять заходить-CONV:ANT 3.SG-младший.родственник кигылы находиться-CONV.3.SG здесь-садиться-CONV.3.SG быть-IND кигылы это второй ярус землянка-дом этот нары второй нары кигылы называться-IND",
             "length": 19,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Опять зашла, сестрёнка сидит на втором ярусе нар, она сидела на втором ярусе нар; жилище второй ярус нар называется кигылы.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "анти",
                         "lemma": "анти",
                         "tagsets": [
@@ -4106,7 +4268,7 @@
                         "translation": "заходить"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "й",
                         "lemma": "й",
                         "tagsets": [
@@ -4127,14 +4289,13 @@
                         "translation": "3.SG"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4147,14 +4308,13 @@
                         "translation": "младший.родственник"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "к’игылы",
                         "lemma": "к’игылы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4188,7 +4348,7 @@
                         "translation": "находиться"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "ӿур̌тивр̌",
                         "lemma": "ӿур̌",
                         "tagsets": [
@@ -4216,6 +4376,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -4229,14 +4390,13 @@
                         "translation": "быть"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "к’игылы",
                         "lemma": "к’игылы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4249,7 +4409,7 @@
                         "translation": "кигылы"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "это",
                         "lemma": "это",
                         "tagsets": [
@@ -4272,7 +4432,9 @@
                         "lemma": "второй",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4285,14 +4447,13 @@
                         "translation": "второй"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 12,
                         "token": "ярус",
                         "lemma": "ярус",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4305,14 +4466,13 @@
                         "translation": "ярус"
                   },
                   {
-                        "itoken": "13",
+                        "itoken": 13,
                         "token": "торыф",
                         "lemma": "то",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4325,7 +4485,7 @@
                         "translation": "землянка"
                   },
                   {
-                        "itoken": "14",
+                        "itoken": 14,
                         "token": "этот",
                         "lemma": "этот",
                         "tagsets": [
@@ -4343,14 +4503,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "15",
+                        "itoken": 15,
                         "token": "наӽ",
                         "lemma": "наӽ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4368,7 +4527,9 @@
                         "lemma": "второй",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4381,14 +4542,13 @@
                         "translation": "второй"
                   },
                   {
-                        "itoken": "17",
+                        "itoken": 17,
                         "token": "наӽ",
                         "lemma": "наӽ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4401,14 +4561,13 @@
                         "translation": "нары"
                   },
                   {
-                        "itoken": "18",
+                        "itoken": 18,
                         "token": "к’игылы",
                         "lemma": "к’игылы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4428,6 +4587,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -4444,7 +4604,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "ADV"
                         ],
@@ -4476,7 +4636,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "PART",
                               "Person=3",
@@ -4494,11 +4654,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4511,11 +4670,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4546,7 +4704,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "ADV",
                               "VerbForm=Conv",
@@ -4568,6 +4726,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -4581,11 +4740,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4598,7 +4756,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "PRON"
                         ],
@@ -4615,7 +4773,9 @@
                         "name": "-",
                         "id": "11",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -4628,11 +4788,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4645,11 +4804,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
+                        "id": 13,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4662,7 +4820,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "14",
+                        "id": 14,
                         "tags": [
                               "DET"
                         ],
@@ -4677,11 +4835,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "15",
+                        "id": 15,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4696,7 +4853,9 @@
                         "name": "-",
                         "id": "16",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -4709,11 +4868,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "17",
+                        "id": 17,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4726,11 +4884,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "18",
+                        "id": 18,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -4747,6 +4904,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -4763,20 +4921,31 @@
       },
       {
             "id": "30-33",
-            "text": "(ӿай, ай) тёньӽ п’ир̌ к’игылы тёньӽ п’ир̌ ӿуртивр, к’еликар ӿы кинс ньр̌ак момодь момодь ӿы умгу оғла момодь момодь.",
-            "length": 19,
-            "source": "Source unspecified",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
+            "text": "(ӿай, ай) тёньӽ п’ир̌ к’игылы тёньӽ п’ир̌ ӿур тивр, к’еликар ӿы кинс ньр̌ак момодь момодь ӿы умгу оғла момодь момодь.",
+            "segmented_text": "ӿай ай тёньӽ п’и-р̌ к’игылы тёньӽ п’и-р̌ ӿур тив-р к’е-ли-кар ӿы кинс нь-р̌ак момо-дь момо-дь ӿы умгу оғла момо-дь момо-дь",
+            "glossed_text": "хай ай угол находиться-CONV.3.SG кигылы угол находиться-CONV.3.SG здесь сидеть-CONV.3.SG быть.худым-ATR-COMPL этот чёрт один-раз сосать-IND сосать-IND этот женщина ребенок сосать-IND сосать-IND",
+            "length": 20,
             "sentence_tree": "-",
             "russian_text": "Ай, ай, в углу второго яруса сидит, худая-худая сидела, а чёрт всё её сосал.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿай",
                         "lemma": "ӿай",
                         "tagsets": [
                               [
-                                    "INTJ"
+                                    "NOUN",
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4789,7 +4958,7 @@
                         "translation": "хай"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ай",
                         "lemma": "ай",
                         "tagsets": [
@@ -4807,14 +4976,13 @@
                         "translation": "ай"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "тёньӽ",
                         "lemma": "тёньӽ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4848,14 +5016,13 @@
                         "translation": "находиться"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "к’игылы",
                         "lemma": "к’игылы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4868,14 +5035,13 @@
                         "translation": "кигылы"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "тёньӽ",
                         "lemma": "тёньӽ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4909,9 +5075,27 @@
                         "translation": "находиться"
                   },
                   {
-                        "itoken": "8",
-                        "token": "ӿуртивр",
-                        "lemma": "ӿуртив",
+                        "itoken": 8,
+                        "token": "ӿур",
+                        "lemma": "ӿур",
+                        "tagsets": [
+                              [
+                                    "ADV"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "здесь"
+                  },
+                  {
+                        "itoken": "9",
+                        "token": "тивр",
+                        "lemma": "тив",
                         "tagsets": [
                               [
                                     "VERB",
@@ -4927,10 +5111,10 @@
                               "is_head": false,
                               "id": "-"
                         },
-                        "translation": "садиться"
+                        "translation": "сидеть"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": "10",
                         "token": "к’еликар",
                         "lemma": "к’е",
                         "tagsets": [
@@ -4950,7 +5134,7 @@
                         "translation": "быть.худым"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 11,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -4968,14 +5152,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 12,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -4988,7 +5171,7 @@
                         "translation": "чёрт"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 13,
                         "token": "ньр̌ак",
                         "lemma": "нь",
                         "tagsets": [
@@ -5006,26 +5189,6 @@
                         "translation": "один"
                   },
                   {
-                        "itoken": "13",
-                        "token": "момодь",
-                        "lemma": "момо",
-                        "tagsets": [
-                              [
-                                    "VERB",
-                                    "Mood=Ind",
-                                    "Tense=Pres_Aor"
-                              ]
-                        ],
-                        "parent_token_index": "-",
-                        "edge_type": "-",
-                        "constituent": {
-                              "name": "-",
-                              "is_head": false,
-                              "id": "-"
-                        },
-                        "translation": "сосать"
-                  },
-                  {
                         "itoken": "14",
                         "token": "момодь",
                         "lemma": "момо",
@@ -5033,6 +5196,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -5047,6 +5211,27 @@
                   },
                   {
                         "itoken": "15",
+                        "token": "момодь",
+                        "lemma": "момо",
+                        "tagsets": [
+                              [
+                                    "VERB",
+                                    "Mood=Ind",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
+                              ]
+                        ],
+                        "parent_token_index": "-",
+                        "edge_type": "-",
+                        "constituent": {
+                              "name": "-",
+                              "is_head": false,
+                              "id": "-"
+                        },
+                        "translation": "сосать"
+                  },
+                  {
+                        "itoken": 16,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -5064,14 +5249,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "16",
+                        "itoken": 17,
                         "token": "умгу",
                         "lemma": "умгу",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5084,14 +5268,13 @@
                         "translation": "женщина"
                   },
                   {
-                        "itoken": "17",
+                        "itoken": 18,
                         "token": "оғла",
                         "lemma": "оғла",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5104,13 +5287,14 @@
                         "translation": "ребенок"
                   },
                   {
-                        "itoken": "18",
+                        "itoken": "19",
                         "token": "момодь",
                         "lemma": "момо",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -5124,13 +5308,14 @@
                         "translation": "сосать"
                   },
                   {
-                        "itoken": "19",
+                        "itoken": "20",
                         "token": "момодь",
                         "lemma": "момо",
                         "tagsets": [
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -5147,9 +5332,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
-                              "INTJ"
+                              "NOUN",
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5162,7 +5348,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "INTJ"
                         ],
@@ -5177,11 +5363,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5212,11 +5397,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5229,11 +5413,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5264,7 +5447,22 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
+                        "tags": [
+                              "ADV"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӿур"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӿур",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "9",
                         "tags": [
                               "VERB",
                               "VerbForm=Conv",
@@ -5273,16 +5471,16 @@
                         ],
                         "tokens": [
                               [
-                                    "ӿуртивр"
+                                    "тивр"
                               ]
                         ],
                         "head_id": "-",
-                        "text": "ӿуртивр",
+                        "text": "тивр",
                         "length": 1
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": "10",
                         "tags": [
                               "VERB",
                               "VerbForm=Part",
@@ -5299,7 +5497,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 11,
                         "tags": [
                               "DET"
                         ],
@@ -5314,11 +5512,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5331,7 +5528,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 13,
                         "tags": [
                               "NUM"
                         ],
@@ -5346,27 +5543,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
-                        "tags": [
-                              "VERB",
-                              "Mood=Ind",
-                              "Tense=Pres_Aor"
-                        ],
-                        "tokens": [
-                              [
-                                    "момодь"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "момодь",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
                         "id": "14",
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -5382,57 +5563,9 @@
                         "name": "-",
                         "id": "15",
                         "tags": [
-                              "DET"
-                        ],
-                        "tokens": [
-                              [
-                                    "ӿы"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "ӿы",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "16",
-                        "tags": [
-                              "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
-                        ],
-                        "tokens": [
-                              [
-                                    "умгу"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "умгу",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "17",
-                        "tags": [
-                              "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
-                        ],
-                        "tokens": [
-                              [
-                                    "оғла"
-                              ]
-                        ],
-                        "head_id": "-",
-                        "text": "оғла",
-                        "length": 1
-                  },
-                  {
-                        "name": "-",
-                        "id": "18",
-                        "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -5446,10 +5579,76 @@
                   },
                   {
                         "name": "-",
+                        "id": 16,
+                        "tags": [
+                              "DET"
+                        ],
+                        "tokens": [
+                              [
+                                    "ӿы"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "ӿы",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": 17,
+                        "tags": [
+                              "NOUN",
+                              "Case=Null"
+                        ],
+                        "tokens": [
+                              [
+                                    "умгу"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "умгу",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": 18,
+                        "tags": [
+                              "NOUN",
+                              "Case=Null"
+                        ],
+                        "tokens": [
+                              [
+                                    "оғла"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "оғла",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
                         "id": "19",
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
+                        ],
+                        "tokens": [
+                              [
+                                    "момодь"
+                              ]
+                        ],
+                        "head_id": "-",
+                        "text": "момодь",
+                        "length": 1
+                  },
+                  {
+                        "name": "-",
+                        "id": "20",
+                        "tags": [
+                              "VERB",
+                              "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -5466,9 +5665,19 @@
       },
       {
             "id": "34",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "п’рыр̌ моморур вир̌, ӿогор̌.",
+            "segmented_text": "п’ры-р̌ момо-ру-р ви-р̌ ӿого-р̌",
+            "glossed_text": "приходить-CONV.3.SG сосать-?-CONV.3.SG идти-CONV.3.SG так.делать-CONV.3.SG",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Придёт, пососёт её и уйдёт.",
             "miscellaneous": "",
@@ -5636,15 +5845,25 @@
       },
       {
             "id": "35",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "иф п’рыр̌ тывғр̌ п’атик р̌ныр̌ ғейныр̌.",
+            "segmented_text": "иф п’ры-р̌ тывғ-р̌ п’-атик р̌ны-р̌ ғе-йны-р̌",
+            "glossed_text": "он приходить-CONV.3.SG заходить-CONV.3.SG REFL-младший.родственник видеть-CONV.3.SG брать-DES-CONV.3.SG",
             "length": 7,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Она вошла в дом, увидела сестрёнку, хотела забрать её.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "иф",
                         "lemma": "иф",
                         "tagsets": [
@@ -5704,7 +5923,7 @@
                         "translation": "заходить"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -5724,14 +5943,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5790,7 +6008,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON"
                         ],
@@ -5841,7 +6059,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -5858,11 +6076,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -5915,15 +6132,25 @@
       },
       {
             "id": "36-39",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿаке кинс, кинс ыр̌к клы ӿеркух п’р̌ыдь, п’р̌ыр̌ лель, сидь вак моӄмоӄдьлю тиғр̌ пак моӄмоӄдьлю яӈгутлю ӿар",
+            "segmented_text": "ӿа-ке кинс кинс ыр̌к клы ӿерк-ух п’р̌ы-дь п’р̌ы-р̌ лель сидь вак моӄ-моӄ-дь-лю тиғр̌ пак моӄ-моӄ-дь-лю яӈ-гу-т-лю ӿа-р",
+            "glossed_text": "быть.таким-CONV:SIM чёрт чёрт уже улица сторона-ABL приходить-IND приходить-CONV.3.SG DISC что только резать-резать-IND-INDEF дерево только резать-резать-IND-INDEF что.делать-CAUS-CONV.3.PL-INDEF так.делать-CONV.3.SG",
             "length": 17,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "В это время чёрт с улицы пришёл, начал всё вокруг крушить, деревья.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿаке",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -5943,14 +6170,13 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5963,14 +6189,13 @@
                         "translation": "чёрт"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -5983,7 +6208,7 @@
                         "translation": "чёрт"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ыр̌к",
                         "lemma": "ыр̌к",
                         "tagsets": [
@@ -6001,14 +6226,13 @@
                         "translation": "уже"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "клы",
                         "lemma": "клы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6021,14 +6245,13 @@
                         "translation": "улица"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "ӿеркух",
                         "lemma": "ӿерк",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6048,6 +6271,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6082,7 +6306,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "лель",
                         "lemma": "None",
                         "tagsets": [
@@ -6100,7 +6324,7 @@
                         "translation": "None"
                   },
                   {
-                        "itoken": "10",
+                        "itoken": 10,
                         "token": "сидь",
                         "lemma": "сидь",
                         "tagsets": [
@@ -6118,7 +6342,7 @@
                         "translation": "что"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "вак",
                         "lemma": "вак",
                         "tagsets": [
@@ -6144,6 +6368,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Definite=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6157,14 +6382,13 @@
                         "translation": "резать"
                   },
                   {
-                        "itoken": "13",
+                        "itoken": 13,
                         "token": "тиғр̌",
                         "lemma": "тиғр̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6177,7 +6401,7 @@
                         "translation": "дерево"
                   },
                   {
-                        "itoken": "14",
+                        "itoken": 14,
                         "token": "пак",
                         "lemma": "пак",
                         "tagsets": [
@@ -6203,6 +6427,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Definite=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6263,7 +6488,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -6280,11 +6505,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6297,11 +6521,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6314,7 +6537,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "ADV"
                         ],
@@ -6329,11 +6552,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6346,11 +6568,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -6367,6 +6588,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6398,7 +6620,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "INTJ"
                         ],
@@ -6413,7 +6635,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "10",
+                        "id": 10,
                         "tags": [
                               "PRON"
                         ],
@@ -6428,7 +6650,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "PART"
                         ],
@@ -6448,6 +6670,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Definite=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6461,11 +6684,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
+                        "id": 13,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6478,7 +6700,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "14",
+                        "id": 14,
                         "tags": [
                               "PART"
                         ],
@@ -6498,6 +6720,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Definite=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -6552,15 +6775,25 @@
       },
       {
             "id": "40-43",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿы инанак ӿеркух эӄурэӄур клырох п’ур̌, п’имр вир̌ энв ерӄтох вир̌ ӿоӈгур, анти ӿоӈгур лудь,",
+            "segmented_text": "ӿы и-нанак ӿерк-ух э-ӄу-р-э-ӄу-р клы-рох п’у-р̌ п’им-р ви-р̌ энв ерӄ-тох ви-р̌ ӿоӈ-гу-р анти ӿоӈ-гу-р лу-дь",
+            "glossed_text": "этот 3.SG-старшая.сестра сторона-ABL быть.быстрым-CAUS-CONV.3.SG-быть.быстрым-CAUS-CONV.3.SG улица-DAT выходить-CONV.3.SG бежать-CONV.3.SG идти-CONV.3.SG быть.иным сторона-DAT идти-CONV.3.SG быть.таким-CAUS-CONV.3.SG опять быть.таким-CAUS-CONV.3.SG петь-IND",
             "length": 16,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "А старшая сестра быстро-быстро вышла на улицу, убежала в другую сторону, стала петь.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -6578,7 +6811,7 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "и",
                         "lemma": "и",
                         "tagsets": [
@@ -6599,14 +6832,13 @@
                         "translation": "3.SG"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "нанак",
                         "lemma": "нанак",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6619,14 +6851,13 @@
                         "translation": "старшая.сестра"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿеркух",
                         "lemma": "ӿерк",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6661,14 +6892,13 @@
                         "translation": "быть.быстрым"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "клырох",
                         "lemma": "клы",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6749,7 +6979,9 @@
                         "lemma": "энв",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6762,14 +6994,13 @@
                         "translation": "быть.иным"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "ерӄтох",
                         "lemma": "ерӄ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Dat",
-                                    "Number=Sing"
+                                    "Case=Dat"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -6803,7 +7034,7 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "13",
+                        "itoken": 13,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -6825,7 +7056,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "14",
+                        "itoken": 14,
                         "token": "анти",
                         "lemma": "анти",
                         "tagsets": [
@@ -6843,7 +7074,7 @@
                         "translation": "опять"
                   },
                   {
-                        "itoken": "15",
+                        "itoken": 15,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -6872,6 +7103,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -6888,7 +7120,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -6903,7 +7135,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "PART",
                               "Person=3",
@@ -6921,11 +7153,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -6938,11 +7169,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -6974,11 +7204,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -7047,7 +7276,9 @@
                         "name": "-",
                         "id": "10",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -7060,11 +7291,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "NOUN",
-                              "Case=Dat",
-                              "Number=Sing"
+                              "Case=Dat"
                         ],
                         "tokens": [
                               [
@@ -7095,7 +7325,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
+                        "id": 13,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -7114,7 +7344,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "14",
+                        "id": 14,
                         "tags": [
                               "ADV"
                         ],
@@ -7129,7 +7359,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "15",
+                        "id": 15,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -7152,6 +7382,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7168,15 +7399,25 @@
       },
       {
             "id": "44-45",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "«уи, уи, тодьра, уи, уи» ӿар ӿоӈгур лур̌ ӄоюр̌,",
+            "segmented_text": "уи уи то-дь-ра уи уи ӿа-р ӿоӈ-гу-р лу-р̌ ӄою-р̌",
+            "glossed_text": "уи уи плакать-IND-FOC уи уи так.делать-CONV.3.SG быть.таким-CAUS-CONV.3.SG петь-CONV.3.SG кричать-CONV.3.SG",
             "length": 9,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "\"Уи, уи плачет\" так она продолжала громко петь.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -7194,7 +7435,7 @@
                         "translation": "уи"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -7220,6 +7461,7 @@
                                     "VERB",
                                     "Mood=Ind",
                                     "Focus=Yes",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7233,7 +7475,7 @@
                         "translation": "плакать"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -7251,7 +7493,7 @@
                         "translation": "уи"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "уи",
                         "lemma": "уи",
                         "tagsets": [
@@ -7290,7 +7532,7 @@
                         "translation": "так.делать"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "ӿоӈгур",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -7357,7 +7599,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "INTJ"
                         ],
@@ -7372,7 +7614,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "INTJ"
                         ],
@@ -7392,6 +7634,7 @@
                               "VERB",
                               "Mood=Ind",
                               "Focus=Yes",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7405,7 +7648,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "INTJ"
                         ],
@@ -7420,7 +7663,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "INTJ"
                         ],
@@ -7453,7 +7696,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -7511,15 +7754,25 @@
       },
       {
             "id": "46-47",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿы кинсеркух ӿыдь йатик п’имр видь ӿагур р̌ур видь иф п’имдь",
+            "segmented_text": "ӿы кинс-ерк-ух ӿыдь й-атик п’им-р ви-дь ӿа-гу-р р̌у-р ви-дь иф п’им-дь",
+            "glossed_text": "этот чёрт-сторона-ABL этот 3.SG-младший.родственник бежать-CONV.3.SG идти-IND быть.таким-CAUS-CONV.3.SG преследовать-CONV.3.SG идти-IND он бежать-IND",
             "length": 12,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "А чёрт: сбежала сестрёнка, побежал за ней.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -7537,14 +7790,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "кинсеркух",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7557,7 +7809,7 @@
                         "translation": "чёрт"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ӿыдь",
                         "lemma": "ӿыдь",
                         "tagsets": [
@@ -7575,7 +7827,7 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "й",
                         "lemma": "й",
                         "tagsets": [
@@ -7596,14 +7848,13 @@
                         "translation": "3.SG"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -7644,6 +7895,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7657,7 +7909,7 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "8",
+                        "itoken": 8,
                         "token": "ӿагур",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -7707,6 +7959,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7720,7 +7973,7 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "иф",
                         "lemma": "иф",
                         "tagsets": [
@@ -7745,6 +7998,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -7761,7 +8015,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -7776,11 +8030,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -7793,7 +8046,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "DET"
                         ],
@@ -7808,7 +8061,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "PART",
                               "Person=3",
@@ -7826,11 +8079,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -7865,6 +8117,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7878,7 +8131,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "8",
+                        "id": 8,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -7919,6 +8172,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7932,7 +8186,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "PRON"
                         ],
@@ -7951,6 +8205,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -7967,9 +8222,19 @@
       },
       {
             "id": "48-49",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "п’имдь п’имдь ӿоӈгур̌ ӿарор̌, вике кинсух п’имр вира кинс, ӿыдь",
+            "segmented_text": "п’им-дь п’им-дь ӿоӈ-гу-р̌ ӿа-рор̌ ви-ке кинс-ух п’им-р ви-ра кинс ӿыдь",
+            "glossed_text": "бежать-IND бежать-IND быть.таким-CAUS-CONV.3.SG быть.таким-CONV:ANT.3.SG идти-CONV:SIM чёрт-ABL бежать-CONV.3.SG идти-PRED.3.SG чёрт этот",
             "length": 10,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Она бежала, бежала и убежала от чёрта, черт бежал.",
             "miscellaneous": "",
@@ -7982,6 +8247,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -8002,6 +8268,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -8015,7 +8282,7 @@
                         "translation": "бежать"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "ӿоӈгур̌",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -8037,7 +8304,7 @@
                         "translation": "быть.таким"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "ӿарор̌",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -8079,14 +8346,13 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "кинсух",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8128,7 +8394,9 @@
                                     "VERB",
                                     "Predicative=Yes",
                                     "Person[subj]=3",
-                                    "Number[subj]=Sing"
+                                    "Number[subj]=Sing",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8141,14 +8409,13 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "9",
+                        "itoken": 9,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8186,6 +8453,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -8203,6 +8471,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -8216,7 +8485,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -8235,7 +8504,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "DET",
                               "VerbForm=Conv",
@@ -8271,11 +8540,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -8311,7 +8579,9 @@
                               "VERB",
                               "Predicative=Yes",
                               "Person[subj]=3",
-                              "Number[subj]=Sing"
+                              "Number[subj]=Sing",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -8324,11 +8594,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "9",
+                        "id": 9,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8359,22 +8628,31 @@
       },
       {
             "id": "50-51",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "орӈр̌, орӈр̌ (могила) мерх (он) орӈыр̌ку (раньше хоронили)",
+            "segmented_text": "орӈр̌ орӈр̌ могила ме-рх он орӈыр̌-ку раньше хоронили",
+            "glossed_text": "ульт ульт могила внутри-DAT он ульт-PL раньше хоронили",
             "length": 8,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Прибежала к уильтскому кладбищу, где они хоронили умерших, спряталась в одном гробу.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "орӈр̌",
                         "lemma": "орӈр̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8387,14 +8665,13 @@
                         "translation": "ульт"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "орӈр̌",
                         "lemma": "орӈр̌",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8407,14 +8684,13 @@
                         "translation": "ульт"
                   },
                   {
-                        "itoken": "3",
+                        "itoken": 3,
                         "token": "могила",
                         "lemma": "могила",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8427,7 +8703,7 @@
                         "translation": "могила"
                   },
                   {
-                        "itoken": "4",
+                        "itoken": 4,
                         "token": "мерх",
                         "lemma": "ме",
                         "tagsets": [
@@ -8446,7 +8722,7 @@
                         "translation": "внутри"
                   },
                   {
-                        "itoken": "5",
+                        "itoken": 5,
                         "token": "он",
                         "lemma": "он",
                         "tagsets": [
@@ -8464,14 +8740,14 @@
                         "translation": "он"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "орӈыр̌ку",
                         "lemma": "орӈыр̌",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8484,7 +8760,7 @@
                         "translation": "ульт"
                   },
                   {
-                        "itoken": "7",
+                        "itoken": 7,
                         "token": "раньше",
                         "lemma": "раньше",
                         "tagsets": [
@@ -8507,7 +8783,9 @@
                         "lemma": "хоронили",
                         "tagsets": [
                               [
-                                    "VERB"
+                                    "VERB",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8523,11 +8801,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8540,11 +8817,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8557,11 +8833,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "3",
+                        "id": 3,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8574,7 +8849,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "4",
+                        "id": 4,
                         "tags": [
                               "ADV",
                               "Case=Dat"
@@ -8590,7 +8865,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "5",
+                        "id": 5,
                         "tags": [
                               "PRON"
                         ],
@@ -8605,11 +8880,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8622,7 +8897,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "7",
+                        "id": 7,
                         "tags": [
                               "ADV"
                         ],
@@ -8639,7 +8914,9 @@
                         "name": "-",
                         "id": "8",
                         "tags": [
-                              "VERB"
+                              "VERB",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -8655,15 +8932,25 @@
       },
       {
             "id": "52",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ГЛ:] ӿы орӈр̌ку (?)",
+            "segmented_text": "ӿы орӈр̌-ку ",
+            "glossed_text": "этот ульт-PL ",
             "length": 3,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Эти ульты?",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -8681,14 +8968,14 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "орӈр̌ку",
                         "lemma": "орӈр̌",
                         "tagsets": [
                               [
                                     "NOUN",
                                     "Number=Plur",
-                                    "Case=Abs"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -8722,7 +9009,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -8737,11 +9024,11 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
                               "Number=Plur",
-                              "Case=Abs"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -8772,9 +9059,19 @@
       },
       {
             "id": "53",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] ӿы.",
+            "segmented_text": "ӿы",
+            "glossed_text": "да",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Да",
             "miscellaneous": "",
@@ -8819,15 +9116,25 @@
       },
       {
             "id": "54",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "[ВИ:] ӿоӈгур̌ п’лывр̌,",
+            "segmented_text": "ӿоӈ-гу-р̌ п’лыв-р̌",
+            "glossed_text": "быть.таким-CAUS-CONV.3.SG прятаться-CONV.3.SG",
             "length": 2,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Так она спряталась от чёрта.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿоӈгур̌",
                         "lemma": "ӿоӈ",
                         "tagsets": [
@@ -8873,7 +9180,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -8913,15 +9220,25 @@
       },
       {
             "id": "55",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "ӿы кинс илызр̌ ӄамар видь",
+            "segmented_text": "ӿы кинс и-лыз-р̌ ӄама-р ви-дь",
+            "glossed_text": "этот чёрт 3.SG-проходить.мимо-CONV.3.SG бежать-CONV.3.SG идти-IND",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "А чёрт пробежал мимо неё.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "ӿы",
                         "lemma": "ӿы",
                         "tagsets": [
@@ -8939,14 +9256,13 @@
                         "translation": "этот"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "кинс",
                         "lemma": "кинс",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9010,6 +9326,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -9026,7 +9343,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "DET"
                         ],
@@ -9041,11 +9358,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9100,6 +9416,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -9116,15 +9433,25 @@
       },
       {
             "id": "56-59",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "йах п’лызр̌ ӄамар вигурор ӿурмих п’ур̌ п’хыдох ӄамар п’р̌ыр̌ п’атик тяньдрыфух ғотьр̌,",
+            "segmented_text": "й-ах п’-лыз-р̌ ӄама-р ви-гу-рор ӿур-ми-х п’у-р̌ п’хы-дох ӄама-р п’р̌ы-р̌ п’-атик тяньд-рыф-ух ғоть-р̌",
+            "glossed_text": "он-CAUSEE REFL-проходить.мимо-CONV.3.SG бежать-CONV.3.SG идти-CAUS-CONV:ANT.3.SG здесь-внутри-ABL выходить-CONV.3.SG возвращаться-DAT бежать-CONV.3.SG приходить-CONV.3.SG REFL-младший.родственник -дом-ABL снять.сверху-CONV.3.SG",
             "length": 13,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Дав черту пробежать мимо себя, изнутри выйдя, она вышла, прибежала обратно и побежала за сестрой, в летнее жилище.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "йах",
                         "lemma": "й",
                         "tagsets": [
@@ -9209,7 +9536,7 @@
                         "translation": "идти"
                   },
                   {
-                        "itoken": "6",
+                        "itoken": 6,
                         "token": "ӿурмих",
                         "lemma": "ӿур",
                         "tagsets": [
@@ -9255,7 +9582,9 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Case=Dat"
+                                    "Case=Dat",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9310,7 +9639,7 @@
                         "translation": "приходить"
                   },
                   {
-                        "itoken": "11",
+                        "itoken": 11,
                         "token": "п’",
                         "lemma": "п’",
                         "tagsets": [
@@ -9330,14 +9659,13 @@
                         "translation": "REFL"
                   },
                   {
-                        "itoken": "12",
+                        "itoken": 12,
                         "token": "атик",
                         "lemma": "атик",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abs",
-                                    "Number=Sing"
+                                    "Case=Null"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9350,14 +9678,13 @@
                         "translation": "младший.родственник"
                   },
                   {
-                        "itoken": "13",
+                        "itoken": 13,
                         "token": "тяньдрыфух",
                         "lemma": "рыф",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9394,7 +9721,7 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "PRON",
                               "Case=Cau"
@@ -9467,7 +9794,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "6",
+                        "id": 6,
                         "tags": [
                               "ADV",
                               "Case=Abl"
@@ -9504,7 +9831,9 @@
                         "id": "7",
                         "tags": [
                               "VERB",
-                              "Case=Dat"
+                              "Case=Dat",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -9553,7 +9882,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "11",
+                        "id": 11,
                         "tags": [
                               "PART",
                               "Reflex=Yes",
@@ -9570,11 +9899,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "12",
+                        "id": 12,
                         "tags": [
                               "NOUN",
-                              "Case=Abs",
-                              "Number=Sing"
+                              "Case=Null"
                         ],
                         "tokens": [
                               [
@@ -9587,11 +9915,10 @@
                   },
                   {
                         "name": "-",
-                        "id": "13",
+                        "id": 13,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -9625,22 +9952,31 @@
       },
       {
             "id": "60-61",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "наӽух ғотьр̌ эғр̌ р̌ор видь.",
+            "segmented_text": "наӽ-ух ғоть-р̌ эғ-р̌ р̌о-р ви-дь",
+            "glossed_text": "нары-ABL снять.сверху-CONV.3.SG возвращаться.домой-CONV.3.SG нести-CONV.3.SG идти-IND",
             "length": 5,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Сняла её с нар и привела домой.",
             "miscellaneous": "",
             "tokens": [
                   {
-                        "itoken": "1",
+                        "itoken": 1,
                         "token": "наӽух",
                         "lemma": "наӽ",
                         "tagsets": [
                               [
                                     "NOUN",
-                                    "Case=Abl",
-                                    "Number=Sing"
+                                    "Case=Abl"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9723,6 +10059,7 @@
                               [
                                     "VERB",
                                     "Mood=Ind",
+                                    "VerbForm=Fin",
                                     "Tense=Pres_Aor"
                               ]
                         ],
@@ -9739,11 +10076,10 @@
             "constituents": [
                   {
                         "name": "-",
-                        "id": "1",
+                        "id": 1,
                         "tags": [
                               "NOUN",
-                              "Case=Abl",
-                              "Number=Sing"
+                              "Case=Abl"
                         ],
                         "tokens": [
                               [
@@ -9814,6 +10150,7 @@
                         "tags": [
                               "VERB",
                               "Mood=Ind",
+                              "VerbForm=Fin",
                               "Tense=Pres_Aor"
                         ],
                         "tokens": [
@@ -9830,9 +10167,19 @@
       },
       {
             "id": "62",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "сыкра",
+            "segmented_text": "сык-ра",
+            "glossed_text": "весь-FOC",
             "length": 1,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Всё.",
             "miscellaneous": "",
@@ -9879,9 +10226,19 @@
       },
       {
             "id": "63",
+            "metadata": {
+                  "title_n": "атик ғе кинс",
+                  "title_r": "Чёрт забрал сестрёнку",
+                  "genre": "Устный рассказ (фольклор)",
+                  "dialect": "Амурский",
+                  "author": "В.Акиляк-Иванова, Г.Д. Лок",
+                  "interviewer": "Х. Шираиши",
+                  "date": "28.08.2000"
+            },
             "text": "кылкар ӿагут итныдь (можно)",
+            "segmented_text": "кыл-кар ӿа-гу-т ит-ны-дь можно",
+            "glossed_text": "быть.длинным-COMPL быть.таким-CAUS-CONV.1.SG говорить-FUT-IND можно",
             "length": 4,
-            "source": "Source unspecified",
             "sentence_tree": "-",
             "russian_text": "Долго-долго могу рассказывать.",
             "miscellaneous": "",
@@ -9893,7 +10250,9 @@
                         "tagsets": [
                               [
                                     "VERB",
-                                    "Aspect=Compl"
+                                    "Aspect=Compl",
+                                    "VerbForm=Fin",
+                                    "Tense=Pres_Aor"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9906,7 +10265,7 @@
                         "translation": "быть.длинным"
                   },
                   {
-                        "itoken": "2",
+                        "itoken": 2,
                         "token": "ӿагут",
                         "lemma": "ӿа",
                         "tagsets": [
@@ -9935,7 +10294,8 @@
                               [
                                     "VERB",
                                     "Tense=Fut",
-                                    "Mood=Ind"
+                                    "Mood=Ind",
+                                    "VerbForm=Fin"
                               ]
                         ],
                         "parent_token_index": "-",
@@ -9972,7 +10332,9 @@
                         "id": "1",
                         "tags": [
                               "VERB",
-                              "Aspect=Compl"
+                              "Aspect=Compl",
+                              "VerbForm=Fin",
+                              "Tense=Pres_Aor"
                         ],
                         "tokens": [
                               [
@@ -9985,7 +10347,7 @@
                   },
                   {
                         "name": "-",
-                        "id": "2",
+                        "id": 2,
                         "tags": [
                               "DET",
                               "Voice=Caus",
@@ -10008,7 +10370,8 @@
                         "tags": [
                               "VERB",
                               "Tense=Fut",
-                              "Mood=Ind"
+                              "Mood=Ind",
+                              "VerbForm=Fin"
                         ],
                         "tokens": [
                               [
