@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="ru">
   <meta charset="UTF-8" />
-  <title>main-frame</title>
+  <title>Поиск по корпусу</title>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="static/reset.css" />
     <link rel="stylesheet" href="static/styles.css" />
   </head>
 
@@ -40,402 +43,436 @@
                   fill="#19111D" />
               </g>
             </svg>
-            Глоссатор</a>
-          <a href="" class="middle-main_link">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_146_1376" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
-                height="40">
-                <rect width="40" height="40" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_146_1376)">
-                <path
-                  d="M20 35.8334C17.8291 35.8334 15.7805 35.4172 13.8541 34.585C11.9277 33.7528 10.2477 32.6197 8.81413 31.1859C7.38024 29.7522 6.24718 28.0722 5.41496 26.1459C4.58274 24.2195 4.16663 22.1709 4.16663 20C4.16663 17.812 4.58274 15.759 5.41496 13.8413C6.24718 11.9235 7.38024 10.2478 8.81413 8.81419C10.2477 7.3803 11.9277 6.24724 13.8541 5.41502C15.7805 4.5828 17.8291 4.16669 20 4.16669C22.188 4.16669 24.2409 4.5828 26.1587 5.41502C28.0765 6.24724 29.7522 7.3803 31.1858 8.81419C32.6197 10.2478 33.7527 11.9235 34.585 13.8413C35.4172 15.759 35.8333 17.812 35.8333 20C35.8333 22.1709 35.4172 24.2195 34.585 26.1459C33.7527 28.0722 32.6197 29.7522 31.1858 31.1859C29.7522 32.6197 28.0765 33.7528 26.1587 34.585C24.2409 35.4172 22.188 35.8334 20 35.8334ZM20 33.2979C20.8505 32.1699 21.5663 31.0321 22.1475 29.8846C22.7286 28.7371 23.2019 27.4828 23.5675 26.1217H16.4325C16.8194 27.5256 17.2982 28.8013 17.8687 29.9488C18.439 31.0963 19.1494 32.2127 20 33.2979ZM16.7725 32.8396C16.1336 31.9229 15.5598 30.8809 15.0512 29.7134C14.5426 28.5456 14.1473 27.3484 13.8654 26.1217H8.21163C9.0919 27.8525 10.2725 29.3067 11.7533 30.4842C13.2341 31.6614 14.9072 32.4465 16.7725 32.8396ZM23.2275 32.8396C25.0927 32.4465 26.7658 31.6614 28.2466 30.4842C29.7275 29.3067 30.908 27.8525 31.7883 26.1217H26.1345C25.799 27.3589 25.3769 28.5614 24.8683 29.7292C24.36 30.897 23.813 31.9338 23.2275 32.8396ZM7.16329 23.6217H13.3591C13.2544 23.0022 13.1784 22.3949 13.1312 21.7996C13.0843 21.2046 13.0608 20.6047 13.0608 20C13.0608 19.3953 13.0843 18.7954 13.1312 18.2004C13.1784 17.6052 13.2544 16.9978 13.3591 16.3784H7.16329C7.00301 16.9445 6.88024 17.5331 6.79496 18.1442C6.7094 18.7553 6.66663 19.3739 6.66663 20C6.66663 20.6261 6.7094 21.2447 6.79496 21.8559C6.88024 22.467 7.00301 23.0556 7.16329 23.6217ZM15.8587 23.6217H24.1412C24.2457 23.0022 24.3215 22.4003 24.3687 21.8159C24.4157 21.2314 24.4391 20.6261 24.4391 20C24.4391 19.3739 24.4157 18.7686 24.3687 18.1842C24.3215 17.5997 24.2457 16.9978 24.1412 16.3784H15.8587C15.7543 16.9978 15.6784 17.5997 15.6312 18.1842C15.5843 18.7686 15.5608 19.3739 15.5608 20C15.5608 20.6261 15.5843 21.2314 15.6312 21.8159C15.6784 22.4003 15.7543 23.0022 15.8587 23.6217ZM26.6408 23.6217H32.8366C32.9969 23.0556 33.1197 22.467 33.205 21.8559C33.2905 21.2447 33.3333 20.6261 33.3333 20C33.3333 19.3739 33.2905 18.7553 33.205 18.1442C33.1197 17.5331 32.9969 16.9445 32.8366 16.3784H26.6408C26.7455 16.9978 26.8215 17.6052 26.8687 18.2004C26.9157 18.7954 26.9391 19.3953 26.9391 20C26.9391 20.6047 26.9157 21.2046 26.8687 21.7996C26.8215 22.3949 26.7455 23.0022 26.6408 23.6217ZM26.1345 13.8784H31.7883C30.8975 12.1261 29.725 10.672 28.2708 9.51585C26.8166 8.36002 25.1355 7.56947 23.2275 7.14419C23.8663 8.11419 24.4347 9.17516 24.9325 10.3271C25.4305 11.4788 25.8312 12.6625 26.1345 13.8784ZM16.4325 13.8784H23.5675C23.1805 12.485 22.6938 11.2013 22.1075 10.0271C21.5208 8.85294 20.8183 7.7446 20 6.7021C19.1816 7.7446 18.4791 8.85294 17.8925 10.0271C17.3061 11.2013 16.8194 12.485 16.4325 13.8784ZM8.21163 13.8784H13.8654C14.1687 12.6625 14.5694 11.4788 15.0675 10.3271C15.5652 9.17516 16.1336 8.11419 16.7725 7.14419C14.8536 7.56947 13.1698 8.3628 11.7212 9.52419C10.2723 10.6853 9.10246 12.1367 8.21163 13.8784Z"
-                  fill="#19111D" />
-              </g>
-            </svg>
-            Переводчик</a>
-          <a href="" class="middle-main_link">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_146_1399" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
-                height="40">
-                <rect width="40" height="40" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_146_1399)">
-                <path
-                  d="M12.5963 35.8334C11.171 35.8334 9.96528 35.3403 8.97917 34.3542C7.99306 33.3681 7.5 32.1624 7.5 30.7371V9.58335C7.5 8.08974 8.0225 6.81363 9.0675 5.75502C10.1122 4.69613 11.3953 4.16669 12.9167 4.16669H32.5V28.1409C31.7564 28.1409 31.1378 28.3946 30.6442 28.9021C30.1506 29.4096 29.9037 30.0213 29.9037 30.7371C29.9037 31.4807 30.1506 32.0993 30.6442 32.5929C31.1378 33.0865 31.7564 33.3334 32.5 33.3334V35.8334H12.5963ZM12.5963 33.3334H28.17C27.9283 32.955 27.7403 32.5539 27.6058 32.13C27.4711 31.7059 27.4037 31.2415 27.4037 30.7371C27.4037 30.2607 27.4668 29.8035 27.5929 29.3654C27.719 28.9274 27.9114 28.5192 28.17 28.1409H12.5963C11.8526 28.1409 11.234 28.3946 10.7404 28.9021C10.2468 29.4096 10 30.0213 10 30.7371C10 31.4807 10.2468 32.0993 10.7404 32.5929C11.234 33.0865 11.8526 33.3334 12.5963 33.3334ZM10 26.4071C10.3783 26.1485 10.7794 25.9561 11.2033 25.83C11.6275 25.7042 12.0918 25.6413 12.5963 25.6413H30V6.66669H12.9167C12.0875 6.66669 11.3942 6.95252 10.8367 7.52419C10.2789 8.09558 10 8.78196 10 9.58335V26.4071ZM14.8142 21.4742H16.5192L17.5287 18.6763H22.4296L23.4392 21.4742H25.1283L20.8717 10.1925H19.0608L14.8142 21.4742ZM18.0479 17.1925L19.9487 11.9742H20.0258L21.9104 17.1925H18.0479Z"
-                  fill="#19111D" />
-              </g>
-            </svg>
-
             Словник</a>
+          <a href="" class="middle-main_link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
+                height="20">
+                <rect width="20" height="20" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_1030_300)">
+                <path
+                  d="M14.583 3.38794C15.301 3.38794 16.0051 3.47132 16.6953 3.63696C17.2991 3.78189 17.8818 3.99019 18.4434 4.26196L18.6826 4.38208L18.6855 4.38306C18.8281 4.4479 18.9336 4.5443 19.0039 4.67212C19.076 4.80319 19.1113 4.94011 19.1113 5.08325V15.1252C19.1112 15.4254 18.9856 15.6503 18.7314 15.8069C18.4778 15.963 18.2166 15.9706 17.9414 15.8264H17.9424C17.4249 15.5467 16.8829 15.3299 16.3164 15.176C15.7492 15.022 15.1712 14.9446 14.583 14.9446C13.7432 14.9446 12.9313 15.0921 12.1475 15.386C11.3773 15.6748 10.6607 16.0784 9.99902 16.5969C9.33761 16.0788 8.62235 15.6747 7.85254 15.386C7.06857 15.092 6.25592 14.9446 5.41602 14.9446C4.82806 14.9446 4.25057 15.0221 3.68359 15.176C3.117 15.3299 2.57424 15.5466 2.05664 15.8264C1.78175 15.9701 1.52188 15.9627 1.26855 15.8069C1.01417 15.6503 0.887786 15.4255 0.887695 15.1252V5.08325C0.887695 4.9401 0.923997 4.8032 0.996094 4.67212C1.06642 4.54437 1.17188 4.44786 1.31445 4.38306L1.55664 4.26196C2.11799 3.99036 2.70021 3.78184 3.30371 3.63696C3.9938 3.47134 4.69818 3.38796 5.41602 3.38794C6.21674 3.38794 7.00051 3.49144 7.7666 3.69849C8.53255 3.9055 9.26746 4.21686 9.97168 4.6311L10 4.64673L10.0273 4.6311C10.7315 4.2169 11.4666 3.9055 12.2324 3.69849C12.9985 3.49143 13.7823 3.38794 14.583 3.38794ZM14.583 10.8879C14.9413 10.8879 15.2925 10.9159 15.6367 10.9709C15.968 11.0239 16.2929 11.0898 16.6113 11.1682V12.3801C16.2993 12.2676 15.9843 12.1818 15.666 12.1233C15.3222 12.0601 14.9611 12.0286 14.583 12.0286C14.051 12.0286 13.5395 12.0909 13.0488 12.217C12.5875 12.3357 12.1456 12.5124 11.7217 12.7424V11.4534C12.1659 11.2674 12.6202 11.1275 13.084 11.0334C13.5592 10.9371 14.0587 10.8879 14.583 10.8879ZM14.583 8.59692C14.9412 8.59692 15.2925 8.62389 15.6367 8.67896C15.968 8.73196 16.2928 8.79881 16.6113 8.8772V10.0891C16.2992 9.97652 15.9844 9.88978 15.666 9.8313C15.3222 9.76815 14.9611 9.73657 14.583 9.73657C14.0506 9.73657 13.5389 9.80349 13.0479 9.93677C12.587 10.0618 12.1454 10.2344 11.7217 10.4524V9.16235C12.166 8.97637 12.6202 8.83557 13.084 8.74146C13.5592 8.64507 14.0588 8.59692 14.583 8.59692ZM14.583 6.30493C14.9413 6.30493 15.2925 6.33286 15.6367 6.38794C15.968 6.44094 16.2928 6.50683 16.6113 6.58521V7.79712C16.2992 7.68454 15.9844 7.59779 15.666 7.53931C15.3222 7.47616 14.9611 7.44458 14.583 7.44458C14.0506 7.44458 13.5389 7.51151 13.0479 7.64478C12.5871 7.76984 12.1453 7.94249 11.7217 8.1604V6.87036C12.166 6.6844 12.6202 6.54357 13.084 6.44946C13.5591 6.35309 14.0588 6.30493 14.583 6.30493ZM9.22168 5.96802L9.19434 5.95239C8.62065 5.61658 8.01179 5.36447 7.36816 5.19653C6.72479 5.0287 6.07353 4.94458 5.41602 4.94458C4.91254 4.9446 4.41245 4.99415 3.91602 5.09204C3.41945 5.18997 2.94023 5.33662 2.47852 5.53247L2.44434 5.54712V13.9104L2.51758 13.885C3.00105 13.7193 3.48092 13.5948 3.95703 13.512C4.43287 13.4292 4.91923 13.388 5.41602 13.3879C6.06454 13.3879 6.69587 13.4609 7.30957 13.6057C7.92357 13.7506 8.53477 13.968 9.14258 14.2581L9.22168 14.2952V5.96802ZM17.5547 5.54712L17.5215 5.53247C17.0596 5.33653 16.5797 5.18999 16.083 5.09204C15.5865 4.99415 15.0865 4.94458 14.583 4.94458C13.9256 4.94458 13.2751 5.02874 12.6318 5.19653C11.9882 5.36444 11.3794 5.61662 10.8057 5.95239L10.7783 5.96802V14.2952L10.8564 14.2581C11.4643 13.968 12.0755 13.7506 12.6895 13.6057C13.3032 13.4609 13.9344 13.3879 14.583 13.3879C15.0798 13.3879 15.5662 13.4292 16.042 13.512C16.518 13.5947 16.9981 13.7193 17.4814 13.885L17.5547 13.9104V5.54712Z"
+                  fill="#1C1B1F" stroke="white" stroke-width="0.11" />
+              </g>
+            </svg>
+            О корпусе
+          </a>
+
+
         </li>
       </ul>
     </header>
 
     <div class="main-search">
       <div class="final-form">
-        <div class="all-searching-frames">
-          <form class="main-searching-frame" id="main-frame0">
-            <div class="search-selection-info">
-              <div class="language-selection-containter">
-                <select id="extension" name="language-select" class="custom-select">
-                  <option value="nivkh" selected>Нивх</option>
-                  <option value="russian">Рус</option>
-                </select>
-                <!-- <img src="/static/images/keyboard_arrow_down.svg" /> -->
-              </div>
-              <div class="segmented-control">
-                <input type="radio" name="search-type" value="token" id="wordform0" checked
-                  onclick="wordformButton(this)" />
-                <label for="wordform0"> Словоформа </label>
-                <input type="radio" name="search-type" id="lemma0" value="lemma" onclick="lemmaButton(this)" />
-                <label for="lemma0"> Лемма </label>
-              </div>
-              <div class="regulation-adding">
-                <div id="add0" class="add-word">
-                  <input type="image" src="/static/images/add.svg" />
+        <div class="all-searching-frames" id="search-frame">
+          <template id="search-frame-template">
+            <form class="main-searching-frame" id="main-frame-0">
+              <div class="search-selection-info">
+                <div class="segmented-control">
+                  <input type="radio" name="search-type" value="token" id="wordform-0" checked />
+                  <label for="wordform-0"> Словоформа </label>
+                  <input type="radio" name="search-type" id="lemma-0" value="lemma" />
+                  <label for="lemma-0"> Лемма </label>
                 </div>
-              </div>
-            </div>
-            <div class="searching-input">
-              <input id="correct_placeholder0" class="input-panel" type="search" name="input_word"
-                placeholder="Найти по словоформе" />
+                <div class="regulation-adding">
+                  <div class="add-word" id="add-0">
+                    <!-- <div > -->
+                    <div style="height: fit-content;">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.7998 0.200195V6.2002H13.7998V7.7998H7.7998V13.7998H6.2002V7.7998H0.200195V6.2002H6.2002V0.200195H7.7998Z"
+                          fill="#254038" stroke="white" stroke-width="0.4" />
+                      </svg>
+                    </div>
 
-              <div class="keyboard-container">
-                <input id="nivkh_keyboard0" class="keyboard" type="image" src="/static/images/keyboard.svg"
-                  onclick="actionKeyboard(this)" />
-              </div>
-            </div>
+                    <p>Слово</p>
+                  </div>
+                  <div class="close-word" id="closure-0"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_665_1449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="24" height="24">
+                        <rect width="24" height="24" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_665_1449)">
+                        <path
+                          d="M6.39994 18.6538L5.34619 17.6L10.9462 12L5.34619 6.4L6.39994 5.34625L11.9999 10.9463L17.5999 5.34625L18.6537 6.4L13.0537 12L18.6537 17.6L17.5999 18.6538L11.9999 13.0538L6.39994 18.6538Z"
+                          fill="#19111D" />
+                      </g>
+                    </svg>
 
-            <div class="letter-input" id="keyboard0">
-              <div class="letter-container">
-                <div class="keyboard-row">
-                  <button class="letters">ӷ</button>
-                  <button class="letters">ғ</button>
-                  <button class="letters">ӻ</button>
-                  <button class="letters">ӄ</button>
-                  <button class="letters">ӄ’</button>
-                </div>
-                <div class="keyboard-row">
-                  <button class="letters">ӈ</button>
-                  <button class="letters">р̌</button>
-                  <button class="letters">ў</button>
-                  <button class="letters">ӽ</button>
-                  <button class="letters">ӿ</button>
-                </div>
-              </div>
-            </div>
-            <div class="basic-container" id="gram-feat-cont0">
-              <div class="top-base-container">
-                <div>Грамматические признаки</div>
-                <div class="additional-selections">
-                  <div class="select-features" id="gram-chosen0">Выбрать</div>
-                  <div class="small-extra-buttons">
-                    <input id="question0_0" type="image" src="/static/images/question_mark.svg" onclick=""
-                      style="width: 10px; height: 10px" />
-                  </div>
-                  <!-- <div class="small-extra-buttons">
-									<input
-										id="close_container0_0"
-										type="image"
-										src="/static/images/close.svg"
-										onclick="closeContainer(this)"
-										style="width: 10px; height: 10px"
-									/>
-								</div> -->
-                </div>
-              </div>
-              <input class="regex-input" id="regex0" name="added-gram-features" type="text"
-                placeholder="Регулярное выражение" />
-            </div>
-            <div class="basic-container" id="add-feat-cont0">
-              <div class="top-base-container">
-                <div>Дополнительные признаки</div>
-                <div class="additional-selections">
-                  <div class="select-features" id="check-all0">Выбрать все</div>
-                  <div class="small-extra-buttons">
-                    <input id="question0_1" type="image" src="/static/images/question_mark.svg" onclick=""
-                      style="width: 10px; height: 10px" />
                   </div>
                 </div>
               </div>
-              <div class="additional-wrapper">
-                <div class="features-wrapper">
-                  <div class="features-checkbox" name="add-feat" id="add-feat0">
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="nfh" />Nfh (Evident)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="caus" />Caus (Voice)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="ind" />Ind (definite)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="neg" />Neg (Polarity)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="fut" />Fut (Tense)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="dim" />Dim (Degree)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="class" />Classifier
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="pred" />Predicative
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="foc" />Focus
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="emph" />Emphatic
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="qu" />Question
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="coord" />Coordinating
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="refl" />Reflex
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="rec" />Reciprocal
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="conces" />Conces
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="add" />Add
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="coll" />Collective (NumType)
-                    </div>
-                    <div class="add-element">
-                      <input type="checkbox" name="additional[]" value="aux" />Aux (VerbType)
-                    </div>
+              <div class="searching-input">
+                <input id="correct_placeholder-0" class="input-panel" type="search" name="input_word"
+                  placeholder="Найти по словоформе" />
+
+                <div class="right-searching-input-extras">
+                  <!-- <div class="keyboard-container"> -->
+                  <div id="nivkh_keyboard-0" class="keyboard">
+                    <img src="/static/images/keyboard.svg" />
+
+                  </div>
+                  <!-- </div> -->
+
+                  <select id="extension-0" name="language-select" class="custom-select">
+                    <option value="nivkh" selected>Нивх</option>
+                    <option value="russian">Рус</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <div class="letter-input" id="keyboard-0">
+                <div class="letter-container">
+                  <div class="keyboard-row">
+                    <div class="letters">ӷ</div>
+                    <div class="letters">ғ</div>
+                    <div class="letters">ӻ</div>
+                    <div class="letters">ӄ</div>
+                    <div class="letters">ӄ’</div>
+                  </div>
+                  <div class="keyboard-row">
+                    <div class="letters">ӈ</div>
+                    <div class="letters">р̌</div>
+                    <div class="letters">ў</div>
+                    <div class="letters">ӽ</div>
+                    <div class="letters">ӿ</div>
                   </div>
                 </div>
               </div>
-              <div class="additional-content">
-                <button class="underline-button" id="reset-features0">
-                  Сбросить
-                </button>
-              </div>
-            </div>
-            <dialog class="dialog" id="pop-up0">
-              <div class="modal-top">
-                <div class="left-buttons">
-                  <div class="modal-buttons" id="check-categories0">
-                    Выбрать все категории
+              <div class="basic-container" id="gram-feat-cont-0">
+                <div class="top-base-container">
+                  <div>Грамматические признаки</div>
+                  <div class="additional-selections">
+                    <div class="select-features" id="gram-chosen-0">Выбрать</div>
+                    <div class="small-extra-buttons">
+                      <input id="question-0" type="image" src="/static/images/question_mark.svg" onclick=""
+                        style="width: 10px; height: 10px" />
+                    </div>
+
                   </div>
-                  <div class="simple-buttons" id="reset-categories0">
+                </div>
+                <input class="regex-input" id="regex-0" name="added-gram-features" type="text"
+                  placeholder="Регулярное выражение" />
+
+              </div>
+              <dialog class="dialog" id="pop-up-0">
+                <div class="modal-top">
+                  <div class="left-buttons">
+                    <p>Грамматические признаки</p>
+                    <div class="modal-buttons" id="check-categories-0">
+                      Выбрать все
+                    </div>
+                    <!-- <div class="simple-buttons" id="reset-categories-0">
+                      Сбросить
+                    </div> -->
+                  </div>
+                  <div class="right-buttons">
+                    <div class="underline-button">Список сокращений</div>
+                    <div class="close-word" id="close-modal-0"> <svg width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="mask0_665_1449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                          width="24" height="24">
+                          <rect width="24" height="24" fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_665_1449)">
+                          <path
+                            d="M6.39994 18.6538L5.34619 17.6L10.9462 12L5.34619 6.4L6.39994 5.34625L11.9999 10.9463L17.5999 5.34625L18.6537 6.4L13.0537 12L18.6537 17.6L17.5999 18.6538L11.9999 13.0538L6.39994 18.6538Z"
+                            fill="#19111D" />
+                        </g>
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="gram-scroll-container">
+                  <div class="gram-categories">
+                    <div class="feature-column">
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="pos" value="all" /> POS
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="pos[]" value="NOUN" />
+                          NOUN</label>
+                        <label><input type="checkbox" name="pos[]" value="VERB" />
+                          VERB</label>
+                        <label><input type="checkbox" name="pos[]" value="NUM" />
+                          NUM</label>
+                        <label><input type="checkbox" name="pos[]" value="CLASS" />
+                          CLASS</label>
+                        <label><input type="checkbox" name="pos[]" value="Q" /> Q</label>
+                        <label><input type="checkbox" name="pos[]" value="ADV" />
+                          ADV</label>
+                        <label><input type="checkbox" name="pos[]" value="PROPN" />
+                          PROPN</label>
+                        <label><input type="checkbox" name="pos[]" value="PRON" />
+                          PRON</label>
+                        <label><input type="checkbox" name="pos[]" value="DISC" />
+                          DISC</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="case" value="all" /> Case
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="case[]" value="Abs" />
+                          Abl</label>
+                        <label><input type="checkbox" name="case[]" value="Abl" />
+                          Abl</label>
+                        <label><input type="checkbox" name="case[]" value="Per" />
+                          Per</label>
+                        <label><input type="checkbox" name="case[]" value="Loc" />
+                          Loc</label>
+                        <label><input type="checkbox" name="case[]" value="Dat" />
+                          Dat</label>
+                        <label><input type="checkbox" name="case[]" value="Ins" />
+                          Ins</label>
+                        <label><input type="checkbox" name="case[]" value="Voc" />
+                          Voc</label>
+                        <label><input type="checkbox" name="case[]" value="Cau" />
+                          Cau</label>
+                        <label><input type="checkbox" name="case[]" value="Com" />
+                          Com</label>
+                        <label><input type="checkbox" name="case[]" value="Cmp" />
+                          Cmp</label>
+                        <label><input type="checkbox" name="case[]" value="Lim" />
+                          Lim</label>
+                        <label><input type="checkbox" name="case[]" value="Rep" />
+                          Rep</label>
+                      </div>
+                    </div>
+                    <div class="feature-column">
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="nountype" value="all" />
+                            NounType
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="nountype[]" value="Agent" />
+                          Agent</label>
+                        <label><input type="checkbox" name="nountype[]" value="Locat" />
+                          Locat</label>
+                        <label><input type="checkbox" name="nountype[]" value="Proc" />
+                          Proc</label>
+                        <label><input type="checkbox" name="nountype[]" value="Ing" />
+                          Ing</label>
+                        <label><input type="checkbox" name="nountype[]" value="Deverb" />
+                          Deverb</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="clusivity" value="all" />
+                            Clusivity
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="clusivity[]" value="In" />
+                          In</label>
+                        <label><input type="checkbox" name="clusivity[]" value="Ex" />
+                          Ex</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="verbform" value="all" />
+                            VerbForm
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="verbform[]" value="Conv" />
+                          Conv</label>
+                        <label><input type="checkbox" name="verbform[]" value="Vnoun" />
+                          Vnoun</label>
+                        <label><input type="checkbox" name="verbform[]" value="Part" />
+                          Part</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="tense" value="all" />
+                            Tense
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="tense[]" value="Fut" />
+                          Fut</label>
+                        <label><input type="checkbox" name="tense[]" value="Non_fut" />
+                          Non-Fut</label>
+                      </div>
+                    </div>
+                    <div class="feature-column">
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="mood" value="all" /> Mood
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="mood[]" value="Ind" />
+                          Ind</label>
+                        <label><input type="checkbox" name="mood[]" value="Des" />
+                          Des</label>
+                        <label><input type="checkbox" name="mood[]" value="Imp" />
+                          Imp</label>
+                        <label><input type="checkbox" name="mood[]" value="Cnd" />
+                          Conces</label>
+                        <label><input type="checkbox" name="mood[]" value="Cnd" />
+                          Cnd</label>
+                        <label><input type="checkbox" name="mood[]" value="Hort" />
+                          Hort</label>
+                        <label><input type="checkbox" name="mood[]" value="Jus" />
+                          Jus</label>
+                        <label><input type="checkbox" name="mood[]" value="Prob" />
+                          Prob</label>
+                        <label><input type="checkbox" name="mood[]" value="Proh" />
+                          Proh</label>
+                        <label><input type="checkbox" name="mood[]" value="Indir" />
+                          Indir</label>
+                        <label><input type="checkbox" name="mood[]" value="Subj" />
+                          Subj</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="aspect" value="all" />
+                            Aspect
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="aspect[]" value="Prog" />
+                          Prog</label>
+                        <label><input type="checkbox" name="aspect[]" value="Ant" />
+                          Ant</label>
+                        <label><input type="checkbox" name="aspect[]" value="Iter" />
+                          Iter</label>
+                        <label><input type="checkbox" name="aspect[]" value="Usit" />
+                          Usit</label>
+                        <label><input type="checkbox" name="aspect[]" value="Res" />
+                          Res</label>
+                        <label><input type="checkbox" name="aspect[]" value="Compl" />
+                          Compl</label>
+                        <label><input type="checkbox" name="aspect[]" value="Sim" />
+                          Sim</label>
+                        <label><input type="checkbox" name="aspect[]" value="Avert" />
+                          Avert</label>
+                        <label><input type="checkbox" name="aspect[]" value="Hab" />
+                          Hab</label>
+                        <label><input type="checkbox" name="aspect[]" value="Mult" />
+                          Mult</label>
+                      </div>
+                    </div>
+                    <div class="feature-column">
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="person" value="all" />
+                            Person (subj)
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="person[]" value="1" />
+                          1</label>
+                        <label><input type="checkbox" name="person[]" value="2" />
+                          2</label>
+                        <label><input type="checkbox" name="person[]" value="3" />
+                          3</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="number" value="all" />
+                            Number (subj)
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="number[]" value="Sing" />
+                          Sing</label>
+                        <label><input type="checkbox" name="number[]" value="Dual" />
+                          Dual</label>
+                        <label><input type="checkbox" name="number[]" value="Plur" />
+                          Plur</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="person_obj" value="all" />
+                            Person (obj)
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="person_obj[]" value="1" />
+                          1</label>
+                        <label><input type="checkbox" name="person_obj[]" value="2" />
+                          2</label>
+                        <label><input type="checkbox" name="person_obj[]" value="3" />
+                          3</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="number_obj" value="all" />
+                            Number (obj)
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="number_obj[]" value="Sing" />
+                          Sing</label>
+                        <label><input type="checkbox" name="number_obj[]" value="Dual" />
+                          Dual</label>
+                        <label><input type="checkbox" name="number_obj[]" value="Plur" />
+                          Plur</label>
+                      </div>
+                    </div>
+                    <div class="feature-column">
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="verb" value="all" />
+                            Verb misc.
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="verb[]" value="NP" />
+                          Caus</label>
+                        <label><input type="checkbox" name="verb[]" value="VP" />
+                          Predicative</label>
+                        <label><input type="checkbox" name="verb[]" value="NumP" />
+                          Aux</label>
+                        <label><input type="checkbox" name="verb[]" value="QP" />
+                          Coord</label>
+                      </div>
+                      <div class="feature-block">
+                        <h4>
+                          <label><input type="checkbox" name="misc" value="all" />
+                            Miscellaneous
+                          </label>
+                        </h4>
+                        <label><input type="checkbox" name="misc[]" value="NP" />
+                          Evidentiality</label>
+                        <label><input type="checkbox" name="misc[]" value="VP" />
+                          Negation</label>
+                        <label><input type="checkbox" name="misc[]" value="NumP" />
+                          Dim</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Add</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Question</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Emphativ</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Collective num</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Classifier</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Reflex</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Indefinite</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Reciprocal</label>
+                        <label><input type="checkbox" name="misc[]" value="QP" />
+                          Focus</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dialog-buttons">
+                  <!-- <div class="decision-buttonss"> -->
+                  <div class="simple-buttons" id="reset-categories-0">
                     Сбросить
                   </div>
+                  <div class="check-button" id="checked-categories-0">
+                    Применить
+                    <!-- </div> -->
+                  </div>
                 </div>
-                <div class="right-buttons">
-                  <div class="underline-button">Список сокращений</div>
-                  <input id="close_modal0" type="image" src="/static/images/close.svg"
-                    style="width: 32px; height: 32px" />
-                </div>
-              </div>
-              <div class="gram-categories">
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="pos" value="all" /> POS
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="pos[]" value="NOUN" />
-                    NOUN</label>
-                  <label><input type="checkbox" name="pos[]" value="VERB" />
-                    VERB</label>
-                  <label><input type="checkbox" name="pos[]" value="NUM" />
-                    NUM</label>
-                  <label><input type="checkbox" name="pos[]" value="CLASS" />
-                    CLASS</label>
-                  <label><input type="checkbox" name="pos[]" value="Q" /> Q</label>
-                  <label><input type="checkbox" name="pos[]" value="ADV" />
-                    ADV</label>
-                  <label><input type="checkbox" name="pos[]" value="PROPN" />
-                    PROPN</label>
-                  <label><input type="checkbox" name="pos[]" value="PRON" />
-                    PRON</label>
-                  <label><input type="checkbox" name="pos[]" value="DISC" />
-                    DISC</label>
-                  <label><input type="checkbox" name="pos[]" value="NONE" />
-                    NONE</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="case" value="all" /> Case
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="case[]" value="Abl" />
-                    Abl</label>
-                  <label><input type="checkbox" name="case[]" value="Per" />
-                    Per</label>
-                  <label><input type="checkbox" name="case[]" value="Loc" />
-                    Loc</label>
-                  <label><input type="checkbox" name="case[]" value="Dat" />
-                    Dat</label>
-                  <label><input type="checkbox" name="case[]" value="Ins" />
-                    Ins</label>
-                  <label><input type="checkbox" name="case[]" value="Voc" />
-                    Voc</label>
-                  <label><input type="checkbox" name="case[]" value="Cau" />
-                    Cau</label>
-                  <label><input type="checkbox" name="case[]" value="Com" />
-                    Com</label>
-                  <label><input type="checkbox" name="case[]" value="Cmp" />
-                    Cmp</label>
-                  <label><input type="checkbox" name="case[]" value="Lim" />
-                    Lim</label>
-                  <label><input type="checkbox" name="case[]" value="Rep" />
-                    Rep</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="number" value="all" />
-                      Number
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="number[]" value="Sing" />
-                    Sing</label>
-                  <label><input type="checkbox" name="number[]" value="Dual" />
-                    Dual</label>
-                  <label><input type="checkbox" name="number[]" value="Plur" />
-                    Plur</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="person" value="all" />
-                      Person
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="person[]" value="1" />
-                    1</label>
-                  <label><input type="checkbox" name="person[]" value="2" />
-                    2</label>
-                  <label><input type="checkbox" name="person[]" value="3" />
-                    3</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="mood" value="all" /> Mood
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="mood[]" value="Ind" />
-                    Ind</label>
-                  <label><input type="checkbox" name="mood[]" value="Des" />
-                    Des</label>
-                  <label><input type="checkbox" name="mood[]" value="Imp" />
-                    Imp</label>
-                  <label><input type="checkbox" name="mood[]" value="Cnd" />
-                    Cnd</label>
-                  <label><input type="checkbox" name="mood[]" value="Hort" />
-                    Hort</label>
-                  <label><input type="checkbox" name="mood[]" value="Jus" />
-                    Jus</label>
-                  <label><input type="checkbox" name="mood[]" value="Prob" />
-                    Prob</label>
-                  <label><input type="checkbox" name="mood[]" value="Proh" />
-                    Proh</label>
-                  <label><input type="checkbox" name="mood[]" value="Indir" />
-                    Indir</label>
-                  <label><input type="checkbox" name="mood[]" value="Subj" />
-                    Subj</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="aspect" value="all" />
-                      Aspect
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="aspect[]" value="Prog" />
-                    Prog</label>
-                  <label><input type="checkbox" name="aspect[]" value="Ant" />
-                    Ant</label>
-                  <label><input type="checkbox" name="aspect[]" value="Iter" />
-                    Iter</label>
-                  <label><input type="checkbox" name="aspect[]" value="Usit" />
-                    Usit</label>
-                  <label><input type="checkbox" name="aspect[]" value="Res" />
-                    Res</label>
-                  <label><input type="checkbox" name="aspect[]" value="Compl" />
-                    Compl</label>
-                  <label><input type="checkbox" name="aspect[]" value="Sim" />
-                    Sim</label>
-                  <label><input type="checkbox" name="aspect[]" value="Avert" />
-                    Avert</label>
-                  <label><input type="checkbox" name="aspect[]" value="Hab" />
-                    Hab</label>
-                  <label><input type="checkbox" name="aspect[]" value="Mult" />
-                    Mult</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="categories" value="all" />
-                      Categories
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="categories[]" value="NP" />
-                    NP</label>
-                  <label><input type="checkbox" name="categories[]" value="VP" />
-                    VP</label>
-                  <label><input type="checkbox" name="categories[]" value="NumP" />
-                    NumP</label>
-                  <label><input type="checkbox" name="categories[]" value="QP" />
-                    QP</label>
-                  <label><input type="checkbox" name="categories[]" value="ADVP" />
-                    ADVP</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="verbform" value="all" />
-                      VerbForm
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="verbform[]" value="Conv" />
-                    Conv</label>
-                  <label><input type="checkbox" name="verbform[]" value="Vnoun" />
-                    Vnoun</label>
-                  <label><input type="checkbox" name="verbform[]" value="Part" />
-                    Part</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="clusivity" value="all" />
-                      Clusivity
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="clusivity[]" value="In" />
-                    In</label>
-                  <label><input type="checkbox" name="clusivity[]" value="Ex" />
-                    Ex</label>
-                </div>
-                <div class="feature-block">
-                  <h4>
-                    <label><input type="checkbox" name="nountype" value="all" />
-                      NounType
-                    </label>
-                  </h4>
-                  <label><input type="checkbox" name="nountype[]" value="Agent" />
-                    Agent</label>
-                  <label><input type="checkbox" name="nountype[]" value="Locat" />
-                    Locat</label>
-                  <label><input type="checkbox" name="nountype[]" value="Proc" />
-                    Proc</label>
-                  <label><input type="checkbox" name="nountype[]" value="Ing" />
-                    Ing</label>
-                  <label><input type="checkbox" name="nountype[]" value="Deverb" />
-                    Deverb</label>
-                </div>
-              </div>
-            </dialog>
-          </form>
-          <!-- сюда -->
+              </dialog>
+            </form>
+          </template>
         </div>
         <div class="search-buttons">
           <div class="final-buttons" id="reset">Сбросить</div>
@@ -444,7 +481,7 @@
       </div>
     </div>
     <footer></footer>
-    <script src="/static/main_js.js?v=12345"></script>
+    <script type="module" src="/static/main.js?v=12345"></script>
   </body>
 
 </html>

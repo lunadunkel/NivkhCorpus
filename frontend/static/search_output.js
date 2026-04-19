@@ -90,6 +90,14 @@ function process_output(data) {
 
     const element = document.getElementById('documents');
     const len_documents = data.length.toString();
-    element.textContent = len_documents;
+    let word = " примеров";
+    let regexp = /[234]$/gi;
+
+    if (len_documents.endsWith("1")) {
+      word = " пример"
+    } else if (len_documents.match(regexp)) {
+      word = " примера"
+    }
+    element.textContent = len_documents + word;
 
 }
