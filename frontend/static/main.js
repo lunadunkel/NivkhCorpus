@@ -69,7 +69,8 @@ document.getElementById("search").addEventListener("click", async () => {
 		const result = await response.json();
 		console.log("Успешный ответ от сервера:", result);
 
-		window.location.href = "search_output.html";
+		window.location.href = `search_output.html?job_id=${result.job_id}`;
+
 
 	} catch (error) {
 		console.error("Ошибка при запросе:", error);

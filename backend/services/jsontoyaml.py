@@ -34,8 +34,7 @@ class SubexampleItem:
                     case 'pos[]':
                         self.Morph += [('|').join(value)]
                     case 'misc[]' | 'verb[]':
-                        dictionary = MISC.get(key, None)
-                        if dictionary is not None:
+                        if dictionary := MISC.get(key, None):
                             self.Morph += [('|').join([dictionary[x] for x in value])]
                     case _:
                         if isinstance(db_key, list):

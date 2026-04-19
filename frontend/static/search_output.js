@@ -1,3 +1,6 @@
+const params = new URLSearchParams(window.location.search);
+const jobId = params.get("job_id");
+
 document.getElementById("new-search").addEventListener("click", () => {
   sessionStorage.removeItem("search-form-data");
   window.location.href = "/";
@@ -7,16 +10,17 @@ document.getElementById("new-search").addEventListener("click", () => {
 
 async function fetchData() {
     try {
-        const response = await fetch('/get_output');
+        const response = await fetch(`/get_output?job_id=${jobId}`);
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return response.json();
-        // console.log('Fetched data:', data);
+
+        return await response.json();
+
     } catch (error) {
         console.error('Fetch error:', error.message);
     }
-    return data;
 }
 
 fetchData()
@@ -31,7 +35,8 @@ function process_output(data) {
       placeholder.style.display = "block";
     };
 
-    for (const item of data) {
+    for (const [idx, item] of data.entries()) {
+        // console.log(item['final_indexes']);
         const real_output = document.createElement("div");
         real_output.className = "real-output"
 
@@ -43,10 +48,10 @@ function process_output(data) {
 
         const bold_title = document.createElement("div");
         bold_title.className = "bold-name";
-        bold_title.textContent = item['id'] + '. '+ item['name']
+        bold_title.textContent = idx + 1 + ') '+ item['title']
 
         const bold_author = document.createElement("div");
-        bold_author.className = "bold-name";
+        bold_author.className = "simple-name";
         bold_author.textContent = item['author']
 
         top_item.appendChild(bold_title);
@@ -59,7 +64,17 @@ function process_output(data) {
         nivkh.classList = "nivkh-text";
 
         const p_nivkh = document.createElement('p');
-        p_nivkh.innerHTML = item['text'];
+
+        if (item['final_indexes']) {
+          const words = item['text'].split(" "); 
+          for (const index of item['final_indexes']) {
+            words[index] = `<b>${words[index]}</b>`;
+          }
+          p_nivkh.innerHTML = words.join(" ");
+        } else {
+          p_nivkh.innerHTML = item['text'];
+        }
+
 
         nivkh.appendChild(p_nivkh);
 
@@ -67,7 +82,7 @@ function process_output(data) {
         rus.classList = "rus-text";
 
         const p_rus = document.createElement('p');
-        p_rus.textContent = item['translation'];
+        p_rus.textContent = item['russian_text'];
 
         rus.appendChild(p_rus);
 

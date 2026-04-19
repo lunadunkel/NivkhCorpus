@@ -6,6 +6,9 @@ QUERY2DB = {'pos[]': 'POS', 'case[]': 'Case', 'nountype[]': 'NounType',
             'person_obj[]': 'Person[obj]', 'number_obj[]': 'Number[obj]', 
             'mood[]': 'Mood', 'verb[]': 'verb[]', 'misc[]': 'misc[]'}
 
+ONLY4DB = {'person[]': 'Person[subj]',
+            'number[]': 'Number[subj]'}
+
 MISC: dict[str, dict] = {
         'verb[]': {
             'caus': 'Voice=Caus',

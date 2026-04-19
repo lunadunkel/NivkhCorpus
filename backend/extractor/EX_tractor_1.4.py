@@ -881,7 +881,6 @@ if __name__ == '__main__':
 											#'key_word': slot_value.key_word,
 											'key_lemma': slot_value.key_lemma,
 											'key_index': slot_value.key_index})
-				print('')
 				str_csv = str_csv + str_csv_tmp
 
 				if verbosity:

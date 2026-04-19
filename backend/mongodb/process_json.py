@@ -31,8 +31,10 @@ class Json2MongoProcessing:
                     tagsets = tagsets[0]
                     for idx, tag in enumerate(tagsets):
                         if '=' in tag:
-                            true_tags = tag.split('=')
-                            new_tagset[true_tags[0]] = true_tags[1]
+                            key, val = tag.split('=')
+                            if key in ['Number', 'Person']:
+                                key += '[subj]'
+                            new_tagset[key] = val
                         elif tag in self.pos_tags or idx == 0: 
                             new_tagset['POS'] = tag
                         else:

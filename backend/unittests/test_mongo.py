@@ -1,8 +1,6 @@
 from typing import Optional
-
 import pytest
-
-from backend.mongodb.create_query import AggregatePipeline
+from backend.mongodb.compile.aggregation_compile import AggregatePipeline
 from backend.mongodb.process_query import OriginalQuery
 
 

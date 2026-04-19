@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Any, Dict, Optional
-from backend.dictionaries import GRAMMAR_DICT, QUERY2DB
+from backend.dictionaries import MISC, ONLY4DB, QUERY2DB
 
 @dataclass
 class OriginalQuery:
@@ -21,27 +21,14 @@ class QueryBuilder:
     def extract_gram_feats(self, query: dict) -> Dict:
         feats = {}
         for ui_key, db_key in QUERY2DB.items():
-            if ui_key == 'additional[]':
-                continue
-            if value := query.get(ui_key):
+
+            if value := query.get(ui_key, None):
+                if feature := MISC.get(ui_key, None):
+                    db_key, value = feature[value].split('=')  
+                if isinstance(db_key, list):
+                    db_key = ONLY4DB[ui_key]
                 feats[db_key] = value
         return feats
-    
-    def extract_add_feats(self, query: dict, gram_feats: dict = {}) -> Dict:
-        additional = query.get('additional[]')
-        if not additional:
-            return gram_feats
-
-        if not isinstance(additional, list):
-            additional = [additional]
-
-        feats = {}
-        for add in additional:
-            key, value = GRAMMAR_DICT[add].split('=')
-            feats[key] = value
-        if feats:
-            gram_feats.update(feats)
-        return gram_feats
     
     def process_queries(self, query: list) -> list:
         queries = []
@@ -50,7 +37,6 @@ class QueryBuilder:
             input_word = q.get('input_word') or None
 
             gram_feats = self.extract_gram_feats(q)
-            gram_feats = self.extract_add_feats(q, gram_feats)
             if not gram_feats:
                 gram_feats = None
                 
