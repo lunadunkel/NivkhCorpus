@@ -1,6 +1,6 @@
 from typing import Dict, List, cast
 
-from backend.mongodb.process_query import OriginalQuery
+from backend.mongodb.compile.process_query import OriginalQuery
 
 
 class MatchQueryCompiler:

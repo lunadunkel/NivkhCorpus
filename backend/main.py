@@ -1,8 +1,24 @@
 from fastapi import FastAPI
 
+from contextlib import asynccontextmanager
 from backend.api.api_router import api_router
-from backend.core.config import FRONTEND_DIR
+from backend.core.config import COLLECTION_JOB, FRONTEND_DIR, USE_DB
 from fastapi.staticfiles import StaticFiles
+
+from backend.mongodb.repositories.database import get_collection
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+
+    if USE_DB:
+        collection = get_collection(COLLECTION_JOB)
+
+        await collection.create_index(
+            "created_at",
+            expireAfterSeconds=3600
+        )
+
+    yield
 
 
 app = FastAPI()

@@ -1,7 +1,7 @@
 from typing import List
 from backend.mongodb.compile.add_fields_compile import AddFieldsCompiler
 from backend.mongodb.compile.match_compile import MatchQueryCompiler
-from backend.mongodb.process_query import OriginalQuery
+from backend.mongodb.compile.process_query import OriginalQuery
 
 
 class AggregatePipeline:
@@ -16,7 +16,7 @@ class AggregatePipeline:
                 "text": 1,
                 "final_indexes": 1,
                 "author": '$metadata.author',
-                "title": '$metadata.title_n'
+                "title": '$metadata.title_r'
             }
 
         return {'$project': project}

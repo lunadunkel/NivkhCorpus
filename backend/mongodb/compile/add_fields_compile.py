@@ -1,6 +1,6 @@
 from typing import Optional
 from backend.mongodb.compile.match_compile import MatchQueryCompiler
-from backend.mongodb.process_query import OriginalQuery
+from backend.mongodb.compile.process_query import OriginalQuery
 
     
 class AddFieldsCompiler:

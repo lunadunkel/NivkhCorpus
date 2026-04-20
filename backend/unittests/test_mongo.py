@@ -1,7 +1,7 @@
 from typing import Optional
 import pytest
 from backend.mongodb.compile.aggregation_compile import AggregatePipeline
-from backend.mongodb.process_query import OriginalQuery
+from backend.mongodb.compile.process_query import OriginalQuery
 
 
 # def make_query(word: str, gram: Optional[dict] = None):

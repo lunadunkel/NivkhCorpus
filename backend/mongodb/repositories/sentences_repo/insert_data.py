@@ -1,8 +1,8 @@
 import asyncio
 import os
 from backend.core.config import JSON_DATA_PATH
-from backend.mongodb.database import get_collection
-from backend.mongodb.process_json import Json2MongoProcessing
+from backend.mongodb.repositories.database import get_collection
+from backend.mongodb.repositories.sentences_repo.process_json import Json2MongoProcessing
 
 collection = get_collection('sentences')
 preprocessing = Json2MongoProcessing(JSON_DATA_PATH)

@@ -1,9 +1,10 @@
 from fastapi import APIRouter
 from fastapi.responses import FileResponse, JSONResponse
 
-from backend.core.config import FRONTEND_DIR, OUTPUT_DIR, USE_DB
+from backend.core.config import COLLECTION_JOB, FRONTEND_DIR, OUTPUT_DIR, USE_DB
+from backend.mongodb.repositories.utils import clean
 from backend.services.prepare_for_html import CSVConverter
-from backend.mongodb.database import get_collection
+from backend.mongodb.repositories.database import get_collection
 
 
 router = APIRouter()
@@ -18,18 +19,6 @@ def root():
 def search_page():
     return FileResponse(FRONTEND_DIR / "search_output.html")
 
-from bson import ObjectId
-
-def clean(obj):
-    if isinstance(obj, list):
-        return [clean(x) for x in obj]
-    if isinstance(obj, dict):
-        return {
-            k: (str(v) if isinstance(v, ObjectId) else clean(v))
-            for k, v in obj.items()
-        }
-    return obj
-
 @router.get("/get_output")
 async def get_output_data(job_id: str):
     if not USE_DB:
@@ -40,9 +29,8 @@ async def get_output_data(job_id: str):
         json_data = converter.convert()
         return JSONResponse(json_data)
     else:
-        collection = get_collection("sentences")
+        collection = get_collection(COLLECTION_JOB)
         doc = await collection.find_one({"_id": job_id})
-        print(doc)
         if not doc:
             return {"error": "not found"}
 

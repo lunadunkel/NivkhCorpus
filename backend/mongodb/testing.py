@@ -1,8 +1,8 @@
 import asyncio
 import pprint
 
-from backend.mongodb.database import get_collection
-from backend.mongodb.process_query import QueryBuilder
+from backend.mongodb.repositories.database import get_collection
+from backend.mongodb.compile.process_query import QueryBuilder
 from backend.mongodb.compile.aggregation_compile import AggregatePipeline
 
 
