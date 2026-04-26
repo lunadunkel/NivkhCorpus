@@ -11,3 +11,4 @@ JSON_DATA_PATH = INPUT_DIR / "main"
 USE_DB = True
 COLLECTION_JOB = "jobs_id"
 COLLECTION_SENT = "sentences"
+COLLECTION_RESULTS = "results"

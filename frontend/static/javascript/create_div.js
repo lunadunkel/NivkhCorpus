@@ -80,16 +80,30 @@ function bindEvents(root, value, manager) {
         const gramQuery = {}
         const checkboxes = root.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
-            const categoryName = checkbox.name
-            if (checkbox.checked && categoryName) {
-                const categoryValue = checkbox.value
+            const categoryName = checkbox.name;
+            if (checkbox.checked && categoryName && checkbox.value !== 'all') { // вот здесь
+                const categoryValue = checkbox.value;
                 if (!(categoryName in gramQuery)) {
-                    gramQuery[categoryName] = []
+                    gramQuery[categoryName] = [];
                 }
                 gramQuery[categoryName].push(categoryValue);
             };
         });
         root.querySelector("#pop-up-" + value).close();
+        const parts = [];
+        for (const [name, values] of Object.entries(gramQuery)) {
+            // let part;
+            let part = values.length > 1 ? `(${values.join('|')})` : values[0];
+            // } else {
+            //     const key = name.replace('[]', '');
+            //     const vals = values.map(v => `${key}=${v}`);
+            //     part = vals.length > 1 ? `(${vals.join('|')})` : vals[0];
+            // }
+            parts.push(part);
+        }
+        root.querySelector("#regex-" + value).value = parts.join(' & ');
+
+        root.querySelector("#pop-up-" + value).close(); // это уже было
         console.log(gramQuery);
     });
 

@@ -8,7 +8,7 @@ import uuid
 from backend.mongodb.compile.aggregation_compile import AggregatePipeline
 from backend.mongodb.repositories.database import get_collection
 from backend.mongodb.compile.process_query import QueryBuilder
-from backend.mongodb.repositories.sentences_repo import search_jobs
+from backend.mongodb.repositories.jobs_repo import search_jobs
 from backend.mongodb.repositories.utils import make_hash
 from backend.services.jsontoyaml import JsonToYaml
 from backend.core.config import COLLECTION_SENT, EXTRACTOR_DIR, USE_DB
@@ -53,7 +53,12 @@ async def search(query):
     await search_jobs.save({
         "_id": job_id,
         "query_hash": query_hash,
-        "result": result,
+        # "result": result,
         "created_at": datetime.now(timezone.utc)
     })
+
+    results = [{'job_id': job_id, 'result': res, "created_at": datetime.now(timezone.utc)} for res in result]
+
+    await search_jobs.insert_results(results)
+
     return {"status": "ok", "job_id": job_id}
