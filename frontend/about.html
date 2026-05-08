@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
-    <meta charset="UTF-8" />
-    <title>search output</title>
+<html lang="en">
 
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <link rel="stylesheet" href="static/reset.css" />
-        <link rel="stylesheet" href="/static/styles.css" />
+        <link rel="stylesheet" href="static/styles.css" />
+        <link rel="stylesheet" href="static/about.css" />
+        <title>О корпусе</title>
     </head>
 
     <body>
@@ -44,7 +44,7 @@
                             </g>
                         </svg>
                         Словник</a>
-                    <a href="about.html" class="middle-main_link">
+                    <a href="" class="middle-main_link">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                 width="20" height="20">
@@ -63,45 +63,89 @@
                 </li>
             </ul>
         </header>
-        <div class="search_output" id="output-info">
-            <div class="top-back-container">
-                <a class="back_to_search" href="/">Вернуться к поиску</a>
-                <div class="statistics">
-                    Найдено:
-                    <div class="word_stat">
-                        <div class="counter" id="documents">0 примеров</div>
-                    </div>
-                </div>
+        <div class="main-info">
+            <div class="text-section">
+                <h2> О корпусе</h2>
+                <p><strong>Нивхский язык</strong> (палеоазиатская группа)&nbsp;&mdash; уникальный язык-изолят,
+                    распространенный
+                    территориально в&nbsp;низовьях Амура и&nbsp;на&nbsp;Сахалине. На&nbsp;данный момент количество
+                    людей, причисляющих себя к&nbsp;нивхскому этносу, составляет примерно 4,5 тысячи людей. Данный
+                    ресурс создавался с&nbsp;целью сохранения цифровых материалов языка: как для самих носителей, так
+                    и&nbsp;для лингвистов-исследователей.
+                </p>
+                <p>
+                    На&nbsp;данный момент корпус включает в&nbsp;себя 16&nbsp;текстов разных авторов: всего
+                    742&nbsp;предложения, с&nbsp;суммарным количеством слов, превышающее 5000 единиц.
+                    В&nbsp;корпусе представлены тексты на&nbsp;амурском и&nbsp;сахалинском диалектах,
+                    9&nbsp;и&nbsp;7&nbsp;текстов соответственно.
+                    Кроме того, тексты относятся к&nbsp;разным жанрам для обеспечения репрезентативности корпуса.
+                </p>
+                <p>
+                    Исследование выполнено за счет гранта Российского научного фонда № 25-28-00552 "Цифровизация данных
+                    исчезающего языка: нивхский", реализуемого в МГУ имени М.В. Ломоносова.
+                </p>
             </div>
 
-            <div class="example-output" id="no-found-data">
-                По заданному поиску не найдено результатов. <br> Попробуйте поменять запрос.
+            <div class="text-section">
+                <h2> Содержание</h2>
+                <ol>
+                    <li><a href="#use-corpus">Как пользоваться корпусом</a></li>
+                    <li> <a href="#abbreviations">Список сокращений</a></li>
+                    <li> <a href="#participants">Участники</a></li>
+                    <li><a href="#resources">Полезные ресурсы</a></li>
+                </ol>
             </div>
+            <div class="text-section" id="use-corpus">
+                <h2> Как пользоваться корпусом</h2>
+                <p> Поисковой механизм корпуса поддерживает поиск по&nbsp;леммам и&nbsp;словоформам как
+                    на&nbsp;нивхском, так и&nbsp;на
+                    русском.
+                    Для нивхских слов полностью поддерживается дополнительный поиск по&nbsp;различным грамматическим
+                    признакам; в&nbsp;случае
+                    русского языка для словоформ поиск происходит с&nbsp;помощью регулярного выражения по&nbsp;русскому
+                    переводу.
 
-            <div class="documents-output" id="all-documents">
-                <a class="go-up">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M5.83333 13.3333V3.1875L1.16667 7.85417L0 6.66667L6.66667 0L13.3333 6.66667L12.1667 7.85417L7.5 3.1875V13.3333H5.83333Z"
-                            fill="#1C1B1F" />
-                    </svg>
-                </a>
-
+                </p>
+                <p>Для удобства пользованием корпусом аннотация была осуществлена в&nbsp;структуре Universal
+                    Dependencies
+                    (UD). Глоссирование текстов реализовано также по&nbsp;общепринятым стандартам разметки&nbsp;&mdash;
+                    Лейпцигской
+                    системе правил глоссирования. Тексты снабжены следующей разметкой:
+                <ul class="ul-list">
+                    <li>POS&nbsp;&mdash; часть речи слова</li>
+                    <li>Case&nbsp;&mdash; падеж слова (для имен существительных)</li>
+                    <li>NounType&nbsp;&mdash; тип имени существительного</li>
+                    <li>Clusivity&nbsp;&mdash; инклюзивное или эксклюзивное прочтение (для местоимений)</li>
+                    <li>VerbForm&nbsp;&mdash; тип глагола</li>
+                    <li>Tense&nbsp;&mdash; время глагола</li>
+                    <li>Mood&nbsp;&mdash; наклонение глагола</li>
+                    <li>Aspect&nbsp;&mdash; аспект глагола</li>
+                    <li>Person&nbsp;&mdash; лицо (отдельно для субъекта и&nbsp;объекта)</li>
+                    <li>Number&nbsp;&mdash; число (отдельно для субъекта и&nbsp;объекта)</li>
+                    <li>Verb misc. &mdash;&nbsp;прочие морфологические признаки для глагола</li>
+                    <li>Miscellaneous&nbsp;&mdash; дополнительные признаки</li>
+                </ul>
+                </p>
+                <p>
+                    Поиск поддерживает до&nbsp;10&nbsp;слов в&nbsp;одном запросе, а&nbsp;также снабжен виртуальной
+                    клавиатурой
+                    для особых знаков в&nbsp;нивхской письменности.
+                </p>
             </div>
-
-            <div class="show-button" id="show-more">Показать ещё</div>
-
-            <!-- <div class="real-output">
-
-
-                <div class="modal-buttons" id="more-data">
-                    Показать ещё
-                </div>
-            </div> -->
-
+            <div class="text-section" id="abbreviations">
+                <h2> Список сокращений</h2>
+                <p> </p>
+            </div>
+            <div class="text-section" id="participants">
+                <h2> Участники проекта</h2>
+                <p> </p>
+            </div>
+            <div class="text-section" id="resources">
+                <h2> Полезные ресурсы</h2>
+                <p> </p>
+            </div>
         </div>
-        <footer></footer>
-        <script src="static/search_output.js"></script>
+        <script type="module" src="/static/javascript/about.js"></script>
     </body>
 
 </html>

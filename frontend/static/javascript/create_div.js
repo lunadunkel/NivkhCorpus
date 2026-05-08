@@ -39,6 +39,17 @@ function bindEvents(root, value, manager) {
         root.querySelector("#pop-up-" + value).showModal();
     });
 
+    const letters = root.querySelectorAll(".letters");
+    letters.forEach((item) => {
+        item.addEventListener("click", function (e) {
+            const selectedLetter = item.textContent;
+            const trueValue = root.querySelector(
+                "#correct_placeholder-" + value
+            );
+            trueValue.value += selectedLetter;
+        });
+    });
+
     root.querySelector("#close-modal-" + value).addEventListener("click", function(e) {
         if (Object.keys(gramState).length === 0) {
             dialog.querySelectorAll('input[type="checkbox"]')

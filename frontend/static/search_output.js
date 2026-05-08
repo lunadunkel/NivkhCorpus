@@ -37,6 +37,7 @@ async function fetchData(offset = 0) {
 
 // первая загрузка
 fetchData(0).then(data => {
+    console.log(data.length)
     if (!data) return;
     updateCounter(data.length);
     if (data.length === 0) {

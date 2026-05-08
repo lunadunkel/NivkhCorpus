@@ -19,6 +19,7 @@ export function keyboardActivate(elem) {
                 grammContainer.forEach((cont) => (cont.style.display = "none"))
             };
         }
+
     });
 
     if (elem.value) {

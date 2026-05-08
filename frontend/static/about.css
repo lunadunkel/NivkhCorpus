@@ -1,0 +1,47 @@
+.main-info {
+    display: flex;
+    gap: 28px;
+    max-width: 680px;
+    justify-content: flex-start;
+    margin: 5rem auto 0 auto;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+p {
+    line-height: 130%;
+    font-stretch: expanded;
+}
+
+h2 {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    line-height: 1.5;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.ul-list {
+    list-style-type: square;
+    list-style-position: inside;
+    line-height: 1.5;
+}

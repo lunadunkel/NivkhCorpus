@@ -35,12 +35,12 @@ async def run_search_db(query):
     qb = QueryBuilder(query)
     aggregate_compiler = AggregatePipeline(qb.queries)
     aggregation = aggregate_compiler.aggregate()
-
     cursor = collection.aggregate(aggregation)
     result = await cursor.to_list(length=None)
     return result
 
 async def search(query):
+    print(query)
     if not USE_DB:
         return extractor_search(query)
     query_hash = make_hash(query)
@@ -53,12 +53,14 @@ async def search(query):
     await search_jobs.save({
         "_id": job_id,
         "query_hash": query_hash,
-        # "result": result,
+        "status": "empty" if not result else "done",
         "created_at": datetime.now(timezone.utc)
     })
-
-    results = [{'job_id': job_id, 'result': res, "created_at": datetime.now(timezone.utc)} for res in result]
-
-    await search_jobs.insert_results(results)
+    if result:
+        results = [
+            {'job_id': job_id, 'result': res, "created_at": datetime.now(timezone.utc)}
+            for res in result
+        ]
+        await search_jobs.insert_results(results)
 
     return {"status": "ok", "job_id": job_id}
