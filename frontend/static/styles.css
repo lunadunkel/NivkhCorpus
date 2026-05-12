@@ -773,12 +773,15 @@ dialog:focus {
 }
 
 .final-buttons {
-  width: 100%;
-  min-width: 120px;
-  padding: 12px;
-  border-radius: 6px;
-  box-sizing: border-box;
-  cursor: pointer;
+    display: flex;
+    width: 100%;
+    min-width: 120px;
+    padding: 12px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 .final-buttons#search {
@@ -983,6 +986,17 @@ input[type="radio"] {
     }
   }
 
+  .segm-text, .gloss-text {
+    display: none;
+    color: var(-500);
+    font-family: inherit;
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--500);
+    }
+  }
+
   .rus-text {
     color: var(-500);
     font-family: inherit;
@@ -1044,3 +1058,73 @@ input[type="radio"] {
       opacity: 0.8;
     }
 }
+
+.loader, .loader:before, .loader:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  animation-fill-mode: both;
+  animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+
+.loader {
+    display: none;
+    color: #FFF;
+    font-size: 3.5px;
+    position: relative;
+    text-indent: -9999em;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+    margin-top: -16px;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+
+.loader:before {
+  left: -3.5em;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 3.5em;
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
+  40% { box-shadow: 0 2.5em 0 0 }
+}
+
+.gloss-wrapper {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.word-pair {
+    display: flex;
+    flex-direction: column;
+}
+    
+/* .igt {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(6, max-content);
+
+    column-gap: 14px;
+    row-gap: 4px;
+
+    width: max-content;
+
+    overflow-x: auto;
+}
+
+.igt div {
+    white-space: nowrap;
+} */

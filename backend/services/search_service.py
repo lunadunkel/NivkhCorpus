@@ -5,6 +5,7 @@ import sys
 import asyncio
 from typing import Dict, Optional, Tuple
 import uuid
+from bson import ObjectId
 from backend.mongodb.compile.aggregation_compile import AggregatePipeline
 from backend.mongodb.repositories.database import get_collection
 from backend.mongodb.compile.process_query import QueryBuilder
@@ -64,3 +65,8 @@ async def search(query):
         await search_jobs.insert_results(results)
 
     return {"status": "ok", "job_id": job_id}
+
+async def add_glossing(doc_id):
+    collection = get_collection(COLLECTION_SENT)
+    result = await collection.find_one({"_id": ObjectId(doc_id)}, projection={"segmented_text": 1, "glossed_text": 1})
+    return result

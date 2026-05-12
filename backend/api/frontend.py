@@ -24,6 +24,7 @@ def search_page():
 def about():
     return FileResponse(FRONTEND_DIR / "about.html")
 
+
 @router.get("/get_output")
 async def get_output_data(job_id: str, offset: int = 0, limit: int = 20):
     if not USE_DB:

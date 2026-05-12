@@ -9,6 +9,7 @@ document.getElementById("new-search").addEventListener("click", () => {
 });
 
 
+
 const goUpBtn = document.querySelector('.go-up');
 
 window.addEventListener('scroll', () => {
@@ -37,7 +38,6 @@ async function fetchData(offset = 0) {
 
 // первая загрузка
 fetchData(0).then(data => {
-    console.log(data.length)
     if (!data) return;
     updateCounter(data.length);
     if (data.length === 0) {
@@ -61,7 +61,6 @@ document.getElementById('show-more').addEventListener('click', () => {
 
 
 function updateShowMore(total) {
-    console.log(total, currentOffset);
     const btn = document.getElementById('show-more');
     btn.style.display = currentOffset < total ? 'block' : 'none';
 }
@@ -78,6 +77,47 @@ function updateCounter(total) {
     element.textContent = str + word;
 }
 
+async function addContext(id, card) {
+  const response = await fetch(`/search/doc_id=${id}`, {
+    method: "POST"
+  });
+
+  const data = await response.json();
+  console.log(data, card);
+
+
+  const segmentation = data['segmentation'].split(" ");
+  const glosses = data['glossing'].split(" ");
+  
+  const glossBlock = document.createElement("div");
+  glossBlock.className = "gloss-wrapper";
+  for (let i = 0; i < segmentation.length; i++) {
+    const seg = document.createElement("div");
+    seg.textContent = segmentation[i];
+
+    const gloss = document.createElement("div");
+    gloss.textContent = glosses[i];
+
+    const wordPair = document.createElement("div");
+    wordPair.className = "word-pair";
+
+    wordPair.appendChild(seg);
+    wordPair.appendChild(gloss);
+
+    glossBlock.appendChild(wordPair);
+  }
+
+
+  card.querySelector(".segm-text").appendChild(glossBlock);
+//   card.querySelector(".gloss-text").appendChild(p_gloss);
+  card.querySelector(".segm-text").style.display = "flex";
+//   card.querySelector(".gloss-text").style.display = "flex";
+  card.querySelector(".additional-info").style.display = "none";
+
+
+  console.log(card);
+}
+
 function process_output(items, total) {
     const container = document.getElementById("all-documents");
     
@@ -86,6 +126,7 @@ function process_output(items, total) {
         real_output.className = "real-output";
 
         const text_item = document.createElement("div");
+        text_item.dataset.id = item['_id'];
         text_item.className = "text-item";
 
         const top_item = document.createElement("div");
@@ -128,12 +169,27 @@ function process_output(items, total) {
         p_rus.textContent = item['russian_text'];
         rus.appendChild(p_rus);
 
+
+        const segmentation = document.createElement('div');
+        segmentation.className = "segm-text";
+
+        const glossing = document.createElement('div');
+        glossing.className = "gloss-text";
+
+
         main_text.appendChild(nivkh);
+        main_text.appendChild(segmentation);
+        main_text.appendChild(glossing);
         main_text.appendChild(rus);
 
         const add_info = document.createElement('div');
         add_info.className = "additional-info";
         add_info.textContent = "Посмотреть контекст";
+
+        add_info.addEventListener("click", async() => {
+            
+            await addContext(item['_id'], real_output);
+        })
 
         text_item.appendChild(top_item);
         text_item.appendChild(main_text);

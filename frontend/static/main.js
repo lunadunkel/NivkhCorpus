@@ -17,7 +17,7 @@ document.getElementById("search").addEventListener("click", async () => {
 	const forms = document.querySelectorAll(".main-searching-frame");
 	const allData = [];
 	let hasAnyValue = false;
-
+	
 	forms.forEach(form => {
 		const formData = new FormData(form);
 		const formObj = {};
@@ -51,6 +51,10 @@ document.getElementById("search").addEventListener("click", async () => {
 		alert("Введите хотя бы одно поле для поиска.");
 		return;
 	}
+
+	document.getElementById("text-search").style.display = "none";
+	document.getElementById("loader").style.display = "block";
+	document.getElementById("search").style.opacity = "0.8";
 
 	console.log("Отправка данных:", allData);
 
