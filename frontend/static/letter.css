@@ -1,0 +1,40 @@
+
+.dictionary-list {
+    display: flex;
+    /* margin: 80px 0px; */
+    width: 100%;
+    max-width: 760px;
+    height: fit-content;
+    justify-self: center;
+    margin: 0px auto 80px;
+    /* gap: 8px; */
+    flex-direction: column;
+
+  @media screen and (max-width: 486px) {
+      font-size: 18px;
+      .top-base-container {
+        flex-direction: column;
+      row-gap: 0.75rem;
+      .simple-name {
+        text-align: left;
+      }
+      }
+    }
+}
+
+.word-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px 0px;
+    border-bottom: 1px solid var(--200);
+}
+
+.lemma {
+    color: var(--700);
+    font-size: 20px;
+}
+
+.translation {
+    color: var(--950);
+}

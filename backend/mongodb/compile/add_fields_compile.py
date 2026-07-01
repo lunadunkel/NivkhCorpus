@@ -10,6 +10,19 @@ class AddFieldsCompiler:
     def __init__(self, query: list[OriginalQuery]):
         self.query = query
         self.fields_query = self.compile()
+    
+    def _get_person_fields(self, clobj: bool, clpos: bool, prefix: str = "tagsets"):
+        fields = []
+
+        if clobj:
+            fields.append(f"{prefix}.Person[clobj]")
+        if clpos:
+            fields.append(f"{prefix}.Person[clpos]")
+
+        return fields or [
+            f"{prefix}.Person[clobj]",
+            f"{prefix}.Person[clpos]"
+        ]
 
     def _build_conditions(self, oq: OriginalQuery) -> list[dict]:
         """Внутренняя функция для написания условий на этапе addFields"""
@@ -33,14 +46,67 @@ class AddFieldsCompiler:
 
         # граммемы
         if oq.gram_feats:
+            person_object = oq.gram_feats.get("PersonObject")
+
             for key, value in oq.gram_feats.items():
+                if key == "PersonObject":
+                    continue
+
                 field = f"$$x.tagsets.{key}"
 
-                if isinstance(value, list):
-                    conditions.append({"$in": [field, value]})
+                conditions.append(
+                    {"$in": [field, value]}
+                    if isinstance(value, list)
+                    else {"$eq": [field, value]}
+                )
+
+            if person_object:
+                person = person_object["person"]
+
+                fields = self._get_person_fields(
+                    person_object["clobj"],
+                    person_object["clpos"],
+                    "$$x.tagsets"
+                )
+
+                if person:
+                    operator = "$in" if isinstance(person, list) else "$eq"
+
+                    if len(fields) == 1:
+                        conditions.append(
+                            {operator: [fields[0], person]}
+                            if operator == "$eq"
+                            else {"$in": [fields[0], person]}
+                        )
+                    else:
+                        conditions.append({
+                            "$or": [
+                                (
+                                    {"$eq": [field, person]}
+                                    if operator == "$eq"
+                                    else {"$in": [field, person]}
+                                )
+                                for field in fields
+                            ]
+                        })
+
                 else:
-                    conditions.append({"$eq": [field, value]})
-        
+                    exists_conditions = [
+                        {
+                            "$ne": [
+                                {"$ifNull": [field, None]},
+                                None
+                            ]
+                        }
+                        for field in fields
+                    ]
+
+                    conditions.append(
+                        exists_conditions[0]
+                        if len(fields) == 1
+                        else {"$or": exists_conditions}
+                    )
+
         return conditions
 
     def _build_single_add_fields(self, oq: OriginalQuery, fields_dictionary: dict) -> dict:

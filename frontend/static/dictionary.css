@@ -1,0 +1,98 @@
+
+.alpha-index {
+    padding: 4px 28px;
+    column-count: 3;
+    column-gap: 0px;
+    margin-top: 4px;
+}
+
+.progress-search {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.dict-entry { 
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer; 
+}
+
+.entry-tr {
+  color: rgba(99, 99, 99, 0.8);
+  font-style: italic;
+}
+
+.dict-entry.is-active {
+  color: var(--500);
+  cursor: pointer;
+  background-color: color-mix(in srgb, var(--100), transparent 70%);
+}
+ 
+.dict-results {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  flex-direction: column;
+  border: 1px solid var(--100);
+  border-radius: 8px;
+  background-color: white;
+  top: 60px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  z-index: 1;
+ 
+  li {
+    padding: 1rem 16px;
+    transition: background-color 0.2s;
+    position: relative;
+    /* :hover убран намеренно — подсветка идёт через .is-active из JS */
+  }
+}
+
+
+
+@media screen and (max-width: 520px) {
+  .alpha-index {
+    column-count: 2;
+  }
+}
+
+.idx-row {
+  display: flex;
+  align-items: baseline;
+  /* gap: 14px; */
+  padding: 8px 0;
+  break-inside: avoid;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--950);
+  transition: color 0.15s ease;
+}
+
+.idx-letter {
+  flex: none;
+  width: 28px;
+  font-size: 16px;
+  /* font-weight: 700; */
+  color: var(--950);
+  transition: color 0.15s ease;
+}
+
+.idx-example {
+  font-size: 17px;
+  color: var(--500);
+  transition: color 0.15s ease;
+
+}
+
+/* hover — текст зеленеет, без подложки */
+.idx-row:hover .idx-letter {
+  /* opacity: 70%; */
+  color: var(--500);
+}
+
+.idx-row:hover {
+  opacity: 70%;
+}

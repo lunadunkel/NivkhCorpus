@@ -1,5 +1,6 @@
 import pprint
 from datetime import datetime, timezone
+import re
 import subprocess
 import sys
 import asyncio
@@ -12,7 +13,7 @@ from backend.mongodb.compile.process_query import QueryBuilder
 from backend.mongodb.repositories.jobs_repo import search_jobs
 from backend.mongodb.repositories.utils import make_hash
 from backend.services.jsontoyaml import JsonToYaml
-from backend.core.config import COLLECTION_SENT, EXTRACTOR_DIR, USE_DB
+from backend.core.config import COLLECTION_SENT, EXTRACTOR_DIR, USE_DB, COLLECTION_DICT
 
 
 async def extractor_search(query):
@@ -36,12 +37,12 @@ async def run_search_db(query):
     qb = QueryBuilder(query)
     aggregate_compiler = AggregatePipeline(qb.queries)
     aggregation = aggregate_compiler.aggregate()
+    print(aggregation)
     cursor = collection.aggregate(aggregation)
     result = await cursor.to_list(length=None)
     return result
 
 async def search(query):
-    print(query)
     if not USE_DB:
         return extractor_search(query)
     query_hash = make_hash(query)
@@ -70,3 +71,17 @@ async def add_glossing(doc_id):
     collection = get_collection(COLLECTION_SENT)
     result = await collection.find_one({"_id": ObjectId(doc_id)}, projection={"segmented_text": 1, "glossed_text": 1})
     return result
+
+async def return_dictionary():
+    collection = get_collection(COLLECTION_DICT)
+    cursor = collection.find({})
+    documents = await cursor.to_list() 
+    return documents
+
+async def return_letter_list(letter):
+    collection = get_collection(COLLECTION_DICT)
+
+    pattern = '^' + re.escape(letter) + '(?![\u2019\u030c\u02C7])'
+    cursor = collection.find({"lemma": {"$regex": pattern}})
+    documents = await cursor.to_list() 
+    return documents

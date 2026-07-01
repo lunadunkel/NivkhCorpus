@@ -120,10 +120,14 @@ function bindEvents(root, value, manager) {
 
     dialog.querySelectorAll(".feature-block").forEach((block) => {
         const selectAll = block.querySelector("h4 > label > input");
-        selectAll.addEventListener("click", function() {
+        console.log(selectAll);
+        if (selectAll) {
+            selectAll.addEventListener("click", function() {
             block.querySelectorAll("label > input[type='checkbox']")
                 .forEach(cb => cb.checked = selectAll.checked);
         });
+
+        }
     });
 
 }

@@ -77,25 +77,50 @@ function updateCounter(total) {
     element.textContent = str + word;
 }
 
+function closeContext(card) {
+    card.querySelector(".segm-text").style.display = "none"
+    card.querySelector(".additional-info").textContent = "Показать глоссы";
+}
+
 async function addContext(id, card) {
-  const response = await fetch(`/search/doc_id=${id}`, {
+
+    // console.log('уже есть')
+    
+    console.log(card)
+    const glossedText = card.querySelector(".gloss-wrapper");
+    if (glossedText) {
+        if (glossedText.checkVisibility()) {
+            closeContext(card);
+            return
+        }
+        else {
+            console.log("нет")
+            console.log(glossedText)
+            card.querySelector(".segm-text").style.display = "flex";
+            return
+        };
+    }
+
+    const response = await fetch(`/search/doc_id=${id}`, {
     method: "POST"
-  });
+    });
 
-  const data = await response.json();
-  console.log(data, card);
+    const data = await response.json();
+    console.log(data, card);
 
 
-  const segmentation = data['segmentation'].split(" ");
-  const glosses = data['glossing'].split(" ");
-  
-  const glossBlock = document.createElement("div");
-  glossBlock.className = "gloss-wrapper";
-  for (let i = 0; i < segmentation.length; i++) {
+    const segmentation = data['segmentation'].split(" ");
+    const glosses = data['glossing'].split(" ");
+
+    const glossBlock = document.createElement("div");
+    glossBlock.className = "gloss-wrapper";
+    for (let i = 0; i < segmentation.length; i++) {
     const seg = document.createElement("div");
     seg.textContent = segmentation[i];
+    seg.className = "nivkh-segm";
 
     const gloss = document.createElement("div");
+    gloss.className = "rus-segm"
     gloss.textContent = glosses[i];
 
     const wordPair = document.createElement("div");
@@ -105,17 +130,13 @@ async function addContext(id, card) {
     wordPair.appendChild(gloss);
 
     glossBlock.appendChild(wordPair);
-  }
+    }
 
 
-  card.querySelector(".segm-text").appendChild(glossBlock);
-//   card.querySelector(".gloss-text").appendChild(p_gloss);
-  card.querySelector(".segm-text").style.display = "flex";
-//   card.querySelector(".gloss-text").style.display = "flex";
-  card.querySelector(".additional-info").style.display = "none";
-
-
-  console.log(card);
+    card.querySelector(".segm-text").appendChild(glossBlock);
+    card.querySelector(".segm-text").style.display = "flex";
+    card.querySelector(".additional-info").textContent = "Скрыть глоссы";
+    console.log(card);
 }
 
 function process_output(items, total) {
@@ -173,18 +194,17 @@ function process_output(items, total) {
         const segmentation = document.createElement('div');
         segmentation.className = "segm-text";
 
-        const glossing = document.createElement('div');
-        glossing.className = "gloss-text";
+        // const glossing = document.createElement('div');
+        // glossing.className = "gloss-text";
 
 
         main_text.appendChild(nivkh);
         main_text.appendChild(segmentation);
-        main_text.appendChild(glossing);
         main_text.appendChild(rus);
 
         const add_info = document.createElement('div');
         add_info.className = "additional-info";
-        add_info.textContent = "Посмотреть контекст";
+        add_info.textContent = "Показать глоссы";
 
         add_info.addEventListener("click", async() => {
             

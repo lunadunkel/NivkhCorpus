@@ -12,3 +12,4 @@ USE_DB = True
 COLLECTION_JOB = "jobs_id"
 COLLECTION_SENT = "sentences"
 COLLECTION_RESULTS = "results"
+COLLECTION_DICT = "dictionary"

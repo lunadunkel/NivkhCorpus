@@ -3,6 +3,7 @@ from fastapi.responses import FileResponse, JSONResponse
 
 from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS, FRONTEND_DIR, OUTPUT_DIR, USE_DB
 from backend.mongodb.repositories.utils import clean
+from backend.services import search_service
 from backend.services.prepare_for_html import CSVConverter
 from backend.mongodb.repositories.database import get_collection
 
@@ -15,15 +16,14 @@ def root():
     return FileResponse(FRONTEND_DIR / "index.html")
 
 # search_output.html
-@router.get("/search_output.html")
+@router.get("/search_output")
 def search_page():
     return FileResponse(FRONTEND_DIR / "search_output.html")
 
 # about.html
-@router.get("/about.html")
+@router.get("/about")
 def about():
     return FileResponse(FRONTEND_DIR / "about.html")
-
 
 @router.get("/get_output")
 async def get_output_data(job_id: str, offset: int = 0, limit: int = 20):

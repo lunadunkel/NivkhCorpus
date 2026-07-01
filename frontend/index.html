@@ -31,7 +31,7 @@
               </g>
             </svg>
             Поиск</a>
-          <a href="" class="middle-main_link">
+          <a href="dictionary" class="middle-main_link">
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0_144_1346" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
                 height="40">
@@ -44,7 +44,7 @@
               </g>
             </svg>
             Словник</a>
-          <a href="about.html" class="middle-main_link">
+          <a href="about" class="middle-main_link">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
                 height="20">
@@ -71,10 +71,10 @@
             <form class="main-searching-frame" id="main-frame-0">
               <div class="search-selection-info">
                 <div class="segmented-control">
-                  <input type="radio" name="search-type" value="token" id="wordform-0" checked />
-                  <label for="wordform-0"> Словоформа </label>
-                  <input type="radio" name="search-type" id="lemma-0" value="lemma" />
+                  <input type="radio" name="search-type" id="lemma-0" value="lemma" checked />
                   <label for="lemma-0"> Лемма </label>
+                  <input type="radio" name="search-type" value="token" id="wordform-0" />
+                  <label for="wordform-0"> Словоформа </label>
                 </div>
                 <div class="regulation-adding">
                   <div class="add-word" id="add-0">
@@ -107,7 +107,7 @@
               </div>
               <div class="searching-input">
                 <input id="correct_placeholder-0" class="input-panel" type="search" name="input_word"
-                  placeholder="Найти по словоформе" />
+                  placeholder="Найти по лемме" />
 
                 <div class="right-searching-input-extras">
                   <!-- <div class="keyboard-container"> -->
@@ -202,7 +202,7 @@
                           VERB</label>
                         <label><input type="checkbox" name="pos[]" value="NUM" />
                           NUM</label>
-                        <label><input type="checkbox" name="pos[]" value="CLASS" />
+                        <label><input type="checkbox" name="misc[]" value="class" />
                           CLASS</label>
                         <label><input type="checkbox" name="pos[]" value="Q" /> Q</label>
                         <label><input type="checkbox" name="pos[]" value="ADV" />
@@ -234,7 +234,7 @@
                         <label><input type="checkbox" name="case[]" value="Voc" />
                           Voc</label>
                         <label><input type="checkbox" name="case[]" value="Cau" />
-                          Cau</label>
+                          Causee</label>
                         <label><input type="checkbox" name="case[]" value="Com" />
                           Com</label>
                         <label><input type="checkbox" name="case[]" value="Cmp" />
@@ -254,14 +254,14 @@
                         </h4>
                         <label><input type="checkbox" name="nountype[]" value="Agent" />
                           Agent</label>
+                        <label><input type="checkbox" name="nountype[]" value="Ing" />
+                          Instr</label>
                         <label><input type="checkbox" name="nountype[]" value="Locat" />
                           Locat</label>
                         <label><input type="checkbox" name="nountype[]" value="Proc" />
                           Proc</label>
-                        <label><input type="checkbox" name="nountype[]" value="Ing" />
-                          Ing</label>
-                        <label><input type="checkbox" name="nountype[]" value="Deverb" />
-                          Deverb</label>
+                        <!-- <label><input type="checkbox" name="nountype[]" value="Deverb" />
+                          Deverb</label> -->
                       </div>
                       <div class="feature-block">
                         <h4>
@@ -282,8 +282,8 @@
                         </h4>
                         <label><input type="checkbox" name="verbform[]" value="Conv" />
                           Conv</label>
-                        <label><input type="checkbox" name="verbform[]" value="Vnoun" />
-                          Vnoun</label>
+                        <!-- <label><input type="checkbox" name="verbform[]" value="Vnoun" />
+                          Vnoun</label> -->
                         <label><input type="checkbox" name="verbform[]" value="Part" />
                           Part</label>
                       </div>
@@ -305,26 +305,24 @@
                           <label><input type="checkbox" name="mood" value="all" /> Mood
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="mood[]" value="Ind" />
-                          Ind</label>
-                        <label><input type="checkbox" name="mood[]" value="Des" />
-                          Des</label>
-                        <label><input type="checkbox" name="mood[]" value="Imp" />
-                          Imp</label>
-                        <label><input type="checkbox" name="mood[]" value="Conc" />
-                          Conces</label>
                         <label><input type="checkbox" name="mood[]" value="Cnd" />
                           Cnd</label>
+                        <label><input type="checkbox" name="mood[]" value="Conc" />
+                          Conces</label>
                         <label><input type="checkbox" name="mood[]" value="Hort" />
                           Hort</label>
+                        <label><input type="checkbox" name="mood[]" value="Imp" />
+                          Imp</label>
+                        <label><input type="checkbox" name="mood[]" value="Ind" />
+                          Ind</label>
+                        <label><input type="checkbox" name="mood[]" value="Indir" />
+                          Indir</label>
                         <label><input type="checkbox" name="mood[]" value="Jus" />
                           Jus</label>
                         <label><input type="checkbox" name="mood[]" value="Prob" />
                           Prob</label>
                         <label><input type="checkbox" name="mood[]" value="Proh" />
                           Proh</label>
-                        <label><input type="checkbox" name="mood[]" value="Indir" />
-                          Indir</label>
                         <label><input type="checkbox" name="mood[]" value="Subj" />
                           Subj</label>
                       </div>
@@ -334,33 +332,35 @@
                             Aspect
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="aspect[]" value="Prog" />
-                          Prog</label>
                         <label><input type="checkbox" name="aspect[]" value="Ant" />
                           Ant</label>
-                        <label><input type="checkbox" name="aspect[]" value="Iter" />
-                          Iter</label>
-                        <label><input type="checkbox" name="aspect[]" value="Usit" />
-                          Usit</label>
-                        <label><input type="checkbox" name="aspect[]" value="Res" />
-                          Res</label>
-                        <label><input type="checkbox" name="aspect[]" value="Compl" />
-                          Compl</label>
-                        <label><input type="checkbox" name="aspect[]" value="Sim" />
-                          Sim</label>
                         <label><input type="checkbox" name="aspect[]" value="Avert" />
                           Avert</label>
-                        <label><input type="checkbox" name="aspect[]" value="Hab" />
-                          Hab</label>
-                        <label><input type="checkbox" name="aspect[]" value="Mult" />
-                          Mult</label>
+                        <label><input type="checkbox" name="aspect[]" value="Compl" />
+                          Compl</label>
+                        <!-- <label><input type="checkbox" name="aspect[]" value="Hab" />
+                          Hab</label> -->
+                        <label><input type="checkbox" name="aspect[]" value="Des" />
+                          Des</label>
+                        <label><input type="checkbox" name="aspect[]" value="Iter" />
+                          Iter</label>
+                        <label><input type="checkbox" name="aspect[]" value="Prog" />
+                          Prog</label>
+                        <!-- <label><input type="checkbox" name="aspect[]" value="Res" />
+                          Res</label> -->
+                        <label><input type="checkbox" name="aspect[]" value="Sim" />
+                          Sim</label>
+                        <label><input type="checkbox" name="aspect[]" value="Usit" />
+                          Usit</label>
+                        <!-- <label><input type="checkbox" name="aspect[]" value="Mult" />
+                          Mult</label> -->
                       </div>
                     </div>
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
                           <label><input type="checkbox" name="person" value="all" />
-                            Person (subj)
+                            Person (main word)
                           </label>
                         </h4>
                         <label><input type="checkbox" name="person[]" value="1" />
@@ -373,7 +373,7 @@
                       <div class="feature-block">
                         <h4>
                           <label><input type="checkbox" name="number" value="all" />
-                            Number (subj)
+                            Number (main word)
                           </label>
                         </h4>
                         <label><input type="checkbox" name="number[]" value="Sing" />
@@ -386,7 +386,7 @@
                       <div class="feature-block">
                         <h4>
                           <label><input type="checkbox" name="person_obj" value="all" />
-                            Person (obj)
+                            Person (object / possessor)
                           </label>
                         </h4>
                         <label><input type="checkbox" name="person_obj[]" value="1" />
@@ -398,35 +398,88 @@
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="number_obj" value="all" />
-                            Number (obj)
+                          <label><input type="checkbox" name="coord" value="all" />
+                            Clitic
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="number_obj[]" value="Sing" />
-                          Sing</label>
-                        <label><input type="checkbox" name="number_obj[]" value="Dual" />
-                          Dual</label>
-                        <label><input type="checkbox" name="number_obj[]" value="Plur" />
-                          Plur</label>
+                        <label><input type="checkbox" name="misc[]" value="refl" />
+                          Reflex</label>
+                        <label><input type="checkbox" name="misc[]" value="rec" />
+                          Reciprocal</label>
+                        <label><input type="checkbox" name="clobj" value="yes" />
+                          Clobj
+                        </label>
+                        <label><input type="checkbox" name="clpos" value="yes" />
+                          Clpos
+                        </label>
+
                       </div>
+
                     </div>
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="verb" value="all" />
-                            Verb misc.
+                          <label><input type="checkbox" name="coord" value="all" />
+                            Coordination
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="verb[]" value="caus" />
-                          Caus</label>
-                        <label><input type="checkbox" name="verb[]" value="pred" />
-                          Predicative</label>
-                        <label><input type="checkbox" name="verb[]" value="aux" />
-                          Aux</label>
-                        <label><input type="checkbox" name="verb[]" value="coord" />
-                          Coord</label>
+                        <label><input type="checkbox" name="misc[]" value="coord" />
+                          VCoord</label>
+                        <label><input type="checkbox" name="misc[]" value="add" />
+                          NCoord</label>
                       </div>
-                      <div class="feature-block">
+
+                      <div class="feature-block" id="misc">
+                        <h4>Miscellaneous</h4>
+                        <label><input type="checkbox" name="misc[]" value="aux" />
+                          Aux
+                        </label>
+                        <label><input type="checkbox" name="misc[]" value="caus" />
+                          Caus
+                        </label>
+                        <!-- </h4> -->
+                        <!-- <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="coll" />
+                          Collective num
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="emph" />
+                          Emphatic
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="evid" />
+                          Evidentiality
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="foc" />
+                          Focus
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="neg" />
+                          Negation
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="indef" />
+                          Indefinite
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="q" />
+                          Question
+                        </label>
+                        <!-- </h4>
+                        <h4> -->
+                        <label><input type="checkbox" name="misc[]" value="dim" />
+                          Diminutive
+                        </label>
+                        <!-- </h4> -->
+                      </div>
+                      <!-- <div class="feature-block"> 
                         <h4>
                           <label><input type="checkbox" name="misc" value="all" />
                             Miscellaneous
@@ -434,29 +487,28 @@
                         </h4>
                         <label><input type="checkbox" name="misc[]" value="evid" />
                           Evidentiality</label>
-                        <label><input type="checkbox" name="misc[]" value="neg" />
+                       <label><input type="checkbox" name="misc[]" value="neg" />
                           Negation</label>
                         <label><input type="checkbox" name="misc[]" value="dim" />
                           Dim</label>
                         <label><input type="checkbox" name="misc[]" value="add" />
-                          Add</label>
-                        <label><input type="checkbox" name="misc[]" value="q" />
-                          Question</label>
-                        <label><input type="checkbox" name="misc[]" value="emph" />
-                          Emphatic</label>
-                        <label><input type="checkbox" name="misc[]" value="coll" />
-                          Collective num</label>
-                        <label><input type="checkbox" name="misc[]" value="class" />
-                          Classifier</label>
+                          Add</label> 
+                         <label><input type="checkbox" name="misc[]" value="q" />
+                          Question</label> 
+                         <label><input type="checkbox" name="misc[]" value="emph" />
+                          Emphatic</label> 
+                         <label><input type="checkbox" name="misc[]" value="coll" />
+                          Collective num</label> 
+                         <label><input type="checkbox" name="misc[]" value="class" />
+                          Classifier</label> 
                         <label><input type="checkbox" name="misc[]" value="refl" />
                           Reflex</label>
-                        <label><input type="checkbox" name="misc[]" value="indef" />
-                          Indefinite</label>
+                         <label><input type="checkbox" name="misc[]" value="indef" />
+                          Indefinite</label> 
                         <label><input type="checkbox" name="misc[]" value="rec" />
                           Reciprocal</label>
-                        <label><input type="checkbox" name="misc[]" value="foc" />
-                          Focus</label>
-                      </div>
+                         <label><input type="checkbox" name="misc[]" value="foc" />
+                          Focus</label> -->
                     </div>
                   </div>
                 </div>

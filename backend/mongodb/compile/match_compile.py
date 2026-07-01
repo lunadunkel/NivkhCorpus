@@ -9,6 +9,43 @@ class MatchQueryCompiler:
         self.query = query
         self.match_query = self.compile()
 
+    def _get_person_fields(self, clobj: bool, clpos: bool, prefix: str = "tagsets"):
+        fields = []
+
+        if clobj:
+            fields.append(f"{prefix}.Person[clobj]")
+        if clpos:
+            fields.append(f"{prefix}.Person[clpos]")
+
+        return fields or [
+            f"{prefix}.Person[clobj]",
+            f"{prefix}.Person[clpos]"
+        ]
+
+    def _compile_person_object(self, person_object) -> dict:
+        person = person_object["person"]
+        fields = self._get_person_fields(
+            person_object["clobj"],
+            person_object["clpos"]
+        )
+
+        if person:
+            value = {"$in": person} if isinstance(person, list) else person
+
+            if len(fields) == 1:
+                return {fields[0]: value}
+
+            return {
+                "$or": [{field: value} for field in fields]
+            }
+
+        if len(fields) == 1:
+            return {fields[0]: {"$exists": True}}
+
+        return {
+            "$or": [{field: {"$exists": True}} for field in fields]
+        }
+
     def _word_compile_match(self, oq: OriginalQuery) -> dict:
         """Создает mongodb match запрос на основе введенного пользователям слова 
         Args:
@@ -48,8 +85,9 @@ class MatchQueryCompiler:
             inter_query['tokens'] = dict()
             inter_query['tokens']['$elemMatch'] = dict()
 
-        gram_feats = cast(Dict[str, str], oq.gram_feats)
+        gram_feats = cast(Dict[str, str], oq.gram_feats).copy()
         sub_type = 'tagsets'
+        person_object = gram_feats.pop('PersonObject', None)
         for key, value in gram_feats.items():
             # key = gram category / value = its value
             # forming query for each input grammatical/additional features
@@ -58,6 +96,12 @@ class MatchQueryCompiler:
                 # if a multiple-choice gramm –> using $in operator
                 basic_query = {f'$in': value}
             inter_query['tokens']['$elemMatch'][f'{sub_type}.{key}'] = basic_query
+        if person_object:
+            compiled = self._compile_person_object(person_object)
+
+            for key, value in compiled.items():
+                inter_query['tokens']['$elemMatch'][key] = value
+        print('Curr query', inter_query)
         return inter_query
 
     def compile(self) -> dict:

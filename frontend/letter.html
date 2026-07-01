@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-    <meta charset="UTF-8" />
-    <title>Результаты поиска</title>
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="static/reset.css" />
-        <link rel="stylesheet" href="/static/styles.css" />
-    </head>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/static/reset.css" />
+            <link rel="stylesheet" href="/static/styles.css" />
+            <link rel="stylesheet" href="/static/letter.css" />
+            <title>Слова на букву </title>
+        </head>
+
 
     <body>
         <header class="main-header">
@@ -31,7 +34,7 @@
                             </g>
                         </svg>
                         Поиск</a>
-                    <a href="dictionary" class="middle-main_link">
+                    <a href="/dictionary" class="middle-main_link">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_144_1346" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                 width="40" height="40">
@@ -44,7 +47,7 @@
                             </g>
                         </svg>
                         Словник</a>
-                    <a href="about" class="middle-main_link">
+                    <a href="/about" class="middle-main_link">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
                                 width="20" height="20">
@@ -63,21 +66,13 @@
                 </li>
             </ul>
         </header>
-        <div class="search_output" id="output-info">
+
+        <div class="search_output">
             <div class="top-back-container">
-                <a class="back_to_search" href="/">Вернуться к поиску</a>
-                <div class="statistics">
-                    Найдено:
-                    <div class="word_stat">
-                        <div class="counter" id="documents">0 примеров</div>
-                    </div>
-                </div>
+                <a class="back_to_search" href="/dictionary">Вернуться к поиску</a>
             </div>
-
-            <div class="example-output" id="no-found-data">
-                По заданному поиску не найдено результатов. <br> Попробуйте поменять запрос.
+            <div class="dictionary-list">
             </div>
-
             <div class="documents-output" id="all-documents">
                 <a class="go-up">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -88,20 +83,8 @@
                 </a>
 
             </div>
-
-            <div class="show-button" id="show-more">Показать ещё</div>
-
-            <!-- <div class="real-output">
-
-
-                <div class="modal-buttons" id="more-data">
-                    Показать ещё
-                </div>
-            </div> -->
-
         </div>
-        <footer></footer>
-        <script src="static/javascript/search_output.js"></script>
+        <script src="/static/javascript/letter.js"></script>
     </body>
 
 </html>

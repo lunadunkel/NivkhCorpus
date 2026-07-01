@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/static/reset.css" />
+      <link rel="stylesheet" href="/static/styles.css" />
+      <link rel="stylesheet" href="/static/dictionary.css" />
+      <title>Словник</title>
+    </head>
+
+
+  <body>
+    <header class="main-header">
+      <div class="left-main" id="logo">
+        <img src="/static/images/logo.svg" />
+      </div>
+
+      <ul class="middle-main">
+        <li class="middle-main_item">
+          <a href="/" class="middle-main_link" id="new-search">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_637_112" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
+                height="24">
+                <rect width="24" height="24" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_637_112)">
+                <path
+                  d="M19.5423 20.577L13.2616 14.296C12.7616 14.7088 12.1866 15.0319 11.5366 15.2653C10.8866 15.4986 10.2141 15.6153 9.5193 15.6153C7.81014 15.6153 6.36364 15.0235 5.1798 13.84C3.99597 12.6565 3.40405 11.2103 3.40405 9.50152C3.40405 7.79285 3.9958 6.34618 5.1793 5.16152C6.3628 3.97702 7.80897 3.38477 9.5178 3.38477C11.2265 3.38477 12.6731 3.97668 13.8578 5.16051C15.0423 6.34435 15.6346 7.79085 15.6346 9.50002C15.6346 10.2142 15.5147 10.8963 15.2751 11.5463C15.0352 12.1963 14.7153 12.7616 14.3153 13.2423L20.5961 19.523L19.5423 20.577ZM9.5193 14.1155C10.8078 14.1155 11.8991 13.6683 12.7933 12.774C13.6876 11.8798 14.1348 10.7885 14.1348 9.50002C14.1348 8.21152 13.6876 7.12018 12.7933 6.22601C11.8991 5.33168 10.8078 4.88452 9.5193 4.88452C8.2308 4.88452 7.13947 5.33168 6.2453 6.22601C5.35097 7.12018 4.9038 8.21152 4.9038 9.50002C4.9038 10.7885 5.35097 11.8798 6.2453 12.774C7.13947 13.6683 8.2308 14.1155 9.5193 14.1155Z"
+                  fill="#19111D" />
+              </g>
+            </svg>
+            Поиск</a>
+          <a href="/dictionary" class="middle-main_link">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_144_1346" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
+                height="40">
+                <rect width="40" height="40" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_144_1346)">
+                <path
+                  d="M10.4808 26.1858H23.6858V23.6858H10.4808V26.1858ZM27.0191 26.1858H29.5191V23.6858H27.0191V26.1858ZM10.4808 19.8717H12.9808V17.3717H10.4808V19.8717ZM16.3141 19.8717H29.5191V17.3717H16.3141V19.8717ZM7.17954 32.5C6.3376 32.5 5.62496 32.2083 5.04163 31.625C4.45829 31.0417 4.16663 30.329 4.16663 29.4871V10.5129C4.16663 9.67097 4.45829 8.95833 5.04163 8.375C5.62496 7.79167 6.3376 7.5 7.17954 7.5H32.8204C33.6623 7.5 34.375 7.79167 34.9583 8.375C35.5416 8.95833 35.8333 9.67097 35.8333 10.5129V29.4871C35.8333 30.329 35.5416 31.0417 34.9583 31.625C34.375 32.2083 33.6623 32.5 32.8204 32.5H7.17954ZM7.17954 30H32.8204C32.9487 30 33.0662 29.9465 33.1729 29.8396C33.2798 29.7329 33.3333 29.6154 33.3333 29.4871V10.5129C33.3333 10.3846 33.2798 10.2671 33.1729 10.1604C33.0662 10.0535 32.9487 10 32.8204 10H7.17954C7.05121 10 6.93371 10.0535 6.82704 10.1604C6.7201 10.2671 6.66663 10.3846 6.66663 10.5129V29.4871C6.66663 29.6154 6.7201 29.7329 6.82704 29.8396C6.93371 29.9465 7.05121 30 7.17954 30Z"
+                  fill="#19111D" />
+              </g>
+            </svg>
+            Словник</a>
+          <a href="/about" class="middle-main_link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
+                height="20">
+                <rect width="20" height="20" fill="#D9D9D9" />
+              </mask>
+              <g mask="url(#mask0_1030_300)">
+                <path
+                  d="M14.583 3.38794C15.301 3.38794 16.0051 3.47132 16.6953 3.63696C17.2991 3.78189 17.8818 3.99019 18.4434 4.26196L18.6826 4.38208L18.6855 4.38306C18.8281 4.4479 18.9336 4.5443 19.0039 4.67212C19.076 4.80319 19.1113 4.94011 19.1113 5.08325V15.1252C19.1112 15.4254 18.9856 15.6503 18.7314 15.8069C18.4778 15.963 18.2166 15.9706 17.9414 15.8264H17.9424C17.4249 15.5467 16.8829 15.3299 16.3164 15.176C15.7492 15.022 15.1712 14.9446 14.583 14.9446C13.7432 14.9446 12.9313 15.0921 12.1475 15.386C11.3773 15.6748 10.6607 16.0784 9.99902 16.5969C9.33761 16.0788 8.62235 15.6747 7.85254 15.386C7.06857 15.092 6.25592 14.9446 5.41602 14.9446C4.82806 14.9446 4.25057 15.0221 3.68359 15.176C3.117 15.3299 2.57424 15.5466 2.05664 15.8264C1.78175 15.9701 1.52188 15.9627 1.26855 15.8069C1.01417 15.6503 0.887786 15.4255 0.887695 15.1252V5.08325C0.887695 4.9401 0.923997 4.8032 0.996094 4.67212C1.06642 4.54437 1.17188 4.44786 1.31445 4.38306L1.55664 4.26196C2.11799 3.99036 2.70021 3.78184 3.30371 3.63696C3.9938 3.47134 4.69818 3.38796 5.41602 3.38794C6.21674 3.38794 7.00051 3.49144 7.7666 3.69849C8.53255 3.9055 9.26746 4.21686 9.97168 4.6311L10 4.64673L10.0273 4.6311C10.7315 4.2169 11.4666 3.9055 12.2324 3.69849C12.9985 3.49143 13.7823 3.38794 14.583 3.38794ZM14.583 10.8879C14.9413 10.8879 15.2925 10.9159 15.6367 10.9709C15.968 11.0239 16.2929 11.0898 16.6113 11.1682V12.3801C16.2993 12.2676 15.9843 12.1818 15.666 12.1233C15.3222 12.0601 14.9611 12.0286 14.583 12.0286C14.051 12.0286 13.5395 12.0909 13.0488 12.217C12.5875 12.3357 12.1456 12.5124 11.7217 12.7424V11.4534C12.1659 11.2674 12.6202 11.1275 13.084 11.0334C13.5592 10.9371 14.0587 10.8879 14.583 10.8879ZM14.583 8.59692C14.9412 8.59692 15.2925 8.62389 15.6367 8.67896C15.968 8.73196 16.2928 8.79881 16.6113 8.8772V10.0891C16.2992 9.97652 15.9844 9.88978 15.666 9.8313C15.3222 9.76815 14.9611 9.73657 14.583 9.73657C14.0506 9.73657 13.5389 9.80349 13.0479 9.93677C12.587 10.0618 12.1454 10.2344 11.7217 10.4524V9.16235C12.166 8.97637 12.6202 8.83557 13.084 8.74146C13.5592 8.64507 14.0588 8.59692 14.583 8.59692ZM14.583 6.30493C14.9413 6.30493 15.2925 6.33286 15.6367 6.38794C15.968 6.44094 16.2928 6.50683 16.6113 6.58521V7.79712C16.2992 7.68454 15.9844 7.59779 15.666 7.53931C15.3222 7.47616 14.9611 7.44458 14.583 7.44458C14.0506 7.44458 13.5389 7.51151 13.0479 7.64478C12.5871 7.76984 12.1453 7.94249 11.7217 8.1604V6.87036C12.166 6.6844 12.6202 6.54357 13.084 6.44946C13.5591 6.35309 14.0588 6.30493 14.583 6.30493ZM9.22168 5.96802L9.19434 5.95239C8.62065 5.61658 8.01179 5.36447 7.36816 5.19653C6.72479 5.0287 6.07353 4.94458 5.41602 4.94458C4.91254 4.9446 4.41245 4.99415 3.91602 5.09204C3.41945 5.18997 2.94023 5.33662 2.47852 5.53247L2.44434 5.54712V13.9104L2.51758 13.885C3.00105 13.7193 3.48092 13.5948 3.95703 13.512C4.43287 13.4292 4.91923 13.388 5.41602 13.3879C6.06454 13.3879 6.69587 13.4609 7.30957 13.6057C7.92357 13.7506 8.53477 13.968 9.14258 14.2581L9.22168 14.2952V5.96802ZM17.5547 5.54712L17.5215 5.53247C17.0596 5.33653 16.5797 5.18999 16.083 5.09204C15.5865 4.99415 15.0865 4.94458 14.583 4.94458C13.9256 4.94458 13.2751 5.02874 12.6318 5.19653C11.9882 5.36444 11.3794 5.61662 10.8057 5.95239L10.7783 5.96802V14.2952L10.8564 14.2581C11.4643 13.968 12.0755 13.7506 12.6895 13.6057C13.3032 13.4609 13.9344 13.3879 14.583 13.3879C15.0798 13.3879 15.5662 13.4292 16.042 13.512C16.518 13.5947 16.9981 13.7193 17.4814 13.885L17.5547 13.9104V5.54712Z"
+                  fill="#1C1B1F" stroke="white" stroke-width="0.11" />
+              </g>
+            </svg>
+            О корпусе
+          </a>
+
+
+        </li>
+      </ul>
+    </header>
+
+    <div class="main-search">
+      <div class="final-form">
+        <div class="progress-search">
+
+          <div class="searching-input">
+            <input id="correct_placeholder-0" class="input-panel" type="search" name="input_word"
+              placeholder="Начните вводить слово" autocomplete="off" />
+
+            <div class="right-searching-input-extras">
+              <!-- <div class="keyboard-container"> -->
+              <div id="nivkh_keyboard-0" class="keyboard">
+                <img src="/static/images/keyboard.svg" />
+
+              </div>
+              <!-- </div> -->
+
+              <select id="extension-0" name="language-select" class="custom-select">
+                <option value="nivkh" selected>Нивх</option>
+                <option value="russian">Рус</option>
+              </select>
+
+            </div>
+          </div>
+          <ul class="dict-results" id="dict-results">
+          </ul>
+        </div>
+
+        <div class="letter-input" id="keyboard-0">
+          <div class="letter-container">
+            <div class="keyboard-row">
+              <div class="letters">ӷ</div>
+              <div class="letters">ғ</div>
+              <div class="letters">ӻ</div>
+              <div class="letters">ӄ</div>
+              <div class="letters">ӄ’</div>
+            </div>
+            <div class="keyboard-row">
+              <div class="letters">ӈ</div>
+              <div class="letters">р̌</div>
+              <div class="letters">ў</div>
+              <div class="letters">ӽ</div>
+              <div class="letters">ӿ</div>
+            </div>
+          </div>
+        </div>
+
+        <nav class="alpha-index" aria-label="Алфавитный указатель">
+          <a class="idx-row">
+            <span class="idx-letter">А</span>
+            <span class="idx-example">ав</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Б</span>
+            <span class="idx-example">бал</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">В</span>
+            <span class="idx-example">ва</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Г</span>
+            <span class="idx-example">ге</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ғ</span>
+            <span class="idx-example">ғары</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӷ</span>
+            <span class="idx-example">ӷоми</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӻ</span>
+            <span class="idx-example">ӻав</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Д</span>
+            <span class="idx-example">дау</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Е</span>
+            <span class="idx-example">еғев</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ё</span>
+            <span class="idx-example">ёӻо</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">З</span>
+            <span class="idx-example">за</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">И</span>
+            <span class="idx-example">ив</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Й</span>
+            <span class="idx-example">йа</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">К</span>
+            <span class="idx-example">калағала</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">К’</span>
+            <span class="idx-example">к’ать</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӄ</span>
+            <span class="idx-example">ӄа</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӄ’</span>
+            <span class="idx-example">ӄ’арӈ</span>
+          </a>
+
+          <a class="idx-row">
+            <span class="idx-letter">Л</span>
+            <span class="idx-example">ла</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">М</span>
+            <span class="idx-example">ма</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Н</span>
+            <span class="idx-example">на</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӈ</span>
+            <span class="idx-example">ӈа</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">О</span>
+            <span class="idx-example">оғла</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">П</span>
+            <span class="idx-example">па</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">П’</span>
+            <span class="idx-example">п’аки</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Р</span>
+            <span class="idx-example">ра</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">р̌</span>
+            <span class="idx-example">р̌аг</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">С</span>
+            <span class="idx-example">сарӻо</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Т</span>
+            <span class="idx-example">та</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Т’</span>
+            <span class="idx-example">т’атӈ</span>
+          </a>
+
+          <a class="idx-row">
+            <span class="idx-letter">У</span>
+            <span class="idx-example">уву</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ф</span>
+            <span class="idx-example">фать</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Х</span>
+            <span class="idx-example">ха</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӽ</span>
+            <span class="idx-example">ӽа</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ӿ</span>
+            <span class="idx-example">ӿа</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ч</span>
+            <span class="idx-example">ча</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ы</span>
+            <span class="idx-example">ыви</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Э</span>
+            <span class="idx-example">эврӄ</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Ю</span>
+            <span class="idx-example">юғ</span>
+          </a>
+          <a class="idx-row">
+            <span class="idx-letter">Я</span>
+            <span class="idx-example">яго</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+    <script src="/static/javascript/fuse.min.js"></script>
+    <script src="/static/javascript/dictionary.js"></script>
+  </body>
+
+</html>

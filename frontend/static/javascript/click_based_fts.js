@@ -44,12 +44,12 @@ export function wordformButton(elem) {
 	const id_value = elem.id.match(/\d+/)[0];
 	document.getElementById("wordform-" + id_value).checked = true;
 	document.getElementById("lemma-" + id_value).checked = false;
-    const languageValue = document.getElementById("extension-" + id_value).value;
-    if (languageValue == "russian") {
-        document.getElementById("gram-feat-cont-" + id_value).style.display = "none";
-    } else {
-        document.getElementById("gram-feat-cont-" + id_value).style.display = "flex";
-    };
+    // const languageValue = document.getElementById("extension-" + id_value).value;
+    // if (languageValue == "russian") {
+    document.getElementById("gram-feat-cont-" + id_value).style.display = "none";
+    // } else {
+    //     document.getElementById("gram-feat-cont-" + id_value).style.display = "flex";
+    // };
 
 
 	const placeholder = document.getElementById("correct_placeholder-" + id_value);

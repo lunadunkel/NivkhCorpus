@@ -12,22 +12,33 @@ class OriginalQuery:
     def to_dict(self) -> Dict:
         return {k: v for k, v in self.__dict__.items() if v is not None}
 
-
 class QueryBuilder:
     def __init__(self, query: list):
         self.language = query[0]['language-select']
         self.queries = self.process_queries(query)
     
     def extract_gram_feats(self, query: dict) -> Dict:
+        print(query)
         feats = {}
         for ui_key, db_key in QUERY2DB.items():
 
             if value := query.get(ui_key, None):
                 if feature := MISC.get(ui_key, None):
                     db_key, value = feature[value].split('=')  
-                if isinstance(db_key, list):
-                    db_key = ONLY4DB[ui_key]
+                # if isinstance(db_key, list):
+                #     db_key = ONLY4DB[ui_key]
                 feats[db_key] = value
+
+        person_obj = query.get('person_obj[]')
+        clobj = query.get('clobj')
+        clpos = query.get('clpos')
+
+        if person_obj or clobj or clpos:
+            feats['PersonObject'] = {
+                'person': person_obj,
+                'clobj': bool(clobj),
+                'clpos': bool(clpos)
+            }
         return feats
     
     def process_queries(self, query: list) -> list:

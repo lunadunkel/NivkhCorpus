@@ -32,8 +32,8 @@ class Json2MongoProcessing:
                     for idx, tag in enumerate(tagsets):
                         if '=' in tag:
                             key, val = tag.split('=')
-                            if key in ['Number', 'Person']:
-                                key += '[subj]'
+                            # if key in ['Number', 'Person']:
+                            #     key += '[subj]'
                             new_tagset[key] = val
                         elif tag in self.pos_tags or idx == 0: 
                             new_tagset['POS'] = tag
@@ -47,4 +47,12 @@ class Json2MongoProcessing:
                     print(tagsets)
                     continue
                 file_data[m]['tokens'][pos]['tagsets'] = new_tagset
+                translation = file_data[m]['tokens'][pos]['translation']
+                # if file_data[m]['tokens'][pos]['translation'] == "None":
+                #     print(file_data[m]['tokens'][pos])
+                #     print(file_data[m]['tokens'][pos]['translation'])
+                #     break
+                if translation != "None":
+                    file_data[m]['tokens'][pos]['translation'] = translation
+                else: file_data[m]['tokens'][pos].pop('translation')
         return file_data
