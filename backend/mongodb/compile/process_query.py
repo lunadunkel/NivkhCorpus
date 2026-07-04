@@ -18,16 +18,18 @@ class QueryBuilder:
         self.queries = self.process_queries(query)
     
     def extract_gram_feats(self, query: dict) -> Dict:
-        print(query)
         feats = {}
         for ui_key, db_key in QUERY2DB.items():
 
             if value := query.get(ui_key, None):
                 if feature := MISC.get(ui_key, None):
-                    db_key, value = feature[value].split('=')  
-                # if isinstance(db_key, list):
-                #     db_key = ONLY4DB[ui_key]
-                feats[db_key] = value
+                    if isinstance(value, list):
+                        for val in value:
+                            db_key, value = feature[val].split('=')
+                            feats[db_key] = val
+                    else:
+                        db_key, value = feature[value].split('=')  
+                        feats[db_key] = value
 
         person_obj = query.get('person_obj[]')
         clobj = query.get('clobj')

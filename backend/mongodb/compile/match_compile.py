@@ -101,7 +101,6 @@ class MatchQueryCompiler:
 
             for key, value in compiled.items():
                 inter_query['tokens']['$elemMatch'][key] = value
-        print('Curr query', inter_query)
         return inter_query
 
     def compile(self) -> dict:

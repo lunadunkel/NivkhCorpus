@@ -40,14 +40,20 @@ dictionary_pipeline = [
     {"$group": {
         "_id": "$tokens.token",           
         "lemma": {"$first": "$tokens.lemma"},     
-        "translation": {"$first": "$tokens.translation"} 
+        "translation": {"$first": "$tokens.translation"},
+        "POS": {"$first": "$tokens.tagsets.POS"},
+        "text": {"$first": "$text"},
+        "rus": {"$first": "$russian_text"},
     }},
     
     {"$project": {
         "_id": 0,
         "word": "$_id",
         "lemma": 1,
-        "translation": 1
+        "translation": 1,
+        "POS": 1,
+        "text": 1,
+        "rus": 1
     }},
     
     {"$sort": {"word": 1}}

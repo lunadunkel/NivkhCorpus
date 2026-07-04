@@ -1,4 +1,4 @@
-
+let currentResults = [];
 const input = document.getElementById('correct_placeholder-0'); 
 const indexEl = document.querySelector('.alpha-index'); 
 const resultsEl = document.getElementById('dict-results');
@@ -85,23 +85,33 @@ function render(hits) {
 
   const groups = new Map();
   for (const hit of hits) {
-    const { lemma, translation } = hit.item;
-    if (!groups.has(translation)) groups.set(translation, []);
-    groups.get(translation).push(lemma);
+    const { _id, lemma, translation } = hit.item;
+
+    if (!groups.has(translation)) {
+        groups.set(translation, {
+            lemmas: [],
+            ids: []
+        });
+    }
+
+    const group = groups.get(translation);
+    group.lemmas.push(lemma);
+    group.ids.push(_id);
   }
 
   const top5 = [...groups.entries()].slice(0, 5);
+  currentResults = top5;
 
   const isRu = langSelect.value === 'russian';
 
-  resultsEl.innerHTML = top5.map(([translation, lemmas]) => {
-    const lemmaText = lemmas.join(', ');
+  resultsEl.innerHTML = top5.map(([translation, group], index) => {
+    const lemmaText = group.lemmas.join(', ');
 
     const [first, second] = isRu
       ? [translation, lemmaText]   // русский поиск: перевод первым
       : [lemmaText, translation];  // нивхский поиск: лемма первой
 
-    return `<li class="dict-entry">
+    return `<li class="dict-entry" data-index="${index}">
               <span class="entry-lemma">${first}</span>
               <span class="entry-tr">${second}</span>
             </li>`;
@@ -113,6 +123,12 @@ function render(hits) {
 }
 
 function select(li) {
+  const index = Number(li.dataset.index)
+  const [, group] = currentResults[index];
+  const ids = group.ids;
+  console.log(index);
+  console.log(ids);
+
   const lemmaSpan = li.querySelector('.entry-lemma');
   input.value = lemmaSpan.textContent.trim();
   resultsEl.style.display = 'none';

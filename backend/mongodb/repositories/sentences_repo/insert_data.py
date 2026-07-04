@@ -12,7 +12,7 @@ args = parser.parse_args()
 
 collection = get_collection('sentences')
 
-async def drop_collection():
+async def drop_collection(collection):
     await collection.drop()
 
 
@@ -20,7 +20,7 @@ preprocessing = Json2MongoProcessing(JSON_DATA_PATH)
 
 async def main():
     if args.drop_collection:
-        await drop_collection()
+        await drop_collection(collection)
     for file in os.listdir(JSON_DATA_PATH):
         file_path = os.path.join(JSON_DATA_PATH, file)
 
