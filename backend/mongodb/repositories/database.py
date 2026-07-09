@@ -5,9 +5,9 @@ from motor.motor_asyncio import AsyncIOMotorClient
 load_dotenv()
 
 
-MONGO_URL = os.getenv("MONGO_URL")
+MONGO_URI = os.getenv("MONGO_URI")
 
-client = AsyncIOMotorClient(MONGO_URL)
+client = AsyncIOMotorClient(MONGO_URI)
 db = client["corpus"]
 
 def get_collection(name: str):

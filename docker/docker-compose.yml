@@ -1,0 +1,54 @@
+services:
+  data-fetcher:
+    image: alpine:latest
+    volumes:
+      - ../data:/data
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        set -e
+        if [ -n "$$(ls -A /data/*.json 2>/dev/null)" ]; then
+          echo "Corpus data already present in ./data — skipping download."
+          exit 0
+        fi
+        echo "Downloading corpus data from GitHub Release..."
+        apk add --no-cache curl unzip >/dev/null
+        curl -fL -o /tmp/data.zip "https://github.com/lunadunkel/NivkhCorpus/releases/download/data-v1/data.zip"
+        unzip -oj /tmp/data.zip -d /data
+        rm -f /tmp/data.zip
+        echo "Done."
+
+  mongo:
+    image: mongo:7
+    command: ["--quiet", "--logpath", "/dev/null"]
+    restart: unless-stopped
+    depends_on:
+      data-fetcher:
+        condition: service_completed_successfully
+    volumes:
+      - mongo_data:/data/db
+      - ../data:/data/import:ro
+      - ./import.sh:/docker-entrypoint-initdb.d/import.sh:ro
+    environment:
+      MONGO_INITDB_DATABASE: corpus
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      MONGO_URI: mongodb://mongo:27017/corpus
+
+volumes:
+  mongo_data:
