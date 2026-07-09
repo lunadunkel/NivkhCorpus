@@ -40,8 +40,58 @@ a {
     }
 }
 
+.href-in-text {
+    color: var(--600);
+}
+
 .ul-list {
     list-style-type: square;
     list-style-position: inside;
     line-height: 1.5;
+}
+
+/* Container using CSS Grid */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.image-wrapper {
+  margin-bottom: .75rem;
+}
+
+.image-wrapper img {
+    width: 100%;
+    /* height: 100%; */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Typography elements */
+.contact-card h4 {
+  margin: 0 0 4px 0;
+  color: var(--600);
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px
 }

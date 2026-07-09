@@ -4,6 +4,10 @@ const indexEl = document.querySelector('.alpha-index');
 const resultsEl = document.getElementById('dict-results');
 const langSelect = document.getElementById('extension-0');
 
+document.addEventListener('DOMContentLoaded', () => {
+  keyboardActivate(document.getElementById('extension-0'));
+});
+
 resultsEl.style.display = 'none';
 
 let fuse;
@@ -123,21 +127,12 @@ function render(hits) {
 }
 
 function select(li) {
-  const index = Number(li.dataset.index)
+  const index = Number(li.dataset.index);
   const [, group] = currentResults[index];
-  const ids = group.ids;
-  console.log(index);
-  console.log(ids);
-
-  const lemmaSpan = li.querySelector('.entry-lemma');
-  input.value = lemmaSpan.textContent.trim();
+  const id = group.ids[0];
   resultsEl.style.display = 'none';
   activeIndex = -1;
-  const word = input.value.split(', ')[0];
-  const chosenWord = word[0];
-  // console.log(word[0]);
-  window.location.href = `/dictionary/word=${encodeURIComponent(letter)}`;
-
+  window.location.href = `/dictionary/word?id=${encodeURIComponent(id)}`;
 }
 
 input.addEventListener('focus', () => {
@@ -188,4 +183,50 @@ function highlight(items) {
   if (activeIndex >= 0) {
     items[activeIndex].scrollIntoView({ block: 'nearest' });
   }
+}
+
+function keyboardActivate(select) {
+  const frame = select.closest('.final-form');
+  const keyboardBtn = frame.querySelector('.keyboard');       // #nivkh_keyboard-0
+  const keyboardPanel = frame.querySelector('.letter-input');  // #keyboard-0
+  const input = frame.querySelector('.input-panel');           // #correct_placeholder-0
+
+  // видимость иконки клавиатуры в зависимости от языка
+  function applyLanguage() {
+    if (select.value === 'nivkh') {
+      keyboardBtn.style.display = 'flex';
+    } else {
+      keyboardBtn.style.display = 'none';
+      keyboardPanel.style.display = 'none';  // на русском панель закрыта
+    }
+  }
+
+  select.addEventListener('change', applyLanguage);
+  applyLanguage();  // начальное состояние
+
+  // клик по иконке — тоггл панели
+  keyboardBtn.addEventListener('click', () => {
+    const isOpen = keyboardPanel.style.display === 'flex';
+    keyboardPanel.style.display = isOpen ? 'none' : 'flex';
+  });
+
+  // клик по букве — вставляем символ в инпут в позицию курсора
+  keyboardPanel.addEventListener('click', (e) => {
+    const key = e.target.closest('.letters');
+    if (!key) return;
+
+    const ch = key.textContent;
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? input.value.length;
+
+    input.value = input.value.slice(0, start) + ch + input.value.slice(end);
+
+    // возвращаем фокус и ставим курсор после вставленного символа
+    input.focus();
+    const pos = start + ch.length;
+    input.setSelectionRange(pos, pos);
+
+    // триггерим input, чтобы сработал поиск в dictionary.js
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  });
 }

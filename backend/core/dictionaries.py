@@ -58,15 +58,3 @@ dictionary_pipeline = [
     
     {"$sort": {"word": 1}}
 ]
-
-# GRAMMAR_DICT = {"nfh": "Evident=Nfh", "caus": "Voice=Caus", 
-#                            "ind": "Definite=Ind", "neg": "Polarity=Neg",
-#                            "fut": "Tense=Fut", "dim": "Degree=Dim",
-#                            "class": "Classifier=Yes", "pred": "Predicative=Yes",
-#                            "foc": "Focus=Yes", "emph": "Emphatic=Yes",
-#                            "qu": "Question=Yes", "coord": "Coordinating=Yes",
-#                            "refl": "Reflex=Yes", "rec": "Reciprocal=Yes",
-#                            "conces": "Conces=Yes", "add": "Add=Yes",
-#                            "coll": "NumType=Collective", "aux": "VerbType=Aux",
-#                            'conv': 'Conv'
-# }

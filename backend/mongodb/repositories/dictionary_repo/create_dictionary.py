@@ -1,7 +1,8 @@
 import argparse
 import asyncio
 import json
-from backend.dictionaries import dictionary_pipeline
+import string
+from backend.core.dictionaries import dictionary_pipeline
 from backend.mongodb.repositories.database import get_collection
 from backend.mongodb.repositories.sentences_repo.insert_data import drop_collection
 
@@ -13,17 +14,20 @@ parser.add_argument("-d", "--drop_collection", type=bool, default=False, help="Ð
 args = parser.parse_args()
 
 USED_WORDS = set()
+translator = str.maketrans('', '', string.punctuation)
 
 def decapitalize(word):
-    if word['lemma'] in USED_WORDS:
+    new_word = word['lemma'].lower()
+    new_word = new_word.translate(translator)
+    if new_word in USED_WORDS:
         return
     
-    USED_WORDS.add(word['lemma'])
+    USED_WORDS.add(word['lemma'].lower())
     if word['lemma'] == 'NaN':
         return
     if word['lemma'].istitle() and word['translation'].istitle():
         return 
-    return {'lemma': word['lemma'].lower(),
+    return {'lemma': new_word,
             'translation': word['translation'].lower(),
             'POS': word['POS'],
             "ex": word['text'],

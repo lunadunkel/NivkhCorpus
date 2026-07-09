@@ -148,10 +148,10 @@
                   <div>Грамматические признаки</div>
                   <div class="additional-selections">
                     <div class="select-features" id="gram-chosen-0">Выбрать</div>
-                    <div class="small-extra-buttons">
+                    <!-- <div class="small-extra-buttons">
                       <input id="question-0" type="image" src="/static/images/question_mark.svg" onclick=""
                         style="width: 10px; height: 10px" />
-                    </div>
+                    </div> -->
 
                   </div>
                 </div>
@@ -160,6 +160,7 @@
 
               </div>
               <dialog class="dialog" id="pop-up-0">
+                <div class="tooltip" id="tooltip-0"></div>
                 <div class="modal-top">
                   <div class="left-buttons">
                     <p>Грамматические признаки</p>
@@ -171,7 +172,7 @@
                     </div> -->
                   </div>
                   <div class="right-buttons">
-                    <div class="underline-button">Список сокращений</div>
+                    <!-- <div class="underline-button">Список сокращений</div> -->
                     <div class="close-word" id="close-modal-0"> <svg width="24" height="24" viewBox="0 0 24 24"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_665_1449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
@@ -193,164 +194,166 @@
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="pos" value="all" /> POS
+                          <label data-tooltip="Часть речи слова"><input type="checkbox" name="pos" value="all" /> POS
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="pos[]" value="NOUN" />
+                        <label data-tooltip="Имя существительное"><input type="checkbox" name="pos[]" value="NOUN" />
                           NOUN</label>
-                        <label><input type="checkbox" name="pos[]" value="VERB" />
+                        <label data-tooltip="Глагол"><input type="checkbox" name="pos[]" value="VERB" />
                           VERB</label>
-                        <label><input type="checkbox" name="pos[]" value="NUM" />
+                        <label data-tooltip="Имя числительное"><input type="checkbox" name="pos[]" value="NUM" />
                           NUM</label>
-                        <label><input type="checkbox" name="misc[]" value="class" />
+                        <label data-tooltip="Классификатор"><input type="checkbox" name="misc[]" value="class" />
                           CLASS</label>
-                        <label><input type="checkbox" name="pos[]" value="Q" /> Q</label>
-                        <label><input type="checkbox" name="pos[]" value="ADV" />
+                        <label data-tooltip="Квантор"><input type="checkbox" name="pos[]" value="Q" /> Q</label>
+                        <label data-tooltip="Наречие"><input type="checkbox" name="pos[]" value="ADV" />
                           ADV</label>
-                        <label><input type="checkbox" name="pos[]" value="PROPN" />
+                        <label data-tooltip="Имя собственное"><input type="checkbox" name="pos[]" value="PROPN" />
                           PROPN</label>
-                        <label><input type="checkbox" name="pos[]" value="PRON" />
+                        <label data-tooltip="Местоимение"><input type="checkbox" name="pos[]" value="PRON" />
                           PRON</label>
-                        <label><input type="checkbox" name="pos[]" value="DISC" />
+                        <label data-tooltip="Дискурсивная частица"><input type="checkbox" name="pos[]" value="DISC" />
                           DISC</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="case" value="all" /> Case
+                          <label data-tooltip="Падеж"><input type="checkbox" name="case" value="all" /> Case
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="case[]" value="Abs" />
+                        <label data-tooltip="Абсолютив"><input type="checkbox" name="case[]" value="Abs" />
                           Abs</label>
-                        <label><input type="checkbox" name="case[]" value="Abl" />
+                        <label data-tooltip="Аблатив"><input type="checkbox" name="case[]" value="Abl" />
                           Abl</label>
-                        <label><input type="checkbox" name="case[]" value="Per" />
+                        <label data-tooltip="Перлатив"><input type="checkbox" name="case[]" value="Per" />
                           Per</label>
-                        <label><input type="checkbox" name="case[]" value="Loc" />
+                        <label data-tooltip="Локатив"><input type="checkbox" name="case[]" value="Loc" />
                           Loc</label>
-                        <label><input type="checkbox" name="case[]" value="Dat" />
+                        <label data-tooltip="Датив"><input type="checkbox" name="case[]" value="Dat" />
                           Dat</label>
-                        <label><input type="checkbox" name="case[]" value="Ins" />
+                        <label data-tooltip="Инструменталис"><input type="checkbox" name="case[]" value="Ins" />
                           Ins</label>
-                        <label><input type="checkbox" name="case[]" value="Voc" />
+                        <label data-tooltip="Вокатив"><input type="checkbox" name="case[]" value="Voc" />
                           Voc</label>
-                        <label><input type="checkbox" name="case[]" value="Cau" />
+                        <label data-tooltip="Каузи"><input type="checkbox" name="case[]" value="Cau" />
                           Causee</label>
-                        <label><input type="checkbox" name="case[]" value="Com" />
+                        <label data-tooltip="Комитатив"><input type="checkbox" name="case[]" value="Com" />
                           Com</label>
-                        <label><input type="checkbox" name="case[]" value="Cmp" />
+                        <label data-tooltip="Компаратив"><input type="checkbox" name="case[]" value="Cmp" />
                           Cmp</label>
-                        <label><input type="checkbox" name="case[]" value="Lim" />
+                        <label data-tooltip="Лимитатив"><input type="checkbox" name="case[]" value="Lim" />
                           Lim</label>
-                        <label><input type="checkbox" name="case[]" value="Rep" />
+                        <label data-tooltip="Репортатив"><input type="checkbox" name="case[]" value="Rep" />
                           Rep</label>
                       </div>
                     </div>
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="nountype" value="all" />
+                          <label data-tooltip="Тип номинализации"><input type="checkbox" name="nountype" value="all" />
                             NounType
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="nountype[]" value="Agent" />
+                        <label data-tooltip="Агентивная"><input type="checkbox" name="nountype[]" value="Agent" />
                           Agent</label>
-                        <label><input type="checkbox" name="nountype[]" value="Ing" />
+                        <label data-tooltip="Инструментальная"><input type="checkbox" name="nountype[]" value="Ing" />
                           Instr</label>
-                        <label><input type="checkbox" name="nountype[]" value="Locat" />
+                        <label data-tooltip="Локативная"><input type="checkbox" name="nountype[]" value="Locat" />
                           Locat</label>
-                        <label><input type="checkbox" name="nountype[]" value="Proc" />
+                        <label data-tooltip="Процесс"><input type="checkbox" name="nountype[]" value="Proc" />
                           Proc</label>
                         <!-- <label><input type="checkbox" name="nountype[]" value="Deverb" />
                           Deverb</label> -->
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="clusivity" value="all" />
+                          <label data-tooltip="Инклюзивность"><input type="checkbox" name="clusivity" value="all" />
                             Clusivity
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="clusivity[]" value="In" />
+                        <label data-tooltip="Инклюзивный"><input type="checkbox" name="clusivity[]" value="In" />
                           In</label>
-                        <label><input type="checkbox" name="clusivity[]" value="Ex" />
+                        <label data-tooltip="Эксклюзивный"><input type="checkbox" name="clusivity[]" value="Ex" />
                           Ex</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="verbform" value="all" />
+                          <label data-tooltip="Тип нефинитной формы"><input type="checkbox" name="verbform"
+                              value="all" />
                             VerbForm
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="verbform[]" value="Conv" />
+                        <label data-tooltip="Конверб"><input type="checkbox" name="verbform[]" value="Conv" />
                           Conv</label>
                         <!-- <label><input type="checkbox" name="verbform[]" value="Vnoun" />
                           Vnoun</label> -->
-                        <label><input type="checkbox" name="verbform[]" value="Part" />
+                        <label data-tooltip="Причастие"><input type="checkbox" name="verbform[]" value="Part" />
                           Part</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="tense" value="all" />
+                          <label data-tooltip="Время"><input type="checkbox" name="tense" value="all" />
                             Tense
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="tense[]" value="Fut" />
+                        <label data-tooltip="Будущее"><input type="checkbox" name="tense[]" value="Fut" />
                           Fut</label>
-                        <label><input type="checkbox" name="tense[]" value="Pres_Aor" />
+                        <label data-tooltip="Настояще-прошедшее"><input type="checkbox" name="tense[]"
+                            value="Pres_Aor" />
                           Non-Fut</label>
                       </div>
                     </div>
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="mood" value="all" /> Mood
+                          <label data-tooltip="Наклонение"><input type="checkbox" name="mood" value="all" /> Mood
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="mood[]" value="Cnd" />
+                        <label data-tooltip="Условное"><input type="checkbox" name="mood[]" value="Cnd" />
                           Cnd</label>
-                        <label><input type="checkbox" name="mood[]" value="Conc" />
+                        <label data-tooltip="Уступительное"><input type="checkbox" name="mood[]" value="Conc" />
                           Conces</label>
-                        <label><input type="checkbox" name="mood[]" value="Hort" />
+                        <label data-tooltip="Гортатив"><input type="checkbox" name="mood[]" value="Hort" />
                           Hort</label>
-                        <label><input type="checkbox" name="mood[]" value="Imp" />
+                        <label data-tooltip="Императив"><input type="checkbox" name="mood[]" value="Imp" />
                           Imp</label>
-                        <label><input type="checkbox" name="mood[]" value="Ind" />
+                        <label data-tooltip="Индикатив"><input type="checkbox" name="mood[]" value="Ind" />
                           Ind</label>
-                        <label><input type="checkbox" name="mood[]" value="Indir" />
+                        <label data-tooltip="Косвенная речь"><input type="checkbox" name="mood[]" value="Indir" />
                           Indir</label>
-                        <label><input type="checkbox" name="mood[]" value="Jus" />
+                        <label data-tooltip="Юссив"><input type="checkbox" name="mood[]" value="Jus" />
                           Jus</label>
-                        <label><input type="checkbox" name="mood[]" value="Prob" />
+                        <label data-tooltip="Пробабилитив"><input type="checkbox" name="mood[]" value="Prob" />
                           Prob</label>
-                        <label><input type="checkbox" name="mood[]" value="Proh" />
+                        <label data-tooltip="Прохибитив"><input type="checkbox" name="mood[]" value="Proh" />
                           Proh</label>
-                        <label><input type="checkbox" name="mood[]" value="Subj" />
+                        <label data-tooltip="Сослагательное"><input type="checkbox" name="mood[]" value="Subj" />
                           Subj</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="aspect" value="all" />
+                          <label data-tooltip="Вид"><input type="checkbox" name="aspect" value="all" />
                             Aspect
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="aspect[]" value="Ant" />
+                        <label data-tooltip="Предшествование"><input type="checkbox" name="aspect[]" value="Ant" />
                           Ant</label>
-                        <label><input type="checkbox" name="aspect[]" value="Avert" />
+                        <label data-tooltip="Авертив"><input type="checkbox" name="aspect[]" value="Avert" />
                           Avert</label>
-                        <label><input type="checkbox" name="aspect[]" value="Compl" />
+                        <label data-tooltip="Комплетив"><input type="checkbox" name="aspect[]" value="Compl" />
                           Compl</label>
                         <!-- <label><input type="checkbox" name="aspect[]" value="Hab" />
                           Hab</label> -->
-                        <label><input type="checkbox" name="aspect[]" value="Des" />
+                        <label data-tooltip="Дезидератив"><input type="checkbox" name="aspect[]" value="Des" />
                           Des</label>
-                        <label><input type="checkbox" name="aspect[]" value="Iter" />
+                        <label data-tooltip="Повторяемость"><input type="checkbox" name="aspect[]" value="Iter" />
                           Iter</label>
-                        <label><input type="checkbox" name="aspect[]" value="Prog" />
+                        <label data-tooltip="Прогрессив"><input type="checkbox" name="aspect[]" value="Prog" />
                           Prog</label>
                         <!-- <label><input type="checkbox" name="aspect[]" value="Res" />
                           Res</label> -->
-                        <label><input type="checkbox" name="aspect[]" value="Sim" />
+                        <label data-tooltip="Одновременность"><input type="checkbox" name="aspect[]" value="Sim" />
                           Sim</label>
-                        <label><input type="checkbox" name="aspect[]" value="Usit" />
+                        <label data-tooltip="Узитатив"><input type="checkbox" name="aspect[]" value="Usit" />
                           Usit</label>
                         <!-- <label><input type="checkbox" name="aspect[]" value="Mult" />
                           Mult</label> -->
@@ -359,58 +362,59 @@
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="number" value="all" />
+                          <label data-tooltip="Число"><input type="checkbox" name="number" value="all" />
                             Number
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="number[]" value="Sing" />
+                        <label data-tooltip="Единственное"><input type="checkbox" name="number[]" value="Sing" />
                           Sing</label>
-                        <label><input type="checkbox" name="number[]" value="Dual" />
+                        <label data-tooltip="Двойственное"><input type="checkbox" name="number[]" value="Dual" />
                           Dual</label>
-                        <label><input type="checkbox" name="number[]" value="Plur" />
+                        <label data-tooltip="Множественное"><input type="checkbox" name="number[]" value="Plur" />
                           Plur</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="person" value="all" />
+                          <label data-tooltip="Лицо главного слова"><input type="checkbox" name="person" value="all" />
                             Person (main word)
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="person[]" value="1" />
+                        <label data-tooltip="Первое лицо"><input type="checkbox" name="person[]" value="1" />
                           1</label>
-                        <label><input type="checkbox" name="person[]" value="2" />
+                        <label data-tooltip="Второе лицо"><input type="checkbox" name="person[]" value="2" />
                           2</label>
-                        <label><input type="checkbox" name="person[]" value="3" />
+                        <label data-tooltip="Третье лицо"><input type="checkbox" name="person[]" value="3" />
                           3</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="person_obj" value="all" />
+                          <label data-tooltip="Лицо объектное или посессивной клитики"><input type="checkbox"
+                              name="person_obj" value="all" />
                             Person (object / possessor)
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="person_obj[]" value="1" />
+                        <label data-tooltip="Первое лицо"><input type="checkbox" name="person_obj[]" value="1" />
                           1</label>
-                        <label><input type="checkbox" name="person_obj[]" value="2" />
+                        <label data-tooltip="Второе лицо"><input type="checkbox" name="person_obj[]" value="2" />
                           2</label>
-                        <label><input type="checkbox" name="person_obj[]" value="3" />
+                        <label data-tooltip="Третье лицо"><input type="checkbox" name="person_obj[]" value="3" />
                           3</label>
                       </div>
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="coord" value="all" />
+                          <label data-tooltip="Признак клитики"><input type="checkbox" name="coord" value="all" />
                             Clitic
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="misc[]" value="refl" />
+                        <label data-tooltip="Рефлексив"><input type="checkbox" name="misc[]" value="refl" />
                           Reflex</label>
-                        <label><input type="checkbox" name="misc[]" value="rec" />
+                        <label data-tooltip="Реципрок"><input type="checkbox" name="misc[]" value="rec" />
                           Reciprocal</label>
-                        <label><input type="checkbox" name="clobj" value="yes" />
-                          Clobj
+                        <label data-tooltip="Объект"><input type="checkbox" name="clobj" value="yes" />
+                          Obj
                         </label>
-                        <label><input type="checkbox" name="clpos" value="yes" />
-                          Clpos
+                        <label data-tooltip="Посссор"><input type="checkbox" name="clpos" value="yes" />
+                          Pos
                         </label>
 
                       </div>
@@ -419,96 +423,67 @@
                     <div class="feature-column">
                       <div class="feature-block">
                         <h4>
-                          <label><input type="checkbox" name="coord" value="all" />
+                          <label data-tooltip="Тип сочинения"><input type="checkbox" name="coord" value="all" />
                             Coordination
                           </label>
                         </h4>
-                        <label><input type="checkbox" name="misc[]" value="coord" />
+                        <label data-tooltip="Глагольное сочинение"><input type="checkbox" name="misc[]" value="coord" />
                           VCoord</label>
-                        <label><input type="checkbox" name="misc[]" value="add" />
+                        <label data-tooltip="Именное сочинение"><input type="checkbox" name="misc[]" value="add" />
                           NCoord</label>
                       </div>
 
                       <div class="feature-block" id="misc">
                         <h4>Miscellaneous</h4>
-                        <label><input type="checkbox" name="misc[]" value="aux" />
+                        <label data-tooltip="Прочее"><input type="checkbox" name="misc[]" value="aux" />
                           Aux
                         </label>
-                        <label><input type="checkbox" name="misc[]" value="caus" />
+                        <label data-tooltip="Каузатив"><input type="checkbox" name="misc[]" value="caus" />
                           Caus
                         </label>
                         <!-- </h4> -->
                         <!-- <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="coll" />
+                        <label data-tooltip="Собирательное числительное"><input type="checkbox" name="misc[]"
+                            value="coll" />
                           Collective num
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="emph" />
+                        <label data-tooltip="Эмфаза"><input type="checkbox" name="misc[]" value="emph" />
                           Emphatic
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="evid" />
-                          Evidentiality
+                        <label data-tooltip="Эвиденциальность"><input type="checkbox" name="misc[]" value="evid" />
+                          Evid
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="foc" />
+                        <label data-tooltip="Фокус"><input type="checkbox" name="misc[]" value="foc" />
                           Focus
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="neg" />
+                        <label data-tooltip="Отрицание"><input type="checkbox" name="misc[]" value="neg" />
                           Negation
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="indef" />
+                        <label data-tooltip="Неопределенность"><input type="checkbox" name="misc[]" value="indef" />
                           Indefinite
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="q" />
+                        <label data-tooltip="Вопрос"><input type="checkbox" name="misc[]" value="q" />
                           Question
                         </label>
                         <!-- </h4>
                         <h4> -->
-                        <label><input type="checkbox" name="misc[]" value="dim" />
+                        <label data-tooltip="Диминутив"><input type="checkbox" name="misc[]" value="dim" />
                           Diminutive
                         </label>
                         <!-- </h4> -->
                       </div>
-                      <!-- <div class="feature-block"> 
-                        <h4>
-                          <label><input type="checkbox" name="misc" value="all" />
-                            Miscellaneous
-                          </label>
-                        </h4>
-                        <label><input type="checkbox" name="misc[]" value="evid" />
-                          Evidentiality</label>
-                       <label><input type="checkbox" name="misc[]" value="neg" />
-                          Negation</label>
-                        <label><input type="checkbox" name="misc[]" value="dim" />
-                          Dim</label>
-                        <label><input type="checkbox" name="misc[]" value="add" />
-                          Add</label> 
-                         <label><input type="checkbox" name="misc[]" value="q" />
-                          Question</label> 
-                         <label><input type="checkbox" name="misc[]" value="emph" />
-                          Emphatic</label> 
-                         <label><input type="checkbox" name="misc[]" value="coll" />
-                          Collective num</label> 
-                         <label><input type="checkbox" name="misc[]" value="class" />
-                          Classifier</label> 
-                        <label><input type="checkbox" name="misc[]" value="refl" />
-                          Reflex</label>
-                         <label><input type="checkbox" name="misc[]" value="indef" />
-                          Indefinite</label> 
-                        <label><input type="checkbox" name="misc[]" value="rec" />
-                          Reciprocal</label>
-                         <label><input type="checkbox" name="misc[]" value="foc" />
-                          Focus</label> -->
                     </div>
                   </div>
                 </div>
@@ -533,10 +508,12 @@
             <span class="loader" id="loader"></span>
           </div>
         </div>
+        <div class="search-hint" id="search-hint" role="alert" aria-live="polite"></div>
       </div>
     </div>
     <footer></footer>
-    <script type="module" src="/static/main.js?v=12345"></script>
+    <script type="module" src="/static/main.js"></script>
+    <script type="module" src="/static/javascript/tooltip.js"></script>
   </body>
 
 </html>

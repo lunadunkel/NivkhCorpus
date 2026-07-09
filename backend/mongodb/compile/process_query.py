@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from typing import Any, Dict, Optional
-from backend.dictionaries import MISC, ONLY4DB, QUERY2DB
+from backend.core.dictionaries import MISC, ONLY4DB, QUERY2DB
 
 @dataclass
 class OriginalQuery:

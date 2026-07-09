@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 from contextlib import asynccontextmanager
 from backend.api.api_router import api_router
-from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT, FRONTEND_DIR, USE_DB
+from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT, FRONTEND_DIR
 from fastapi.staticfiles import StaticFiles
 
 from backend.mongodb.repositories.database import get_collection, ping_db
@@ -10,31 +10,30 @@ from backend.mongodb.repositories.database import get_collection, ping_db
 @asynccontextmanager
 async def lifespan(app: FastAPI):
 
-    if USE_DB:
-        collection = get_collection(COLLECTION_JOB)
+    collection = get_collection(COLLECTION_JOB)
 
-        await collection.create_index(
-            "created_at",
-            expireAfterSeconds=3600
-        )
-        await collection.create_index(
-            "query_hash",
-            unique=True
-        )
+    await collection.create_index(
+        "created_at",
+        expireAfterSeconds=3600
+    )
+    await collection.create_index(
+        "query_hash",
+        unique=True
+    )
 
-        main_fields = ["tokens.token", "tokens.lemma", "tokens.tagsets.Number[subj]",
-                       "tokens.tagsets.Case", "tokens.tagsets.Person[subj]", "tokens.tagsets.Tense", "tokens.tagsets.POS"]
-        sentences = get_collection(COLLECTION_SENT)
+    main_fields = ["tokens.token", "tokens.lemma", "tokens.tagsets.Number[subj]",
+                    "tokens.tagsets.Case", "tokens.tagsets.Person[subj]", "tokens.tagsets.Tense", "tokens.tagsets.POS"]
+    sentences = get_collection(COLLECTION_SENT)
 
-        for field in main_fields:
-            await sentences.create_index(field)
+    for field in main_fields:
+        await sentences.create_index(field)
 
-        results = get_collection(COLLECTION_RESULTS)
-        await results.create_index('job_id')
-        await results.create_index(
-            "created_at",
-            expireAfterSeconds=3600
-        )
+    results = get_collection(COLLECTION_RESULTS)
+    await results.create_index('job_id')
+    await results.create_index(
+        "created_at",
+        expireAfterSeconds=3600
+    )
 
     yield
 

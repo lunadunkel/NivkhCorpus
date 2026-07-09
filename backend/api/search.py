@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 from fastapi.responses import JSONResponse
-from backend.services import search_service
+from backend.core import search_service
 from backend.mongodb.repositories.utils import clean
 
 router = APIRouter(prefix="/search", tags=["Search"])

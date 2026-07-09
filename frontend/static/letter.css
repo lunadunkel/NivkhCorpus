@@ -23,6 +23,7 @@
 }
 
 .word-item {
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -37,4 +38,34 @@
 
 .translation {
     color: var(--950);
+}
+/* ---- страница слова (word.html): часть речи + примеры ---- */
+.word-item .lemma {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.pos {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--500);
+}
+
+.example {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+    padding-left: 14px;
+    border-left: 2px solid var(--200);
+}
+
+.example-nivkh {
+    color: var(--700);
+}
+
+.example-rus {
+    color: var(--500);
+    font-style: italic;
 }
