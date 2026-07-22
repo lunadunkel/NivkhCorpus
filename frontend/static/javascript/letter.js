@@ -1,4 +1,9 @@
 const letter = decodeURIComponent(window.location.pathname.split("/").pop());
+const lang = window.location.pathname.split("/")[1];
+document.querySelectorAll('a[href*="{lang}"]').forEach(link => {
+    const href = link.getAttribute("href");
+    link.setAttribute("href", href.replace("{lang}", lang));
+});
 
 document.title = `Слова на букву ${letter}`;
 
@@ -18,7 +23,7 @@ goUpBtn.addEventListener('click', () => {
 
 async function loadWords() {
     const smallLetter = letter.toLowerCase();
-    const response = await fetch(`/dictionary/list/${encodeURIComponent(smallLetter)}`);
+    const response = await fetch(`/${lang}/dictionary/list/${encodeURIComponent(smallLetter)}`);
     const words = await response.json();
 
     // группируем по переводу: несколько лемм -> один перевод, СОХРАНЯЯ id
@@ -71,7 +76,7 @@ async function loadWords() {
         if (!item) return;
         const group = grouped[Number(item.dataset.index)];
         const id = group.ids[0];
-        window.location.href = `/dictionary/word?id=${encodeURIComponent(id)}`;
+        window.location.href = `/${lang}/dictionary/word?id=${encodeURIComponent(id)}`;
     });
 }
 

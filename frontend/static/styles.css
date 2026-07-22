@@ -99,7 +99,7 @@ img[src="/static/images/logo.svg"] {
   justify-content: center;
 
   img {
-    cursor: default;
+    cursor: pointer;
   }
 }
 

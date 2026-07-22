@@ -1,519 +1,104 @@
-<!doctype html>
-<html lang="ru">
-  <meta charset="UTF-8" />
-  <title>Поиск по корпусу</title>
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="static/reset.css" />
-    <link rel="stylesheet" href="static/styles.css" />
-  </head>
+        <link rel="stylesheet" href="static/reset.css" />
+        <link rel="stylesheet" href="static/styles.css" />
+        <link rel="stylesheet" href="static/index.css" />
+        <title>Корпуса НИВЦ</title>
+    </head>
 
-  <body>
-    <header class="main-header">
-      <div class="left-main" id="logo">
-        <img src="/static/images/logo.svg" />
-      </div>
-
-      <ul class="middle-main">
-        <li class="middle-main_item">
-          <a href="/" class="middle-main_link" id="new-search">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_637_112" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24"
-                height="24">
-                <rect width="24" height="24" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_637_112)">
-                <path
-                  d="M19.5423 20.577L13.2616 14.296C12.7616 14.7088 12.1866 15.0319 11.5366 15.2653C10.8866 15.4986 10.2141 15.6153 9.5193 15.6153C7.81014 15.6153 6.36364 15.0235 5.1798 13.84C3.99597 12.6565 3.40405 11.2103 3.40405 9.50152C3.40405 7.79285 3.9958 6.34618 5.1793 5.16152C6.3628 3.97702 7.80897 3.38477 9.5178 3.38477C11.2265 3.38477 12.6731 3.97668 13.8578 5.16051C15.0423 6.34435 15.6346 7.79085 15.6346 9.50002C15.6346 10.2142 15.5147 10.8963 15.2751 11.5463C15.0352 12.1963 14.7153 12.7616 14.3153 13.2423L20.5961 19.523L19.5423 20.577ZM9.5193 14.1155C10.8078 14.1155 11.8991 13.6683 12.7933 12.774C13.6876 11.8798 14.1348 10.7885 14.1348 9.50002C14.1348 8.21152 13.6876 7.12018 12.7933 6.22601C11.8991 5.33168 10.8078 4.88452 9.5193 4.88452C8.2308 4.88452 7.13947 5.33168 6.2453 6.22601C5.35097 7.12018 4.9038 8.21152 4.9038 9.50002C4.9038 10.7885 5.35097 11.8798 6.2453 12.774C7.13947 13.6683 8.2308 14.1155 9.5193 14.1155Z"
-                  fill="#19111D" />
-              </g>
-            </svg>
-            Поиск</a>
-          <a href="dictionary" class="middle-main_link">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_144_1346" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40"
-                height="40">
-                <rect width="40" height="40" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_144_1346)">
-                <path
-                  d="M10.4808 26.1858H23.6858V23.6858H10.4808V26.1858ZM27.0191 26.1858H29.5191V23.6858H27.0191V26.1858ZM10.4808 19.8717H12.9808V17.3717H10.4808V19.8717ZM16.3141 19.8717H29.5191V17.3717H16.3141V19.8717ZM7.17954 32.5C6.3376 32.5 5.62496 32.2083 5.04163 31.625C4.45829 31.0417 4.16663 30.329 4.16663 29.4871V10.5129C4.16663 9.67097 4.45829 8.95833 5.04163 8.375C5.62496 7.79167 6.3376 7.5 7.17954 7.5H32.8204C33.6623 7.5 34.375 7.79167 34.9583 8.375C35.5416 8.95833 35.8333 9.67097 35.8333 10.5129V29.4871C35.8333 30.329 35.5416 31.0417 34.9583 31.625C34.375 32.2083 33.6623 32.5 32.8204 32.5H7.17954ZM7.17954 30H32.8204C32.9487 30 33.0662 29.9465 33.1729 29.8396C33.2798 29.7329 33.3333 29.6154 33.3333 29.4871V10.5129C33.3333 10.3846 33.2798 10.2671 33.1729 10.1604C33.0662 10.0535 32.9487 10 32.8204 10H7.17954C7.05121 10 6.93371 10.0535 6.82704 10.1604C6.7201 10.2671 6.66663 10.3846 6.66663 10.5129V29.4871C6.66663 29.6154 6.7201 29.7329 6.82704 29.8396C6.93371 29.9465 7.05121 30 7.17954 30Z"
-                  fill="#19111D" />
-              </g>
-            </svg>
-            Словник</a>
-          <a href="about" class="middle-main_link">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <mask id="mask0_1030_300" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20"
-                height="20">
-                <rect width="20" height="20" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_1030_300)">
-                <path
-                  d="M14.583 3.38794C15.301 3.38794 16.0051 3.47132 16.6953 3.63696C17.2991 3.78189 17.8818 3.99019 18.4434 4.26196L18.6826 4.38208L18.6855 4.38306C18.8281 4.4479 18.9336 4.5443 19.0039 4.67212C19.076 4.80319 19.1113 4.94011 19.1113 5.08325V15.1252C19.1112 15.4254 18.9856 15.6503 18.7314 15.8069C18.4778 15.963 18.2166 15.9706 17.9414 15.8264H17.9424C17.4249 15.5467 16.8829 15.3299 16.3164 15.176C15.7492 15.022 15.1712 14.9446 14.583 14.9446C13.7432 14.9446 12.9313 15.0921 12.1475 15.386C11.3773 15.6748 10.6607 16.0784 9.99902 16.5969C9.33761 16.0788 8.62235 15.6747 7.85254 15.386C7.06857 15.092 6.25592 14.9446 5.41602 14.9446C4.82806 14.9446 4.25057 15.0221 3.68359 15.176C3.117 15.3299 2.57424 15.5466 2.05664 15.8264C1.78175 15.9701 1.52188 15.9627 1.26855 15.8069C1.01417 15.6503 0.887786 15.4255 0.887695 15.1252V5.08325C0.887695 4.9401 0.923997 4.8032 0.996094 4.67212C1.06642 4.54437 1.17188 4.44786 1.31445 4.38306L1.55664 4.26196C2.11799 3.99036 2.70021 3.78184 3.30371 3.63696C3.9938 3.47134 4.69818 3.38796 5.41602 3.38794C6.21674 3.38794 7.00051 3.49144 7.7666 3.69849C8.53255 3.9055 9.26746 4.21686 9.97168 4.6311L10 4.64673L10.0273 4.6311C10.7315 4.2169 11.4666 3.9055 12.2324 3.69849C12.9985 3.49143 13.7823 3.38794 14.583 3.38794ZM14.583 10.8879C14.9413 10.8879 15.2925 10.9159 15.6367 10.9709C15.968 11.0239 16.2929 11.0898 16.6113 11.1682V12.3801C16.2993 12.2676 15.9843 12.1818 15.666 12.1233C15.3222 12.0601 14.9611 12.0286 14.583 12.0286C14.051 12.0286 13.5395 12.0909 13.0488 12.217C12.5875 12.3357 12.1456 12.5124 11.7217 12.7424V11.4534C12.1659 11.2674 12.6202 11.1275 13.084 11.0334C13.5592 10.9371 14.0587 10.8879 14.583 10.8879ZM14.583 8.59692C14.9412 8.59692 15.2925 8.62389 15.6367 8.67896C15.968 8.73196 16.2928 8.79881 16.6113 8.8772V10.0891C16.2992 9.97652 15.9844 9.88978 15.666 9.8313C15.3222 9.76815 14.9611 9.73657 14.583 9.73657C14.0506 9.73657 13.5389 9.80349 13.0479 9.93677C12.587 10.0618 12.1454 10.2344 11.7217 10.4524V9.16235C12.166 8.97637 12.6202 8.83557 13.084 8.74146C13.5592 8.64507 14.0588 8.59692 14.583 8.59692ZM14.583 6.30493C14.9413 6.30493 15.2925 6.33286 15.6367 6.38794C15.968 6.44094 16.2928 6.50683 16.6113 6.58521V7.79712C16.2992 7.68454 15.9844 7.59779 15.666 7.53931C15.3222 7.47616 14.9611 7.44458 14.583 7.44458C14.0506 7.44458 13.5389 7.51151 13.0479 7.64478C12.5871 7.76984 12.1453 7.94249 11.7217 8.1604V6.87036C12.166 6.6844 12.6202 6.54357 13.084 6.44946C13.5591 6.35309 14.0588 6.30493 14.583 6.30493ZM9.22168 5.96802L9.19434 5.95239C8.62065 5.61658 8.01179 5.36447 7.36816 5.19653C6.72479 5.0287 6.07353 4.94458 5.41602 4.94458C4.91254 4.9446 4.41245 4.99415 3.91602 5.09204C3.41945 5.18997 2.94023 5.33662 2.47852 5.53247L2.44434 5.54712V13.9104L2.51758 13.885C3.00105 13.7193 3.48092 13.5948 3.95703 13.512C4.43287 13.4292 4.91923 13.388 5.41602 13.3879C6.06454 13.3879 6.69587 13.4609 7.30957 13.6057C7.92357 13.7506 8.53477 13.968 9.14258 14.2581L9.22168 14.2952V5.96802ZM17.5547 5.54712L17.5215 5.53247C17.0596 5.33653 16.5797 5.18999 16.083 5.09204C15.5865 4.99415 15.0865 4.94458 14.583 4.94458C13.9256 4.94458 13.2751 5.02874 12.6318 5.19653C11.9882 5.36444 11.3794 5.61662 10.8057 5.95239L10.7783 5.96802V14.2952L10.8564 14.2581C11.4643 13.968 12.0755 13.7506 12.6895 13.6057C13.3032 13.4609 13.9344 13.3879 14.583 13.3879C15.0798 13.3879 15.5662 13.4292 16.042 13.512C16.518 13.5947 16.9981 13.7193 17.4814 13.885L17.5547 13.9104V5.54712Z"
-                  fill="#1C1B1F" stroke="white" stroke-width="0.11" />
-              </g>
-            </svg>
-            О корпусе
-          </a>
-
-
-        </li>
-      </ul>
-    </header>
-
-    <div class="main-search">
-      <div class="final-form">
-        <div class="all-searching-frames" id="search-frame">
-          <template id="search-frame-template">
-            <form class="main-searching-frame" id="main-frame-0">
-              <div class="search-selection-info">
-                <div class="segmented-control">
-                  <input type="radio" name="search-type" id="lemma-0" value="lemma" checked />
-                  <label for="lemma-0"> Лемма </label>
-                  <input type="radio" name="search-type" value="token" id="wordform-0" />
-                  <label for="wordform-0"> Словоформа </label>
+    <body>
+        <header class="main-header">
+            <img src="/static/images/rcc.svg" class="desktop" />
+            <img src="/static/images/rcc-small.svg" class="phone" />
+        </header>
+        <div class="main-info">
+            <!-- <div class="text-section"></div> -->
+            <div class="title-info">
+                <h1>Корпуса НИВЦ МГУ</h1>
+                <div class="sub-title">
+                    <p>
+                        Лаборатории автоматических лексикографических систем НИВЦ МГУ представляет аннотированные
+                        корпуса малых языков с&nbsp;морфологической разметкой и глоссированием.
+                    </p>
+                    <p>
+                        Наши работы по&nbsp;созданию корпусов языков России мы&nbsp;хотели&nbsp;бы посвятить светлой
+                        памяти В.&nbsp;В.&nbsp;Воеводина. Поддержка Владимира Валентиновича помогала нам
+                        и&nbsp;вдохновляла с&nbsp;самого начала пути.
+                    </p>
                 </div>
-                <div class="regulation-adding">
-                  <div class="add-word" id="add-0">
-                    <!-- <div > -->
-                    <div style="height: fit-content;">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M7.7998 0.200195V6.2002H13.7998V7.7998H7.7998V13.7998H6.2002V7.7998H0.200195V6.2002H6.2002V0.200195H7.7998Z"
-                          fill="#254038" stroke="white" stroke-width="0.4" />
-                      </svg>
-                    </div>
-
-                    <p>Слово</p>
-                  </div>
-                  <div class="close-word" id="closure-0"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <mask id="mask0_665_1449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                        width="24" height="24">
-                        <rect width="24" height="24" fill="#D9D9D9" />
-                      </mask>
-                      <g mask="url(#mask0_665_1449)">
-                        <path
-                          d="M6.39994 18.6538L5.34619 17.6L10.9462 12L5.34619 6.4L6.39994 5.34625L11.9999 10.9463L17.5999 5.34625L18.6537 6.4L13.0537 12L18.6537 17.6L17.5999 18.6538L11.9999 13.0538L6.39994 18.6538Z"
-                          fill="#19111D" />
-                      </g>
-                    </svg>
-
-                  </div>
-                </div>
-              </div>
-              <div class="searching-input">
-                <input id="correct_placeholder-0" class="input-panel" type="search" name="input_word"
-                  placeholder="Найти по лемме" />
-
-                <div class="right-searching-input-extras">
-                  <!-- <div class="keyboard-container"> -->
-                  <div id="nivkh_keyboard-0" class="keyboard">
-                    <img src="/static/images/keyboard.svg" />
-
-                  </div>
-                  <!-- </div> -->
-
-                  <select id="extension-0" name="language-select" class="custom-select">
-                    <option value="nivkh" selected>Нивх</option>
-                    <option value="russian">Рус</option>
-                  </select>
-
-                </div>
-              </div>
-
-              <div class="letter-input" id="keyboard-0">
-                <div class="letter-container">
-                  <div class="keyboard-row">
-                    <div class="letters">ӷ</div>
-                    <div class="letters">ғ</div>
-                    <div class="letters">ӻ</div>
-                    <div class="letters">ӄ</div>
-                    <div class="letters">ӄ’</div>
-                  </div>
-                  <div class="keyboard-row">
-                    <div class="letters">ӈ</div>
-                    <div class="letters">р̌</div>
-                    <div class="letters">ў</div>
-                    <div class="letters">ӽ</div>
-                    <div class="letters">ӿ</div>
-                  </div>
-                </div>
-              </div>
-              <div class="basic-container" id="gram-feat-cont-0">
-                <div class="top-base-container">
-                  <div>Грамматические признаки</div>
-                  <div class="additional-selections">
-                    <div class="select-features" id="gram-chosen-0">Выбрать</div>
-                    <!-- <div class="small-extra-buttons">
-                      <input id="question-0" type="image" src="/static/images/question_mark.svg" onclick=""
-                        style="width: 10px; height: 10px" />
-                    </div> -->
-
-                  </div>
-                </div>
-                <input class="regex-input" id="regex-0" name="added-gram-features" type="text"
-                  placeholder="Регулярное выражение" />
-
-              </div>
-              <dialog class="dialog" id="pop-up-0">
-                <div class="tooltip" id="tooltip-0"></div>
-                <div class="modal-top">
-                  <div class="left-buttons">
-                    <p>Грамматические признаки</p>
-                    <div class="modal-buttons" id="check-categories-0">
-                      Выбрать все
-                    </div>
-                    <!-- <div class="simple-buttons" id="reset-categories-0">
-                      Сбросить
-                    </div> -->
-                  </div>
-                  <div class="right-buttons">
-                    <!-- <div class="underline-button">Список сокращений</div> -->
-                    <div class="close-word" id="close-modal-0"> <svg width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <mask id="mask0_665_1449" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                          width="24" height="24">
-                          <rect width="24" height="24" fill="#D9D9D9" />
-                        </mask>
-                        <g mask="url(#mask0_665_1449)">
-                          <path
-                            d="M6.39994 18.6538L5.34619 17.6L10.9462 12L5.34619 6.4L6.39994 5.34625L11.9999 10.9463L17.5999 5.34625L18.6537 6.4L13.0537 12L18.6537 17.6L17.5999 18.6538L11.9999 13.0538L6.39994 18.6538Z"
-                            fill="#19111D" />
-                        </g>
-                      </svg>
-
-                    </div>
-                  </div>
-                </div>
-                <div class="gram-scroll-container">
-                  <div class="gram-categories">
-                    <div class="feature-column">
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Часть речи слова"><input type="checkbox" name="pos" value="all" /> POS
-                          </label>
-                        </h4>
-                        <label data-tooltip="Имя существительное"><input type="checkbox" name="pos[]" value="NOUN" />
-                          NOUN</label>
-                        <label data-tooltip="Глагол"><input type="checkbox" name="pos[]" value="VERB" />
-                          VERB</label>
-                        <label data-tooltip="Имя числительное"><input type="checkbox" name="pos[]" value="NUM" />
-                          NUM</label>
-                        <label data-tooltip="Классификатор"><input type="checkbox" name="misc[]" value="class" />
-                          CLASS</label>
-                        <label data-tooltip="Квантор"><input type="checkbox" name="pos[]" value="Q" /> Q</label>
-                        <label data-tooltip="Наречие"><input type="checkbox" name="pos[]" value="ADV" />
-                          ADV</label>
-                        <label data-tooltip="Имя собственное"><input type="checkbox" name="pos[]" value="PROPN" />
-                          PROPN</label>
-                        <label data-tooltip="Местоимение"><input type="checkbox" name="pos[]" value="PRON" />
-                          PRON</label>
-                        <label data-tooltip="Дискурсивная частица"><input type="checkbox" name="pos[]" value="DISC" />
-                          DISC</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Падеж"><input type="checkbox" name="case" value="all" /> Case
-                          </label>
-                        </h4>
-                        <label data-tooltip="Абсолютив"><input type="checkbox" name="case[]" value="Abs" />
-                          Abs</label>
-                        <label data-tooltip="Аблатив"><input type="checkbox" name="case[]" value="Abl" />
-                          Abl</label>
-                        <label data-tooltip="Перлатив"><input type="checkbox" name="case[]" value="Per" />
-                          Per</label>
-                        <label data-tooltip="Локатив"><input type="checkbox" name="case[]" value="Loc" />
-                          Loc</label>
-                        <label data-tooltip="Датив"><input type="checkbox" name="case[]" value="Dat" />
-                          Dat</label>
-                        <label data-tooltip="Инструменталис"><input type="checkbox" name="case[]" value="Ins" />
-                          Ins</label>
-                        <label data-tooltip="Вокатив"><input type="checkbox" name="case[]" value="Voc" />
-                          Voc</label>
-                        <label data-tooltip="Каузи"><input type="checkbox" name="case[]" value="Cau" />
-                          Causee</label>
-                        <label data-tooltip="Комитатив"><input type="checkbox" name="case[]" value="Com" />
-                          Com</label>
-                        <label data-tooltip="Компаратив"><input type="checkbox" name="case[]" value="Cmp" />
-                          Cmp</label>
-                        <label data-tooltip="Лимитатив"><input type="checkbox" name="case[]" value="Lim" />
-                          Lim</label>
-                        <label data-tooltip="Репортатив"><input type="checkbox" name="case[]" value="Rep" />
-                          Rep</label>
-                      </div>
-                    </div>
-                    <div class="feature-column">
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Тип номинализации"><input type="checkbox" name="nountype" value="all" />
-                            NounType
-                          </label>
-                        </h4>
-                        <label data-tooltip="Агентивная"><input type="checkbox" name="nountype[]" value="Agent" />
-                          Agent</label>
-                        <label data-tooltip="Инструментальная"><input type="checkbox" name="nountype[]" value="Ing" />
-                          Instr</label>
-                        <label data-tooltip="Локативная"><input type="checkbox" name="nountype[]" value="Locat" />
-                          Locat</label>
-                        <label data-tooltip="Процесс"><input type="checkbox" name="nountype[]" value="Proc" />
-                          Proc</label>
-                        <!-- <label><input type="checkbox" name="nountype[]" value="Deverb" />
-                          Deverb</label> -->
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Инклюзивность"><input type="checkbox" name="clusivity" value="all" />
-                            Clusivity
-                          </label>
-                        </h4>
-                        <label data-tooltip="Инклюзивный"><input type="checkbox" name="clusivity[]" value="In" />
-                          In</label>
-                        <label data-tooltip="Эксклюзивный"><input type="checkbox" name="clusivity[]" value="Ex" />
-                          Ex</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Тип нефинитной формы"><input type="checkbox" name="verbform"
-                              value="all" />
-                            VerbForm
-                          </label>
-                        </h4>
-                        <label data-tooltip="Конверб"><input type="checkbox" name="verbform[]" value="Conv" />
-                          Conv</label>
-                        <!-- <label><input type="checkbox" name="verbform[]" value="Vnoun" />
-                          Vnoun</label> -->
-                        <label data-tooltip="Причастие"><input type="checkbox" name="verbform[]" value="Part" />
-                          Part</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Время"><input type="checkbox" name="tense" value="all" />
-                            Tense
-                          </label>
-                        </h4>
-                        <label data-tooltip="Будущее"><input type="checkbox" name="tense[]" value="Fut" />
-                          Fut</label>
-                        <label data-tooltip="Настояще-прошедшее"><input type="checkbox" name="tense[]"
-                            value="Pres_Aor" />
-                          Non-Fut</label>
-                      </div>
-                    </div>
-                    <div class="feature-column">
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Наклонение"><input type="checkbox" name="mood" value="all" /> Mood
-                          </label>
-                        </h4>
-                        <label data-tooltip="Условное"><input type="checkbox" name="mood[]" value="Cnd" />
-                          Cnd</label>
-                        <label data-tooltip="Уступительное"><input type="checkbox" name="mood[]" value="Conc" />
-                          Conces</label>
-                        <label data-tooltip="Гортатив"><input type="checkbox" name="mood[]" value="Hort" />
-                          Hort</label>
-                        <label data-tooltip="Императив"><input type="checkbox" name="mood[]" value="Imp" />
-                          Imp</label>
-                        <label data-tooltip="Индикатив"><input type="checkbox" name="mood[]" value="Ind" />
-                          Ind</label>
-                        <label data-tooltip="Косвенная речь"><input type="checkbox" name="mood[]" value="Indir" />
-                          Indir</label>
-                        <label data-tooltip="Юссив"><input type="checkbox" name="mood[]" value="Jus" />
-                          Jus</label>
-                        <label data-tooltip="Пробабилитив"><input type="checkbox" name="mood[]" value="Prob" />
-                          Prob</label>
-                        <label data-tooltip="Прохибитив"><input type="checkbox" name="mood[]" value="Proh" />
-                          Proh</label>
-                        <label data-tooltip="Сослагательное"><input type="checkbox" name="mood[]" value="Subj" />
-                          Subj</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Вид"><input type="checkbox" name="aspect" value="all" />
-                            Aspect
-                          </label>
-                        </h4>
-                        <label data-tooltip="Предшествование"><input type="checkbox" name="aspect[]" value="Ant" />
-                          Ant</label>
-                        <label data-tooltip="Авертив"><input type="checkbox" name="aspect[]" value="Avert" />
-                          Avert</label>
-                        <label data-tooltip="Комплетив"><input type="checkbox" name="aspect[]" value="Compl" />
-                          Compl</label>
-                        <!-- <label><input type="checkbox" name="aspect[]" value="Hab" />
-                          Hab</label> -->
-                        <label data-tooltip="Дезидератив"><input type="checkbox" name="aspect[]" value="Des" />
-                          Des</label>
-                        <label data-tooltip="Повторяемость"><input type="checkbox" name="aspect[]" value="Iter" />
-                          Iter</label>
-                        <label data-tooltip="Прогрессив"><input type="checkbox" name="aspect[]" value="Prog" />
-                          Prog</label>
-                        <!-- <label><input type="checkbox" name="aspect[]" value="Res" />
-                          Res</label> -->
-                        <label data-tooltip="Одновременность"><input type="checkbox" name="aspect[]" value="Sim" />
-                          Sim</label>
-                        <label data-tooltip="Узитатив"><input type="checkbox" name="aspect[]" value="Usit" />
-                          Usit</label>
-                        <!-- <label><input type="checkbox" name="aspect[]" value="Mult" />
-                          Mult</label> -->
-                      </div>
-                    </div>
-                    <div class="feature-column">
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Число"><input type="checkbox" name="number" value="all" />
-                            Number
-                          </label>
-                        </h4>
-                        <label data-tooltip="Единственное"><input type="checkbox" name="number[]" value="Sing" />
-                          Sing</label>
-                        <label data-tooltip="Двойственное"><input type="checkbox" name="number[]" value="Dual" />
-                          Dual</label>
-                        <label data-tooltip="Множественное"><input type="checkbox" name="number[]" value="Plur" />
-                          Plur</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Лицо главного слова"><input type="checkbox" name="person" value="all" />
-                            Person (main word)
-                          </label>
-                        </h4>
-                        <label data-tooltip="Первое лицо"><input type="checkbox" name="person[]" value="1" />
-                          1</label>
-                        <label data-tooltip="Второе лицо"><input type="checkbox" name="person[]" value="2" />
-                          2</label>
-                        <label data-tooltip="Третье лицо"><input type="checkbox" name="person[]" value="3" />
-                          3</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Лицо объектное или посессивной клитики"><input type="checkbox"
-                              name="person_obj" value="all" />
-                            Person (object / possessor)
-                          </label>
-                        </h4>
-                        <label data-tooltip="Первое лицо"><input type="checkbox" name="person_obj[]" value="1" />
-                          1</label>
-                        <label data-tooltip="Второе лицо"><input type="checkbox" name="person_obj[]" value="2" />
-                          2</label>
-                        <label data-tooltip="Третье лицо"><input type="checkbox" name="person_obj[]" value="3" />
-                          3</label>
-                      </div>
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Признак клитики"><input type="checkbox" name="coord" value="all" />
-                            Clitic
-                          </label>
-                        </h4>
-                        <label data-tooltip="Рефлексив"><input type="checkbox" name="misc[]" value="refl" />
-                          Reflex</label>
-                        <label data-tooltip="Реципрок"><input type="checkbox" name="misc[]" value="rec" />
-                          Reciprocal</label>
-                        <label data-tooltip="Объект"><input type="checkbox" name="clobj" value="yes" />
-                          Obj
-                        </label>
-                        <label data-tooltip="Посссор"><input type="checkbox" name="clpos" value="yes" />
-                          Pos
-                        </label>
-
-                      </div>
-
-                    </div>
-                    <div class="feature-column">
-                      <div class="feature-block">
-                        <h4>
-                          <label data-tooltip="Тип сочинения"><input type="checkbox" name="coord" value="all" />
-                            Coordination
-                          </label>
-                        </h4>
-                        <label data-tooltip="Глагольное сочинение"><input type="checkbox" name="misc[]" value="coord" />
-                          VCoord</label>
-                        <label data-tooltip="Именное сочинение"><input type="checkbox" name="misc[]" value="add" />
-                          NCoord</label>
-                      </div>
-
-                      <div class="feature-block" id="misc">
-                        <h4>Miscellaneous</h4>
-                        <label data-tooltip="Прочее"><input type="checkbox" name="misc[]" value="aux" />
-                          Aux
-                        </label>
-                        <label data-tooltip="Каузатив"><input type="checkbox" name="misc[]" value="caus" />
-                          Caus
-                        </label>
-                        <!-- </h4> -->
-                        <!-- <h4> -->
-                        <label data-tooltip="Собирательное числительное"><input type="checkbox" name="misc[]"
-                            value="coll" />
-                          Collective num
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Эмфаза"><input type="checkbox" name="misc[]" value="emph" />
-                          Emphatic
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Эвиденциальность"><input type="checkbox" name="misc[]" value="evid" />
-                          Evid
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Фокус"><input type="checkbox" name="misc[]" value="foc" />
-                          Focus
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Отрицание"><input type="checkbox" name="misc[]" value="neg" />
-                          Negation
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Неопределенность"><input type="checkbox" name="misc[]" value="indef" />
-                          Indefinite
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Вопрос"><input type="checkbox" name="misc[]" value="q" />
-                          Question
-                        </label>
-                        <!-- </h4>
-                        <h4> -->
-                        <label data-tooltip="Диминутив"><input type="checkbox" name="misc[]" value="dim" />
-                          Diminutive
-                        </label>
-                        <!-- </h4> -->
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="dialog-buttons">
-                  <!-- <div class="decision-buttonss"> -->
-                  <div class="simple-buttons" id="reset-categories-0">
-                    Сбросить
-                  </div>
-                  <div class="check-button" id="checked-categories-0">
-                    Применить
+            </div>
+            <div class="lang-select">
+                <a href="/nivkh" class=" lang-container">
+                    <!-- <div class="lang-info"> -->
+                    <h2>Нивхский</h2>
+                    <div class="add-info">изолят</div>
                     <!-- </div> -->
-                  </div>
+                    <div class="stats">
+                        <div class="stats-entry"><strong>25</strong> текстов</div>
+                        <div class="stats-entry"><strong>1251</strong> предложение</div>
+                        <div class="stats-entry"><strong>7907</strong> токенов</div>
+                    </div>
+                </a>
+                <a class="lang-container disabled">
+                    <!-- <div class="lang-info"> -->
+                    <h2>Караимский</h2>
+                    <div class="add-info">тюркский</div>
+                    <!-- </div> -->
+                    <div class="stats">
+                        В разработке
+                    </div>
+                </a>
+                <a class="lang-container disabled">
+                    <!-- <div class="lang-info"> -->
+                    <h2>Хваршинский</h2>
+                    <div class="add-info">нахско-дагестанский</div>
+                    <!-- </div> -->
+
+                    <div class="stats">
+                        В разработке
+                    </div>
+                </a>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <h2>
+                        Поиск
+                    </h2>
+                    <div class="feat-text">По&nbsp;лемме или словоформе, с&nbsp;фильтрами по&nbsp;части речи, падежу,
+                        времени и&nbsp;другим
+                        граммемам.</div>
                 </div>
-              </dialog>
-            </form>
-          </template>
+                <div class="feature">
+                    <h2>
+                        Словник
+                    </h2>
+                    <div class="feat-text">Алфавитный указатель лемм и наличие быстрого поиска
+                        по&nbsp;словам,
+                        из&nbsp;текстов с&nbsp;примером из&nbsp;корпуса.</div>
+                </div>
+                <div class="feature">
+                    <h2>
+                        Глоссирование
+                    </h2>
+                    <div class="feat-text">Каждый пример включает
+                        глоссирование по
+                        Лейпцигским правилам и&nbsp;переводом на&nbsp;русский.</div>
+                </div>
+            </div>
         </div>
-        <div class="search-buttons">
-          <div class="final-buttons" id="reset">Сбросить</div>
-          <div class="final-buttons" id="search">
-            <div id="text-search">Найти</div>
-            <span class="loader" id="loader"></span>
-          </div>
-        </div>
-        <div class="search-hint" id="search-hint" role="alert" aria-live="polite"></div>
-      </div>
-    </div>
-    <footer></footer>
-    <script type="module" src="/static/main.js"></script>
-    <script type="module" src="/static/javascript/tooltip.js"></script>
-  </body>
+        <footer>
+            <div class="footer">
+                <div>
+                    НИВЦ МГУ, 2026
+                </div>
+                <a href="https://github.com/lunadunkel/NivkhCorpus/tree/main">Github</a>
+            </div>
+        </footer>
+    </body>
 
 </html>

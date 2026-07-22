@@ -1,6 +1,13 @@
 import { WordManager, keyboardActivate, actionKeyboard, lemmaButton, wordformButton } from './javascript/click_based_fts.js';
 import { createDiv } from './javascript/create_div.js';
 
+const lang = window.location.pathname.split("/")[1];
+
+document.querySelectorAll('a[href*="{lang}"]').forEach(link => {
+    const href = link.getAttribute("href");
+    link.setAttribute("href", href.replace("{lang}", lang));
+});
+
 export const manager = new WordManager(createDiv);
 
 
@@ -79,7 +86,8 @@ document.getElementById("search").addEventListener("click", async () => {
 	console.log("Отправка данных:", allData);
 
 	try {
-		const response = await fetch("/search", {
+		console.log(lang);
+		const response = await fetch(`/${lang}/search`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(allData)
@@ -93,7 +101,7 @@ document.getElementById("search").addEventListener("click", async () => {
 		const result = await response.json();
 		console.log("Успешный ответ от сервера:", result);
 
-		window.location.href = `search_output?job_id=${result.job_id}`;
+		window.location.href = `/${lang}/search_output?job_id=${result.job_id}`;
 
 
 	} catch (error) {

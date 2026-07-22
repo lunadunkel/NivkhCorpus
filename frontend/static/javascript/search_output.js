@@ -1,4 +1,7 @@
 const params = new URLSearchParams(window.location.search);
+
+const lang = window.location.pathname.split("/")[1];
+// console.log(lang)
 const jobId = params.get("job_id");
 let currentOffset = 0;
 const PAGE_SIZE = 20;
@@ -8,7 +11,10 @@ document.getElementById("new-search").addEventListener("click", () => {
   window.location.href = "/";
 });
 
-
+document.querySelectorAll('a[href*="{lang}"]').forEach(link => {
+    const href = link.getAttribute("href");
+    link.setAttribute("href", href.replace("{lang}", lang));
+});
 
 const goUpBtn = document.querySelector('.go-up');
 
@@ -26,7 +32,7 @@ goUpBtn.addEventListener('click', () => {
 
 async function fetchData(offset = 0) {
     try {
-        const response = await fetch(`/get_output?job_id=${jobId}&offset=${offset}&limit=${PAGE_SIZE}`);
+        const response = await fetch(`/${lang}/get_output?job_id=${jobId}&offset=${offset}&limit=${PAGE_SIZE}`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -101,7 +107,7 @@ async function addContext(id, card) {
         };
     }
 
-    const response = await fetch(`/search/doc_id=${id}`, {
+    const response = await fetch(`/${lang}/search/doc_id=${id}`, {
     method: "POST"
     });
 

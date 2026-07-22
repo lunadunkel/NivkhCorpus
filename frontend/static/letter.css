@@ -31,6 +31,10 @@
     border-bottom: 1px solid var(--200);
 }
 
+.word-item.no-link {
+    cursor: default;
+}
+
 .lemma {
     color: var(--700);
     font-size: 20px;

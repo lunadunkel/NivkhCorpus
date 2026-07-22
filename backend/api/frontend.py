@@ -7,12 +7,12 @@ from backend.core import search_service
 from backend.mongodb.repositories.database import get_collection
 
 
-router = APIRouter()
+router = APIRouter(prefix="/{lang}")
 
-# index.html
+# search.html
 @router.get("/")
-def root():
-    return FileResponse(FRONTEND_DIR / "index.html")
+async def language_page(lang: str):
+    return FileResponse(FRONTEND_DIR / "search.html")
 
 # search_output.html
 @router.get("/search_output")

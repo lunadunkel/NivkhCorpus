@@ -1,5 +1,12 @@
 const id = new URLSearchParams(location.search).get('id');
 
+const lang = window.location.pathname.split("/")[1];
+
+
+document.querySelectorAll('a[href*="{lang}"]').forEach(link => {
+    const href = link.getAttribute("href");
+    link.setAttribute("href", href.replace("{lang}", lang));
+});
 // кнопка «наверх», как на странице буквы
 const goUpBtn = document.querySelector('.go-up');
 if (goUpBtn) {
@@ -46,7 +53,7 @@ async function loadWord() {
 
     let data;
     try {
-        const res = await fetch(`/dictionary/group?id=${encodeURIComponent(id)}`);
+        const res = await fetch(`/${lang}/dictionary/group?id=${encodeURIComponent(id)}`);
         if (!res.ok) {
             list.textContent = 'Не найдено';
             return;
@@ -64,7 +71,7 @@ async function loadWord() {
 
     for (const doc of lemmas) {
         const item = document.createElement('div');
-        item.className = 'word-item';
+        item.className = 'word-item no-link';
 
         const head = document.createElement('div');
         head.className = 'lemma';

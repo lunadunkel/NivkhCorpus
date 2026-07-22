@@ -1,5 +1,13 @@
 let currentResults = [];
 const input = document.getElementById('correct_placeholder-0'); 
+
+const lang = window.location.pathname.split("/")[1];
+
+document.querySelectorAll('a[href*="{lang}"]').forEach(link => {
+    const href = link.getAttribute("href");
+    link.setAttribute("href", href.replace("{lang}", lang));
+});
+
 const indexEl = document.querySelector('.alpha-index'); 
 const resultsEl = document.getElementById('dict-results');
 const langSelect = document.getElementById('extension-0');
@@ -13,7 +21,7 @@ resultsEl.style.display = 'none';
 let fuse;
 let activeIndex = -1;
 
-fetch('/search/dictionary')
+fetch(`/${lang}/search/dictionary`)
   .then(response => response.json())
   .then(words => {
     fuse = new Fuse(words, {
@@ -60,7 +68,7 @@ const clickZone = document.querySelectorAll(".idx-row");
 clickZone.forEach(selectedZone => {
     selectedZone.addEventListener("click", () => {
         const letter = selectedZone.firstElementChild.textContent.trim();
-        window.location.href = `/dictionary/${encodeURIComponent(letter)}`;
+        window.location.href = `/${lang}/dictionary/${encodeURIComponent(letter)}`;
     });
 });
 
@@ -132,7 +140,7 @@ function select(li) {
   const id = group.ids[0];
   resultsEl.style.display = 'none';
   activeIndex = -1;
-  window.location.href = `/dictionary/word?id=${encodeURIComponent(id)}`;
+  window.location.href = `/${lang}/dictionary/word?id=${encodeURIComponent(id)}`;
 }
 
 input.addEventListener('focus', () => {

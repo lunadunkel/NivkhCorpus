@@ -4,7 +4,7 @@ from backend.core.config import FRONTEND_DIR
 from backend.core import search_service
 from backend.mongodb.repositories.utils import clean
 
-router = APIRouter(prefix="/dictionary", tags=["Dictionary"])
+router = APIRouter(prefix="/{lang}/dictionary", tags=["Dictionary"])
 
 # dictionary.html
 @router.get("")

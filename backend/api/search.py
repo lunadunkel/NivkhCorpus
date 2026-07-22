@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from backend.core import search_service
 from backend.mongodb.repositories.utils import clean
 
-router = APIRouter(prefix="/search", tags=["Search"])
+router = APIRouter(prefix="/{lang}/search", tags=["Search"])
 
 @router.post("/")
 async def search(request: Request):

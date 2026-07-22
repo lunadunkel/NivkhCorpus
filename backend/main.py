@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 
 from contextlib import asynccontextmanager
+
+from fastapi.responses import FileResponse
 from backend.api.api_router import api_router
 from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT, FRONTEND_DIR
 from fastapi.staticfiles import StaticFiles
@@ -51,6 +53,9 @@ async def no_cache(request, call_next):
 # Подключение статики
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR / "static"), name="static")
 
+@app.get("/")
+async def main_page():
+    return FileResponse(FRONTEND_DIR / "index.html")
 
 @app.get("/ping")
 async def ping():
