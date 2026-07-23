@@ -1,52 +1,78 @@
 #!/bin/sh
 set -e
- 
-MONGO_URI="${MONGO_URI:-mongodb://mongo:27017/corpus}"
- 
-# 1. Ждём, пока корпус (sentences) будет налит init-скриптом Mongo.
-#    Healthcheck гарантирует, что Mongo отвечает, но import.sh
-#    может ещё доливать большой корпус — поэтому ждём непустую коллекцию.
-echo "Importing corpus data..."
+
+export MONGO_URI="${MONGO_URI:-mongodb://mongo:27017/corpus}"
+export WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-150}"
+export WAIT_INTERVAL="${WAIT_INTERVAL:-4}"
+
+# MONGO_URI="${MONGO_URI:-mongodb://mongo:27017/corpus}"
+# WAIT_ATTEMPTS="${WAIT_ATTEMPTS:-150}"
+# WAIT_INTERVAL="${WAIT_INTERVAL:-4}"
+
+echo "Waiting for corpus import to complete..."
 python3 - <<'PY'
 import os, sys, time
 from pymongo import MongoClient
- 
+
 uri = os.getenv("MONGO_URI", "mongodb://mongo:27017/corpus")
-db = MongoClient(uri).get_default_database()
- 
-for attempt in range(1, 31):
+attempts = int(os.getenv("WAIT_ATTEMPTS", "150"))
+interval = float(os.getenv("WAIT_INTERVAL", "4"))
+db = MongoClient(uri, serverSelectionTimeoutMS=5000).get_default_database()
+
+for attempt in range(1, attempts + 1):
     try:
-        if db.sentences.count_documents({}) > 0:
-            print(f"Corpus ready ({db.sentences.count_documents({})} sentences).")
+        state = db.import_state.find_one({"_id": "corpus"})
+        if state and state.get("status") == "done":
+            print(f"Corpus ready ({state['sentences']} sentences).")
             sys.exit(0)
     except Exception as e:
         print(f"  Mongo not ready yet: {e}")
-    print(f"  waiting... ({attempt}/30)")
-    time.sleep(2)
- 
-print("ERROR: corpus is still empty after waiting — did the import run?")
+    print(f"  waiting for import marker... ({attempt}/{attempts})")
+    time.sleep(interval)
+
+print("ERROR: import marker never appeared — check mongo init logs.", file=sys.stderr)
 sys.exit(1)
 PY
- 
-# 2. Строим словарь только если он ещё пуст.
-DICT_COUNT=$(python3 - <<'PY'
+
+NEED_DICT=$(python3 - <<'PY'
 import os
 from pymongo import MongoClient
 uri = os.getenv("MONGO_URI", "mongodb://mongo:27017/corpus")
 db = MongoClient(uri).get_default_database()
-print(db.dictionary.count_documents({}))
+
+state = db.import_state.find_one({"_id": "corpus"}) or {}
+corpus_n = state.get("sentences", 0)
+dict_state = db.import_state.find_one({"_id": "dictionary"}) or {}
+
+if db.dictionary.count_documents({}) == 0:
+    print("1")
+elif dict_state.get("built_for_sentences") != corpus_n:
+    print("1")
+else:
+    print("0")
 PY
 )
- 
-if [ "$DICT_COUNT" -eq "0" ]; then
+
+if [ "$NEED_DICT" -eq "1" ]; then
   echo "Building dictionary from corpus..."
   python3 -m backend.mongodb.repositories.dictionary_repo.create_dictionary -d True
+  python3 - <<'PY'
+import os
+from pymongo import MongoClient
+uri = os.getenv("MONGO_URI", "mongodb://mongo:27017/corpus")
+db = MongoClient(uri).get_default_database()
+state = db.import_state.find_one({"_id": "corpus"}) or {}
+db.import_state.replace_one(
+    {"_id": "dictionary"},
+    {"_id": "dictionary", "built_for_sentences": state.get("sentences", 0)},
+    upsert=True,
+)
+print("Dictionary marker written.")
+PY
   echo "Dictionary built."
 else
-  echo "Dictionary already has $DICT_COUNT entries — skipping build."
+  echo "Dictionary is up to date — skipping build."
 fi
- 
-# 3. Запускаем API. exec — чтобы uvicorn стал главным процессом
-#    контейнера и корректно получал сигналы остановки.
+
 echo "Starting API..."
 exec uvicorn backend.main:app --host 0.0.0.0 --port 8000

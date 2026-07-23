@@ -49,6 +49,8 @@ services:
         condition: service_healthy
     environment:
       MONGO_URI: mongodb://mongo:27017/corpus
+      WAIT_ATTEMPTS: 150
+      WAIT_INTERVAL: 4
 
 volumes:
   mongo_data:
