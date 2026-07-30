@@ -1,7 +1,10 @@
 .PHONY: up down restart logs rebuild clean help
 
+# Подключение переменных окружения из файла .env
+include .env
+
 # Путь к docker-compose.yml
-DOCKER_COMPOSE := docker compose -f docker/docker-compose.yml
+DOCKER_COMPOSE ?= $(DOCKER_COMPOSE_CMD) -f docker/docker-compose.yml --env-file .env
 
 help: ## Показать список всех команд
 	@echo "Доступные команды:"
@@ -14,7 +17,7 @@ down: ## Остановка всех сервисов
 	$(DOCKER_COMPOSE) down
 
 restart: ## Перезапуск сервисов
-	down up
+	$(MAKE) down && $(MAKE) up
 
 logs: ## Просмотр логов
 	$(DOCKER_COMPOSE) logs -f
