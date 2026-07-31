@@ -23,7 +23,7 @@ if [ "$FOUND" -eq 0 ]; then
   exit 1
 fi
 
-mongosh --quiet "$DB" --eval '
+mongo --quiet "$DB" --eval '
   const n = db.sentences.countDocuments({});
   if (n === 0) { throw new Error("import produced 0 sentences"); }
   db.import_state.replaceOne(
