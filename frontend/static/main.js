@@ -87,7 +87,7 @@ document.getElementById("search").addEventListener("click", async () => {
 
 	try {
 		console.log(lang);
-		const response = await fetch(`/${lang}/search`, {
+		const response = await fetch(`/${lang}/search/`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(allData)
