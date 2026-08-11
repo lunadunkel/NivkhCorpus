@@ -1,7 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 
 const lang = window.location.pathname.split("/")[1];
-// console.log(lang)
 const jobId = params.get("job_id");
 let currentOffset = 0;
 const PAGE_SIZE = 20;
@@ -89,10 +88,6 @@ function closeContext(card) {
 }
 
 async function addContext(id, card) {
-
-    // console.log('уже есть')
-    
-    console.log(card)
     const glossedText = card.querySelector(".gloss-wrapper");
     if (glossedText) {
         if (glossedText.checkVisibility()) {
@@ -100,8 +95,6 @@ async function addContext(id, card) {
             return
         }
         else {
-            console.log("нет")
-            console.log(glossedText)
             card.querySelector(".segm-text").style.display = "flex";
             return
         };
@@ -112,7 +105,6 @@ async function addContext(id, card) {
     });
 
     const data = await response.json();
-    console.log(data, card);
 
 
     const segmentation = data['segmentation'].split(" ");
@@ -142,7 +134,6 @@ async function addContext(id, card) {
     card.querySelector(".segm-text").appendChild(glossBlock);
     card.querySelector(".segm-text").style.display = "flex";
     card.querySelector(".additional-info").textContent = "Скрыть глоссы";
-    console.log(card);
 }
 
 function process_output(items, total) {

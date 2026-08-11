@@ -43,14 +43,6 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.include_router(api_router)
 
-# Middleware, чтобы запретить кеширование (пока разработка)
-@app.middleware("http")
-async def no_cache(request, call_next):
-    response = await call_next(request)
-    response.headers["Cache-Control"] = "no-store"
-    return response
-
-# Подключение статики
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR / "static"), name="static")
 
 @app.get("/")

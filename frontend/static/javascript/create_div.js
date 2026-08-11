@@ -115,12 +115,10 @@ function bindEvents(root, value, manager) {
         root.querySelector("#regex-" + value).value = parts.join(' & ');
 
         root.querySelector("#pop-up-" + value).close(); // это уже было
-        console.log(gramQuery);
     });
 
     dialog.querySelectorAll(".feature-block").forEach((block) => {
         const selectAll = block.querySelector("h4 > label > input");
-        console.log(selectAll);
         if (selectAll) {
             selectAll.addEventListener("click", function() {
             block.querySelectorAll("label > input[type='checkbox']")
@@ -153,7 +151,6 @@ function updateIds(root, oldIndex, newIndex) {
 };
 
 export function createDiv(value, manager) {
-    console.log("adding", value);
     const template = document.getElementById("search-frame-template");
     const clone = template.content.cloneNode(true);
     const root = clone.firstElementChild;

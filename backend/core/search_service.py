@@ -13,6 +13,7 @@ from backend.core.config import COLLECTION_SENT, COLLECTION_DICT
 async def run_search_db(query):
     collection = get_collection(COLLECTION_SENT)
     qb = QueryBuilder(query)
+    print(qb.queries)
     aggregate_compiler = AggregatePipeline(qb.queries)
     aggregation = aggregate_compiler.aggregate()
     print(aggregation)
@@ -21,6 +22,7 @@ async def run_search_db(query):
     return result
 
 async def search(query):
+    print(query)
     query_hash = make_hash(query)
     existing = await search_jobs.find_by_hash(query_hash)
     if existing:

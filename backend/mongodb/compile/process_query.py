@@ -22,14 +22,15 @@ class QueryBuilder:
         for ui_key, db_key in QUERY2DB.items():
 
             if value := query.get(ui_key, None):
+                if not isinstance(value, list):
+                    value = [value]
+
                 if feature := MISC.get(ui_key, None):
-                    if isinstance(value, list):
-                        for val in value:
-                            db_key, value = feature[val].split('=')
-                            feats[db_key] = val
-                    else:
-                        db_key, value = feature[value].split('=')  
-                        feats[db_key] = value
+                    for val in value:
+                        misc_key, misc_value = feature[val].split('=')
+                        feats[misc_key] = misc_value
+                else:
+                    feats[db_key] = value
 
         person_obj = query.get('person_obj[]')
         clobj = query.get('clobj')

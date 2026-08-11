@@ -88,7 +88,6 @@ export class WordManager {
         }
         const id_value = target.id.match(/\d+/)[0];
         const frame = createDiv(this.#pos_id++, this);
-        console.log("adding new value", frame);
         document.getElementById("main-frame-" + id_value).after(frame);
     }
 

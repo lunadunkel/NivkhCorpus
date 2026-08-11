@@ -56,7 +56,6 @@ document.getElementById("search").addEventListener("click", async () => {
 			}
 
 			if (value.trim() !== "") {
-				console.log(value);
 				hasAnyValue = true;
 			}
 
@@ -83,10 +82,8 @@ document.getElementById("search").addEventListener("click", async () => {
 	document.getElementById("loader").style.display = "block";
 	document.getElementById("search").style.opacity = "0.8";
 
-	console.log("Отправка данных:", allData);
 
 	try {
-		console.log(lang);
 		const response = await fetch(`/${lang}/search/`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -99,7 +96,6 @@ document.getElementById("search").addEventListener("click", async () => {
 		}
 
 		const result = await response.json();
-		console.log("Успешный ответ от сервера:", result);
 
 		window.location.href = `/${lang}/search_output?job_id=${result.job_id}`;
 
