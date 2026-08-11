@@ -134,13 +134,13 @@ h1 {
 
 .features {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 28px;
     margin-top: 20px;
     border-top: 1px solid var(--100);
+    border-bottom: 1px solid var(--100);
     /* gap: 16px; */
     padding: 48px 12px;
-
 }
 
 .feature {
@@ -203,4 +203,8 @@ footer {
 a {
     text-decoration: none;
     color: var(--500)
+}
+
+.dedication {
+    color: var(--950);
 }
