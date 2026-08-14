@@ -1,3 +1,4 @@
+from enum import Enum
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -12,3 +13,12 @@ COLLECTION_JOB = "jobs_id"
 COLLECTION_SENT = "sentences"
 COLLECTION_RESULTS = "results"
 COLLECTION_DICT = "dictionary"
+
+SITE_URL = "https://corpora.rcc.msu.ru"
+
+class Corpus(str, Enum):
+    nivkh = "nivkh"
+    # karaim = "karaim"
+    # khwarshi = "khwarshi"
+
+ACTIVE_CORPORA = [c.value for c in Corpus]

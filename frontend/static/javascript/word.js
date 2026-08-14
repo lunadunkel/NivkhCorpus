@@ -65,7 +65,7 @@ async function loadWord() {
         return;
     }
 
-    document.title = data.translation;
+    document.title = `${data.translation} — Нивхско-русский словарь`;
 
     const lemmas = [...data.documents].sort(byLemma);
 
