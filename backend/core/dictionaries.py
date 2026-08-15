@@ -25,7 +25,8 @@ MISC = {
             'refl': 'Reflex=Yes',
             'indef': 'Definite=Ind',
             'rec': 'Reciprocal=Yes',
-            'foc': 'Focus=Yes'
+            'foc': 'Focus=Yes',
+            'conc': 'Conces=Yes'
         }
 }
 

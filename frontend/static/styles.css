@@ -1058,7 +1058,7 @@ input[type="radio"] {
 
 .segm-text {
     display: none;
-    color: var(-500);
+    color: var(--500);
     font-family: inherit;
     p {
       margin-top: 0;
@@ -1068,7 +1068,7 @@ input[type="radio"] {
   }
 
   .nivkh-segm {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-style: italic;
     color: var(--800);
   }

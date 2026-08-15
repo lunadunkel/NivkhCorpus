@@ -4,19 +4,31 @@ services:
     container_name: ${PROJECT_NAME:-corpora}-data-fetcher
     volumes:
       - ../data:/data
+      - ../backend:/src/backend:ro
+      - ./preprocess.py:/src/preprocess.py:ro
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
         set -e
-        if [ -n "$$(ls -A /data/*.json 2>/dev/null)" ]; then
+        apk add --no-cache curl unzip python3 >/dev/null
+
+        if [ -z "$$(ls -A /data/*.json 2>/dev/null)" ]; then
+          echo "Downloading corpus data from GitHub Release..."
+          curl -fL -o /tmp/data.zip "https://github.com/lunadunkel/NivkhCorpus/releases/download/data-v1/data.zip"
+          unzip -oj /tmp/data.zip -d /data
+          rm -f /tmp/data.zip
+        else
           echo "Corpus data already present in ./data — skipping download."
+        fi
+
+        if [ -f /data/mongo-ready/.done ]; then
+          echo "Preprocessed data already present — skipping."
           exit 0
         fi
-        echo "Downloading corpus data from GitHub Release..."
-        apk add --no-cache curl unzip >/dev/null
-        curl -fL -o /tmp/data.zip "https://github.com/lunadunkel/NivkhCorpus/releases/download/data-v1/data.zip"
-        unzip -oj /tmp/data.zip -d /data
-        rm -f /tmp/data.zip
+
+        echo "Preprocessing JSON before import..."
+        python3 /src/preprocess.py
+        touch /data/mongo-ready/.done
         echo "Done."
 
   mongo:
@@ -29,7 +41,7 @@ services:
         condition: service_completed_successfully
     volumes:
       - mongo_data:/data/db
-      - ../data:/data/import:ro
+      - ../data/mongo-ready:/data/import:ro
       - ./import.sh:/docker-entrypoint-initdb.d/import.sh:ro
     environment:
       MONGO_INITDB_DATABASE: corpus
