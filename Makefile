@@ -1,4 +1,4 @@
-.PHONY: up down restart logs rebuild clean help
+.PHONY: up down restart logs build clean reset help
 
 # Подключение переменных окружения из файла .env
 include .env
@@ -27,3 +27,8 @@ build: ## Сборка образов без использования кэша
 
 clean: ## Остановка и удаление volumes
 	$(DOCKER_COMPOSE) down -v
+
+reset: ## Остановка, удаление тома Mongo и очистка ./data
+	$(DOCKER_COMPOSE) down -v --remove-orphans --timeout 10
+	-docker volume rm $(PROJECT_NAME)-mongo_data
+	rm -rf data
