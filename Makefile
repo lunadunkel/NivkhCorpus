@@ -30,5 +30,4 @@ clean: ## Остановка и удаление volumes
 
 reset: ## Остановка, удаление тома Mongo и очистка ./data
 	$(DOCKER_COMPOSE) down -v --remove-orphans --timeout 10
-	-docker volume rm $(PROJECT_NAME)-mongo_data
-	rm -rf data
+	@if [ -d data ]; then docker run --rm -v "$(CURDIR):/work" alpine rm -rf /work/data; fi
