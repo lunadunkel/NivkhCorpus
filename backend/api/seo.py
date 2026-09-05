@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 from fastapi import APIRouter, Response
 from fastapi.responses import FileResponse
 
-from backend.core.config import ACTIVE_CORPORA, FRONTEND_DIR, SITE_URL
+from backend.core.config import ACTIVE_CORPORA, FRONTEND_DIR, SITE
 
 router = APIRouter(include_in_schema=False)
 
@@ -35,7 +35,7 @@ def build_sitemap() -> str:
         for target in targets:
             lines += [
                 "  <url>",
-                f"    <loc>{escape(SITE_URL + target)}</loc>",
+                f"    <loc>{escape(SITE['url'] + target)}</loc>",
                 f"    <lastmod>{lastmod}</lastmod>",
                 f"    <changefreq>{changefreq}</changefreq>",
                 f"    <priority>{priority}</priority>",

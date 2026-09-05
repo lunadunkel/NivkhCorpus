@@ -1,0 +1,37 @@
+<form class="main-searching-frame" id="main-frame-{{ index }}">
+
+  <div class="search-selection-info">
+    <div class="segmented-control">
+      <input type="radio" name="search-type" id="lemma-{{ index }}" value="lemma" checked />
+      <label for="lemma-{{ index }}"> Лемма </label>
+      <input type="radio" name="search-type" value="token" id="wordform-{{ index }}" />
+      <label for="wordform-{{ index }}"> Словоформа </label>
+    </div>
+    <div class="regulation-adding">
+      <div class="add-word" id="add-{{ index }}">
+        <div style="height: fit-content;">
+          {% include "partials/icons/plus.html" %}
+        </div>
+        <p>Слово</p>
+      </div>
+    </div>
+  </div>
+
+  {% include "partials/input_panel.html" %}
+
+  {% include "partials/keyboard.html" %}
+
+  <div class="basic-container" id="gram-feat-cont-{{ index }}">
+    <div class="top-base-container">
+      <div>Грамматические признаки</div>
+      <div class="additional-selections">
+        <div class="select-features" id="gram-chosen-{{ index }}">Выбрать</div>
+      </div>
+    </div>
+    <input class="regex-input" id="regex-{{ index }}" name="added-gram-features" type="text"
+      placeholder="Регулярное выражение" />
+  </div>
+
+  {% include "partials/grammar.html" %}
+
+</form>

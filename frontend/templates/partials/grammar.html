@@ -1,0 +1,53 @@
+<dialog class="dialog" id="pop-up-{{ index }}">
+  <div class="tooltip" id="tooltip-{{ index }}"></div>
+
+  <div class="modal-top">
+    <div class="left-buttons">
+      <p>Грамматические признаки</p>
+      <div class="modal-buttons" id="check-categories-{{ index }}">
+        Выбрать все
+      </div>
+    </div>
+    <div class="right-buttons">
+      <div class="close-word" id="close-modal-{{ index }}">
+        {% include "partials/icons/close.html" %}
+      </div>
+    </div>
+  </div>
+
+  <div class="gram-scroll-container">
+    <div class="gram-categories">
+      {% for column in corpus.columns() %}
+      <div class="feature-column">
+        {% for block in column %}
+        <div class="feature-block" {% if block.html_id %} id="{{ block.html_id }}" {% endif %}>
+          <h4>
+            {% if block.select_all %}
+            <label data-tooltip="{{ block.tooltip }}"><input type="checkbox" name="{{ block.id }}" value="all" />
+              {{ block.label }}
+            </label>
+            {% else %}
+            {{ block.label }}
+            {% endif %}
+          </h4>
+          {% for value in block.visible_values %}
+          <label data-tooltip="{{ value.tooltip }}"><input type="checkbox" name="{{ value.name(block.id) }}"
+              value="{{ value.value }}" />
+            {{ value.label }}</label>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="dialog-buttons">
+    <div class="simple-buttons" id="reset-categories-{{ index }}">
+      Сбросить
+    </div>
+    <div class="check-button" id="checked-categories-{{ index }}">
+      Применить
+    </div>
+  </div>
+</dialog>

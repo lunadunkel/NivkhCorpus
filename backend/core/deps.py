@@ -1,8 +1,14 @@
-from fastapi import HTTPException
-from backend.core.config import ACTIVE_CORPORA
+"""Настройка корпусных конфигов при запуске"""
+from typing import Annotated
+from fastapi import Depends, HTTPException, Path
+from backend.core.config import CORPORA
+from backend.core.corpora import CorpusConfig
+
+def get_corpus(corpus_name: Annotated[str, Path()]) -> CorpusConfig:
+    corpus = CORPORA.get(corpus_name)
+    if corpus is None:
+        raise HTTPException(404, f"Unknown corpus: {corpus_name}")
+    return corpus
 
 
-async def valid_corpus(lang: str) -> str:
-    if lang not in ACTIVE_CORPORA:
-        raise HTTPException(status_code=404, detail=f"Unknown corpus: {lang}")
-    return lang
+CorpusDep = Annotated[CorpusConfig, Depends(get_corpus)]

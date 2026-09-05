@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+
+{% block content %}
+<div class="search_output">
+    <div class="top-back-container">
+        <a class="back_to_search" href="/{{corpus.id}}/dictionary">Вернуться к поиску</a>
+    </div>
+    <div class="dictionary-list">
+    </div>
+    <div class="documents-output" id="all-documents">
+        {% include "partials/go-up-button.html" %}
+
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/letter.js"></script>
+{% endblock %}

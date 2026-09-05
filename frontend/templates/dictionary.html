@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-search">
+  <div class="final-form">
+    <div class="progress-search">
+      {% with index = 0 %}
+      {% include "partials/input_panel.html" %}
+
+      <ul class="dict-results" id="dict-results">
+      </ul>
+    </div>
+
+    {% include "partials/keyboard.html" %}
+
+    {% include "partials/sample_words.html" %}
+    {% endwith %}
+
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}<footer></footer>{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/fuse.min.js"></script>
+<script src="/static/js/dictionary.js"></script>
+{% endblock %}
+<!-- <script src="/static/javascript/fuse.min.js"></script>
+<script src="/static/javascript/dictionary.js"></script>
+</body>
+
+</html> -->

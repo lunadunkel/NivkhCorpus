@@ -1,0 +1,11 @@
+<div class="letter-input" id="keyboard-{{ index }}">
+  <div class="letter-container">
+    {% for row in corpus.keyboard %}
+    <div class="keyboard-row">
+      {% for letter in row %}
+      <div class="letters">{{ letter }}</div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,72 @@
+{#
+Каркас страниц
+
+Аргументы:
+site — url, github, год
+corpus — CorpusConfig
+page — PageMeta текущей страницы
+#}
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.noindex %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+
+    <title>{{ page.title }}</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.canonical %}
+    <link rel="canonical" href="{{ site.url }}{{ page.canonical }}">
+    {% endif %}
+
+    {# --- стили: общие, потом корпусные, потом постраничные --- #}
+    <link rel="stylesheet" href="/static/css/reset.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    {% if corpus %}
+    {% for href in corpus.assets.styles %}
+    <link rel="stylesheet" href="/static/css/{{ href }}" />
+    {% endfor %}
+    {% endif %}
+    {% for href in page.styles | default([]) %}
+    <link rel="stylesheet" href="/static/css/{{ href }}" />
+    {% endfor %}
+
+    <meta property="og:type" content="{{ page.og_type | default('website') }}">
+    <meta property="og:title" content="{{ page.og_title }}">
+    {% if page.og_description %}
+    <meta property="og:description" content="{{ page.og_description }}">
+    {% endif %}
+    {% if page.canonical %}
+    <meta property="og:url" content="{{ site.url }}{{ page.canonical }}">
+    {% endif %}
+    <meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ page.og_image_alt }}">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="/static/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/static/images/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/static/images/favicon.png">
+  </head>
+
+  <body>
+    {% block header %}{% include "partials/nav.html" %}{% endblock %}
+
+    {% block content %}{% endblock %}
+
+    {% block footer %}{% endblock %}
+
+    {% if corpus %}
+    <script id="corpus-config" type="application/json">{{ corpus.public_dict() | tojson }}</script>
+    {% endif %}
+    {% block scripts %}{% endblock %}
+  </body>
+
+</html>

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="search_output" id="output-info">
+    <div class="top-back-container">
+        <a class="back_to_search" href="/{{corpus.id}}">Вернуться к поиску</a>
+        <div class="statistics">
+            Найдено:
+            <div class="word_stat">
+                <div class="counter" id="documents">0 примеров</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-output" id="no-found-data">
+        По заданному поиску не найдено результатов. <br> Попробуйте поменять запрос.
+    </div>
+
+    <div class="documents-output" id="all-documents">
+
+        {% include "partials/go-up-button.html" %}
+        <!-- <a class="go-up">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M5.83333 13.3333V3.1875L1.16667 7.85417L0 6.66667L6.66667 0L13.3333 6.66667L12.1667 7.85417L7.5 3.1875V13.3333H5.83333Z"
+                    fill="#1C1B1F" />
+            </svg>
+        </a> -->
+
+    </div>
+
+    <div class="show-button" id="show-more">Показать ещё</div>
+
+</div>
+{% endblock %}
+
+{% block footer %}<footer></footer>{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/search_output.js"></script>
+{% endblock %}

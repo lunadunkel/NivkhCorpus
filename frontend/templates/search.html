@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-search">
+  <div class="final-form">
+    <div class="all-searching-frames" id="search-frame">
+      <template id="search-frame-template">
+        {% with index = 0 %}
+        {% include "partials/search_frame.html" %}
+        {% endwith %}
+      </template>
+    </div>
+    <div class="search-buttons">
+      <div class="final-buttons" id="reset">Сбросить</div>
+      <div class="final-buttons" id="search">
+        <div id="text-search">Найти</div>
+        <span class="loader" id="loader"></span>
+      </div>
+    </div>
+    <div class="search-hint" id="search-hint" role="alert" aria-live="polite"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}<footer></footer>{% endblock %}
+
+{% block scripts %}
+<script type="module" src="./static/js/main.js"></script>
+<script type="module" src="./static/js/tooltip.js"></script>
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="alpha-index" aria-label="Алфавитный указатель">
+
+    {% for item in corpus.dictionary%}
+    <a class="idx-row">
+        <span class="idx-letter">{{item.letter}}</span>
+        <span class="idx-example">{{item.example}}</span>
+
+    </a>
+    {% endfor %}
+</div>

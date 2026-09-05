@@ -1,0 +1,11 @@
+<div class="searching-input">
+    <input id="correct_placeholder-{{ index }}" class="input-panel" type="search" name="input_word"
+        placeholder="Найти по лемме" />
+
+    <div class="right-searching-input-extras">
+        <div id="kbd-{{ index }}" class="keyboard">
+            <img src="/static/images/keyboard.svg" />
+        </div>
+        {% include "partials/language_select.html" %}
+    </div>
+</div>
