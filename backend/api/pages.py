@@ -49,7 +49,12 @@ def search_output(request: Request, corpus: CorpusDep):
 @router.get("/get_output", include_in_schema=False)
 async def get_output_data(request: Request, job_id: str, offset: int, limit: int, corpus: CorpusDep):
     result = await search_service.return_results(corpus.id, job_id, offset, limit)
-    return result
+    if result is None:
+        return JSONResponse({"error": "job not found"}, status_code=404)
+    return JSONResponse({
+        "results": [clean(doc) for doc in result["results"]],
+        "length": result["length"],
+    })
 
 # dictionary.html
 @router.get("/dictionary/word")

@@ -9,41 +9,13 @@ from starlette.exceptions import HTTPException as StarletteHTTPException
 from backend.api.router import router as api_router
 from backend.api.seo import router as seo_router
 from backend.core.templates import TEMPLATES
-from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT, FRONTEND_DIR, SITE, TEMPLATES_DIR
-
-# from backend.app.api.api_router import api_router
-# from backend.app.api.seo import router as seo_router
-# from backend.app.core.config import COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT, FRONTEND_DIR
-
-# from backend.app.db.repositories.database import get_collection, ping_db
+from backend.core.config import CORPORA, FRONTEND_DIR, TEMPLATES_DIR
+from backend.db.indexes import ensure_indexes
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # collection = get_collection(COLLECTION_JOB)
-
-    # await collection.create_index(
-    #     "created_at",
-    #     expireAfterSeconds=3600
-    # )
-    # await collection.create_index(
-    #     "query_hash",
-    #     unique=True
-    # )
-
-    # main_fields = ["tokens.token", "tokens.lemma", "tokens.tagsets.Number[subj]",
-    #                 "tokens.tagsets.Case", "tokens.tagsets.Person[subj]", "tokens.tagsets.Tense", "tokens.tagsets.POS"]
-    # sentences = get_collection(COLLECTION_SENT)
-
-    # for field in main_fields:
-    #     await sentences.create_index(field)
-
-    # results = get_collection(COLLECTION_RESULTS)
-    # await results.create_index('job_id')
-    # await results.create_index(
-    #     "created_at",
-    #     expireAfterSeconds=3600
-    # )
-
+    for corpus_id in CORPORA:
+        await ensure_indexes(corpus_id)
     yield
 
 
