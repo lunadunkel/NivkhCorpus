@@ -18,7 +18,7 @@ search:
   token_field: token
   person_object:
     # одна граммема, живущая в нескольких полях тегсета
-    field: person_obj[]
+    field: person_obj
     paths:
       clobj: "Person[clobj]"
       clpos: "Person[clpos]"
@@ -178,6 +178,7 @@ layout:
 
 grammar:
 - id: POS
+  match: any
   label: POS
   tooltip: Часть речи слова
   values:
@@ -192,6 +193,7 @@ grammar:
   - { value: DISC, label: DISC, tooltip: Дискурсивная частица }
 
 - id: Case
+  match: any
   label: Case
   tooltip: Падеж
   values:
@@ -209,6 +211,7 @@ grammar:
   - { value: Rep, label: Rep, tooltip: Репортатив }
 
 - id: NounType
+  match: any
   label: NounType
   tooltip: Тип номинализации
   values:
@@ -219,6 +222,7 @@ grammar:
   - { value: Deverb, label: Deverb, tooltip: Отглагольная, show: false }
 
 - id: Clusivity
+  match: any
   label: Clusivity
   tooltip: Инклюзивность
   values:
@@ -226,6 +230,7 @@ grammar:
   - { value: Ex, label: Ex, tooltip: Эксклюзивный }
 
 - id: VerbForm
+  match: any
   label: VerbForm
   tooltip: Тип нефинитной формы
   values:
@@ -234,6 +239,7 @@ grammar:
   - { value: Part, label: Part, tooltip: Причастие }
 
 - id: Tense
+  match: any
   label: Tense
   tooltip: Время
   values:
@@ -241,6 +247,7 @@ grammar:
   - { value: Pres_Aor, label: Non-Fut, tooltip: Настояще-прошедшее }
 
 - id: Mood
+  match: any
   label: Mood
   tooltip: Наклонение
   values:
@@ -256,6 +263,7 @@ grammar:
   - { value: Subj, label: Subj, tooltip: Сослагательное }
 
 - id: Aspect
+  match: any
   label: Aspect
   tooltip: Вид
   values:
@@ -272,6 +280,7 @@ grammar:
   - { value: Mult, label: Mult, tooltip: Мультипликатив, show: false }
 
 - id: "Number[word]"
+  match: any
   label: Number
   tooltip: Число
   values:
@@ -280,6 +289,7 @@ grammar:
   - { value: Plur, label: Plur, tooltip: Множественное }
 
 - id: "Person[word]"
+  match: any
   label: Person (main word)
   tooltip: Лицо главного слова
   values:
@@ -288,6 +298,7 @@ grammar:
   - { value: "3", label: "3", tooltip: Третье лицо }
 
 - id: person_obj
+  match: any
   group: true # только визуальная группировка
   label: Person (object / possessor)
   tooltip: Лицо объектное или посессивной клитики
@@ -295,7 +306,9 @@ grammar:
   - { value: "1", label: "1", tooltip: Первое лицо, field: person_obj }
   - { value: "2", label: "2", tooltip: Второе лицо, field: person_obj }
   - { value: "3", label: "3", tooltip: Третье лицо, field: person_obj }
+
 - id: clitic
+  match: any
   group: true # только визуальная группировка
   label: Clitic
   tooltip: Признак клитики
@@ -306,6 +319,7 @@ grammar:
   - { value: "yes", label: Pos, tooltip: Посссор, field: clpos }
 
 - id: coord
+  match: any
   label: Coordination
   tooltip: Тип сочинения
   values:

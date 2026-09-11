@@ -18,7 +18,7 @@ class QueryBuilder:
     def __init__(self, corpus: CorpusConfig, forms: list[dict]):
         self.corpus = corpus
         self.search = corpus.search
-        self.fields = corpus.search_fields()
+        # self.fields = corpus.search_fields()
         self.person_values = corpus.person_object_values()
         self.queries = self.process_queries(forms)
 
@@ -48,23 +48,33 @@ class QueryBuilder:
         scope, path, op = spec
         return [Constraint(scope, path, op, (word,))]
 
+
     def _grammar_conditions(self, form: dict) -> list[Condition]:
         conditions: list[Condition] = []
 
-        # Идём по разрешённым полям, а не по форме: имя инпута попадает
-        # в запрос как есть, и произвольное имя от клиента туда не должно.
-        for name, allowed in self.fields.items():
-            raw = form.get(name)
-            if not raw:
+        # Идём по блокам конфига, а не по форме: имя инпута попадает в запрос как есть
+        for mode, fields in self.corpus.search_groups():
+            options: list[Constraint] = []
+
+            for name, allowed in fields.items():
+                raw = form.get(name)
+                if not raw:
+                    continue
+
+                values = tuple(value
+                    for value in (raw if isinstance(raw, list) else [raw])
+                    if value in allowed
+                )
+                if values:
+                    options.append(Constraint(Scope.TAGSET, name, "in", values))
+
+            if not options:
                 continue
 
-            values = tuple(
-                value
-                for value in (raw if isinstance(raw, list) else [raw])
-                if value in allowed
-            )
-            if values:
-                conditions.append(Constraint(Scope.TAGSET, name, "in", values))
+            if mode == "any" and len(options) > 1:
+                conditions.append(AnyOf(tuple(options)))
+            else:
+                conditions.extend(options)
 
         person_object = self._person_object(form)
         if person_object is not None:
@@ -78,7 +88,11 @@ class QueryBuilder:
         if config is None:
             return None
 
-        person = form.get(config.field)
+        raw = form.get(config.field) or []
+        person = tuple(
+            v for v in (raw if isinstance(raw, list) else [raw])
+            if v in self.person_values
+        )
         selected = [path for name, path in config.paths.items() if form.get(name)]
 
         if not (person or selected):
@@ -87,9 +101,8 @@ class QueryBuilder:
         paths = selected or list(config.paths.values())
 
         if person:
-            values = tuple(person) if isinstance(person, list) else (person,)
             options = tuple(
-                Constraint(Scope.TAGSET, path, "in", values) for path in paths
+                Constraint(Scope.TAGSET, path, "in", person) for path in paths
             )
         else:
             options = tuple(Constraint(Scope.TAGSET, path, "exists") for path in paths)

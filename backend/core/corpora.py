@@ -1,5 +1,7 @@
 """Модели pydantic с настройками корпусов"""
 
+from typing import Literal
+
 from pydantic import BaseModel, Field, PrivateAttr, model_validator
 
 
@@ -48,8 +50,15 @@ class GrammarValue(BaseModel):
         return self.field or block_id
 
 class GrammarBlock(BaseModel):
+    """Блок чекбоксов в модале.
+
+    `match` — как объединяются отмеченные галочки внутри блока:
+    "all" — И между разными полями тегсета,
+    "any" — ИЛИ. Внутри одного поля значения всегда объединяются по ИЛИ (по умолчанию).
+    """
     id: str
     group: bool = False
+    match: Literal["all", "any"] = "any"
     label: str
     tooltip: str = ""
     html_id: str | None = None
@@ -100,7 +109,7 @@ class CorpusConfig(BaseModel):
     dictionary: list[Vocabulary] = []
     alphabet_order: list[str] = []
 
-    _fields: dict[str, set[str]] | None = PrivateAttr(default=None)
+    _groups: list[tuple[str, dict[str, set[str]]]] | None = PrivateAttr(default=None)
 
     @model_validator(mode="after")
     def _check_layout(self) -> "CorpusConfig":
@@ -173,29 +182,39 @@ class CorpusConfig(BaseModel):
             if v.name(b.id) == po.field
         }
 
-    def search_fields(self) -> dict[str, set[str]]:
-        """Поле тегсета -> допустимые значения.
+    def search_groups(self) -> list[tuple[str, dict[str, set[str]]]]:
+        """Блоки в виде (режим, поле тегсета -> допустимые значения).
 
-        список разрешённого: имена инпутов приходят от клиента и 
-        попадают в запрос как есть, поэтому их надо сверять
-        с конфигом. Переключатели person_object сюда не входят — у них своя
-        логика в QueryBuilder.
+        Имена инпутов приходят от клиента и попадают в запрос как есть,
+        поэтому их надо сверять с конфигом. Переключатели person_object
+        сюда не входят — у них своя логика в QueryBuilder.
         """
-        if self._fields is not None:
-            return self._fields
+        if self._groups is not None:
+            return self._groups
 
         po = self.search.person_object
         reserved = {po.field, *po.paths} if po else set()
 
-        out: dict[str, set[str]] = {}
+        groups: list[tuple[str, dict[str, set[str]]]] = []
         for block in self.grammar:
+            fields: dict[str, set[str]] = {}
             for value in block.values:
                 name = value.name(block.id)
                 if name in reserved:
                     continue
-                out.setdefault(name, set()).add(value.value)
+                fields.setdefault(name, set()).add(value.value)
+            if fields:
+                groups.append((block.match, fields))
 
-        self._fields = out
+        self._groups = groups
+        return groups
+    
+    def search_fields(self) -> dict[str, set[str]]:
+        """Поле тегсета -> допустимые значения, без разбивки на блоки."""
+        out: dict[str, set[str]] = {}
+        for _, fields in self.search_groups():
+            for name, values in fields.items():
+                out.setdefault(name, set()).update(values)
         return out
 
     @property
