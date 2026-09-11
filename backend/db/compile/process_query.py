@@ -2,122 +2,122 @@
 
 from dataclasses import dataclass, field
 
+from backend.core.corpora import CorpusConfig
 from backend.core.dictionaries import MISC, QUERY2DB
 from backend.core.ir import OPERATION, AnyOf, Condition, Constraint, Scope, normalize
-
-# Поле токена, по которому ищется введённое слово.
-_WORD_FIELD: dict[
-    tuple[str, str],
-    tuple[Scope, str, OPERATION]
-] =  {
-    ("russian", "lemma"): (Scope.TOKEN, "translation", "in"),
-    ("russian", "token"): (Scope.SENTENCE, "russian_text", "regex"),
-}
-_DEFAULT_WORD_FIELD: dict[
-    str,
-    tuple[Scope, str, OPERATION]
-] = {
-    "lemma": (Scope.TOKEN, "lemma", "in"),
-    "token": (Scope.TOKEN, "token", "in"),
-}
-
-_PERSON_OBJECT_PATHS = ("Person[clobj]", "Person[clpos]")
-
 
 @dataclass
 class OriginalQuery:
     """Один запрос пользователя, разобранный в набор условий."""
-
     conditions: list[Condition] = field(default_factory=list)
-    language: str = "niv"
-    search_type: str = "lemma"
+    language: str = ""
+    search_type: str = ""
 
 
 class QueryBuilder:
-    def __init__(self, query: list[dict]):
-        self.language = query[0]["language-select"]
-        self.queries = self.process_queries(query)
+    def __init__(self, corpus: CorpusConfig, forms: list[dict]):
+        self.corpus = corpus
+        self.search = corpus.search
+        self.fields = corpus.search_fields()
+        self.person_values = corpus.person_object_values()
+        self.queries = self.process_queries(forms)
 
-    def _word_conditions(self, search_type: str, word: str | None) -> list[Condition]:
+    def _word_field(self, language: str, search_type: str) -> tuple[Scope, str, OPERATION] | None:
+        """Поле, по которому ищется введённое слово."""
+        if language == self.search.meta_language:
+            if search_type == "lemma":
+                return Scope.TOKEN, self.search.translation_field, "in"
+            if search_type == "token":
+                return Scope.SENTENCE, self.search.sentence_text_field, "regex"
+            return None
+
+        if search_type == "lemma":
+            return Scope.TOKEN, self.search.lemma_field, "in"
+        if search_type == "token":
+            return Scope.TOKEN, self.search.token_field, "in"
+        return None
+
+    def _word_conditions(self, language: str, search_type: str, word: str | None) -> list[Condition]:
         if not word:
             return []
 
-        spec = _WORD_FIELD.get((self.language, search_type))
-        if spec is None:
-            spec = _DEFAULT_WORD_FIELD.get(search_type)
+        spec = self._word_field(language, search_type)
         if spec is None:
             return []
 
         scope, path, op = spec
-        return list([Constraint(scope, path, op, (word,))])
+        return [Constraint(scope, path, op, (word,))]
 
-    def _grammar_conditions(self, query: dict) -> list[Condition]:
+    def _grammar_conditions(self, form: dict) -> list[Condition]:
         conditions: list[Condition] = []
 
-        for ui_key, db_key in QUERY2DB.items():
-
-            value = query.get(ui_key)
-            if not value:
+        # Идём по разрешённым полям, а не по форме: имя инпута попадает
+        # в запрос как есть, и произвольное имя от клиента туда не должно.
+        for name, allowed in self.fields.items():
+            raw = form.get(name)
+            if not raw:
                 continue
 
-            if not isinstance(value, list):
-                value = [value]
+            values = tuple(
+                value
+                for value in (raw if isinstance(raw, list) else [raw])
+                if value in allowed
+            )
+            if values:
+                conditions.append(Constraint(Scope.TAGSET, name, "in", values))
 
-            feature = MISC.get(ui_key)
-            if feature is None:
-                conditions.append(Constraint(Scope.TAGSET, db_key, "in", tuple(value)))
-                continue
-
-            for val in value:
-                path, db_value = feature[val].split("=")
-                conditions.append(Constraint(Scope.TAGSET, path, "in", (db_value,)))
-
-        person_object = self._person_object(query)
+        person_object = self._person_object(form)
         if person_object is not None:
             conditions.append(person_object)
 
         return conditions
 
-    def _person_object(self, query: dict) -> Condition | None:
-        """Лицо объекта или посессора: одна граммема в двух полях тегсета."""
-        person = query.get("person_obj[]")
-        clobj = bool(query.get("clobj"))
-        clpos = bool(query.get("clpos"))
-
-        if not (person or clobj or clpos):
+    def _person_object(self, form: dict) -> Condition | None:
+        """Граммема, живущая сразу в нескольких полях тегсета."""
+        config = self.search.person_object
+        if config is None:
             return None
 
-        selected = [
-            path for path, on in zip(_PERSON_OBJECT_PATHS, (clobj, clpos)) if on
-        ]
-        paths = selected or list(_PERSON_OBJECT_PATHS)
-        # paths = selected
+        person = form.get(config.field)
+        selected = [path for name, path in config.paths.items() if form.get(name)]
+
+        if not (person or selected):
+            return None
+
+        paths = selected or list(config.paths.values())
 
         if person:
-            if not isinstance(person, list):
-                person = [person]
+            values = tuple(person) if isinstance(person, list) else (person,)
             options = tuple(
-                Constraint(Scope.TAGSET, path, "in", tuple(person)) for path in paths
+                Constraint(Scope.TAGSET, path, "in", values) for path in paths
             )
         else:
             options = tuple(Constraint(Scope.TAGSET, path, "exists") for path in paths)
 
         return options[0] if len(options) == 1 else AnyOf(options)
 
-    def process_queries(self, query: list[dict]) -> list[OriginalQuery]:
+
+    def process_queries(self, forms: list[dict]) -> list[OriginalQuery]:
         queries = []
 
-        for q in query:
-            search_type = q.get("search-type")
+        for form in forms:
+            search_type = form.get("search-type")
             if search_type is None:
                 raise ValueError("Не задан тип поиска")
-            conditions = self._word_conditions(search_type, q.get("input_word") or None)
-            conditions += self._grammar_conditions(q)
+
+            language = form.get("language-select")
+            if language is None:
+                raise ValueError("Не задан язык поиска")
+
+            conditions = self._word_conditions(
+                language, search_type, form.get("input_word") or None
+            )
+            conditions += self._grammar_conditions(form)
 
             queries.append(
                 OriginalQuery(
                     conditions=normalize(conditions),
-                    language=self.language,
+                    language=language,
                     search_type=search_type,
                 )
             )

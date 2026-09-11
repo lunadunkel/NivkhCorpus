@@ -1,6 +1,6 @@
 """Модели pydantic с настройками корпусов"""
 
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, PrivateAttr, model_validator
 
 
 class LanguageOption(BaseModel):
@@ -41,17 +41,15 @@ class GrammarValue(BaseModel):
     value: str
     label: str
     tooltip: str = ""
-    field: str | None = None   # переопределяет name (бывший MISC)
-    array: bool = True         # False -> name без квадратных скобок
+    field: str | None = None
     show: bool = True
 
     def name(self, block_id: str) -> str:
-        field = self.field or block_id
-        return f"{field}[]" if self.array else field
-
+        return self.field or block_id
 
 class GrammarBlock(BaseModel):
     id: str
+    group: bool = False
     label: str
     tooltip: str = ""
     html_id: str | None = None
@@ -62,6 +60,24 @@ class GrammarBlock(BaseModel):
     @property
     def visible_values(self) -> list[GrammarValue]:
         return [v for v in self.values if v.show]
+
+class PersonObject(BaseModel):
+    """Граммема, которая может лежать в нескольких полях тегсета сразу.
+
+    `paths` — имя чекбокса-переключателя -> поле тегсета. Если ни один
+    переключатель не отмечен, ищем во всех полях (ИЛИ).
+    """
+    field: str
+    paths: dict[str, str]
+
+class SearchConfig(BaseModel):
+    """Как поля формы переводятся в схему БД."""
+    meta_language: str = "russian"
+    sentence_text_field: str = "russian_text"
+    translation_field: str = "translation"
+    lemma_field: str = "lemma"
+    token_field: str = "token"
+    person_object: PersonObject | None = None
 
 class Layout(BaseModel):
     columns: list[list[str]] = []
@@ -75,6 +91,7 @@ class CorpusConfig(BaseModel):
     id: str
     enabled: bool = True
     languages: list[LanguageOption]
+    search: SearchConfig = Field(default_factory=SearchConfig)
     keyboard: list[list[str]] = []
     assets: Assets = Field(default_factory=Assets)
     pages: dict[str, PageMeta] = {}
@@ -82,6 +99,8 @@ class CorpusConfig(BaseModel):
     grammar: list[GrammarBlock] = []
     dictionary: list[Vocabulary] = []
     alphabet_order: list[str] = []
+
+    _fields: dict[str, set[str]] | None = PrivateAttr(default=None)
 
     @model_validator(mode="after")
     def _check_layout(self) -> "CorpusConfig":
@@ -118,6 +137,66 @@ class CorpusConfig(BaseModel):
             raise ValueError(f"{self.id}: повторяющиеся чекбоксы {sorted(dupes)}")
 
         return self
+    
+    @model_validator(mode="after")
+    def _check_fields(self) -> "CorpusConfig":
+        po = self.search.person_object
+        reserved = {po.field, *po.paths} if po else set()
+
+        for block in self.grammar:
+            if not block.group:
+                continue
+            for value in block.values:
+                if value.field is None:
+                    raise ValueError(
+                        f"{self.id}: {block.id}/{value.label} — блок только "
+                        f"группирует, у значения должно быть своё field"
+                    )
+
+        for name in self.search_fields():
+            if name in reserved:
+                continue
+            if name.startswith("$") or "." in name:
+                raise ValueError(f"{self.id}: недопустимое поле тегсета {name!r}")
+
+        return self
+    
+    def person_object_values(self) -> set[str]:
+        """Значения, которые вправе прийти в поле person_object."""
+        po = self.search.person_object
+        if po is None:
+            return set()
+        return {
+            v.value
+            for b in self.grammar
+            for v in b.values
+            if v.name(b.id) == po.field
+        }
+
+    def search_fields(self) -> dict[str, set[str]]:
+        """Поле тегсета -> допустимые значения.
+
+        список разрешённого: имена инпутов приходят от клиента и 
+        попадают в запрос как есть, поэтому их надо сверять
+        с конфигом. Переключатели person_object сюда не входят — у них своя
+        логика в QueryBuilder.
+        """
+        if self._fields is not None:
+            return self._fields
+
+        po = self.search.person_object
+        reserved = {po.field, *po.paths} if po else set()
+
+        out: dict[str, set[str]] = {}
+        for block in self.grammar:
+            for value in block.values:
+                name = value.name(block.id)
+                if name in reserved:
+                    continue
+                out.setdefault(name, set()).add(value.value)
+
+        self._fields = out
+        return out
 
     @property
     def blocks(self) -> dict[str, GrammarBlock]:

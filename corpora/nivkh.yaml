@@ -1,8 +1,3 @@
-# Нивхский корпус. Всё, что было захардкожено в frontend/search.html.
-#
-# Поля value/field/array определяют, что уйдёт в запрос к БД, — правь их
-# только вместе с backend. Поля label/tooltip/columns — чистый интерфейс.
-
 id: nivkh
 enabled: true
 
@@ -14,6 +9,19 @@ name:
 languages:
 - { value: nivkh, label: Нивх, selected: true }
 - { value: russian, label: Рус }
+
+search:
+  meta_language: russian # значение <select>, означающее язык перевода
+  sentence_text_field: russian_text
+  translation_field: translation
+  lemma_field: lemma
+  token_field: token
+  person_object:
+    # одна граммема, живущая в нескольких полях тегсета
+    field: person_obj[]
+    paths:
+      clobj: "Person[clobj]"
+      clpos: "Person[clpos]"
 
 # Дополнительные буквы под строкой поиска.
 keyboard:
@@ -162,28 +170,28 @@ dictionary:
 # Раскладка грамматического модала по колонкам: список id блоков.
 layout:
   columns:
-  - [ pos, case ]
-  - [ nountype, clusivity, verbform, tense ]
-  - [ mood, aspect ]
-  - [ number, person, person_obj, clitic ]
+  - [ POS, Case ]
+  - [ NounType, Clusivity, VerbForm, Tense ]
+  - [ Mood, Aspect ]
+  - [ "Number[word]", "Person[word]", person_obj, clitic ]
   - [ coord, misc ]
 
 grammar:
-- id: pos
+- id: POS
   label: POS
   tooltip: Часть речи слова
   values:
   - { value: NOUN, label: NOUN, tooltip: Имя существительное }
   - { value: VERB, label: VERB, tooltip: Глагол }
   - { value: NUM, label: NUM, tooltip: Имя числительное }
-  - { value: class, label: CLASS, tooltip: Классификатор, field: misc }
+  - { value: "Yes", label: CLASS, tooltip: Классификатор, field: Classifier }
   - { value: Q, label: Q, tooltip: Квантор }
   - { value: ADV, label: ADV, tooltip: Наречие }
   - { value: PROPN, label: PROPN, tooltip: Имя собственное }
   - { value: PRON, label: PRON, tooltip: Местоимение }
   - { value: DISC, label: DISC, tooltip: Дискурсивная частица }
 
-- id: case
+- id: Case
   label: Case
   tooltip: Падеж
   values:
@@ -200,7 +208,7 @@ grammar:
   - { value: Lim, label: Lim, tooltip: Лимитатив }
   - { value: Rep, label: Rep, tooltip: Репортатив }
 
-- id: nountype
+- id: NounType
   label: NounType
   tooltip: Тип номинализации
   values:
@@ -210,14 +218,14 @@ grammar:
   - { value: Proc, label: Proc, tooltip: Процесс }
   - { value: Deverb, label: Deverb, tooltip: Отглагольная, show: false }
 
-- id: clusivity
+- id: Clusivity
   label: Clusivity
   tooltip: Инклюзивность
   values:
   - { value: In, label: In, tooltip: Инклюзивный }
   - { value: Ex, label: Ex, tooltip: Эксклюзивный }
 
-- id: verbform
+- id: VerbForm
   label: VerbForm
   tooltip: Тип нефинитной формы
   values:
@@ -225,19 +233,19 @@ grammar:
   - { value: Vnoun, label: Vnoun, tooltip: Отглагольное имя, show: false }
   - { value: Part, label: Part, tooltip: Причастие }
 
-- id: tense
+- id: Tense
   label: Tense
   tooltip: Время
   values:
   - { value: Fut, label: Fut, tooltip: Будущее }
   - { value: Pres_Aor, label: Non-Fut, tooltip: Настояще-прошедшее }
 
-- id: mood
+- id: Mood
   label: Mood
   tooltip: Наклонение
   values:
   - { value: Cnd, label: Cnd, tooltip: Условное }
-  - { value: conc, label: Conces, tooltip: Уступительное, field: misc }
+  - { value: "Yes", label: Conces, tooltip: Уступительное, field: Conces }
   - { value: Hort, label: Hort, tooltip: Гортатив }
   - { value: Imp, label: Imp, tooltip: Императив }
   - { value: Ind, label: Ind, tooltip: Индикатив }
@@ -247,7 +255,7 @@ grammar:
   - { value: Proh, label: Proh, tooltip: Прохибитив }
   - { value: Subj, label: Subj, tooltip: Сослагательное }
 
-- id: aspect
+- id: Aspect
   label: Aspect
   tooltip: Вид
   values:
@@ -263,7 +271,7 @@ grammar:
   - { value: Usit, label: Usit, tooltip: Узитатив }
   - { value: Mult, label: Mult, tooltip: Мультипликатив, show: false }
 
-- id: number
+- id: "Number[word]"
   label: Number
   tooltip: Число
   values:
@@ -271,7 +279,7 @@ grammar:
   - { value: Dual, label: Dual, tooltip: Двойственное }
   - { value: Plur, label: Plur, tooltip: Множественное }
 
-- id: person
+- id: "Person[word]"
   label: Person (main word)
   tooltip: Лицо главного слова
   values:
@@ -280,43 +288,43 @@ grammar:
   - { value: "3", label: "3", tooltip: Третье лицо }
 
 - id: person_obj
+  group: true # только визуальная группировка
   label: Person (object / possessor)
   tooltip: Лицо объектное или посессивной клитики
   values:
-  - { value: "1", label: "1", tooltip: Первое лицо }
-  - { value: "2", label: "2", tooltip: Второе лицо }
-  - { value: "3", label: "3", tooltip: Третье лицо }
-
-# В исходном HTML у этого блока было name="coord" — то же, что у
-# Coordination ниже. Переименовано в clitic, см. заметку в README.
+  - { value: "1", label: "1", tooltip: Первое лицо, field: person_obj }
+  - { value: "2", label: "2", tooltip: Второе лицо, field: person_obj }
+  - { value: "3", label: "3", tooltip: Третье лицо, field: person_obj }
 - id: clitic
+  group: true # только визуальная группировка
   label: Clitic
   tooltip: Признак клитики
   values:
-  - { value: refl, label: Reflex, tooltip: Рефлексив, field: misc }
-  - { value: rec, label: Reciprocal, tooltip: Реципрок, field: misc }
-  - { value: "yes", label: Obj, tooltip: Объект, field: clobj, array: false }
-  - { value: "yes", label: Pos, tooltip: Посссор, field: clpos, array: false }
+  - { value: "Yes", label: Reflex, tooltip: Рефлексив, field: Reflex }
+  - { value: "Yes", label: Reciprocal, tooltip: Реципрок, field: Reciprocal }
+  - { value: "yes", label: Obj, tooltip: Объект, field: clobj }
+  - { value: "yes", label: Pos, tooltip: Посссор, field: clpos }
 
 - id: coord
   label: Coordination
   tooltip: Тип сочинения
   values:
-  - { value: coord, label: VCoord, tooltip: Глагольное сочинение, field: misc }
-  - { value: add, label: NCoord, tooltip: Именное сочинение, field: misc }
+  - { value: "Yes", label: VCoord, tooltip: Глагольное сочинение, field: Coordinating }
+  - { value: "Yes", label: NCoord, tooltip: Именное сочинение, field: Add }
 
 - id: misc
+  group: true # только визуальная группировка
   label: Miscellaneous
   html_id: misc # на этот id завязан CSS
   select_all: false # у блока нет чекбокса «выбрать все»
   values:
-  - { value: aux, label: Aux, tooltip: Прочее }
-  - { value: caus, label: Caus, tooltip: Каузатив }
-  - { value: coll, label: Collective num, tooltip: Собирательное числительное }
-  - { value: emph, label: Emphatic, tooltip: Эмфаза }
-  - { value: evid, label: Evid, tooltip: Эвиденциальность }
-  - { value: foc, label: Focus, tooltip: Фокус }
-  - { value: neg, label: Negation, tooltip: Отрицание }
-  - { value: indef, label: Indefinite, tooltip: Неопределенность }
-  - { value: q, label: Question, tooltip: Вопрос }
-  - { value: dim, label: Diminutive, tooltip: Диминутив }
+  - { value: Aux, label: Aux, tooltip: Прочее, field: VerbType }
+  - { value: Caus, label: Caus, tooltip: Каузатив, field: Voice }
+  - { value: Collective, label: Collective num, tooltip: Собирательное числительное, field: NumType }
+  - { value: "Yes", label: Emphatic, tooltip: Эмфаза, field: Emphatic }
+  - { value: Nfh, label: Evid, tooltip: Эвиденциальность, field: Evident }
+  - { value: "Yes", label: Focus, tooltip: Фокус, field: Focus }
+  - { value: Neg, label: Negation, tooltip: Отрицание, field: Polarity }
+  - { value: Ind, label: Indefinite, tooltip: Неопределенность, field: Definite }
+  - { value: "Yes", label: Question, tooltip: Вопрос, field: Question }
+  - { value: Dim, label: Diminutive, tooltip: Диминутив, field: Degree }

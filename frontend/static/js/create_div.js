@@ -85,14 +85,17 @@ function bindEvents(root, value, manager) {
     root.querySelector("#checked-categories-" + value).addEventListener('click', function() {
         gramState = {};
         dialog.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-                gramState[cb.name + "__" + cb.value] = cb.checked;
+            if (!cb.name) {
+                return
+            }
+            gramState[cb.name + "__" + cb.value] = cb.checked;
         });
 
         const gramQuery = {}
         const checkboxes = root.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(checkbox => {
             const categoryName = checkbox.name;
-            if (checkbox.checked && categoryName && checkbox.value !== 'all') { // вот здесь
+            if (checkbox.checked && categoryName) {
                 const categoryValue = checkbox.value;
                 if (!(categoryName in gramQuery)) {
                     gramQuery[categoryName] = [];

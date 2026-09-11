@@ -8,6 +8,7 @@ from motor.motor_asyncio import AsyncIOMotorCollection
 from pymongo.errors import DuplicateKeyError
 
 from backend.core.config import COLLECTION_DICT, COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT
+from backend.core.corpora import CorpusConfig
 from backend.db.compile.aggregation_compile import AggregatePipeline
 from backend.db.compile.process_query import QueryBuilder
 from backend.db.database import get_collection
@@ -22,14 +23,15 @@ def _to_object_id(doc_id: str) -> ObjectId | None:
         return None
 
 
-async def run_search_db(collection: AsyncIOMotorCollection, query: list[dict]):
-    qb = QueryBuilder(query)
+async def run_search_db(corpus: CorpusConfig, collection: AsyncIOMotorCollection, query: list[dict]):
+    qb = QueryBuilder(corpus, forms=query)
     aggregation = AggregatePipeline(qb.queries).aggregate()
     cursor = collection.aggregate(aggregation)
     return await cursor.to_list(length=None)
 
 
-async def search(lang: str, query):
+async def search(corpus: CorpusConfig, query):
+    lang = corpus.id
     jobs_collection = get_collection(lang, COLLECTION_JOB)
     sent_collection = get_collection(lang, COLLECTION_SENT)
     
@@ -40,7 +42,7 @@ async def search(lang: str, query):
     if existing:
         return {"status": "ok", "job_id": existing["_id"]}
 
-    result = await run_search_db(sent_collection, query)
+    result = await run_search_db(corpus, sent_collection, query)
     job_id = str(uuid.uuid4())
     now = datetime.now(timezone.utc)
 

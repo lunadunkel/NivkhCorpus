@@ -23,7 +23,7 @@
         <div class="feature-block" {% if block.html_id %} id="{{ block.html_id }}" {% endif %}>
           <h4>
             {% if block.select_all %}
-            <label data-tooltip="{{ block.tooltip }}"><input type="checkbox" name="{{ block.id }}" value="all" />
+            <label data-tooltip="{{ block.tooltip }}"><input type="checkbox" class="select-all" />
               {{ block.label }}
             </label>
             {% else %}

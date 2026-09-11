@@ -12,8 +12,7 @@ router = APIRouter(prefix="/{corpus_name}/search", tags=["search"])
 @router.post("/")
 async def search(request: Request, corpus: CorpusDep):
     query = await request.json()
-    print(query)
-    return await search_service.search(lang=corpus.id, query=query)
+    return await search_service.search(corpus, query=query)
 
 @router.post("/doc_id={doc_id}")
 async def search_glossing(request: Request, doc_id: str, corpus: CorpusDep):
