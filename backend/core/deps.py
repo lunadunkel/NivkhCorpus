@@ -2,7 +2,7 @@
 from typing import Annotated
 from fastapi import Depends, HTTPException, Path
 from backend.core.config import CORPORA
-from backend.core.corpora import CorpusConfig
+from backend.models.corpus import CorpusConfig
 
 def get_corpus(corpus_name: Annotated[str, Path()]) -> CorpusConfig:
     corpus = CORPORA.get(corpus_name)

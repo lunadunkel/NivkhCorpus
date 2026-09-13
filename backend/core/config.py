@@ -3,7 +3,7 @@ from pathlib import Path
 
 import yaml
 
-from backend.core.corpora import CorpusConfig
+from backend.models.corpus import CorpusConfig
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 BACKEND_ROOT = Path(__file__).resolve().parents[1]

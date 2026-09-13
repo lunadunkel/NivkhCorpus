@@ -2,8 +2,7 @@
 
 from dataclasses import dataclass, field
 
-from backend.core.corpora import CorpusConfig
-from backend.core.dictionaries import MISC, QUERY2DB
+from backend.models.corpus import CorpusConfig
 from backend.core.ir import OPERATION, AnyOf, Condition, Constraint, Scope, normalize
 
 @dataclass
@@ -18,7 +17,6 @@ class QueryBuilder:
     def __init__(self, corpus: CorpusConfig, forms: list[dict]):
         self.corpus = corpus
         self.search = corpus.search
-        # self.fields = corpus.search_fields()
         self.person_values = corpus.person_object_values()
         self.queries = self.process_queries(forms)
 

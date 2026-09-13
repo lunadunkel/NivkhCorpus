@@ -8,7 +8,7 @@ from motor.motor_asyncio import AsyncIOMotorCollection
 from pymongo.errors import DuplicateKeyError
 
 from backend.core.config import COLLECTION_DICT, COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT
-from backend.core.corpora import CorpusConfig
+from backend.models.corpus import CorpusConfig
 from backend.db.compile.aggregation_compile import AggregatePipeline
 from backend.db.compile.process_query import QueryBuilder
 from backend.db.database import get_collection
