@@ -219,7 +219,7 @@ grammar:
   - { value: Ing, label: Instr, tooltip: Инструментальная }
   - { value: Locat, label: Locat, tooltip: Локативная }
   - { value: Proc, label: Proc, tooltip: Процесс }
-  - { value: Deverb, label: Deverb, tooltip: Отглагольная, show: false }
+  # - { value: Deverb, label: Deverb, tooltip: Отглагольная, show: false }
 
 - id: Clusivity
   match: any
@@ -235,7 +235,7 @@ grammar:
   tooltip: Тип нефинитной формы
   values:
   - { value: Conv, label: Conv, tooltip: Конверб }
-  - { value: Vnoun, label: Vnoun, tooltip: Отглагольное имя, show: false }
+  # - { value: Vnoun, label: Vnoun, tooltip: Отглагольное имя, show: false }
   - { value: Part, label: Part, tooltip: Причастие }
 
 - id: Tense
@@ -270,14 +270,14 @@ grammar:
   - { value: Ant, label: Ant, tooltip: Предшествование }
   - { value: Avert, label: Avert, tooltip: Авертив }
   - { value: Compl, label: Compl, tooltip: Комплетив }
-  - { value: Hab, label: Hab, tooltip: Хабитуалис, show: false }
+  # - { value: Hab, label: Hab, tooltip: Хабитуалис, show: false }
   - { value: Des, label: Des, tooltip: Дезидератив }
   - { value: Iter, label: Iter, tooltip: Повторяемость }
   - { value: Prog, label: Prog, tooltip: Прогрессив }
-  - { value: Res, label: Res, tooltip: Результатив, show: false }
+  # - { value: Res, label: Res, tooltip: Результатив, show: false }
   - { value: Sim, label: Sim, tooltip: Одновременность }
   - { value: Usit, label: Usit, tooltip: Узитатив }
-  - { value: Mult, label: Mult, tooltip: Мультипликатив, show: false }
+  # - { value: Mult, label: Mult, tooltip: Мультипликатив, show: false }
 
 - id: "Number[word]"
   match: any
@@ -309,7 +309,7 @@ grammar:
 
 - id: clitic
   match: any
-  group: true # только визуальная группировка
+  group: true
   label: Clitic
   tooltip: Признак клитики
   values:

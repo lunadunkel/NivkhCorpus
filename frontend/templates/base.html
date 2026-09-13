@@ -64,7 +64,7 @@ page — PageMeta текущей страницы
     {% block footer %}{% endblock %}
 
     {% if corpus %}
-    <script id="corpus-config" type="application/json">{{ corpus.public_dict() | tojson }}</script>
+    <script id="corpus-config" type="application/json">{{ public_dict(corpus) | tojson }}</script>
     {% endif %}
     {% block scripts %}{% endblock %}
   </body>
