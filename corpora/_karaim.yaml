@@ -1,0 +1,343 @@
+# id: nivkh
+# enabled: true
+
+# name:
+#   ru: Караимский
+#   en: Нивхский
+
+# # Опции <select> справа от строки поиска.
+# languages:
+# - { value: karaim, label: Караимский, selected: true }
+# - { value: russian, label: Рус }
+
+# search:
+#   meta_language: russian # значение <select>, означающее язык перевода
+#   sentence_text_field: russian_text
+#   translation_field: translation
+#   lemma_field: lemma
+#   token_field: token
+
+# # Дополнительные буквы под строкой поиска.
+# !!!
+# keyboard:
+# - [ ӷ, ғ, ӻ, ӄ, "ӄ’" ]
+# - [ ӈ, "р̌", ў, ӽ, ӿ ]
+# !!!
+
+# assets:
+#   styles: []
+#   scripts: []
+
+# pages:
+#   search:
+#     template: search.html
+#     title: Корпус караимского языка — НИВЦ МГУ
+#     description: >-
+#       Морфологический поиск по текстам на караимском языке с разбором по частям речи, падежам и временам.
+#     og_description: >-
+#       Морфологический поиск по текстам на караимском языке: по словоформе, лемме, части речи, падежу и времени.
+#     og_image_alt: Караимский корпус — НИВЦ МГУ
+#     canonical: /karaim
+#   about:
+#     template: about/nivkh.html
+#     title: О корпусе нивхского языка – НИВЦ МГУ
+#     description: >-
+#       Состав корпуса нивхского языка, источники текстов, принципы разметки и правила цитирования.
+#     og_description: >-
+#       Состав корпуса нивхского языка, источники текстов, принципы разметки и правила цитирования.
+#     og_image_alt: Нивхский корпус — НИВЦ МГУ
+#     canonical: /nivkh/about
+#     styles: [ "about.css" ]
+#   dictionary:
+#     template: dictionary.html
+#     title: Караимско-русский словарь — НИВЦ МГУ
+#     description: >-
+#       Словник караимского языка с переводами на русский. Поиск по букве и по лемме.
+#     og_description: >-
+#       Словник караимского языка с переводами на русский. Поиск по букве и по лемме.
+#     og_image_alt: Караимский корпус — НИВЦ МГУ
+#     canonical: /dictionary
+#     styles: [ "dictionary.css" ]
+#   search_output:
+#     template: search_output.html
+#     title: Результаты поиска — Караимский корпус НИВЦ МГУ
+#   word:
+#     template: word.html
+#     title: Словарная статья — Караимско-русский словарь
+#     description: >-
+#       Значения, переводы и грамматические пометы караимского слова. Караимский языковой корпус. 
+#     og_description: >-
+#       Словник караимского языка с переводами на русский. Поиск по букве и по лемме.
+#     og_image_alt: Караимский корпус — НИВЦ МГУ
+#     canonical: /dictionary/word
+#     styles: [ "letter.css" ]
+#   letter:
+#     template: letter.html
+#     title: Словарь по буквам — Караимско-русский словарь
+#     description: >-
+#       Список караимских слов на выбранную букву с переводами на русский.
+#     og_description: >-
+#       Список караимских слов на выбранную букву с переводами на русский.
+#     og_image_alt: Караимский корпус — НИВЦ МГУ
+#     styles: [ "letter.css" ]
+
+# !!!
+# alphabet_order: [ "Ӄ’", "К’", "П’", "Т’", "Р̌", "А", "Б", "В", "Г", "Ғ", "Ӷ", "Ӻ", "Д", "Е", "Ё", "З", "И", "Й", "К", "Ӄ", "Л", "М", "Н", "Ӈ", "О", "П", "Р", "С", "Т", "У", "Ф", "Х", "Ӽ", "Ӿ", "Ч", "Ы", "Э", "Ю", "Я" ]
+
+# dictionary:
+# - letter: "А"
+#   example: "ав"
+# - letter: "Б"
+#   example: "бал"
+# - letter: "В"
+#   example: "ва"
+# - letter: "Г"
+#   example: "ге"
+# - letter: "Ғ"
+#   example: "ғары"
+# - letter: "Ӷ"
+#   example: "ӷоми"
+# - letter: "Ӻ"
+#   example: "ӻав"
+# - letter: "Д"
+#   example: "дау"
+# - letter: "Е"
+#   example: "еғев"
+# - letter: "Ё"
+#   example: "ёӻо"
+# - letter: "З"
+#   example: "за"
+# - letter: "И"
+#   example: "ив"
+# - letter: "Й"
+#   example: "йа"
+# - letter: "К"
+#   example: "калағала"
+# - letter: "К’"
+#   example: "к’ать"
+# - letter: "Ӄ"
+#   example: "ӄа"
+# - letter: "Ӄ’"
+#   example: "ӄ’арӈ"
+# - letter: "Л"
+#   example: "ла"
+# - letter: "М"
+#   example: "ма"
+# - letter: "Н"
+#   example: "на"
+# - letter: "Ӈ"
+#   example: "ӈа"
+# - letter: "О"
+#   example: "оғла"
+# - letter: "П"
+#   example: "па"
+# - letter: "П’"
+#   example: "п’аки"
+# - letter: "Р"
+#   example: "ра"
+# - letter: "Р̌"
+#   example: "р̌аг"
+# - letter: "С"
+#   example: "сарӻо"
+# - letter: "Т"
+#   example: "та"
+# - letter: "Т’"
+#   example: "т’атӈ"
+# - letter: "У"
+#   example: "уву"
+# - letter: "Ф"
+#   example: "фать"
+# - letter: "Х"
+#   example: "ха"
+# - letter: "Ӽ"
+#   example: "ӽа"
+# - letter: "Ӿ"
+#   example: "ӿа"
+# - letter: "Ч"
+#   example: "ча"
+# - letter: "Ы"
+#   example: "ыви"
+# - letter: "Э"
+#   example: "эврӄ"
+# - letter: "Ю"
+#   example: "юғ"
+# - letter: "Я"
+#   example: "яго"
+# !!!
+
+# !!!
+# # Раскладка грамматического модала по колонкам: список id блоков.
+# layout:
+#   columns:
+#   - [ POS, Case ]
+#   - [ NounType, Clusivity, VerbForm, Tense ]
+#   - [ Mood, Aspect ]
+#   - [ "Number[word]", "Person[word]", person_obj, clitic ]
+#   - [ coord, misc ]
+# !!!
+
+# grammar:
+# - id: POS
+#   match: any
+#   label: POS
+#   tooltip: Часть речи слова
+#   values:
+#   - { value: NOUN, label: NOUN, tooltip: Имя существительное }
+#   - { value: VERB, label: VERB, tooltip: Глагол }
+#   - { value: NUM, label: NUM, tooltip: Имя числительное }
+#   - { value: "Yes", label: CLASS, tooltip: Классификатор, field: Classifier }
+#   - { value: Q, label: Q, tooltip: Квантор }
+#   - { value: ADV, label: ADV, tooltip: Наречие }
+#   - { value: PROPN, label: PROPN, tooltip: Имя собственное }
+#   - { value: PRON, label: PRON, tooltip: Местоимение }
+#   - { value: DISC, label: DISC, tooltip: Дискурсивная частица }
+
+# - id: Case
+#   match: any
+#   label: Case
+#   tooltip: Падеж
+#   values:
+#   - { value: Abs, label: Abs, tooltip: Абсолютив }
+#   - { value: Abl, label: Abl, tooltip: Аблатив }
+#   - { value: Per, label: Per, tooltip: Перлатив }
+#   - { value: Loc, label: Loc, tooltip: Локатив }
+#   - { value: Dat, label: Dat, tooltip: Датив }
+#   - { value: Ins, label: Ins, tooltip: Инструменталис }
+#   - { value: Voc, label: Voc, tooltip: Вокатив }
+#   - { value: Cau, label: Causee, tooltip: Каузи }
+#   - { value: Com, label: Com, tooltip: Комитатив }
+#   - { value: Cmp, label: Cmp, tooltip: Компаратив }
+#   - { value: Lim, label: Lim, tooltip: Лимитатив }
+#   - { value: Rep, label: Rep, tooltip: Репортатив }
+
+# - id: NounType
+#   match: any
+#   label: NounType
+#   tooltip: Тип номинализации
+#   values:
+#   - { value: Agent, label: Agent, tooltip: Агентивная }
+#   - { value: Ing, label: Instr, tooltip: Инструментальная }
+#   - { value: Locat, label: Locat, tooltip: Локативная }
+#   - { value: Proc, label: Proc, tooltip: Процесс }
+#   # - { value: Deverb, label: Deverb, tooltip: Отглагольная, show: false }
+
+# - id: Clusivity
+#   match: any
+#   label: Clusivity
+#   tooltip: Инклюзивность
+#   values:
+#   - { value: In, label: In, tooltip: Инклюзивный }
+#   - { value: Ex, label: Ex, tooltip: Эксклюзивный }
+
+# - id: VerbForm
+#   match: any
+#   label: VerbForm
+#   tooltip: Тип нефинитной формы
+#   values:
+#   - { value: Conv, label: Conv, tooltip: Конверб }
+#   - { value: Part, label: Part, tooltip: Причастие }
+
+# - id: Tense
+#   match: any
+#   label: Tense
+#   tooltip: Время
+#   values:
+#   - { value: Fut, label: Fut, tooltip: Будущее }
+#   - { value: Pres_Aor, label: Non-Fut, tooltip: Настояще-прошедшее }
+
+# - id: Mood
+#   match: any
+#   label: Mood
+#   tooltip: Наклонение
+#   values:
+#   - { value: Cnd, label: Cnd, tooltip: Условное }
+#   - { value: "Yes", label: Conces, tooltip: Уступительное, field: Conces }
+#   - { value: Hort, label: Hort, tooltip: Гортатив }
+#   - { value: Imp, label: Imp, tooltip: Императив }
+#   - { value: Ind, label: Ind, tooltip: Индикатив }
+#   - { value: Indir, label: Indir, tooltip: Косвенная речь }
+#   - { value: Jus, label: Jus, tooltip: Юссив }
+#   - { value: Prob, label: Prob, tooltip: Пробабилитив }
+#   - { value: Proh, label: Proh, tooltip: Прохибитив }
+#   - { value: Subj, label: Subj, tooltip: Сослагательное }
+
+# - id: Aspect
+#   match: any
+#   label: Aspect
+#   tooltip: Вид
+#   values:
+#   - { value: Ant, label: Ant, tooltip: Предшествование }
+#   - { value: Avert, label: Avert, tooltip: Авертив }
+#   - { value: Compl, label: Compl, tooltip: Комплетив }
+#   # - { value: Hab, label: Hab, tooltip: Хабитуалис, show: false }
+#   - { value: Des, label: Des, tooltip: Дезидератив }
+#   - { value: Iter, label: Iter, tooltip: Повторяемость }
+#   - { value: Prog, label: Prog, tooltip: Прогрессив }
+#   # - { value: Res, label: Res, tooltip: Результатив, show: false }
+#   - { value: Sim, label: Sim, tooltip: Одновременность }
+#   - { value: Usit, label: Usit, tooltip: Узитатив }
+#   # - { value: Mult, label: Mult, tooltip: Мультипликатив, show: false }
+
+# - id: "Number[word]"
+#   match: any
+#   label: Number
+#   tooltip: Число
+#   values:
+#   - { value: Sing, label: Sing, tooltip: Единственное }
+#   - { value: Dual, label: Dual, tooltip: Двойственное }
+#   - { value: Plur, label: Plur, tooltip: Множественное }
+
+# - id: "Person[word]"
+#   match: any
+#   label: Person (main word)
+#   tooltip: Лицо главного слова
+#   values:
+#   - { value: "1", label: "1", tooltip: Первое лицо }
+#   - { value: "2", label: "2", tooltip: Второе лицо }
+#   - { value: "3", label: "3", tooltip: Третье лицо }
+
+# - id: person_obj
+#   match: any
+#   group: true # только визуальная группировка
+#   label: Person (object / possessor)
+#   tooltip: Лицо объектное или посессивной клитики
+#   values:
+#   - { value: "1", label: "1", tooltip: Первое лицо, field: person_obj }
+#   - { value: "2", label: "2", tooltip: Второе лицо, field: person_obj }
+#   - { value: "3", label: "3", tooltip: Третье лицо, field: person_obj }
+
+# - id: clitic
+#   match: any
+#   group: true
+#   label: Clitic
+#   tooltip: Признак клитики
+#   values:
+#   - { value: "Yes", label: Reflex, tooltip: Рефлексив, field: Reflex }
+#   - { value: "Yes", label: Reciprocal, tooltip: Реципрок, field: Reciprocal }
+#   - { value: "yes", label: Obj, tooltip: Объект, field: clobj }
+#   - { value: "yes", label: Pos, tooltip: Посссор, field: clpos }
+
+# - id: coord
+#   match: any
+#   label: Coordination
+#   tooltip: Тип сочинения
+#   values:
+#   - { value: "Yes", label: VCoord, tooltip: Глагольное сочинение, field: Coordinating }
+#   - { value: "Yes", label: NCoord, tooltip: Именное сочинение, field: Add }
+
+# - id: misc
+#   group: true # только визуальная группировка
+#   label: Miscellaneous
+#   html_id: misc # на этот id завязан CSS
+#   select_all: false # у блока нет чекбокса «выбрать все»
+#   values:
+#   - { value: Aux, label: Aux, tooltip: Прочее, field: VerbType }
+#   - { value: Caus, label: Caus, tooltip: Каузатив, field: Voice }
+#   - { value: Collective, label: Collective num, tooltip: Собирательное числительное, field: NumType }
+#   - { value: "Yes", label: Emphatic, tooltip: Эмфаза, field: Emphatic }
+#   - { value: Nfh, label: Evid, tooltip: Эвиденциальность, field: Evident }
+#   - { value: "Yes", label: Focus, tooltip: Фокус, field: Focus }
+#   - { value: Neg, label: Negation, tooltip: Отрицание, field: Polarity }
+#   - { value: Ind, label: Indefinite, tooltip: Неопределенность, field: Definite }
+#   - { value: "Yes", label: Question, tooltip: Вопрос, field: Question }
+#   - { value: Dim, label: Diminutive, tooltip: Диминутив, field: Degree }

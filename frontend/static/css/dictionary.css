@@ -34,14 +34,13 @@
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
+  margin-top: 8px;
+  /* position: absolute; */
   flex-direction: column;
   border: 1px solid var(--100);
   border-radius: 8px;
   background-color: white;
-  top: 60px;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
-  z-index: 1;
  
   li {
     padding: 1rem 16px;

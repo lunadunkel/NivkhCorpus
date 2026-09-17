@@ -194,6 +194,7 @@ function keyboardActivate(select) {
   const keyboardBtn = frame.querySelector('.keyboard');       // #nivkh_keyboard-0
   const keyboardPanel = frame.querySelector('.letter-input');  // #keyboard-0
   const input = frame.querySelector('.input-panel');           // #correct_placeholder-0
+  const letterContainer = frame.querySelector('.letter-container');
 
   // видимость иконки клавиатуры в зависимости от языка
   function applyLanguage() {
@@ -204,10 +205,13 @@ function keyboardActivate(select) {
       keyboardPanel.style.display = 'none';  // на русском панель закрыта
     }
   }
-
+  
   select.addEventListener('change', applyLanguage);
   applyLanguage();  // начальное состояние
 
+  // keyboardPanel.addEventListener('mousedown', (e) => e.preventDefault());
+  letterContainer.addEventListener('mousedown', (e) => e.preventDefault());
+  keyboardBtn.addEventListener('mousedown', (e) => e.preventDefault());
   // клик по иконке — тоггл панели
   keyboardBtn.addEventListener('click', () => {
     const isOpen = keyboardPanel.style.display === 'flex';
