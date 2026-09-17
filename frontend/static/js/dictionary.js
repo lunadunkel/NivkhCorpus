@@ -196,6 +196,24 @@ function keyboardActivate(select) {
   const input = frame.querySelector('.input-panel');           // #correct_placeholder-0
   const letterContainer = frame.querySelector('.letter-container');
 
+
+  const closeButton = frame.querySelector(".close-button");
+
+  function toggleClearButton() {
+        closeButton.style.display = input.value !== "" ? "flex" : "none";
+    }
+
+  input.addEventListener("input", toggleClearButton);
+
+  closeButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        input.value = "";
+        input.focus();
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+
+    toggleClearButton();
+
   // видимость иконки клавиатуры в зависимости от языка
   function applyLanguage() {
     if (select.value === corpus.id) {
@@ -210,6 +228,7 @@ function keyboardActivate(select) {
   applyLanguage();  // начальное состояние
 
   // keyboardPanel.addEventListener('mousedown', (e) => e.preventDefault());
+  // closeButton.addEventListener("mousedown", (e) => e.preventDefault());
   letterContainer.addEventListener('mousedown', (e) => e.preventDefault());
   keyboardBtn.addEventListener('mousedown', (e) => e.preventDefault());
   // клик по иконке — тоггл панели

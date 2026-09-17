@@ -12,15 +12,31 @@ function bindEvents(root, value, manager) {
     const select = root.querySelector("#extension-" + value);
     keyboardActivate(select);
 
+    const trueValue = root.querySelector("#correct_placeholder-" + value);
+    const closeButton = root.querySelector("#closure-" + value);
+
+    function toggleClearButton() {
+        closeButton.style.display = trueValue.value !== "" ? "flex" : "none";
+    }
+
+    trueValue.addEventListener("input", toggleClearButton);
+
+    // не даём кнопке забрать фокус у инпута до клика
+    closeButton.addEventListener("mousedown", (e) => e.preventDefault());
+
+    closeButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        trueValue.value = "";
+        trueValue.focus();
+        trueValue.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+
+    toggleClearButton();
+
     root.querySelector("#add-" + value).addEventListener("click", function(e) {
         e.preventDefault();
         manager.add(this);
     });
-
-    // root.querySelector("#closure-" + value).addEventListener("click", function(e) {
-    //     e.preventDefault();
-    //     manager.remove(this);
-    // });
 
     root.querySelector("#wordform-" + value).addEventListener("click", function() {
         wordformButton(this);
@@ -47,6 +63,7 @@ function bindEvents(root, value, manager) {
                 "#correct_placeholder-" + value
             );
             trueValue.value += selectedLetter;
+            trueValue.dispatchEvent(new Event("input", { bubbles: true }));
         });
     });
 

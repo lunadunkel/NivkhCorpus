@@ -7,6 +7,13 @@ body::-webkit-scrollbar {
   display: none; /* Hide the scrollbar */
 }
 
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
 @font-face {
   font-family: "Arsenal";
   src: url("../fonts/Arsenal-Regular.ttf") format("truetype");
@@ -371,7 +378,7 @@ input[type="search"] {
   display: flex;
   flex-direction: row; */
 
-  .keyboard {
+.keyboard {
     width: 52px;
     display: flex;
     align-items: center;
@@ -408,20 +415,12 @@ input[type="image"]:focus {
   /* width: 72px; */
 }
 
+.close-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 
-/* .language-selection-containter::after {
-    content: "";
-    position: absolute;
-    top: 1rem;
-    right: -0.65rem;
-    width: 24px;
-    height: 24px;
-    pointer-events: none;
-    background-image: url(/static/images/keyboard_arrow_down.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    justify-self: start;
-} */
 
 .custom-select {
     appearance: none;
