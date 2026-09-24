@@ -417,6 +417,7 @@ input[type="image"]:focus {
 
 .close-button {
   display: flex;
+  padding: 0px 6px;
   align-items: center;
   cursor: pointer;
 }

@@ -70,12 +70,13 @@ async def search(corpus: CorpusConfig, query):
 
 
 async def add_glossing(lang: str, doc_id: str):
+    candidates: list = [doc_id]
     oid = _to_object_id(doc_id)
-    if oid is None:
-        return None
+    if oid is not None:
+        candidates.append(oid)
 
     collection = get_collection(lang, COLLECTION_SENT)
-    return await collection.find_one({"_id": oid},
+    return await collection.find_one({"_id": {"$in": candidates}},
         projection={"segmented_text": 1, "glossed_text": 1})
 
 async def return_dictionary(lang: str):

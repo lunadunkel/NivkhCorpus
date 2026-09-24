@@ -1,6 +1,10 @@
 import asyncio
 import argparse
 import os
+from pathlib import Path
+
+from pymongo.errors import BulkWriteError
+
 from backend.core.config import CORPORA
 from backend.db.database import get_collection
 from backend.db.repositories.sentences_repo.process_json import Json2MongoProcessing
@@ -11,24 +15,31 @@ async def drop_collection(collection):
 
 
 async def main():
-    preprocessing = Json2MongoProcessing(DATA_PATH)
     lang = args.language
     if lang not in CORPORA:
-        raise ValueError(f"Language \"{lang}\" is not present in current version of DB. Currently avaliable options: {','.join(CORPORA.keys())}")
+        raise ValueError(f"Язык \"{lang}\" отсутствует в БД. Доступные корпуса: {','.join(CORPORA.keys())}")
+
+    corpus = CORPORA[lang]
+    if corpus.ingest is None:
+        raise ValueError(f"В corpora/{lang}.yaml нет секции ingest")
+
+    preprocessing = Json2MongoProcessing(Path(DATA_PATH), corpus.ingest.model_dump(), corpus.id)
     collection = get_collection(lang, 'sentences')
     if args.drop_collection:
         await drop_collection(collection)
-    for file in os.listdir(DATA_PATH):
-        file_path = os.path.join(DATA_PATH, file)
 
-        if file_path.endswith('json'):
-            file_data = preprocessing.process_json(file_path)
+    for file in sorted(os.listdir(DATA_PATH)):
+        if not file.endswith('.json'):
+            continue
 
-            try:
-                result = await collection.insert_many(file_data)
-                print(f"Inserted {len(result.inserted_ids)} documents.")
-            except Exception as e:
-                print(f"Error: {e}")
+        file_data = preprocessing.process_json(file)
+        try:
+            result = await collection.insert_many(file_data, ordered=False)
+            print(f"{file}: inserted {len(result.inserted_ids)} documents.")
+        except BulkWriteError as e:
+            # _id детерминирован, поэтому повторная загрузка без -d упирается в дубли
+            skipped = len(e.details["writeErrors"])
+            print(f"{file}: inserted {e.details['nInserted']}, skipped {skipped} (already in collection or write error)")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Добавление предложений в корпус")

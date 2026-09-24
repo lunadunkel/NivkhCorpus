@@ -96,7 +96,7 @@ async function addContext(id, card) {
         };
     }
 
-    const response = await fetch(`/${corpus.id}/search/doc_id=${id}`, {
+    const response = await fetch(`/${corpus.id}/search/doc_id=${encodeURIComponent(id)}`, {
     method: "POST"
     });
 

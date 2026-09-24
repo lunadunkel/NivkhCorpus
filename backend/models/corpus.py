@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field, model_validator
 from backend.models.grammar import GrammarBlock, Layout
 from backend.models.page import Assets, LanguageOption, PageMeta, Vocabulary
 from backend.models.search import SearchConfig
+from backend.models.ingest import IngestConfig
 
 
 class CorpusConfig(BaseModel):
@@ -22,6 +23,8 @@ class CorpusConfig(BaseModel):
     grammar: list[GrammarBlock] = []
     dictionary: list[Vocabulary] = []
     alphabet_order: list[str] = []
+    alphabet_order: list[str] = []
+    ingest: IngestConfig | None = None
 
     @model_validator(mode="after")
     def _layout_validator(self) -> "CorpusConfig":

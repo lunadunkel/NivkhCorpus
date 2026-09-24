@@ -253,6 +253,7 @@ grammar:
   values:
   - { value: Cnd, label: Cnd, tooltip: Условное }
   - { value: "Yes", label: Conces, tooltip: Уступительное, field: Conces }
+  - { value: Des, label: Des, tooltip: Дезидератив }
   - { value: Hort, label: Hort, tooltip: Гортатив }
   - { value: Imp, label: Imp, tooltip: Императив }
   - { value: Ind, label: Ind, tooltip: Индикатив }
@@ -271,7 +272,6 @@ grammar:
   - { value: Avert, label: Avert, tooltip: Авертив }
   - { value: Compl, label: Compl, tooltip: Комплетив }
   # - { value: Hab, label: Hab, tooltip: Хабитуалис, show: false }
-  - { value: Des, label: Des, tooltip: Дезидератив }
   - { value: Iter, label: Iter, tooltip: Повторяемость }
   - { value: Prog, label: Prog, tooltip: Прогрессив }
   # - { value: Res, label: Res, tooltip: Результатив, show: false }
@@ -346,6 +346,6 @@ grammar:
 ingest:
   script: cyrillic
   strip_punct: [ token, lemma, segmentation ]
-  strip_chars: ".,:;!?„”’‘\"«»()"
+  strip_chars: ".,:;!?„”\"«»()"
   rename: { Person: "Person[word]", Number: "Number[word]" }
   drop_fields: [ parent_token_index, edge_type, constituents, constituent, sentence_tree, url, miscellaneous ]

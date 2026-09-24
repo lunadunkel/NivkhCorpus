@@ -73,7 +73,16 @@ def _expr_leaf(c: Constraint, var: str) -> dict:
         return {"$ne": [{"$ifNull": [field, None]}, None]}
     if c.op == "regex":
         return {"$regexMatch": {"input": field, "regex": c.values[0], "options": "i"}}
-    return {"$in": [field, list(c.values)]}
+    # Тег может быть списком (Case=Obl + Case=Abl), а $in сравнивает его целиком:
+    # для списка ищем пересечение со значениями, для скаляра — прежний $in.
+    values = list(c.values)
+    return {"$cond": [
+        {"$isArray": field},
+        {"$gt": [{"$size": {"$filter": {
+            "input": field, "as": "v", "cond": {"$in": ["$$v", values]},
+        }}}, 0]},
+        {"$in": [field, values]},
+    ]}
 
 
 def render_expr(conditions: list[Condition], var: str = "$$x") -> list[dict]:

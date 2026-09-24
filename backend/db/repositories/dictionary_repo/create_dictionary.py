@@ -10,6 +10,8 @@ USED_WORDS = set()
 translator = str.maketrans('', '', string.punctuation)
 
 def decapitalize(word):
+    if not word['lemma']:
+        return
     new_word = word['lemma'].lower()
     new_word = new_word.translate(translator)
     if new_word in USED_WORDS:
@@ -43,7 +45,9 @@ async def main():
         new_item = decapitalize(item)
         if new_item:
             words_dict.append(new_item)
-
+    missing = [w["lemma"] for w in words_dict if not w["first_letter"]]
+    if missing:
+        print(f"Без первой буквы: {len(missing)}: {', '.join(missing[:30])}")
     if args.drop_collection:
         await drop_collection(dictionary)
     try:

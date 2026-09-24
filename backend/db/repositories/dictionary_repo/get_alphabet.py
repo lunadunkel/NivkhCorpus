@@ -3,7 +3,7 @@ from backend.core.deps import get_corpus
 def get_pipeline_by_lang(language: str):
     corpus = get_corpus(language)
 
-    alphabet_letters = corpus.alphabet_order
+    alphabet_letters = [{"cap": L, "low": L.lower()} for L in corpus.alphabet_order]
 
     DICT_PIPELINE = [
     {"$unwind": "$tokens"},
@@ -36,25 +36,15 @@ def get_pipeline_by_lang(language: str):
                 "initialValue": "",
                 "in": {
                     "$cond": [
-                        {
-                            "$and": [
-                                {"$eq": ["$$value", ""]}, 
-                                {
-                                    "$eq": [
-                                        {
-                                            "$substrCP": [
-                                                "$_id", 
-                                                0, 
-                                                {"$strLenCP": "$$this"}
-                                            ]
-                                        },
-                                        "$$this"
-                                    ]
-                                }
-                            ]
-                        },
-                        "$$this", 
-                        "$$value"  
+                        {"$and": [
+                            {"$eq": ["$$value", ""]},
+                            {"$in": [
+                                {"$substrCP": ["$_id", 0, {"$strLenCP": "$$this.cap"}]},
+                                ["$$this.low", "$$this.cap"],
+                            ]},
+                        ]},
+                        "$$this.cap",
+                        "$$value",
                     ]
                 }
             }

@@ -60,6 +60,7 @@ class Json2MongoProcessing:
         self.drop_fields: set[str] = set(config.get("drop_fields", []))
         self.strip_fields: set[str] = set(config.get("strip_punct", []))
         self.strip_chars: str = config.get("strip_chars", "")
+        self.spelling: dict[str, str] = config.get("spelling", {})
 
     def process_json(self, filename: str) -> list[dict[str, Any]]:
         """Прочитать файл и вернуть документы, готовые к вставке в Mongo."""
@@ -108,10 +109,14 @@ class Json2MongoProcessing:
     def clean(self, value: str, field: str) -> str:
         """Привести строку в порядок: графика, юникод, лишняя пунктуация."""
         value = ud.normalize("NFC", value).strip()
+        if value in PLACEHOLDERS:
+            return value
         if field in LANG_FIELDS:
             # поле целиком на языке оригинала, чужая графика тут вся лишняя
             table = HOMOGLYPHS if self.latin else CYR_FROM_LAT
             value = "".join(table.get(char, char) for char in value)
+            for old, new in self.spelling.items():
+                value = value.replace(old, new)
         elif field in META_FIELDS:
             value = re.sub(r"\w+", fix_mixed_word, value)
         if field in self.strip_fields and self.strip_chars:
@@ -139,6 +144,8 @@ class Json2MongoProcessing:
             old = new_tagset.get(key)
             if old is None:
                 new_tagset[key] = value
+            elif value in (old if isinstance(old, list) else [old]):
+                continue   # Reflex=Yes дважды -> просто Yes
             elif isinstance(old, list):
                 new_tagset[key] = [*old, value]   # третья морфема подряд
             else:

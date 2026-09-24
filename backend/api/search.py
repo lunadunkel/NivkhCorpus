@@ -12,14 +12,14 @@ router = APIRouter(prefix="/{corpus_name}/search", tags=["search"])
 @router.post("/")
 async def search(request: Request, corpus: CorpusDep):
     query = await request.json()
-    print(query)
+   #  print(query)
     return await search_service.search(corpus, query=query)
 
 @router.post("/doc_id={doc_id}")
 async def search_glossing(request: Request, doc_id: str, corpus: CorpusDep):
    result = await search_service.add_glossing(corpus.id, doc_id)
    if result is not None:
-      return {"segmentation": result['segmented_text'], "glossing": result['glossed_text']}
+      return {"segmentation": result.get('segmented_text', ''), "glossing": result.get('glossed_text', '')}
    return JSONResponse({"error": "not found"}, status_code=404)
 
 @router.get("/dictionary")
