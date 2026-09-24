@@ -1,8 +1,9 @@
 """Словари грамматических категорий языка"""
 
 POS = {
-    "NOUN", "VERB", "NUM", "CLASS",
-    "Q", "ADV", "PROPN", "PRON", "DISC"}
+    "PROPN", "NOUN", "VERB", "ADP", "PRON", "ADJ", 
+    "NUM", "CLASS", "DET", "ADV", "INTJ", 
+    "AUX", "CCONJ", "PART", "SCONJ"}
 
 CASES = {
     "GEN": "Case=Gen", 
@@ -13,10 +14,15 @@ CASES = {
     "O": "Case=Obl",
     "INSTR": "Case=Ins",
     "ABE": "Case=Abe",
-    "COMP": "Degree=Cmp",
-    "VRB": "VerbType=Denom|POS=Verb",
-    "ABSTR": "NounType=AbstrNoun|POS=Noun",
-    "ACTOR": 'SemanticLabel=Agent'
+    "COMP": "Degree=Cmp"
+}
+
+    # "VRB": "VerbType=Denom|POS=Verb",
+    # "ABSTR": "NounType=AbstrNoun|POS=Noun",
+    # "ACTOR": 'SemanticLabel=Agent'
+
+PSOR = {
+    
 }
 
 NUMBER = {

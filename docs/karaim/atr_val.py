@@ -1,4 +1,20 @@
 morphdict = {
+  # POS=теги МОЖНО ПОМЕНЯТЬ ФОРМАТ И ДАТЬ ПРОСТО СПИСКОМ ИЛИ В ВИДЕ СЛОВАРЯ {POS: [NOUN, VERB, ADP, ...]}
+    #   "PROPN" : "POS=PROPN", 
+    #   "NOUN" : "POS=NOUN", 
+    #   "VERB" : "POS=VERB", 
+    #   "ADP" : "POS=ADP", 
+    #   "PRON" : "POS=PRON", 
+    #   "ADJ" : "POS=ADJ", 
+    #   "ADV" : "POS=ADV", 
+    #   "NUM" : "POS=NUM", 
+      "DET" : "POS=DET", 
+      "AUX" : "POS=AUX", 
+      "INTJ" : "POS=INTJ", 
+      "CCONJ" : "POS=CCONJ", 
+      "PART" : "POS=PART", 
+      "SCONJ" : "POS=SCONJ", 
+
   # Падежи
       "GEN" : "Case=Gen", 
       "ACC" : "Case=Acc",   
@@ -10,9 +26,18 @@ morphdict = {
       "ABE" : "Case=Abe",       # abessive, caritive, privative
       "COMP" : "Degree=Cmp",
 
-      "VRB" : "VerbType=Denom|POS=Verb",
-      "ABSTR" : "NounType=AbstrNoun|POS=Noun",
-      "ACTOR" : 'SemanticLabel=Agent',
+  # Посессивность
+      "P1SG" : "Person[psor]=1|Number[psor]=Sing", 
+      "P2SG" : "Person[psor]=2|Number[psor]=Sing", 
+      "P1PL" : "Person[psor]=1|Number[psor]=Plur", 
+      "P2PL" : "Person[psor]=2|Number[psor]=Plur", 
+      "P3" : "Person[psor]=3", 
+
+
+#      "VRB" : "VerbType=Denom|POS=NOUN", удобно, но неточно, т.к. может образовываться от разных ЧР
+      "VRB" : "VerbType=Denom",
+      "ABSTR" : "NounType=AbstrNoun",
+      "ACTOR" : 'NounType=Agent',
 
   # Лицо и число
       "SG" : "Number=Sing",
@@ -23,20 +48,24 @@ morphdict = {
       "3" : "Person=3",
 
   # Прилагательное
-      'DIM' : "Degree=Dim",
-      "ATR" : "POS=Adj",
-      "ADV" : "POS=Adv",
+      "ATR" : "POS=Adj", # В ПОИСК НЕ ВЫВОДИМ
+
+  # Наречие
+      "ADVR" : "POS=Adv", # В ПОИСК НЕ ВЫВОДИМ
 
   # Числительные
       "ORD" : "NumType=Ord",
       "COL" : "NumType=Sets",
       "DISTR" : "NumType=Dist",
 
+  # Уменьшительность (у имен)
+      'DIM' : "Degree=Dim",
+
   # Аспект
-      "ANT"  : "Aspect=Ant",   # антериор
-      "SIM"  : "Aspect=Sim",   # симултанеус
-      "IPFV" : "Aspect=Imp",
-      "HAB"  : "Aspect=Hab",   
+      "ANT"  : "Aspect=Ant",   # предшеств.
+      "SIM"  : "Aspect=Sim",   # одновр.
+      "IPFV" : "Aspect=Impf",
+
 
   # Время
       "PRS"   : "Tense=Pres",    
@@ -44,17 +73,18 @@ morphdict = {
       "FUT"   : "Tense=Fut",
 
   # Форма глагола
-      "INF"  : "VerbForm=Inf",
+      "INF"  : "VerbForm=Inf", # В ПОИСКЕ В VerbForm
       "CONV" : "VerbForm=Conv",    
       "PTCP"  : "VerbForm=Part", 
-      "ST" : 'VerbForm=Stat',
-      "NMN" : "VerbForm=Vnoun|POS=Noun",
+
+      "NMN" : "POS=NOUN|VerbForm=VerbNoun", # В ПОИСК VerbForm=VerbNoun
 
   # Залог
       "REFL" : "Reflex=Yes",     # рефлексив
       "REC"  : "Reciprocal=Yes", # реципрок
       "CAUS" : "Voice=Caus",     # каузатив
       "PASS" : "Voice=Pass",     # пассив
+      
       "NEG" : "Polarity=Neg",
 
   # Наклонение
@@ -66,7 +96,7 @@ morphdict = {
 
       "FOC"   : "Focus=Yes",
       "Q" : "PartType=Int|POS=Part",
-      "EP" : "Morph=Epenthetic",
+#      "EP" : "Morph=Epenthetic",
       }
 
 # Дополнительная конфигурация (опциональная).
@@ -81,7 +111,7 @@ adjectives = True
 # True, если в языке есть префиксы.
 # Если значение этого признака False или он отсутствует в файле конфигурации,
 # все префиксы считаются проклитиками (точнее, инкорпорированными местоимениями).
-prefixes = True
+prefixes = False
 
 # Список дефолтных значений морфосинтаксических признаков
 # для каждой из тех частей речи, для которых они необходимы.
