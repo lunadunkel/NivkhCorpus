@@ -3,8 +3,8 @@ import asyncio
 import string
 from backend.core.config import CORPORA
 from backend.db.database import get_collection
-from backend.db.repositories.dictionary_repo.get_alphabet import get_pipeline_by_lang
-from backend.db.repositories.sentences_repo.insert_data import drop_collection
+from backend.db.repositories.alphabet import get_pipeline_by_lang
+from backend.db.repositories.insert_data import drop_collection
 
 USED_WORDS = set()
 translator = str.maketrans('', '', string.punctuation)

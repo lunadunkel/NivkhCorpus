@@ -2,7 +2,7 @@ import json
 import os
 from pathlib import Path
 import sys
-from backend.db.repositories.sentences_repo.process_json import Json2MongoProcessing
+from backend.db.repositories.process_json import Json2MongoProcessing
 
 SRC = Path("/data")
 DST = Path("/data/mongo-ready")

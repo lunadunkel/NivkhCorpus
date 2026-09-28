@@ -12,7 +12,7 @@ from backend.models.corpus import CorpusConfig
 from backend.db.compile.aggregation_compile import AggregatePipeline
 from backend.db.compile.process_query import QueryBuilder
 from backend.db.database import get_collection
-from backend.db.repositories.jobs_repo import search_jobs
+from backend.db.repositories import search_jobs
 from backend.db.repositories.utils import clean, make_hash
 
 

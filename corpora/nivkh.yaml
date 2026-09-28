@@ -29,7 +29,7 @@ keyboard:
 - [ ӈ, "р̌", ў, ӽ, ӿ ]
 
 assets:
-  styles: []
+  styles: [ "nivkh.css" ]
   scripts: []
 
 pages:

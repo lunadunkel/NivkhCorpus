@@ -1,3 +1,17 @@
+:root {
+  --50: #f2f7f5ff;
+  --100: #e0ebe5ff;
+  --200: #c8dcd3ff;
+  --300: #99bcaeff;
+  --400: #6c9b8aff;
+  --600: #386356ff;
+  --500: #4c7d6eff;
+  --700: #2d4f45ff;
+  --800: #254038ff;
+  --900: #1f352fff;
+  --950: #19111dff;
+}
+
 body {
     min-height: 100vh;
 }
@@ -58,7 +72,7 @@ h1 {
 
 .lang-select {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     gap: 8px;
     /* border: 1px solid var(--100); */
 }

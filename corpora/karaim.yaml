@@ -23,7 +23,7 @@ keyboard:
 - [ ö, ś, ż, ü ]
 
 assets:
-  styles: []
+  styles: [ "karaim.css" ]
   scripts: []
 
 pages:

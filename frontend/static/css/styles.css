@@ -40,35 +40,6 @@ body {
   padding: 0 20px;
 }
 
-:root {
-  --50: #f2f7f5ff;
-  --100: #e0ebe5ff;
-  --200: #c8dcd3ff;
-  --300: #99bcaeff;
-  --400: #6c9b8aff;
-  --600: #386356ff;
-  --500: #4c7d6eff;
-  --700: #2d4f45ff;
-  --800: #254038ff;
-  --900: #1f352fff;
-  --950: #19111dff;
-}
-
-/* :root {
-  --50: #f9f4f3ff;
-  --100: #f2e5e0ff;
-  --200: #e9cdc3ff;
-  --300: #d7a18eff;
-  --400: #c77557ff;
-  --500: #ab5536ff;
-  --600: #88452dff;
-  --700: #6a3927ff;
-  --800: #512e21ff;
-  --900: #3f261cff;
-  --950: #0d0c00ff;
-} */
-
-
 input {
   border: none;
   outline: none;
@@ -119,9 +90,13 @@ img[src="/static/images/logo.svg"] {
 .left-main {
   display: flex;
   justify-content: center;
+  min-width: 0; /* позволяет ссылке сжиматься, если она упирается в границы шапки */
+  max-width: 100%;
 
   img {
     cursor: pointer;
+    max-width: 100%; 
+    height: auto; 
   }
 }
 
@@ -263,6 +238,7 @@ img[src="/static/images/logo.svg"] {
     justify-content: center;
     cursor: pointer;
     box-sizing: border-box;
+    color: var(--500);
 
   div,p{
     height: fit-content;
