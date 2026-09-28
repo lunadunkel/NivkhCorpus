@@ -7,11 +7,9 @@ from pymongo.errors import BulkWriteError
 
 from backend.core.config import CORPORA
 from backend.db.database import get_collection
-from backend.db.repositories.sentences_repo.process_json import Json2MongoProcessing
-
-
-async def drop_collection(collection):
-    await collection.drop()
+from backend.db.repositories.process_json import Json2MongoProcessing
+from backend.db.repositories.statistics import process_statistics
+from backend.db.repositories.utils import drop_collection
 
 
 async def main():
@@ -31,13 +29,15 @@ async def main():
     for file in sorted(os.listdir(DATA_PATH)):
         if not file.endswith('.json'):
             continue
+        if file == "corpus_stats.json":
+            await process_statistics(lang, f"{DATA_PATH}/{file}", args.drop_collection)
+            continue
 
         file_data = preprocessing.process_json(file)
         try:
             result = await collection.insert_many(file_data, ordered=False)
             print(f"{file}: inserted {len(result.inserted_ids)} documents.")
         except BulkWriteError as e:
-            # _id детерминирован, поэтому повторная загрузка без -d упирается в дубли
             skipped = len(e.details["writeErrors"])
             print(f"{file}: inserted {e.details['nInserted']}, skipped {skipped} (already in collection or write error)")
 

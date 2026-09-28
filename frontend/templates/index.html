@@ -53,15 +53,24 @@
                 </div>
             </div>
             <div class="lang-select">
-                <a href="/nivkh" class=" lang-container">
-                    <!-- <div class="lang-info"> -->
+                <a href="/nivkh" class="lang-container">
                     <h2>Нивхский</h2>
                     <div class="add-info">изолят</div>
-                    <!-- </div> -->
                     <div class="stats">
-                        <div class="stats-entry"><strong>25</strong> текстов</div>
-                        <div class="stats-entry"><strong>1251</strong> предложение</div>
-                        <div class="stats-entry"><strong>7907</strong> токенов</div>
+                        {% set s = stats.nivkh %}
+                        {% if s %}
+                        <div class="stats-entry"><strong>{{ s.total_texts }}</strong>
+                            {{ s.total_texts | plural(("текст", "текста", "текстов")) }}
+                        </div>
+                        <div class="stats-entry"><strong>{{ s.total_sentences }}</strong>
+                            {{ s.total_sentences | plural(("предложение", "предложения", "предложений")) }}
+                        </div>
+                        <div class="stats-entry"><strong>{{ s.total_tokens }}</strong>
+                            {{ s.total_tokens | plural(("токен", "токена", "токенов")) }}
+                        </div>
+                        {% else %}
+                        В разработке
+                        {% endif %}
                     </div>
                 </a>
                 <a href="/karaim" class="lang-container">
@@ -70,7 +79,20 @@
                     <div class="add-info">тюркский</div>
                     <!-- </div> -->
                     <div class="stats">
+                        {% set s = stats.karaim %}
+                        {% if s %}
+                        <div class="stats-entry"><strong>{{ s.total_texts }}</strong>
+                            {{ s.total_texts | plural(("текст", "текста", "текстов")) }}
+                        </div>
+                        <div class="stats-entry"><strong>{{ s.total_sentences }}</strong>
+                            {{ s.total_sentences | plural(("предложение", "предложения", "предложений")) }}
+                        </div>
+                        <div class="stats-entry"><strong>{{ s.total_tokens }}</strong>
+                            {{ s.total_tokens | plural(("токен", "токена", "токенов")) }}
+                        </div>
+                        {% else %}
                         В разработке
+                        {% endif %}
                     </div>
                 </a>
                 <a class="lang-container disabled">

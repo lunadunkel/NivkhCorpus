@@ -2,6 +2,9 @@ import hashlib
 import json
 from bson import ObjectId
 
+async def drop_collection(collection):
+    await collection.drop()
+
 def clean(obj):
     if isinstance(obj, list):
         return [clean(x) for x in obj]

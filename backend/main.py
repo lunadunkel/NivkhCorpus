@@ -8,6 +8,7 @@ from fastapi.responses import FileResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
 from backend.api.router import router as api_router
 from backend.api.seo import router as seo_router
+from backend.core import fetch_stats
 from backend.core.templates import TEMPLATES
 from backend.core.config import CORPORA, FRONTEND_DIR, TEMPLATES_DIR
 from backend.db.indexes import ensure_indexes
@@ -44,9 +45,9 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 
 
 @app.get("/")
-async def main_page():
-    return FileResponse(TEMPLATES_DIR / "index.html")
-    # return TEMPLATES.TemplateResponse()
+async def main_page(request: Request):
+    statistics = await fetch_stats.fetch_per_corpus()
+    return TEMPLATES.TemplateResponse(request, "index.html", {"stats": statistics})
 
 # @app.get("/ping")
 # async def ping():
