@@ -14,24 +14,9 @@ if (goUpBtn) {
     });
 }
 
-// UD-теги частей речи -> русские подписи; неизвестный код показываем как есть
-const POS_RU = {
-    NOUN: 'сущ.',
-    VERB: 'глаг.',
-    NUM: 'числ.',
-    CLASS: 'классиф.',
-    Q: 'вопр. слово',
-    ADV: 'нареч.',
-    INTJ: 'междом.',
-    PROPN: 'имя собств.',
-    PRON: 'мест.',
-    DISC: 'дискурс. слово',
-    X: 'прочее',
-};
-
 function posLabel(pos) {
     if (!pos) return '';
-    return POS_RU[pos] || pos;
+    return corpus.pos_labels[pos] || pos;
 }
 
 const byLemma = (a, b) => {
