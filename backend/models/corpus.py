@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 from backend.models.grammar import GrammarBlock, Layout
 from backend.models.page import Assets, LanguageOption, PageMeta, Vocabulary
@@ -36,6 +36,15 @@ class CorpusConfig(BaseModel):
     alphabet_order: list[str] = []
     ingest: IngestConfig | None = None
     indexes: list[str] = Field(default_factory=lambda: list(DEFAULT_INDEXED_FIELDS))
+
+
+    @field_validator("indexes")
+    @classmethod
+    def _clean_indexes(cls, fields: list[str]) -> list[str]:
+        cleaned = [f.strip() for f in fields]
+        if not all(cleaned):
+            raise ValueError("indexes: empty field name")
+        return list(dict.fromkeys(cleaned))
 
     @model_validator(mode="after")
     def _layout_validator(self) -> "CorpusConfig":
