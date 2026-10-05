@@ -6,6 +6,16 @@ from backend.models.search import SearchConfig
 from backend.models.ingest import IngestConfig
 
 
+DEFAULT_INDEXED_FIELDS = [
+    "tokens.token",
+    "tokens.lemma",
+    "tokens.tagsets.POS",
+    "tokens.tagsets.Case",
+    "tokens.tagsets.Tense",
+    "tokens.tagsets.Person[word]",
+    "tokens.tagsets.Number[word]",
+]
+
 class CorpusConfig(BaseModel):
     """Один корпус целиком, как он описан в YAML.
 
@@ -25,6 +35,7 @@ class CorpusConfig(BaseModel):
     alphabet_order: list[str] = []
     alphabet_order: list[str] = []
     ingest: IngestConfig | None = None
+    indexes: list[str] = Field(default_factory=lambda: list(DEFAULT_INDEXED_FIELDS))
 
     @model_validator(mode="after")
     def _layout_validator(self) -> "CorpusConfig":
