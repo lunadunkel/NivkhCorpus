@@ -5,30 +5,26 @@ services:
     volumes:
       - ../data:/data
       - ../backend:/src/backend:ro
+      - ../corpora:/src/corpora:ro
       - ./preprocess.py:/src/preprocess.py:ro
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
         set -e
-        apk add --no-cache curl unzip python3 >/dev/null
+        apk add --no-cache curl unzip python3 py3-yaml >/dev/null
 
-        if [ -z "$$(ls -A /data/*.json 2>/dev/null)" ]; then
+        if [ -z "$$(ls -A /data/*/*.json 2>/dev/null)" ]; then
           echo "Downloading corpus data from GitHub Release..."
-          curl -fL -o /tmp/data.zip "https://github.com/lunadunkel/NivkhCorpus/releases/download/data-v1/data.zip"
-          unzip -oj /tmp/data.zip -d /data
+          curl -fL -o /tmp/data.zip "https://github.com/lunadunkel/NivkhCorpus/releases/download/data-v2/data.zip"
+          unzip -o /tmp/data.zip -d /data
           rm -f /tmp/data.zip
         else
           echo "Corpus data already present in ./data — skipping download."
         fi
 
-        if [ -f /data/mongo-ready/.done ]; then
-          echo "Preprocessed data already present — skipping."
-          exit 0
-        fi
 
         echo "Preprocessing JSON before import..."
         python3 /src/preprocess.py
-        touch /data/mongo-ready/.done
         echo "Done."
 
   mongo:

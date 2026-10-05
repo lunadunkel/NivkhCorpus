@@ -4,7 +4,7 @@ from xml.sax.saxutils import escape
 from fastapi import APIRouter, Response
 from fastapi.responses import FileResponse
 
-from backend.core.config import ACTIVE_CORPORA, FRONTEND_DIR, SITE
+from backend.core.config import CORPORA, FRONTEND_DIR, SITE
 
 router = APIRouter(include_in_schema=False)
 
@@ -30,7 +30,7 @@ def build_sitemap() -> str:
         targets = (
             [path]
             if "{corpus}" not in path
-            else [path.format(corpus=c) for c in ACTIVE_CORPORA]
+            else [path.format(corpus=c) for c in CORPORA]
         )
         for target in targets:
             lines += [

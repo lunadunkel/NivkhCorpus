@@ -32,7 +32,6 @@ class CorpusConfig(BaseModel):
     grammar: list[GrammarBlock] = []
     dictionary: list[Vocabulary] = []
     alphabet_order: list[str] = []
-    alphabet_order: list[str] = []
     ingest: IngestConfig | None = None
     indexes: list[str] = Field(default_factory=lambda: list(DEFAULT_INDEXED_FIELDS))
 

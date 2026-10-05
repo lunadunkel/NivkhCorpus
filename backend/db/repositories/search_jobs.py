@@ -1,4 +1,4 @@
-from gridfs.grid_file import BulkWriteError
+from pymongo.errors import BulkWriteError
 from motor.motor_asyncio import AsyncIOMotorCollection
 from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS
 from backend.db.database import get_collection

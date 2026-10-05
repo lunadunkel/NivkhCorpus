@@ -1,37 +1,52 @@
 #!/bin/sh
 set -e
 
-DB="corpus"
 IMPORT_DIR="/data/import"
+CORPORA=""
 
-echo "Seeding corpus into $DB.sentences ..."
+for dir in "$IMPORT_DIR"/*/; do
+  [ -d "$dir" ] || continue
+  DB=$(basename "$dir")
+  echo "Seeding corpus into $DB.sentences ..."
 
-FOUND=0
-for file in "$IMPORT_DIR"/*.json; do
-  [ -e "$file" ] || { echo "No JSON files found in $IMPORT_DIR"; break; }
-  FOUND=1
-  echo "  importing $(basename "$file")..."
-  mongoimport \
-    --db "$DB" \
-    --collection sentences \
-    --file "$file" \
-    --jsonArray
+  for file in "$dir"*.json; do
+    [ -e "$file" ] || continue
+    if [ "$(basename "$file")" = "statistics.json" ]; then
+      mongoimport --db "$DB" --collection statistics --drop --file "$file" --jsonArray
+      continue
+    fi
+    echo "  importing $(basename "$file")..."
+    mongoimport \
+      --db "$DB" \
+      --collection sentences \
+      --file "$file" \
+      --jsonArray
+  done
+
+  mongo --quiet "$DB" --eval '
+    const n = db.sentences.countDocuments({});
+    if (n === 0) { throw new Error("import produced 0 sentences"); }
+    db.import_state.replaceOne(
+      { _id: "corpus" },
+      { _id: "corpus", status: "done", sentences: n, finished_at: new Date() },
+      { upsert: true }
+    );
+    print("Import marker written: " + n + " sentences.");
+  '
+  CORPORA="$CORPORA $DB"
 done
 
-if [ "$FOUND" -eq 0 ]; then
+if [ -z "$CORPORA" ]; then
   echo "ERROR: no data to import" >&2
   exit 1
 fi
 
-mongo --quiet "$DB" --eval '
-  const n = db.sentences.countDocuments({});
-  if (n === 0) { throw new Error("import produced 0 sentences"); }
+mongo --quiet corpus --eval "
   db.import_state.replaceOne(
-    { _id: "corpus" },
-    { _id: "corpus", status: "done", sentences: n, finished_at: new Date() },
+    { _id: 'corpus' },
+    { _id: 'corpus', status: 'done', corpora: '$CORPORA'.trim().split(' '), finished_at: new Date() },
     { upsert: true }
   );
-  print("Import marker written: " + n + " sentences.");
-'
+"
 
-echo "Corpus seeding done."
+echo "Corpus seeding done:$CORPORA"

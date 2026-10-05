@@ -47,4 +47,3 @@ def load_corpora(directory: Path = CORPORA_DIR) -> dict[str, CorpusConfig]:
 
 
 CORPORA: dict[str, CorpusConfig] = load_corpora()
-ACTIVE_CORPORA: list[str] = [cid for cid, c in CORPORA.items()]
