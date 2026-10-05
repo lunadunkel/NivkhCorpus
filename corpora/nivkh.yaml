@@ -60,7 +60,7 @@ pages:
     og_description: >-
       Словник нивхского языка с переводами на русский. Поиск по букве и по лемме.
     og_image_alt: Нивхский корпус — НИВЦ МГУ
-    canonical: /dictionary
+    canonical: /nivkh/dictionary
     styles: [ "dictionary.css" ]
   search_output:
     template: search_output.html
@@ -73,7 +73,7 @@ pages:
     og_description: >-
       Словник нивхского языка с переводами на русский. Поиск по букве и по лемме.
     og_image_alt: Нивхский корпус — НИВЦ МГУ
-    canonical: /dictionary/word
+    canonical: /nivkh/dictionary/word
     styles: [ "letter.css" ]
   letter:
     template: letter.html
