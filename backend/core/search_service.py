@@ -25,7 +25,7 @@ def _to_object_id(doc_id: str) -> ObjectId | None:
 
 async def run_search_db(corpus: CorpusConfig, collection: AsyncIOMotorCollection, query: list[dict]):
     qb = QueryBuilder(corpus, forms=query)
-    aggregation = AggregatePipeline(qb.queries).aggregate()
+    aggregation = AggregatePipeline(qb.queries, corpus.search).aggregate()
     cursor = collection.aggregate(aggregation)
     return await cursor.to_list(length=None)
 

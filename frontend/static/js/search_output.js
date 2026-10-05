@@ -7,7 +7,7 @@ const PAGE_SIZE = 20;
 
 document.getElementById("new-search").addEventListener("click", () => {
   sessionStorage.removeItem("search-form-data");
-  window.location.href = "/";
+  window.location.href = "/${corpus.id}";
 });
 
 
@@ -180,7 +180,7 @@ function process_output(items, total) {
         rus.className = "rus-text";
 
         const p_rus = document.createElement('p');
-        p_rus.textContent = item['russian_text'];
+        p_rus.textContent = item['translation_text'];
         rus.appendChild(p_rus);
 
 

@@ -1037,7 +1037,7 @@ input[type="radio"] {
   gap: 16px;
 
   .nivkh-text {
-    color: var(-800);
+    color: var(--800);
     font-family: inherit;
     p {
       line-height: 135%;

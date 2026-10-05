@@ -12,7 +12,6 @@ async def fetch_per_corpus():
         result = await collection.find_one({}, {"_id": 0})
         data[corpus] = result
 
-    print(data)
     return data
 
 if __name__ == "__main__":

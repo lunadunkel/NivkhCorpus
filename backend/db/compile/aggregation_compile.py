@@ -2,17 +2,19 @@ from typing import List
 from backend.db.compile.add_fields_compile import AddFieldsCompiler
 from backend.db.compile.match_compile import MatchQueryCompiler
 from backend.db.compile.process_query import OriginalQuery
+from backend.models.search import SearchConfig
 
 
 class AggregatePipeline:
-    def __init__(self, query: List[OriginalQuery]):
+    def __init__(self, query: List[OriginalQuery], search: SearchConfig):
         self.query = query
+        self.search = search
     
     def _form_project(self, ) -> dict:
         """Внутренняя функция для написания проекции = поля, возвращаемые из БД"""
         project = {
                 "_id": 1,
-                "russian_text": 1,
+                "translation_text": f"${self.search.sentence_text_field}",
                 "text": 1,
                 "final_indexes": 1,
                 "author": '$metadata.author',

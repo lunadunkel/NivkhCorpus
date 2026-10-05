@@ -17,7 +17,7 @@ def decapitalize(word):
     if new_word in USED_WORDS:
         return
     
-    USED_WORDS.add(word['lemma'].lower())
+    USED_WORDS.add(new_word)
     if word['lemma'] == 'NaN':
         return
     if word['lemma'].istitle() and word['translation'].istitle():

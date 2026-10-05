@@ -35,7 +35,7 @@ fetch(`/${corpus.id}/search/dictionary`)
   .catch(err => console.error('Не удалось загрузить словарь:', err));
 
 function buildQuery(q) {
-  return langSelect.value === 'russian'
+  return langSelect.value === corpus.meta_language
     ? {translation: q }
     : {lemma: q };
 }
@@ -110,7 +110,7 @@ function render(hits) {
   const top5 = [...groups.entries()].slice(0, 5);
   currentResults = top5;
 
-  const isRu = langSelect.value === 'russian';
+  const isRu = langSelect.value === corpus.meta_language;
 
   resultsEl.innerHTML = top5.map(([translation, group], index) => {
     const lemmaText = group.lemmas.join(', ');
@@ -216,7 +216,7 @@ function keyboardActivate(select) {
 
   // видимость иконки клавиатуры в зависимости от языка
   function applyLanguage() {
-    if (select.value === corpus.id) {
+    if (select.value !== corpus.meta_language) {
       keyboardBtn.style.display = 'flex';
     } else {
       keyboardBtn.style.display = 'none';

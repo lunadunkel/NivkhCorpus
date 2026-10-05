@@ -114,14 +114,25 @@ def columns(corpus: CorpusConfig) -> list[list[GrammarBlock]]:
         out.append(visible)
  
     return out
+
+def pos_labels(corpus: CorpusConfig) -> dict[str, str]:
+    """Код части речи -> подпись из YAML."""
+    out = {}
+    for block in corpus.grammar:
+        for value in block.values:
+            if value.name(block.id) == "POS":
+                out[value.value] = value.tooltip or value.label
+    return out
  
  
 def public_dict(corpus: CorpusConfig) -> dict:
     """То, что уезжает в <script id="corpus-config"> для фронтенда."""
     return {
         "id": corpus.id,
+        "meta_language": corpus.search.meta_language,
         "languages": [option.model_dump() for option in corpus.languages],
         "assets": corpus.assets.model_dump(),
+        "pos_labels": pos_labels(corpus),
     }
 
  

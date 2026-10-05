@@ -11,10 +11,10 @@ export function keyboardActivate(elem) {
         const grammContainer = frame.querySelectorAll('.basic-container')
         const selectedRadio = document.querySelector('input[name="search-type"]:checked');
         
-        if (selectedValue === corpus.id) {
+        if (selectedValue !== corpus.meta_language) {
             keyboardButtons.forEach((btn) => (btn.style.display = "flex"));
             grammContainer.forEach((cont) => (cont.style.display = "flex"))
-        } else if (selectedValue === "russian") {
+        } else {
             keyboardButtons.forEach((btn) => (btn.style.display = "none"));
             keyboards.forEach((kb) => (kb.style.display = "none"));
             if (selectedRadio.value == "token") {
