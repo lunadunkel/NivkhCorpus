@@ -10,7 +10,7 @@ from pymongo.errors import DuplicateKeyError
 from backend.core.config import COLLECTION_DICT, COLLECTION_JOB, COLLECTION_RESULTS, COLLECTION_SENT
 from backend.models.corpus import CorpusConfig
 from backend.db.compile.aggregation_compile import AggregatePipeline
-from backend.db.compile.process_query import QueryBuilder
+from backend.db.compile.process_query import OriginalQuery, QueryBuilder, queries_from_doc, queries_to_doc
 from backend.db.database import get_collection
 from backend.db.repositories import search_jobs
 from backend.db.repositories.utils import clean, make_hash
@@ -23,26 +23,34 @@ def _to_object_id(doc_id: str) -> ObjectId | None:
         return None
 
 
-async def run_search_db(corpus: CorpusConfig, collection: AsyncIOMotorCollection, query: list[dict]):
-    qb = QueryBuilder(corpus, forms=query)
-    aggregation = AggregatePipeline(qb.queries, corpus.search).aggregate()
+async def run_search_db(corpus: CorpusConfig, collection: AsyncIOMotorCollection, queries: list[OriginalQuery]):
+    aggregation = AggregatePipeline(queries, corpus.search).aggregate()
     cursor = collection.aggregate(aggregation)
     return await cursor.to_list(length=None)
 
+async def save_results(lang: str, job_id: str, result: list[dict]):
+    now = datetime.now(timezone.utc)
+    collection = get_collection(lang, COLLECTION_RESULTS)
+    results = [{"_id": f"{job_id}:{i}", 
+                "job_id": job_id, 
+                "result": res, "created_at": now} 
+                for i, res in enumerate(result)]
+    await search_jobs.insert_results(collection, results)
 
 async def search(corpus: CorpusConfig, query):
     lang = corpus.id
     jobs_collection = get_collection(lang, COLLECTION_JOB)
     sent_collection = get_collection(lang, COLLECTION_SENT)
-    
-    query_hash = make_hash(query)
 
+    queries = QueryBuilder(corpus, forms=query).queries
+    ir = queries_to_doc(queries)
+    query_hash = make_hash(ir)
     
     existing = await search_jobs.find_by_hash(jobs_collection, query_hash)
     if existing:
         return {"status": "ok", "job_id": existing["_id"]}
 
-    result = await run_search_db(corpus, sent_collection, query)
+    result = await run_search_db(corpus, sent_collection, queries)
     job_id = str(uuid.uuid4())
     now = datetime.now(timezone.utc)
 
@@ -50,7 +58,9 @@ async def search(corpus: CorpusConfig, query):
         await search_jobs.save(jobs_collection, {
                 "_id": job_id,
                 "query_hash": query_hash,
+                "form": query,   # для восстановления формы в интерфейсе
                 "status": "done" if result else "empty",
+                "ir": ir,        # по нему ищем при переходе по ссылке
                 "created_at": now,
             })
         
@@ -61,10 +71,7 @@ async def search(corpus: CorpusConfig, query):
         raise
 
     if result:
-        results_collection = get_collection(lang, COLLECTION_RESULTS)
-        await search_jobs.insert_results(results_collection,
-            [{"job_id": job_id, "result": res, "created_at": now} for res in result],
-        )
+        await save_results(lang, job_id, result)
 
     return {"status": "ok", "job_id": job_id}
 
@@ -110,16 +117,22 @@ async def return_group_by_id(lang: str, doc_id: str):
     return {"translation": translation, "documents": documents}
 
 
-async def return_results(lang: str, job_id: str, offset: int = 0, limit: int = 20):
+async def return_results(corpus: CorpusConfig, job_id: str, offset: int = 0, limit: int = 20):
     """Возвращает страницу результатов или None, если джоб не найден.
 
     Сериализацию и коды ответа делает слой API — сервис про HTTP не знает.
     """
+
+    lang = corpus.id
     job = await get_collection(lang, COLLECTION_JOB).find_one({"_id": job_id})
     if not job:
         return None
 
     collection = get_collection(lang, COLLECTION_RESULTS)
     total = await collection.count_documents({"job_id": job_id})
+    if total == 0 and job["status"] == "done":
+        result = await run_search_db(corpus, get_collection(lang, COLLECTION_SENT), queries_from_doc(job["ir"]))
+        await save_results(lang, job_id, result)
+        total = len(result)
     docs = await collection.find({"job_id": job_id}).skip(offset).limit(limit).to_list(length=limit)
     return {"results": [doc["result"] for doc in docs if "result" in doc], "length": total}

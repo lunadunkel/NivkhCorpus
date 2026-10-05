@@ -23,6 +23,26 @@ def selected(form: dict, name: str) -> list[str]:
         return raw
     return [raw]
 
+def _condition_to_doc(cond) -> dict:
+    if isinstance(cond, AnyOf):
+        return {"any": [_condition_to_doc(option) for option in cond.options]}
+    return {"scope": cond.scope.value, "path": cond.path, "op": cond.op, "values": list(cond.values)}
+
+
+def _condition_from_doc(doc):
+    if "any" in doc:
+        return AnyOf(tuple(_condition_from_doc(option) for option in doc["any"])) 
+    return Constraint(Scope(doc["scope"]), doc["path"], doc["op"], tuple(doc["values"]))
+
+
+def queries_to_doc(queries: list[OriginalQuery]) -> list[list[dict]]:
+    """IR -> JSON: для хэша и для хранения в jobs."""
+    return [[_condition_to_doc(cond) for cond in query.conditions] for query in queries]
+
+
+def queries_from_doc(doc: list[list[dict]]) -> list[OriginalQuery]:
+    """JSON из jobs -> IR, готовый к компиляции."""
+    return [OriginalQuery(conditions=[_condition_from_doc(cond) for cond in query]) for query in doc]
 
 class QueryBuilder:
     def __init__(self, corpus: CorpusConfig, forms: list[dict]):

@@ -11,7 +11,6 @@ async def ensure_indexes(lang: str) -> None:
     sentences = get_collection(lang, COLLECTION_SENT)
 
     await jobs.create_index("query_hash", unique=True)
-    await jobs.create_index("created_at", expireAfterSeconds=JOB_TTL_SECONDS)
 
     await results.create_index("job_id")
     await results.create_index("created_at", expireAfterSeconds=JOB_TTL_SECONDS)

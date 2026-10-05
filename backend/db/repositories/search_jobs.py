@@ -1,3 +1,4 @@
+from gridfs.grid_file import BulkWriteError
 from motor.motor_asyncio import AsyncIOMotorCollection
 from backend.core.config import COLLECTION_JOB, COLLECTION_RESULTS
 from backend.db.database import get_collection
@@ -6,7 +7,11 @@ async def find_by_hash(collection: AsyncIOMotorCollection, query_hash: str):
     return await collection.find_one({"query_hash": query_hash})
 
 async def insert_results(collection: AsyncIOMotorCollection, docs: list[dict]):
-    await collection.insert_many(docs)
+    try:
+        await collection.insert_many(docs)
+    except BulkWriteError as e:
+        if any(err["code"] != 11000 for err in e.details["writeErrors"]):
+            raise
 
 async def save(collection: AsyncIOMotorCollection, doc: dict):
     await collection.insert_one(doc)
