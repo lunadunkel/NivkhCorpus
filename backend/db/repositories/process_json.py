@@ -15,7 +15,7 @@ PLACEHOLDERS = {"None", "-", "", "Webpage unspecified"}
 
 # Поля на языке оригинала и поля на языке описания: графика у них разная.
 LANG_FIELDS = {"token", "lemma", "segmentation", "text", "segmented_text"}
-META_FIELDS = {"gloss", "translation", "glossed_text", "russian_text"}
+BASE_META_FIELDS = {"gloss", "glossed_text"}
 
 # Кириллические буквы и неотличимые от них латинские.
 HOMOGLYPHS = {
@@ -48,13 +48,15 @@ def fix_mixed_word(match: "re.Match[str]") -> str:
 
 
 class Json2MongoProcessing:
-    def __init__(self, path: Path, config: dict[str, Any], corpus: str):
+    def __init__(self, path: Path, config: dict[str, Any], corpus: str, meta_fields):
         """Args:
             path: папка с json-файлами корпуса
             config: секция `ingest:` из конфига корпуса
-            corpus: id корпуса, попадёт в документы"""
+            corpus: id корпуса, попадёт в документы
+            meta_fields: поля на языке перевода из секции `search:`"""
         self.path = path
         self.corpus = corpus
+        self.meta_fields = BASE_META_FIELDS | set(meta_fields)
         self.latin = config["script"] == "latin"
         self.rename: dict[str, str] = config.get("rename", {})
         self.drop_fields: set[str] = set(config.get("drop_fields", []))
@@ -117,7 +119,7 @@ class Json2MongoProcessing:
             value = "".join(table.get(char, char) for char in value)
             for old, new in self.spelling.items():
                 value = value.replace(old, new)
-        elif field in META_FIELDS:
+        elif field in self.meta_fields:
             value = re.sub(r"\w+", fix_mixed_word, value)
         if field in self.strip_fields and self.strip_chars:
             value = value.strip(self.strip_chars)
@@ -161,7 +163,9 @@ if __name__ == "__main__":
     with open(sys.argv[1], encoding="utf8") as config_file:
         config = yaml.safe_load(config_file)
     source = Path(sys.argv[2])
-    processing = Json2MongoProcessing(source.parent, config["ingest"], config["id"])
+    search = config["search"]
+    meta = {search["translation_field"], search["sentence_text_field"]}
+    processing = Json2MongoProcessing(source.parent, config["ingest"], config["id"], meta)
     docs = processing.process_json(source.name)
     print(json.dumps(docs[:1], ensure_ascii=False, indent=2))
     print(f"{source.name}: {len(docs)} предложений, "

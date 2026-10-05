@@ -21,7 +21,8 @@ async def main():
     if corpus.ingest is None:
         raise ValueError(f"В corpora/{lang}.yaml нет секции ingest")
 
-    preprocessing = Json2MongoProcessing(Path(DATA_PATH), corpus.ingest.model_dump(), corpus.id)
+    meta = {corpus.search.translation_field, corpus.search.sentence_text_field}
+    preprocessing = Json2MongoProcessing(Path(DATA_PATH), corpus.ingest.model_dump(), corpus.id, meta)
     collection = get_collection(lang, 'sentences')
     if args.drop_collection:
         await drop_collection(collection)
