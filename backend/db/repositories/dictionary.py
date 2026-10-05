@@ -60,6 +60,6 @@ async def main():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Получение словника")
     parser.add_argument("-l", "--language", required=True, type=str, help="Выбрать корпус языка")
-    parser.add_argument("-d", "--drop_collection", type=bool, default=False, help="Нужно ли удалить существующую коллекцию (по дефолту нет)")
+    parser.add_argument("-d", "--drop_collection", action="store_true", help="Нужно ли удалить существующую коллекцию")
     args = parser.parse_args()
     asyncio.run(main())

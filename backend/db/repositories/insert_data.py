@@ -46,7 +46,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Добавление предложений в корпус")
     parser.add_argument("-p", "--path", type=str, help="Путь к данным", required=True)
     parser.add_argument("-l", "--language", type=str, help="Язык корпуса", required=True)
-    parser.add_argument("-d", "--drop_collection", type=bool, default=False, help="Нужно ли удалить существующую коллекцию (по дефолту нет)")
+    parser.add_argument("-d", "--drop_collection", action="store_true", help="Нужно ли удалить существующую коллекцию (по дефолту нет)")
     args = parser.parse_args()
     DATA_PATH = args.path
     asyncio.run(main())
