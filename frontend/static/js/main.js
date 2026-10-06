@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const frame = createDiv("0", manager);
 	const parentFrame = document.getElementById("search-frame");
 	parentFrame.appendChild(frame);
-    // document.getElementById("closure-0").style.display = "none";
+    document.getElementById("remove-0").style.display = "none";
 
 });
 

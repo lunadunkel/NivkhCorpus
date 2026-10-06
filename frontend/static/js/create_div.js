@@ -38,7 +38,7 @@ function bindEvents(root, value, manager) {
         manager.add(this);
     });
 
-    root.querySelector("#closure-" + value).addEventListener("click", function(e) {
+    root.querySelector("#remove-" + value).addEventListener("click", function(e) {
         e.preventDefault();
         manager.remove(this);
     });
