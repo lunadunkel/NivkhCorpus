@@ -1,3 +1,4 @@
+[![ru](https://img.shields.io/badge/russian_version-4C7D6E?logo=readme&logoColor=white&labelColor=254038)](https://github.com/lunadunkel/NivkhCorpus/blob/main/readme.md)
 # Corpus Platform
 
 A search platform for morphologically annotated corpora of under-resourced and
