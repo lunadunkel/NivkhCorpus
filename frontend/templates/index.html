@@ -53,59 +53,33 @@
                 </div>
             </div>
             <div class="lang-select">
-                <a href="/nivkh" class="lang-container">
-                    <h2>Нивхский</h2>
-                    <div class="add-info">изолят</div>
+                {% for corpus, info in stats.items() %}
+                {% if info.enabled %}
+                <a href="/{{corpus}}" class="lang-container">
+                    <h2>{{info.lang_label}}</h2>
+                    <div class="add-info">{{info.lang_family}}</div>
                     <div class="stats">
-                        {% set s = stats.nivkh %}
-                        {% if s %}
-                        <div class="stats-entry"><strong>{{ s.total_texts }}</strong>
-                            {{ s.total_texts | plural(("текст", "текста", "текстов")) }}
+                        <div class="stats-entry"><strong>{{ info.total_texts }}</strong>
+                            {{ info.total_texts | plural(("текст", "текста", "текстов")) }}
                         </div>
-                        <div class="stats-entry"><strong>{{ s.total_sentences }}</strong>
-                            {{ s.total_sentences | plural(("предложение", "предложения", "предложений")) }}
+                        <div class="stats-entry"><strong>{{ info.total_sentences }}</strong>
+                            {{ info.total_sentences | plural(("предложение", "предложения", "предложений")) }}
                         </div>
-                        <div class="stats-entry"><strong>{{ s.total_tokens }}</strong>
-                            {{ s.total_tokens | plural(("токен", "токена", "токенов")) }}
+                        <div class="stats-entry"><strong>{{ info.total_tokens }}</strong>
+                            {{ info.total_tokens | plural(("токен", "токена", "токенов")) }}
                         </div>
-                        {% else %}
-                        В разработке
-                        {% endif %}
                     </div>
                 </a>
-                <a href="/karaim" class="lang-container">
-                    <!-- <div class="lang-info"> -->
-                    <h2>Караимский</h2>
-                    <div class="add-info">тюркский</div>
-                    <!-- </div> -->
-                    <div class="stats">
-                        {% set s = stats.karaim %}
-                        {% if s %}
-                        <div class="stats-entry"><strong>{{ s.total_texts }}</strong>
-                            {{ s.total_texts | plural(("текст", "текста", "текстов")) }}
-                        </div>
-                        <div class="stats-entry"><strong>{{ s.total_sentences }}</strong>
-                            {{ s.total_sentences | plural(("предложение", "предложения", "предложений")) }}
-                        </div>
-                        <div class="stats-entry"><strong>{{ s.total_tokens }}</strong>
-                            {{ s.total_tokens | plural(("токен", "токена", "токенов")) }}
-                        </div>
-                        {% else %}
-                        В разработке
-                        {% endif %}
-                    </div>
+                {% else %}
+                <a href="/{{corpus}}" class="lang-container disabled">
+                    <h2>{{info.lang_label}}</h2>
+                    <div class="add-info">{{info.lang_family}}</div>
+                    <div class="stats">В разработке</div>
                 </a>
-                <a class="lang-container disabled">
-                    <!-- <div class="lang-info"> -->
-                    <h2>Хваршинский</h2>
-                    <div class="add-info">нахско-дагестанский</div>
-                    <!-- </div> -->
-
-                    <div class="stats">
-                        В разработке
-                    </div>
-                </a>
+                {% endif %}
+                {% endfor %}
             </div>
+
             <div class="features">
                 <div class="feature">
                     <h2>

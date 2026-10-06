@@ -1,8 +1,12 @@
 id: karaim
 
+enabled: True
+
 name:
   ru: Караимский
   en: Karaim
+
+language_family: тюркский
 
 # Опции <select> справа от строки поиска.
 languages:

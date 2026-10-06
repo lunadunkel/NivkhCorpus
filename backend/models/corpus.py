@@ -23,6 +23,9 @@ class CorpusConfig(BaseModel):
     """
 
     id: str
+    name: dict
+    enabled: bool
+    language_family: str
     languages: list[LanguageOption]
     search: SearchConfig = Field(default_factory=SearchConfig)
     keyboard: list[list[str]] = []

@@ -1,8 +1,12 @@
 id: nivkh
 
+enabled: True
+
 name:
   ru: Нивхский
   en: Nivkh
+
+language_family: изолят
 
 # Опции <select> справа от строки поиска.
 languages:

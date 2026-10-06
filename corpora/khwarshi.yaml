@@ -1,0 +1,13 @@
+id: khwarshi
+
+enabled: False
+
+name:
+  ru: Хваршинский
+  en: Khwarshi
+
+language_family: нахско-дагестанский
+
+languages:
+- { value: khwarshi, label: Хварш, selected: true }
+- { value: russian, label: Рус }
