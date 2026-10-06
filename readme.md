@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/english_version-4C7D6E?logo=readme&logoColor=white&labelColor=254038)]([https://github.com/jonatasemidio/multilanguage-readme-pattern/blob/master/README.md](https://github.com/lunadunkel/NivkhCorpus/blob/main/readme.en.md))
+[![en](https://img.shields.io/badge/english_version-4C7D6E?logo=readme&logoColor=white&labelColor=254038)](https://github.com/lunadunkel/NivkhCorpus/blob/main/readme.en.md)
 
 # Корпус языков НИВЦ МГУ
 
