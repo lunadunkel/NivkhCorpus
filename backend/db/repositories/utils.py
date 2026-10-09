@@ -1,5 +1,6 @@
 import hashlib
 import json
+from datetime import datetime
 from bson import ObjectId
 
 async def drop_collection(collection):
@@ -13,6 +14,8 @@ def clean(obj):
             k: (str(v) if isinstance(v, ObjectId) else clean(v))
             for k, v in obj.items()
         }
+    if isinstance(obj, datetime):
+        return obj.strftime("%d.%m.%Y")
     return obj
 
 def make_hash(query):

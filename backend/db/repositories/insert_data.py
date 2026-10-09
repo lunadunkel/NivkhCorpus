@@ -25,6 +25,7 @@ async def main():
     preprocessing = Json2MongoProcessing(Path(DATA_PATH), corpus.ingest.model_dump(), corpus.id, meta)
     collection = get_collection(lang, 'sentences')
     if args.drop_collection:
+        print(args.drop_collection)
         await drop_collection(collection)
 
     for file in sorted(os.listdir(DATA_PATH)):

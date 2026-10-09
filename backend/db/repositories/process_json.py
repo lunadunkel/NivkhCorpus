@@ -4,6 +4,7 @@
     docs = processing.process_json("Solovej.json")
 """
 
+from datetime import datetime
 import json
 import re
 import unicodedata as ud
@@ -24,7 +25,7 @@ HOMOGLYPHS = {
     "Р": "P", "С": "C", "Т": "T", "У": "Y", "Х": "X",
 }
 CYR_FROM_LAT = {lat: cyr for cyr, lat in HOMOGLYPHS.items()}
-
+DATE_FORMAT = "%d.%m.%Y"
 
 def is_cyrillic(char: str) -> bool:
     return "CYRILLIC" in ud.name(char, "")
@@ -84,6 +85,8 @@ class Json2MongoProcessing:
         for key, value in sent.items():
             if key == "tokens" or key in self.drop_fields:
                 continue
+            if key == "metadata" and isinstance(value, dict):
+                value = self.metadata(value)
             if isinstance(value, str):
                 value = self.clean(value, key)
                 if value in PLACEHOLDERS:
@@ -93,6 +96,23 @@ class Json2MongoProcessing:
         doc["tokens"] = [self.token(tok, pos) for pos, tok in enumerate(sent["tokens"])]
         doc["length"] = len(doc["tokens"])
         return doc
+
+    def metadata(self, meta: dict[str, Any]) -> dict[str, Any]:
+        """Привести metadata к виду для Mongo: date из строки в datetime."""
+        new_meta = dict(meta)
+        raw = new_meta.pop("date", None)
+        if isinstance(raw, str):
+            raw = ud.normalize("NFC", raw).strip()
+            if raw not in PLACEHOLDERS:
+                try:
+                    new_meta["date"] = datetime.strptime(raw, DATE_FORMAT)
+                except ValueError:
+                    raise ValueError(
+                        f"metadata.date: ожидался формат ДД.ММ.ГГГГ, получено {raw!r}"
+                    ) from None
+        elif raw is not None:
+            new_meta["date"] = raw   # уже не строка, не трогаем
+        return new_meta
 
     def token(self, tok: dict[str, Any], pos: int) -> dict[str, Any]:
         new_tok: dict[str, Any] = {"idx": pos, "itoken": int(tok["itoken"])}
@@ -167,6 +187,6 @@ if __name__ == "__main__":
     meta = {search["translation_field"], search["sentence_text_field"]}
     processing = Json2MongoProcessing(source.parent, config["ingest"], config["id"], meta)
     docs = processing.process_json(source.name)
-    print(json.dumps(docs[:1], ensure_ascii=False, indent=2))
+    print(json.dumps(docs[:1], ensure_ascii=False, indent=2, default=str))
     print(f"{source.name}: {len(docs)} предложений, "
           f"{sum(len(d['tokens']) for d in docs)} токенов")

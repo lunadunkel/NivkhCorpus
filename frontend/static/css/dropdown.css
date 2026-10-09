@@ -1,0 +1,303 @@
+.dropdown {
+    --dropdown-arrow: url('../images/keyboard_arrow_down.svg');
+    --dropdown-arrow-size:24px;
+    --check-size: 18px;
+    --check-bg: var(--100);
+
+    position: relative;
+    display: inline-block;
+}
+
+.filter {
+    --filter-sort: url('../images/sort.svg');
+    --filter-sort-size:24px;
+    position: relative;
+    display: inline-block;
+    --check-size: 18px;
+    --check-bg: var(--100);
+    
+}
+
+/* ---------- кнопка ---------- */
+
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--200);
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      flex: none;
+      width: var(--dropdown-arrow-size);
+      height: var(--dropdown-arrow-size);
+      background: var(--dropdown-arrow) no-repeat center / contain;
+      transition: rotate 0.2s ease;
+    }
+}
+
+
+.dropdown[open] > .dropdown-toggle::after {
+    rotate: 180deg;
+}
+
+/* .dropdown-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+} */
+
+/* счётчик выбранных, необязательный */
+.dropdown-count {
+    min-width: 20px;
+    border-radius: 10px;
+    background: var(--200);
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 2px;
+}
+
+.dropdown-count[hidden] {
+    display: none;
+}
+
+/* ---------- окно ---------- */
+
+.dropdown-panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* min-width: max(100%, 180px); */
+    max-height: 165px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    border: 1px solid var(--200);
+    border-radius: 6px;
+    background: white;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.dropdown[open] > .dropdown-panel {
+    animation: dropdown-in 0.15s ease;
+}
+
+@keyframes dropdown-in {
+    from {
+        opacity: 0;
+        translate: 0 -4px;
+    }
+}
+
+/* ---------- пункты ---------- */
+
+.dropdown-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-option input {
+    appearance: none;
+    flex: none;
+    width: var(--check-size);
+    height: var(--check-size);
+    margin: 0;
+    border-radius: 3px;
+    background: var(--100) no-repeat center / 14px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.dropdown-option input:checked {
+    background-color: var(--500);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+
+
+
+/* filter */
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px
+}
+
+.filter-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 12px;
+    border: 1px solid var(--200);
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: '';
+      flex: none;
+      width: var(--filter-sort-size);
+      height: var(--filter-sort-size);
+      background: var(--filter-sort) no-repeat center / contain;
+      transition: rotate 0.2s ease;
+    }
+}
+
+.filter[open] > .filter-panel {
+    animation: dropdown-in 0.15s ease;
+}
+
+.filter-panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* min-width: max(100%, 180px); */
+    max-height: 165px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 6px;
+    border: 1px solid var(--200);
+    border-radius: 6px;
+    background: white;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.filter-option input {
+    appearance: none;
+    flex: none;
+    width: var(--check-size);
+    height: var(--check-size);
+    margin: 0;
+    border-radius: 100000px;
+    background: var(--check-bg) no-repeat center / 14px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.filter-option input:checked {
+    background-color: var(--500);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E");
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.aux-functions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+    #download-texts {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .filter-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        white-space: normal;
+        overflow: visible;
+    }
+
+    .filter-container > :first-child {
+        flex: 0 0 100%;
+    }
+
+    .filter-container > :not(:first-child) {
+        flex: 1 0 auto; /* ширина по содержимому + растягивание на остаток строки */
+        min-width: 0;
+    }
+
+    .filter-toggle, .dropdown-toggle {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .info-text {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .query-text {
+        overflow-y: scroll;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+    }
+
+    .filter-panel,
+    .dropdown-panel {
+        padding-top: 24px;
+        position: fixed;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: auto;
+        max-width: none;
+        max-height: 70vh;
+        overflow-y: auto;
+        transform: none;
+        margin: 0;
+        padding-bottom: calc(16px + env(safe-area-inset-bottom));
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+    }
+
+    
+}

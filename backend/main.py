@@ -11,11 +11,21 @@ from backend.api.seo import router as seo_router
 from backend.core import fetch_stats
 from backend.core.templates import TEMPLATES
 from backend.core.config import CORPORA, FRONTEND_DIR, TEMPLATES_DIR
+from backend.db.database import get_collection
 from backend.db.indexes import ensure_indexes
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    for corpus_id in CORPORA:
+    for corpus_id, cfg in CORPORA.items():
+        collection = get_collection(corpus_id, 'sentences')
+        genres = await collection.distinct("metadata.genre")
+        genres = {genre: f'g{number}' for number, genre in enumerate(sorted(genres))}
+        dialects = await collection.distinct("metadata.dialect")
+        dialects = {dialect: f'd{number}' for number, dialect in enumerate(sorted(dialects))}
+        dates = await collection.distinct("metadata.date")
+
+        meta = {'genre': genres, 'dialect': dialects, "date": len(dates) > 1}
+        CORPORA[corpus_id] = cfg.model_copy(update={"meta": meta})
         await ensure_indexes(corpus_id)
     yield
 

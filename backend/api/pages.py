@@ -54,6 +54,7 @@ async def get_output_data(request: Request, job_id: str, offset: int, limit: int
     return JSONResponse({
         "results": [clean(doc) for doc in result["results"]],
         "length": result["length"],
+        "queries": result["queries"],
     })
 
 # dictionary.html

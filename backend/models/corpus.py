@@ -37,6 +37,7 @@ class CorpusConfig(BaseModel):
     alphabet_order: list[str] = []
     ingest: IngestConfig | None = None
     indexes: list[str] = Field(default_factory=lambda: list(DEFAULT_INDEXED_FIELDS))
+    meta: dict[str, dict] = {}
 
 
     @field_validator("indexes")

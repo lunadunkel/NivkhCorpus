@@ -1,5 +1,6 @@
 import { WordManager, keyboardActivate, actionKeyboard, lemmaButton, wordformButton } from './click_based_fts.js';
-import { createDiv } from './create_div.js';
+import { createDiv, fillFrame } from './create_div.js';
+import { showSearchHint } from './hint.js';
 
 const corpus = JSON.parse(document.getElementById("corpus-config").textContent);
 
@@ -18,7 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
 	parentFrame.appendChild(frame);
     document.getElementById("remove-0").style.display = "none";
 
+	const jobId = new URLSearchParams(window.location.search).get("job_id");
+		if (jobId) restoreForm(jobId);
 });
+
+
+async function restoreForm(jobId) {
+	const response = await fetch(`/${corpus.id}/search/form?job_id=${encodeURIComponent(jobId)}`);
+	if (!response.ok) return;
+	const forms = await response.json();
+	for (let i = 1; i < forms.length; i++) {
+		const frames = document.querySelectorAll(".main-searching-frame");
+		manager.add(frames[frames.length - 1].querySelector('[id^="add-"]'));
+	}
+	document.querySelectorAll(".main-searching-frame")
+		.forEach((frame, i) => fillFrame(frame, forms[i]));
+}
 
 document.addEventListener("input", (e) => {
   if (e.target.closest(".main-searching-frame")) {
@@ -28,17 +44,6 @@ document.addEventListener("input", (e) => {
 });
 
 let hintTimer = null;
-
-function showSearchHint(message) {
-  const hint = document.getElementById("search-hint");
-  if (!hint) return;
-  hint.textContent = message;
-  hint.classList.add("is-visible");
-  clearTimeout(hintTimer);
-  hintTimer = setTimeout(() => {
-    hint.classList.remove("is-visible");
-  }, 3000); // само гаснет через 3 c
-}
 
 document.getElementById("search").addEventListener("click", async () => {
 	const forms = document.querySelectorAll(".main-searching-frame");

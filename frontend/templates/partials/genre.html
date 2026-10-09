@@ -1,0 +1,11 @@
+<details class="dropdown">
+    <summary class="dropdown-toggle">
+        Жанр текста
+        <span class="dropdown-count" hidden></span>
+    </summary>
+    <div class="dropdown-panel">
+        {%for name, code in corpus.meta.genre.items() %}
+        <label class="dropdown-option"><input type="checkbox" name="genre" value="{{code}}"> {{ name }}</label>
+        {%endfor%}
+    </div>
+</details>

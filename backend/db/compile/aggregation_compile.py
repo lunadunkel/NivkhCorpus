@@ -17,8 +17,11 @@ class AggregatePipeline:
                 "translation_text": f"${self.search.sentence_text_field}",
                 "text": 1,
                 "final_indexes": 1,
+                "genre": "$metadata.genre",
+                "dialect": "$metadata.dialect",
                 "author": '$metadata.author',
-                "title": '$metadata.title_r'
+                "title": '$metadata.title_r',
+                "date": "$metadata.date"
             }
 
         return {'$project': project}

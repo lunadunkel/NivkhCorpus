@@ -417,21 +417,44 @@ input[type="image"]:focus {
     background-size: 24px;
     background-repeat: no-repeat;
     background-position: 80%;
-
-
-    /* &::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 20px;
-      height: 20px;
-      background: black;
-    } */
 }
 
+.show-more {
+    --show-more-arrow: url('../images/keyboard_arrow_down.svg');
+    --show-more-arrow-size: 24px;
 
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 0;
+    border: none;
+    background: none;
 
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    list-style: none; /* убирает треугольник у summary */
+}
+
+.show-more::-webkit-details-marker {
+    display: none;
+}
+
+.show-more::after {
+    content: '';
+    flex: none;
+    width: var(--show-more-arrow-size);
+    height: var(--show-more-arrow-size);
+    background: var(--show-more-arrow) no-repeat center / contain;
+    /* transition: rotate 0.2s ease; */
+}
+
+/* открыто: внутри <details> или у кнопки с aria-expanded */
+[open] > .show-more::after,
+.show-more[aria-expanded="true"]::after {
+    rotate: 180deg;
+}
 
 .letter-container {
   display: flex;
@@ -593,7 +616,7 @@ input[type="checkbox"] {
   width: 16px;
   height: 16px;
   border: 1px solid var(--100);
-  accent-color: rgba(234, 242, 234, 1);
+  accent-color: var(--800);
   cursor: pointer;
 }
 
@@ -699,6 +722,51 @@ dialog:focus {
       /* background-color: var(--100); */
       opacity: 0.8;
     }
+
+    &.info {
+      cursor: auto;
+      /* clip-path: rect(0 300px 30px 0); */
+      text-overflow: ellipsis;
+      overflow: hidden; 
+      max-width: 380px;
+      height: 30px;
+      white-space: nowrap;
+      display:inline-block;
+      padding: 8px 6px;
+      background: var(--50);
+      box-sizing: border-box;
+      color: var(--600);
+      border: 0px solid var(--50);
+      border-radius: 6px;
+      
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+}
+
+.query-text {
+  display: none;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.query {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  p {
+    color: var(--500);
+  }
+  
 }
 
 .right-buttons {
@@ -942,7 +1010,7 @@ input[type="radio"] {
     height: fit-content;
     justify-self: center;
     margin: 80px auto 0;
-    gap: 2rem;
+    gap: 24px;
     flex-direction: column;
 
   @media screen and (max-width: 486px) {
@@ -969,7 +1037,8 @@ input[type="radio"] {
 .statistics {
   display: flex;
   flex-direction: row;
-  gap: 14px;
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .word_stat {
@@ -1082,6 +1151,7 @@ input[type="radio"] {
 .additional-info {
   cursor: pointer;
   color: var(--600);
+  width: fit-content;
   text-decoration: underline;
 }
 .real-output:last-child{

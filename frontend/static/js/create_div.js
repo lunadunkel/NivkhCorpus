@@ -126,20 +126,16 @@ function bindEvents(root, value, manager) {
             };
         });
         root.querySelector("#pop-up-" + value).close();
-        const parts = [];
-        for (const [name, values] of Object.entries(gramQuery)) {
-            // let part;
-            let part = values.length > 1 ? `(${values.join('|')})` : values[0];
-            // } else {
-            //     const key = name.replace('[]', '');
-            //     const vals = values.map(v => `${key}=${v}`);
-            //     part = vals.length > 1 ? `(${vals.join('|')})` : vals[0];
-            // }
-            parts.push(part);
-        }
-        root.querySelector("#regex-" + value).value = parts.join(' & ');
+        const corpusId = JSON.parse(document.getElementById("corpus-config").textContent).id;
+        fetch(`/${corpusId}/search/preview`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formToObject(root)),
+        })
+            .then(r => r.json())
+            .then(data => { root.querySelector("#regex-" + value).value = data.text; });
 
-        root.querySelector("#pop-up-" + value).close(); // это уже было
+        root.querySelector("#pop-up-" + value).close();
     });
 
     dialog.querySelectorAll(".feature-block").forEach((block) => {
@@ -153,6 +149,41 @@ function bindEvents(root, value, manager) {
         }
     });
 
+}
+
+function formToObject(form) {
+    const obj = {};
+    for (const [key, value] of new FormData(form).entries()) {
+        if (obj[key] === undefined) obj[key] = value;
+        else if (Array.isArray(obj[key])) obj[key].push(value);
+        else obj[key] = [obj[key], value];
+    }
+    return obj;
+}
+
+export function fillFrame(root, data) {
+    const index = root.id.match(/\d+$/)[0];
+    const values = name => [].concat(data[name] ?? []);
+
+    const select = root.querySelector("#extension-" + index);
+    if (data["language-select"]) {
+        select.value = data["language-select"];
+        select.dispatchEvent(new Event("change"));
+    }
+    const type = data["search-type"] === "token" ? "#wordform-" : "#lemma-";
+    root.querySelector(type + index).click();
+
+    const word = root.querySelector("#correct_placeholder-" + index);
+    word.value = data["input_word"] ?? "";
+    word.dispatchEvent(new Event("input", { bubbles: true }));
+
+    let checked = false;
+    root.querySelectorAll('dialog input[type="checkbox"][name]').forEach(cb => {
+        cb.checked = values(cb.name).includes(cb.value);
+        checked ||= cb.checked;
+    });
+
+    if (checked) root.querySelector("#checked-categories-" + index).click();
 }
 
 

@@ -4,11 +4,38 @@
 <div class="search_output" id="output-info">
     <div class="top-back-container">
         <a class="back_to_search" href="/{{corpus.id}}">Вернуться к поиску</a>
+    </div>
+    <div class="query">
         <div class="statistics">
-            Найдено:
-            <div class="word_stat">
-                <div class="counter" id="documents">0 примеров</div>
-            </div>
+            <div class="counter" id="documents">Найдено 0 примеров</div>
+        </div>
+        <div class="info-text">
+            <p id="conditions">По запросу</p>
+            <details>
+                <summary class="show-more" id="show-conditions">Показать условия</summary>
+            </details>
+        </div>
+        <div class="query-text" id="query-text">
+        </div>
+    </div>
+
+    <div class="aux-functions">
+        <div class="filter-container">
+            {% if corpus.meta.date%}
+            {% include "partials/sorting.html" %}
+            {% endif %}
+
+            {% if corpus.meta.dialect and corpus.meta.dialect | length > 1%}
+            {% include "partials/dialect.html" %}
+            {% endif %}
+
+            {% if corpus.meta.genre and corpus.meta.genre | length > 1%}
+            {% include "partials/genre.html" %}
+            {% endif %}
+
+        </div>
+        <div class="filter-container">
+            {% include "partials/download.html" %}
         </div>
     </div>
 
@@ -38,4 +65,5 @@
 
 {% block scripts %}
 <script src="/static/js/search_output.js"></script>
+<script src="/static/js/dropdown.js"></script>
 {% endblock %}

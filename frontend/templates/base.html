@@ -27,6 +27,8 @@ page — PageMeta текущей страницы
     {# --- стили: общие, потом корпусные, потом постраничные --- #}
     <link rel="stylesheet" href="/static/css/reset.css" />
     <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/css/dropdown.css" />
+
     {% if corpus %}
     {% for href in corpus.assets.styles %}
     <link rel="stylesheet" href="/static/css/{{ href }}" />

@@ -1,13 +1,45 @@
 const params = new URLSearchParams(window.location.search);
 
+document.addEventListener('click', (event) => {
+    document.querySelectorAll('.dropdown[open]').forEach((dropdown) => {
+        if (!dropdown.contains(event.target)) dropdown.open = false;
+    });
+    document.querySelectorAll('.filter[open]').forEach((filter) => {
+        if (!filter.contains(event.target)) filter.open = false;
+    });
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    const dropdown = document.querySelector('.dropdown[open]');
+    const filter = document.querySelector('.filter[open]');
+    if (dropdown) {
+        dropdown.open = false;
+    }
+    else if (filter) {
+        filter.open = false;
+    }
+    else return;
+    // dropdown.querySelector('.dropdown-toggle').focus();
+});
+
+
 const corpus = JSON.parse(document.getElementById("corpus-config").textContent);
+const FILTER_ENDPOINT = `/${corpus.id}/search/update_filter`;
+
+let controller = null;
+let replacing = false;
+let debounceTimer = null;
+
 const jobId = params.get("job_id");
 let currentOffset = 0;
 const PAGE_SIZE = 20;
 
+document.querySelector(".back_to_search").href = `/${corpus.id}?job_id=${encodeURIComponent(jobId)}`;
+
 document.getElementById("new-search").addEventListener("click", () => {
   sessionStorage.removeItem("search-form-data");
-  window.location.href = "/${corpus.id}";
+  window.location.href = `/${corpus.id}`;
 });
 
 
@@ -23,6 +55,81 @@ window.addEventListener('scroll', () => {
 
 goUpBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
+function collectFilters() {
+    const filters = {};
+    document.querySelectorAll('.dropdown input:checked').forEach((input) => {
+        (filters[input.name] ??= []).push(input.value);
+    });
+    return filters;
+}
+
+function currentSort() {
+    return document.querySelector('.filter input[name="sort"]:checked')?.value ?? 'default';
+}
+
+async function loadResults({ replace }) {
+    if (!replace && replacing) return;
+
+    controller?.abort();
+    controller = new AbortController();
+    replacing = replace;
+
+    const params = new URLSearchParams({
+        job_id: jobId,
+        sort: currentSort(),
+        offset: replace ? 0 : currentOffset,
+    });
+
+    try {
+        const response = await fetch(`${FILTER_ENDPOINT}?${params}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(collectFilters()),
+            signal: controller.signal,
+        });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+
+        if (replace) {
+            updateCounter(data.length);
+            document.getElementById("no-found-data").style.display = data.length === 0 ? "block" : "none";
+        }
+        process_output(data.results, data.length, { replace });
+        replacing = false;
+    } catch (err) {
+        if (err.name === 'AbortError') return;
+        replacing = false;
+        console.error('Не удалось загрузить результаты:', err);
+    }
+}
+
+document.querySelectorAll('.dropdown').forEach((dropdown) => {
+    const counter = dropdown.querySelector('.dropdown-count');
+
+    const updateDropdownCounter = () => {
+        if (!counter) return;
+        const count = dropdown.querySelectorAll('input:checked').length;
+        counter.textContent = count;
+        counter.hidden = count === 0;
+    };
+
+    dropdown.addEventListener('change', () => {
+        updateDropdownCounter();
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => loadResults({ replace: true }), 300);
+    });
+    updateDropdownCounter(); 
+});
+
+document.querySelectorAll('.filter input[name="sort"]').forEach((radio) => {
+    radio.addEventListener('change', () => {
+        radio.closest('.filter').open = false;
+        clearTimeout(debounceTimer);
+        loadResults({ replace: true });
+    });
 });
 
 async function fetchData(offset = 0) {
@@ -46,19 +153,12 @@ fetchData(0).then(data => {
         return;
     }
     process_output(data.results, data.length);
-    currentOffset += data.results.length;
-    updateShowMore(data.length);
+    showQueries(data.queries)
 });
 
 
-document.getElementById('show-more').addEventListener('click', () => {
-    fetchData(currentOffset).then(data => {
-        if (!data) return;
-        process_output(data.results);
-        currentOffset += data.results.length;
-        updateShowMore(data.length);
-    });
-});
+document.getElementById('show-more').addEventListener('click', () => 
+    loadResults({ replace: false }));
 
 
 function updateShowMore(total) {
@@ -68,14 +168,28 @@ function updateShowMore(total) {
 
 function updateCounter(total) {
     const element = document.getElementById('documents');
+    var prefix = "Найдено ";
     const str = total.toString();
     let word = " примеров";
     if (str.endsWith("1") && !str.endsWith("11")) {
+        prefix = "Найден "
         word = " пример";
     } else if (str.match(/[234]$/) && !str.match(/1[234]$/)) {
         word = " примера";
     }
-    element.textContent = str + word;
+    element.textContent = prefix + str + word;
+}
+
+function updateCondition(total) {
+    const element = document.getElementById('conditions');
+    const str = total.toString();
+    let word = " условий";
+    if (str.endsWith("1") && !str.endsWith("11")) {
+        word = " условия";
+    } else if (str.match(/[234]$/) && !str.match(/1[234]$/)) {
+        word = " условий";
+    }
+    element.textContent += " из " + str + " " + word;
 }
 
 function closeContext(card) {
@@ -132,8 +246,40 @@ async function addContext(id, card) {
     card.querySelector(".additional-info").textContent = "Скрыть глоссы";
 }
 
-function process_output(items, total) {
+function showQueries(queries) {
+
+    const box = document.getElementById("query-text");
+    const show = document.getElementById("show-conditions");
+
+    updateCondition(queries.length)
+
+    queries.filter(Boolean).forEach(text => {
+        const line = document.createElement("div");
+        line.classList = "simple-buttons info";
+        line.textContent = text;
+        box.appendChild(line);
+    });
+
+    show.addEventListener('click', () => {
+        if (box.checkVisibility()) {
+            box.style.display = "none"
+            show.textContent = "Показать условия"
+        }
+        else {
+            box.style.display = "flex"
+            show.textContent = "Скрыть условия"
+
+        }
+    })
+
+}
+
+function process_output(items, total, { replace = false } = {}) {
     const container = document.getElementById("all-documents");
+    if (replace) {
+        container.querySelectorAll('.real-output').forEach((el) => el.remove());
+        currentOffset = 0;
+    }
     
     for (const [idx, item] of items.entries()) {
         const real_output = document.createElement("div");
@@ -209,6 +355,23 @@ function process_output(items, total) {
         text_item.appendChild(add_info);
         real_output.appendChild(text_item);
         container.appendChild(real_output);
-        updateShowMore(total);
     }
+    currentOffset += items.length;
+    updateShowMore(total);
+}
+
+function getActiveFilters() {
+  const filters = {};
+  document.querySelectorAll(".filter-cb:checked").forEach(cb => {
+    (filters[cb.name] ||= []).push(cb.value);
+  });
+  return filters;
+}
+
+function exportResults(format) {
+  const params = new URLSearchParams({ job_id: jobId, format });
+  for (const [key, values] of Object.entries(getActiveFilters())) {
+    values.forEach(v => params.append(key, v));    // append, чтобы мультивыбор не затирался
+  }
+  window.location.href = `/${corpus.id}/export?${params}`; 
 }

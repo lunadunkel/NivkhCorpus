@@ -319,7 +319,7 @@ grammar:
   - { value: "Yes", label: Reflex, tooltip: Рефлексив, field: Reflex }
   - { value: "Yes", label: Reciprocal, tooltip: Реципрок, field: Reciprocal }
   - { value: "yes", label: Obj, tooltip: Объект, field: clobj }
-  - { value: "yes", label: Pos, tooltip: Посссор, field: clpos }
+  - { value: "yes", label: Pos, tooltip: Посессор, field: clpos }
 
 - id: coord
   match: any
