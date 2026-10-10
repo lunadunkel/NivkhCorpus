@@ -1,12 +1,11 @@
 import csv, io
 from typing import Any, Literal
-from urllib.parse import quote
 from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import StreamingResponse
 
 from backend.core.config import COLLECTION_RESULTS, COLLECTION_JOB, COLLECTION_SENT
 from backend.core.deps import CorpusDep
-from backend.core.search_service import run_search_db, save_results
+from backend.core.search_service import attachment, run_search_db, save_results
 from backend.db.compile.process_query import queries_from_doc
 from backend.db.database import get_collection
 
@@ -17,9 +16,6 @@ SORT = {'default': {"idx": 1}, "old": {"result.date": 1}, "new": {"result.date":
 COLUMNS = {"result.text": "Текст", "result.translation_text": "Перевод", 
            "result.genre": "Жанр", "result.dialect": "Диалект",
            "result.author": "Автор", "result.title": "Название"} 
-
-def attachment(filename: str) -> dict:
-    return {"Content-Disposition": f"attachment; filename*=UTF-8''{quote(filename)}"}
 
 @router.get("")
 async def export(request: Request, corpus: CorpusDep, job_id: str, format: Literal["csv", "txt"]):

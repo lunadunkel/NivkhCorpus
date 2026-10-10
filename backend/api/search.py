@@ -46,3 +46,7 @@ async def search_form(job_id: str, corpus: CorpusDep):
 @router.post("/update_filter")
 async def update_texts(corpus: CorpusDep, job_id: str, condition: dict, sort: str = "default", offset: int = 0):
    return await search_service.get_meta(corpus, job_id, condition, sort, offset)
+
+@router.get("/copy={example_id}")
+async def copy_example(corpus: CorpusDep, example_id: str):
+   return await search_service.copy_example(corpus, example_id)

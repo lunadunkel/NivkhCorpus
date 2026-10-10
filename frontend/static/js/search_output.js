@@ -246,6 +246,32 @@ async function addContext(id, card) {
     card.querySelector(".additional-info").textContent = "Скрыть глоссы";
 }
 
+function showCopied(button) {
+    button.dataset.label ??= button.textContent;
+    button.textContent = 'Скопировано';
+    button.classList.add('copied');
+
+    clearTimeout(button._copyTimer);
+    button._copyTimer = setTimeout(() => {
+        button.textContent = button.dataset.label;
+        button.classList.remove('copied');
+    }, 1000);
+}
+
+function copyExample(example_id, button) {
+    const textPromise = fetch(`/${corpus.id}/search/copy=${example_id}`)
+        .then(r => {
+            if (!r.ok) throw new Error(`HTTP error! status: ${r.status}`);
+            return r.json();
+        })
+        .then(data => new Blob([data], { type: 'text/plain' }));
+
+    navigator.clipboard
+        .write([new ClipboardItem({ 'text/plain': textPromise })])
+        .then(() => showCopied(button))
+        .catch(error => console.error('Copy error:', error));
+}
+
 function showQueries(queries) {
 
     const box = document.getElementById("query-text");
@@ -341,6 +367,9 @@ function process_output(items, total, { replace = false } = {}) {
         main_text.appendChild(segmentation);
         main_text.appendChild(rus);
 
+        const elem_add = document.createElement('div');
+        elem_add.className = "example-additional";
+
         const add_info = document.createElement('div');
         add_info.className = "additional-info";
         add_info.textContent = "Показать глоссы";
@@ -350,9 +379,22 @@ function process_output(items, total, { replace = false } = {}) {
             await addContext(item['_id'], real_output);
         })
 
+        const copy = document.createElement('div');
+        copy.className = "content-copy";
+        copy.textContent = "Скопировать пример";
+
+        copy.addEventListener("click", async() => {
+
+            await copyExample(item['_id'], copy)
+        })
+
+        elem_add.appendChild(add_info);
+        elem_add.appendChild(copy);
+
+
         text_item.appendChild(top_item);
         text_item.appendChild(main_text);
-        text_item.appendChild(add_info);
+        text_item.appendChild(elem_add);
         real_output.appendChild(text_item);
         container.appendChild(real_output);
     }
@@ -362,7 +404,6 @@ function process_output(items, total, { replace = false } = {}) {
 
 function exportResults(format) {
   const params = new URLSearchParams({ job_id: jobId, format });
-  console.log(collectFilters())
   for (const [key, values] of Object.entries(collectFilters())) {
     values.forEach(v => params.append(key, v));    // append, чтобы мультивыбор не затирался
   }

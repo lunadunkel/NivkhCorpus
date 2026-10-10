@@ -1,10 +1,11 @@
+from shlex import quote
 from typing import Any
 import uuid
 from datetime import datetime, timezone
 
 from bson import ObjectId
 from bson.errors import InvalidId
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from motor.motor_asyncio import AsyncIOMotorCollection
 from pymongo.errors import DuplicateKeyError
 
@@ -17,6 +18,9 @@ from backend.db.database import get_collection
 from backend.db.repositories import search_jobs
 from backend.db.repositories.utils import clean, make_hash
 
+
+def attachment(filename: str) -> dict:
+    return {"Content-Disposition": f"attachment; filename*=UTF-8''{quote(filename)}"}
 
 def _to_object_id(doc_id: str) -> ObjectId | None:
     try:
@@ -160,3 +164,23 @@ async def get_meta(corpus: CorpusConfig, job_id: str, condition: dict[str, list[
     total = await collection.count_documents(query)
     docs = await collection.find(query).sort(SORTS[sort]).skip(offset).limit(limit).to_list(length=limit)
     return {"results": [doc["result"] for doc in docs if "result" in doc], "length": total}
+
+async def copy_example(corpus: CorpusConfig, example_id: str):
+    lang = corpus.id
+    collection = get_collection(lang, COLLECTION_SENT)
+    translation = corpus.search.sentence_text_field
+    project = {"segmented_text": 1, translation: 1, "glossed_text": 1, 
+               "metadata.author": 1, "metadata.title_r": 1, "metadata.source": 1}
+
+    filename = f"results.{format}"
+
+    result = await collection.find_one({"_id": example_id}, project)
+    if result:
+        example = f"""{result['metadata']['author']}: {result['metadata']['title_r']}
+{'\t'.join(result['segmented_text'].split())}
+{'\t'.join(result['glossed_text'].split())}
+{result[translation]}
+[{result['metadata']['source']}]
+"""
+        return example
+    return ''
