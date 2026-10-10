@@ -360,18 +360,13 @@ function process_output(items, total, { replace = false } = {}) {
     updateShowMore(total);
 }
 
-function getActiveFilters() {
-  const filters = {};
-  document.querySelectorAll(".filter-cb:checked").forEach(cb => {
-    (filters[cb.name] ||= []).push(cb.value);
-  });
-  return filters;
-}
-
 function exportResults(format) {
   const params = new URLSearchParams({ job_id: jobId, format });
-  for (const [key, values] of Object.entries(getActiveFilters())) {
+  console.log(collectFilters())
+  for (const [key, values] of Object.entries(collectFilters())) {
     values.forEach(v => params.append(key, v));    // append, чтобы мультивыбор не затирался
   }
+  sort = currentSort()
+  params.append("sort", sort)
   window.location.href = `/${corpus.id}/export?${params}`; 
 }

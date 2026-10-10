@@ -13,6 +13,7 @@ from backend.db.database import get_collection
 router = APIRouter(prefix="/{corpus_name}/export")
 
 FILTER_FIELDS = {"genre", "dialect"}
+SORT = {'default': {"idx": 1}, "old": {"result.date": 1}, "new": {"result.date": -1}}
 COLUMNS = {"result.text": "Текст", "result.translation_text": "Перевод", 
            "result.genre": "Жанр", "result.dialect": "Диалект",
            "result.author": "Автор", "result.title": "Название"} 
@@ -37,15 +38,17 @@ async def export(request: Request, corpus: CorpusDep, job_id: str, format: Liter
 
     query: dict[str, Any] = {"job_id": job_id}
     for field in FILTER_FIELDS:
+        mapping = {y: x for x, y in corpus.meta[field].items()}
         values = request.query_params.getlist(field)
         if values:
-            query[field] = {"$in": values}
+            print([mapping[x] for x in values])
+            query[f'result.{field}'] = {"$in": [mapping[x] for x in values]}
 
-    # print(query, {f"${c}": 1 for c in COLUMNS} | {"_id": 0})
-    cursor = collection.find(query, {c: 1 for c in COLUMNS.keys()} | {"_id": 0})
-    # print(cursor.to_list()[0])
-    # results = await cursor.to_list()
-    # print(results[0])
+    sorting = request.query_params.get('sort')
+    if sorting is None:
+        sorting = "default"
+    cursor = collection.find(query, {c: 1 for c in COLUMNS.keys()} | {"_id": 0}, sort=SORT[sorting])
+
     filename = f"results.{format}"
 
     if format == "csv":
