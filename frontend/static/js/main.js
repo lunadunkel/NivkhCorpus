@@ -43,12 +43,19 @@ document.addEventListener("input", (e) => {
   }
 });
 
-let hintTimer = null;
 
 document.getElementById("search").addEventListener("click", async () => {
 	const forms = document.querySelectorAll(".main-searching-frame");
 	const allData = [];
 	let hasAnyValue = false;
+
+	const errors = await Promise.all([...forms].map(form => form.syncText()));
+	const broken = errors.findIndex(Boolean);
+	if (broken !== -1) {
+		showSearchHint(`Слово ${broken + 1}: ${errors[broken]}`);
+		return;
+	}
+	
 	
 	forms.forEach(form => {
 		const formData = new FormData(form);

@@ -56,7 +56,7 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 
 @app.get("/")
 async def main_page(request: Request):
-    statistics = await fetch_stats.fetch_per_corpus()
+    statistics = await fetch_stats.fetch_per_corpus() 
     return TEMPLATES.TemplateResponse(request, "index.html", {"stats": statistics})
 
 # @app.get("/ping")

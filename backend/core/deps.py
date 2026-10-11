@@ -6,7 +6,7 @@ from backend.models.corpus import CorpusConfig
 
 def get_corpus(corpus_name: Annotated[str, Path()]) -> CorpusConfig:
     corpus = CORPORA.get(corpus_name)
-    if corpus is None:
+    if corpus is None or not corpus.enabled:
         raise HTTPException(404, f"Unknown corpus: {corpus_name}")
     return corpus
 

@@ -38,7 +38,7 @@
             {% if group.texts | length == 1 %}
             <div class="ref-single">{{ text_item(group.texts[0]) }}</div>
             {% else %}
-            <details class="ref-texts" {% if group.texts | length <=3 %}open{% endif %}>
+            <details class="ref-texts">
                 <summary>
                     {{ group.texts | length }}&nbsp;{{ group.texts | length | plural(("текст", "текста", "текстов")) }}
                 </summary>

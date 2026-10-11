@@ -3,6 +3,7 @@ from fastapi.responses import JSONResponse
 
 from backend.core.config import SITE
 from backend.core.deps import CorpusDep
+from backend.core.gram_query import text_to_checkboxes
 from backend.core.it_text import format_grammar
 from backend.core.templates import TEMPLATES
 from backend.core import search_service
@@ -34,7 +35,18 @@ async def search_dictionary(request: Request, corpus: CorpusDep):
 async def preview(request: Request, corpus: CorpusDep):
    form = await request.json()
    query = QueryBuilder(corpus, [form]).queries[0]
-   return {"text": format_grammar(query.conditions)}
+   return {"text": format_grammar(QueryBuilder(corpus, []).checkbox_conditions(form))}
+
+@router.post("/checkboxes")
+async def checkboxes(request: Request, corpus: CorpusDep):
+   text = (await request.json()).get("text", "")
+   try:
+      checked = text_to_checkboxes(text, corpus)
+   except ValueError as e:
+      # create_div.js покажет текст в подсказке, см. gram_query.py
+      return JSONResponse({"error": str(e)}, status_code=422)
+   return {"checked": checked, 
+           "text": format_grammar(QueryBuilder(corpus, []).checkbox_conditions(checked))}
 
 @router.get("/form")
 async def search_form(job_id: str, corpus: CorpusDep):

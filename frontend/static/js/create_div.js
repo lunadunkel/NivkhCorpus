@@ -1,13 +1,92 @@
 import {actionKeyboard, keyboardActivate, wordformButton, lemmaButton} from './click_based_fts.js';
+import { showSearchHint } from './hint.js';
 
+const corpusId = JSON.parse(document.getElementById("corpus-config").textContent).id;
 
 
 function bindEvents(root, value, manager) {
 
-     let gramState = {}; // состояние чекбоксов для этого фрейма
-
     const v = value;
     const dialog = root.querySelector("#pop-up-" + v);
+    const regex = root.querySelector("#regex-" + value);
+    const boxes = () => dialog.querySelectorAll('input[type="checkbox"]');
+    let saved = []; // галочки на момент открытия модала
+
+    // Строка, по которой сейчас отмечены галочки, и ошибка её разбора.
+    let synced = { text: "", error: "" };
+    let pending = null; // разбор, который ещё ждёт ответа сервера
+
+    // Галочки -> строка. После «Применить» и при восстановлении формы.
+    function refreshText() {
+        return fetch(`/${corpusId}/search/preview`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formToObject(root)),
+        })
+            .then(r => r.json())
+            .then(data => {
+                regex.value = data.text;
+                synced = { text: data.text, error: "" };
+            });
+    }
+
+    // Строка -> галочки. Возвращает текст ошибки или "".
+    // Зовётся при уходе из поля и перед каждым поиском (main.js): поиск
+    // сверяет то, что написано прямо сейчас, и не зависит от того, успел ли
+    // сработать change. Ищется всегда по галочкам, строка лишь их отмечает.
+    function syncText() {
+        const text = regex.value.trim();
+        if (text === synced.text) return Promise.resolve(synced.error);
+        if (pending?.text !== text) {
+            const promise = parseText(text).finally(() => {
+                if (pending?.text === text) pending = null;
+            });
+            pending = { text, promise };
+        }
+        return pending.promise;
+    }
+
+    async function parseText(text) {
+        let checked = {};
+        let canonical = "";
+        if (text) {
+            const response = await fetch(`/${corpusId}/search/checkboxes`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text }),
+            });
+            const data = await response.json();
+            // пока ждали ответ, строку успели поменять — разбираем новую
+            if (regex.value.trim() !== text) return syncText();
+            if (!response.ok) {
+                // галочки не трогаем; «Найти» не пустит, пока строку не исправят
+                synced = { text, error: data.error };
+                showSearchHint(data.error);
+                return data.error;
+            }
+            checked = data.checked;
+            canonical = data.text;
+        }
+        // пустая строка снимает все галочки, без запроса к серверу
+        boxes().forEach(cb => {
+            cb.checked = (checked[cb.name] ?? []).includes(cb.value);
+        });
+        regex.value = canonical;
+        synced = { text: canonical, error: "" };
+        return "";
+    }
+
+    root.syncText = syncText;
+    regex.addEventListener("change", syncText);
+    regex.addEventListener("input", () => {
+        if (!regex.value.trim()) syncText();
+    });
+    regex.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault(); // иначе Enter отправит <form> и перезагрузит страницу
+            regex.blur();       // blur вызовет change
+        }
+    });
 
     const select = root.querySelector("#extension-" + value);
     keyboardActivate(select);
@@ -57,8 +136,13 @@ function bindEvents(root, value, manager) {
     });
 
     root.querySelector("#gram-chosen-" + value).addEventListener("click", function(e) {
-        root.querySelector("#pop-up-" + value).showModal();
+        saved = [...boxes()].map(cb => cb.checked);
+        dialog.showModal();
     });
+
+    // закрыли без «Применить» (крестик или Esc) — возвращаем, как было
+    const restore = () => boxes().forEach((cb, i) => cb.checked = saved[i]);
+    dialog.addEventListener("cancel", restore);
 
     const letters = root.querySelectorAll(".letters");
     letters.forEach((item) => {
@@ -73,21 +157,8 @@ function bindEvents(root, value, manager) {
     });
 
     root.querySelector("#close-modal-" + value).addEventListener("click", function(e) {
-        if (Object.keys(gramState).length === 0) {
-            dialog.querySelectorAll('input[type="checkbox"]')
-                .forEach(cb => cb.checked = false);
-        } else {
-            dialog.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-                const key = cb.name + "__" + cb.value;
-                if (key in gramState) cb.checked = gramState[key];
-            });
-        }
-        dialog.close()
-        // root.querySelector("#pop-up-" + value).close();
-        // const checkboxes = root.querySelectorAll('input[type="checkbox"]');
-        // checkboxes.forEach(checkbox => {
-        //     checkbox.checked = false;
-        // })
+        restore();
+        dialog.close();
     });
 
     root.querySelector('#check-categories-' + value).addEventListener('click', function () {
@@ -105,37 +176,11 @@ function bindEvents(root, value, manager) {
     });
 
     root.querySelector("#checked-categories-" + value).addEventListener('click', function() {
-        gramState = {};
-        dialog.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-            if (!cb.name) {
-                return
-            }
-            gramState[cb.name + "__" + cb.value] = cb.checked;
-        });
-
-        const gramQuery = {}
-        const checkboxes = root.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-            const categoryName = checkbox.name;
-            if (checkbox.checked && categoryName) {
-                const categoryValue = checkbox.value;
-                if (!(categoryName in gramQuery)) {
-                    gramQuery[categoryName] = [];
-                }
-                gramQuery[categoryName].push(categoryValue);
-            };
-        });
-        root.querySelector("#pop-up-" + value).close();
-        const corpusId = JSON.parse(document.getElementById("corpus-config").textContent).id;
-        fetch(`/${corpusId}/search/preview`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formToObject(root)),
-        })
-            .then(r => r.json())
-            .then(data => { root.querySelector("#regex-" + value).value = data.text; });
-
-        root.querySelector("#pop-up-" + value).close();
+        dialog.close();
+        // галочки теперь главнее строки: пока /preview не ответил, старая
+        // строка считается разобранной, чтобы «Найти» не перебил галочки ею
+        synced = { text: regex.value.trim(), error: "" };
+        refreshText();
     });
 
     dialog.querySelectorAll(".feature-block").forEach((block) => {
@@ -183,6 +228,7 @@ export function fillFrame(root, data) {
         checked ||= cb.checked;
     });
 
+    // «Применить» соберёт строку из галочек через /preview
     if (checked) root.querySelector("#checked-categories-" + index).click();
 }
 

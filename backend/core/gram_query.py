@@ -1,190 +1,80 @@
-"""Строка грамматических признаков <-> IR.
-
-Нотация та же, что выдаёт `ir_text.format_grammar`:
-
-    VerbForm=Conv & Person[word]=2
-    (POS=(NOUN|VERB)|Classifier=Yes) & Case=(Dat|Loc)
-    Person[clpos]                      -- поле есть, значение любое
-
-`|` — ИЛИ, `&` — И. Скобки только группируют ИЛИ: `(A & B) | C` в IR
-не выражается, поэтому это ошибка. Поля и значения проверяются по YAML:
-имя поля уходит в запрос к монге, пропускать произвольное нельзя.
-"""
-
 import re
-from collections import defaultdict
 
-from backend.core.ir import AnyOf, Condition, Constraint, Scope
 from backend.models.corpus import CorpusConfig
-from backend.models.derived import person_object_values, search_fields
 
-GRAMMAR_FIELD = "added-gram-features"
-
-_TOKEN = re.compile(r"\s*(?:([()|&=])|([^\s()|&=]+))")
-
-
-class GramQueryError(ValueError):
-    def __init__(self, message: str, frame: int | None = None):
-        super().__init__(message)
-        self.message = message
-        self.frame = frame
+# Поле, Поле=Значение или Поле=(a|b)
+_PAIR = re.compile(r"([^\s()|&=]+)(?:\s*=\s*(?:\(([^()]*)\)|([^\s()|&=]+)))?")
+# то, что может стоять между парами
+_GLUE = re.compile(r"[\s()|&]*")
 
 
-def allowed_fields(corpus: CorpusConfig) -> dict[str, set[str]]:
-    """Поле тегсета -> допустимые значения, включая Person[clobj]/[clpos]."""
-    fields = search_fields(corpus)
-    person = corpus.search.person_object
-    if person is not None:
-        for path in person.paths.values():
-            fields[path] = person_object_values(corpus)
-    return fields
+def _checkbox_values(corpus: CorpusConfig) -> dict[str, list[str]]:
+    """name чекбокса -> его значения, в порядке YAML."""
+    out: dict[str, list[str]] = {}
+    for block in corpus.grammar:
+        for value in block.values:
+            out.setdefault(value.name(block.id), []).append(value.value)
+    return out
 
 
-def _resolve(name: str, options, what: str) -> str:
-    """Точное совпадение, иначе единственное без учёта регистра."""
+def _pick(name: str, options, what: str) -> str:
+    """Точное совпадение, иначе единственное без учёта регистра: dat -> Dat."""
     if name in options:
         return name
-    found = [o for o in options if o.lower() == name.lower()]
+    found = [option for option in options if option.lower() == name.lower()]
     if len(found) == 1:
         return found[0]
-    raise GramQueryError(f"неизвестное {what} «{name}»")
+    raise ValueError(f"{what} «{name}»")
 
 
-class _Parser:
-    def __init__(self, text: str, fields: dict[str, set[str]]):
-        self.fields = fields
-        self.tokens = []
-        pos = 0
-        text = text.rstrip()
-        while pos < len(text):
-            m = _TOKEN.match(text, pos)
-            self.tokens.append(m.group(1) or m.group(2))
-            pos = m.end()
-        self.i = 0
-
-    def peek(self) -> str | None:
-        return self.tokens[self.i] if self.i < len(self.tokens) else None
-
-    def take(self, expected: str | None = None) -> str:
-        tok = self.peek()
-        if tok is None:
-            raise GramQueryError("строка оборвалась" + (f", ожидалось «{expected}»" if expected else ""))
-        if expected and tok != expected:
-            raise GramQueryError(f"ожидалось «{expected}», а стоит «{tok}»")
-        self.i += 1
-        return tok
-
-    def name(self) -> str:
-        tok = self.take()
-        if tok in "()|&=":
-            raise GramQueryError(f"ожидался признак, а стоит «{tok}»")
-        return tok
-
-    def query(self) -> list[list[Constraint]]:
-        groups = [self.group()]
-        while self.peek() == "&":
-            self.take()
-            groups.append(self.group())
-        if self.peek() is not None:
-            raise GramQueryError(f"лишнее «{self.peek()}»")
-        return groups
-
-    def group(self) -> list[Constraint]:
-        out = self.item()
-        while self.peek() == "|":
-            self.take()
-            out += self.item()
-        return out
-
-    def item(self) -> list[Constraint]:
-        if self.peek() == "(":
-            self.take()
-            out = self.group()
-            if self.peek() == "&":
-                raise GramQueryError("внутри скобок можно только |, а & ставится между ними")
-            self.take(")")
-            return out
-        return [self.atom()]
-
-    def atom(self) -> Constraint:
-        path = _resolve(self.name(), self.fields, "поле")
-        if self.peek() != "=":
-            return Constraint(Scope.TAGSET, path, "exists")
-        self.take()
-        if self.peek() == "(":
-            self.take()
-            raw = [self.name()]
-            while self.peek() == "|":
-                self.take()
-                raw.append(self.name())
-            self.take(")")
-        else:
-            raw = [self.name()]
-        values = tuple(dict.fromkeys(_resolve(v, self.fields[path], f"значение {path}") for v in raw))
-        return Constraint(Scope.TAGSET, path, "in", values)
-
-
-def _merge(options: list[Constraint]) -> Condition:
-    """Одна группа ИЛИ -> Constraint или AnyOf; значения одного поля сливаются."""
-    merged: dict[str, list[str]] = {}
-    order: list[str | Constraint] = []
-    for c in options:
-        if c.op != "in":
-            if c not in order:
-                order.append(c)
-            continue
-        if c.path not in merged:
-            merged[c.path] = []
-            order.append(c.path)
-        merged[c.path] += [v for v in c.values if v not in merged[c.path]]
-
-    out = [Constraint(Scope.TAGSET, o, "in", tuple(merged[o])) if isinstance(o, str) else o for o in order]
-    return out[0] if len(out) == 1 else AnyOf(tuple(out))
-
-
-def parse_grammar(text: str, corpus: CorpusConfig) -> list[Condition]:
-    if not text or not text.strip():
-        return []
-    conditions = [_merge(group) for group in _Parser(text, allowed_fields(corpus)).query()]
-
-    # render_match кладёт поле в словарь: два И на одно поле затрут друг друга
-    seen = set()
-    for c in conditions:
-        if isinstance(c, Constraint):
-            if c.path in seen:
-                raise GramQueryError(f"{c.path} указано дважды; варианты пишутся через |")
-            seen.add(c.path)
-    return conditions
-
-
-def to_checkboxes(conditions: list[Condition], corpus: CorpusConfig) -> dict[str, list[str]]:
-    """IR -> какие галочки отметить в модале (name -> значения)."""
+def text_to_checkboxes(text: str, corpus: CorpusConfig) -> dict[str, list[str]]:
+    """Строка -> {name чекбокса: значения}. Пустая строка -> ничего не отмечено."""
+    boxes = _checkbox_values(corpus)
     person = corpus.search.person_object
-    toggle_by_path = {path: name for name, path in person.paths.items()} if person else {}
-    toggle_value = {
-        value.name(block.id): value.value
-        for block in corpus.grammar for value in block.values
-        if value.name(block.id) in toggle_by_path.values()
-    }
+    toggle_by_path = {path: toggle for toggle, path in person.paths.items()} if person else {}
 
-    out: dict[str, list[str]] = defaultdict(list)
-    for cond in conditions:
-        for c in cond.options if isinstance(cond, AnyOf) else (cond,):
-            if c.path in toggle_by_path:
-                toggle = toggle_by_path[c.path]
-                out[toggle] = [toggle_value.get(toggle, "yes")]
-                out[person.field] += [v for v in c.values if v not in out[person.field]]
-            elif c.op == "in":
-                out[c.path] += [v for v in c.values if v not in out[c.path]]
-    return dict(out)
+    checked: dict[str, list[str]] = {}
 
+    def tick(name: str, raw: str) -> None:
+        value = _pick(raw, boxes[name], f"у {name} нет значения")
+        if value not in checked.setdefault(name, []):
+            checked[name].append(value)
 
-def _canon(cond: Condition):
-    if isinstance(cond, AnyOf):
-        return frozenset(_canon(o) for o in cond.options)
-    return (cond.path, cond.op, frozenset(cond.values))
+    pos = 0
+    while True:
+        matchText = _GLUE.match(text, pos)
+        if matchText is not None:
+            pos = matchText.end()
+        if pos == len(text):
+            # значения в порядке YAML, как их отдаёт форма: Case=(Dat|Loc) -> Case=(Loc|Dat)
+            return {name: [v for v in boxes[name] if v in values] for name, values in checked.items()}
 
+        pair = _PAIR.match(text, pos)
+        if pair is None:
+            raise ValueError(f"Неправильный regex «{text[pos:pos + 20]}»; признак пишется как Поле=Значение")
+        pos = pair.end()
 
-def same_conditions(a: list[Condition], b: list[Condition]) -> bool:
-    """Равенство без учёта порядка: строку человек мог написать в любом."""
-    return {_canon(c) for c in a} == {_canon(c) for c in b} and len(a) == len(b)
+        name = _pick(pair.group(1), boxes.keys() | toggle_by_path.keys(), "нет признака")
+        if pair.group(2) is not None:
+            values = [v.strip() for v in pair.group(2).split("|") if v.strip()]
+        elif pair.group(3) is not None:
+            values = [pair.group(3)]
+        else:
+            values = []
+
+        if name in toggle_by_path:
+            # Person[clobj]=1: переключатель Obj, а цифра идёт в лицо объекта
+            toggle = toggle_by_path[name]
+            tick(toggle, boxes[toggle][0])
+            for value in values:
+                if person is not None:
+                    tick(person.field, value)
+            continue
+
+        if not values:
+            if len(boxes[name]) != 1:
+                # Пользователь видит: «у Case нужно указать значение: Case=…»
+                raise ValueError(f"Для {name} нужно указать значение: {name}=…")
+            values = boxes[name]
+        for value in values:
+            tick(name, value)

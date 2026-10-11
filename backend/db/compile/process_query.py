@@ -31,7 +31,7 @@ def _condition_to_doc(cond) -> dict:
 
 def _condition_from_doc(doc):
     if "any" in doc:
-        return AnyOf(tuple(_condition_from_doc(option) for option in doc["any"])) 
+        return AnyOf(tuple(_condition_from_doc(option) for option in doc["any"])) #type: ignore
     return Constraint(Scope(doc["scope"]), doc["path"], doc["op"], tuple(doc["values"]))
 
 
@@ -96,6 +96,10 @@ class QueryBuilder:
         if search_type == "token":
             return Constraint(Scope.TOKEN, self.search.token_field, "in", (word,))
         return None
+    
+    def checkbox_conditions(self, form: dict) -> list[Condition]:
+        """Только грамматика из галочек, без слова: для строки в regex-input."""
+        return normalize(self._grammar_conditions(form))
 
     def _grammar_conditions(self, form: dict) -> list[Condition]:
         """идёт по блокам грамматики из конфига. Для каждого блока зовёт _block_options, потом решает, как склеить полученные ограничения"""
