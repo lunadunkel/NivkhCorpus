@@ -15,6 +15,7 @@ from typing import Literal
 
 from backend.models.corpus import CorpusConfig
 from backend.models.grammar import AllowedValues, GrammarBlock
+from backend.models.page import PageMeta
 
  
  
@@ -135,4 +136,51 @@ def public_dict(corpus: CorpusConfig) -> dict:
         "pos_labels": pos_labels(corpus),
     }
 
- 
+@dataclass(frozen=True)
+class GlossaryRow:
+    """Одно сокращение для справки: подпись, расшифровка, блоки, где оно встречается."""
+    label: str
+    tooltip: str
+    categories: list[str]
+
+def glossary(corpus: CorpusConfig) -> list[GlossaryRow]:
+    """Все сокращения корпуса одним списком по алфавиту.
+
+    Одинаковые пары (подпись, расшифровка) из разных блоков склеиваются:
+    так лица 1/2/3 из Person (main word) и Person (object / possessor)
+    попадают в одну строку.
+    """
+    merged: dict[tuple[str, str], GlossaryRow] = {}
+    for block in corpus.grammar:
+        for value in block.values:
+            if not value.show:
+                continue
+            row = merged.setdefault(
+                (value.label, value.tooltip),
+                GlossaryRow(value.label, value.tooltip, []),
+            )
+            if block.label not in row.categories:
+                row.categories.append(block.label)
+    return sorted(merged.values(), key=lambda row: row.label.casefold())
+
+def reference_page(corpus: CorpusConfig) -> PageMeta | None:
+    """Страница «Справка» (/{corpus}/reference): глоссарий и источники текстов.
+
+    В YAML она не описывается, метаданные строятся здесь из имени корпуса.
+    Страница есть у включённого корпуса, у которого описана грамматика:
+    глоссарий собирается из неё, источники берутся из коллекции texts.
+    """
+    if not corpus.enabled or not corpus.grammar:
+        return None
+    name = corpus.name["ru"]
+    description = (
+        f"Список сокращений грамматической разметки и источники текстов: {name.lower()} корпус."
+    )
+    return PageMeta(
+        template="reference.html",
+        title=f"Справка — {name} корпус НИВЦ МГУ",
+        description=description,
+        og_image_alt=f"{name} корпус — НИВЦ МГУ",
+        canonical=f"/{corpus.id}/reference",
+        styles=["about.css", "reference.css"],
+    )

@@ -95,3 +95,38 @@ a {
   flex-direction: column;
   gap: 4px
 }
+
+/* Список разметки (partials/about/markup.html) */
+.markup-table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1.35;
+}
+
+.markup-table thead th {
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #777;
+  padding: 0 12px 6px 0;
+  border-bottom: 1px solid var(--200);
+}
+
+.markup-table th[scope="row"],
+.markup-table td {
+  padding: 6px 12px 6px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--50);
+}
+
+.markup-table th[scope="row"] {
+  width: 38%;
+  text-align: left;
+  font-weight: bold;
+  color: var(--700);
+}
+
+.markup-table code {
+  font-family: inherit;
+}

@@ -40,7 +40,8 @@
       flex: none;
       width: var(--dropdown-arrow-size);
       height: var(--dropdown-arrow-size);
-      background: var(--dropdown-arrow) no-repeat center / contain;
+      background-color: var(--600);
+      mask: var(--dropdown-arrow) no-repeat center / contain;
       transition: rotate 0.2s ease;
     }
 }
@@ -164,7 +165,8 @@
       flex: none;
       width: var(--filter-sort-size);
       height: var(--filter-sort-size);
-      background: var(--filter-sort) no-repeat center / contain;
+      background-color: var(--600);
+      mask: var(--filter-sort) no-repeat center / contain;
       transition: rotate 0.2s ease;
     }
 }

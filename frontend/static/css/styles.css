@@ -1313,15 +1313,20 @@ input[type="radio"] {
   color: var(--600);
   width: fit-content;
   display: flex;
+  align-items: center;
 
   &::before {
       content: '';
-      /* flex: none; */
-      content: url('../images/content_copy.svg');
+      flex: none;
+      width: 16px;
+      height: 16px;
+      /* content: url('../images/content_copy.svg'); */
+      background-color: var(--600);
+      mask: url('../images/content_copy.svg') center / contain no-repeat;
       transition: rotate 0.2s ease;
     }
 
   &.copied::before {
-    content: url('../images/check.svg');
+    mask: url('../images/check.svg');
   }
 }

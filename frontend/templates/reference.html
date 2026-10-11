@@ -1,0 +1,22 @@
+{#
+Страница «Справка». Метаданные строятся в backend/models/derived.py
+(reference_page), YAML корпуса не меняется. Секции лежат в partials целиком,
+вместе с заголовками.
+
+Аргументы:
+site, corpus, page — как в base.html
+stats — total_texts / total_sentences / total_tokens из коллекции statistics
+sources — источники текстов (backend/core/sources.py)
+#}
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-info">
+    {% include "partials/reference/glossary.html" %}
+    {% include "partials/reference/sources.html" %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/reference.js"></script>
+{% endblock %}

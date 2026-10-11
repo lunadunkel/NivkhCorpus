@@ -1,0 +1,56 @@
+{# Источники текстов: тексты корпуса сгруппированы по полю source (backend/core/sources.py) #}
+{% from "partials/_counts.html" import texts as texts_count %}
+
+{% macro text_item(text) %}
+<span class="ref-title">
+    {% if text.title_n and text.title_r %}
+    <b>{{ text.title_n }}</b> {{ text.title_r }}
+    {% else %}
+    <b>{{ text.title_n or text.title_r or text.file }}</b>
+    {% endif %}
+</span>
+<span class="ref-meta">
+    {{ ([text.dialect, text.year, text.genre] | select | join(" · "))}}
+</span>
+{% endmacro %}
+
+{% if sources | selectattr("source") | list %}
+<div class="text-section" id="sources">
+    <h2>Источники текстов</h2>
+    <p>
+        {% if stats.total_texts %}
+        В&nbsp;корпусе {{ texts_count(stats) }} из&nbsp;{{ sources | length }}&nbsp;{{ sources | length |
+        plural(("источника", "источников", "источников")) }}.
+        {% endif %}
+        Под каждым источником указаны тексты, взятые из&nbsp;него.
+    </p>
+
+    <ul class="ref-sources">
+        {% for group in sources %}
+        <li class="ref-source">
+            <p class="ref-citation">
+                {{ group.source or "Источник не указан" }}
+                {% if group.url %}
+                <a class="href-in-text" href="{{ group.url }}"
+                    rel="noopener">{{ group.url | replace("https://", "") | replace("http://", "") | trim("/") }}</a>
+                {% endif %}
+            </p>
+            {% if group.texts | length == 1 %}
+            <div class="ref-single">{{ text_item(group.texts[0]) }}</div>
+            {% else %}
+            <details class="ref-texts" {% if group.texts | length <=3 %}open{% endif %}>
+                <summary>
+                    {{ group.texts | length }}&nbsp;{{ group.texts | length | plural(("текст", "текста", "текстов")) }}
+                </summary>
+                <ul>
+                    {% for text in group.texts %}
+                    <li>{{ text_item(text) }}</li>
+                    {% endfor %}
+                </ul>
+            </details>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

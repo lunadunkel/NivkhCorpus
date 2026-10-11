@@ -1,0 +1,30 @@
+{# Сокращения грамматической разметки: все label и tooltip из corpus.grammar, по алфавиту #}
+<div class="text-section" id="glossary">
+    <h2>Список сокращений</h2>
+    <p>Сокращения, которые встречаются в глоссах и в окне грамматических признаков поиска.</p>
+    <div class="ref-glossary">
+        <input type="search" class="ref-filter" data-filter="#glossary-table tbody tr"
+            placeholder="Найти сокращение или расшифровку" aria-label="Фильтр по сокращениям">
+        <div class="ref-scroll">
+            <table class="ref-table" id="glossary-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Сокращение</th>
+                        <th scope="col">Расшифровка</th>
+                        <th scope="col">Категория</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in glossary(corpus) %}
+                    <tr>
+                        <td><code>{{ row.label }}</code></td>
+                        <td>{{ row.tooltip }}</td>
+                        <td class="ref-category">{{ row.categories | join(", ") }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p class="ref-empty" hidden>Ничего не найдено</p>
+    </div>
+</div>

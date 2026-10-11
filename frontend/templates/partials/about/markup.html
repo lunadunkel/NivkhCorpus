@@ -1,0 +1,14 @@
+{# Какие категории размечены в корпусе: label и tooltip блоков из corpus.grammar #}
+<table class="markup-table">
+    <thead>
+        <tr><th scope="col">Категория</th><th scope="col">Что размечает</th></tr>
+    </thead>
+    <tbody>
+        {% for block in corpus.grammar %}
+        <tr>
+            <th scope="row"><code>{{ block.label }}</code></th>
+            <td>{{ block.tooltip or "Дополнительные признаки" }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

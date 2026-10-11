@@ -1,11 +1,12 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import JSONResponse
 
-from backend.core import search_service
+from backend.core import fetch_stats, search_service, sources
 from backend.core.config import SITE
 from backend.core.deps import CorpusDep
 from backend.core.templates import TEMPLATES
 from backend.db.repositories.utils import clean
+from backend.models.derived import reference_page
 
 router = APIRouter(prefix="/{corpus_name}", tags=["corporas"])
 
@@ -23,10 +24,28 @@ async def search_page(request: Request, corpus: CorpusDep):
 @router.get("/about")
 async def about(request: Request, corpus: CorpusDep):
     page = corpus.pages['about']
+    stats = await fetch_stats.fetch_corpus_stats(corpus.id)
+    return TEMPLATES.TemplateResponse(request, page.template, {
+            "site": SITE,
+            "corpus": corpus,
+            "page": page,
+            "stats": stats,
+        })
+
+# reference.html
+@router.get("/reference")
+async def reference(request: Request, corpus: CorpusDep):
+    page = reference_page(corpus)
+    if page is None:
+        raise HTTPException(404, f"{corpus.id} has no reference page")
+    stats = await fetch_stats.fetch_corpus_stats(corpus.id)
+    texts = await fetch_stats.fetch_texts(corpus.id)
     return TEMPLATES.TemplateResponse(request, page.template, {
         "site": SITE,
         "corpus": corpus,
         "page": page,
+        "stats": stats,
+        "sources": sources.group_sources(texts),
     })
 
 # dictionary.html

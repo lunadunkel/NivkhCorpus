@@ -1,0 +1,8 @@
+{# Число + существительное в нужной форме: «8 251 токен». Использование:
+{% from "partials/_counts.html" import texts, sentences, tokens %} #}
+{% macro texts(stats) %}{{ stats.total_texts | thousands }}&nbsp;{{ stats.total_texts | plural(("текст", "текста",
+"текстов")) }}{% endmacro %}
+{% macro sentences(stats) %}{{ stats.total_sentences | thousands }}&nbsp;{{ stats.total_sentences |
+plural(("предложение", "предложения", "предложений")) }}{% endmacro %}
+{% macro tokens(stats) %}{{ stats.total_tokens | thousands }}&nbsp;{{ stats.total_tokens | plural(("токен", "токена",
+"токенов")) }}{% endmacro %}
