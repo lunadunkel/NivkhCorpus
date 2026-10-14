@@ -1,3 +1,5 @@
+import calendar
+from datetime import datetime
 import json
 import os
 from pathlib import Path
@@ -11,6 +13,13 @@ DST = Path("/data/mongo-ready")
 CORPORA_DIR = Path("/src/corpora")
 STATS_FILE = "corpus_stats.json"
 
+
+def to_extended_json(obj):
+    """datetime -> {"$date": ...}: mongoimport запишет его в базу как Date."""
+    if isinstance(obj, datetime):
+        ms = calendar.timegm(obj.timetuple()) * 1000 + obj.microsecond // 1000
+        return {"$date": {"$numberLong": str(ms)}}
+    raise TypeError(f"Object of type {type(obj).__name__} is not JSON serializable")
 
 def is_raw(path):
     with open(path, encoding="utf8") as f:
@@ -67,7 +76,7 @@ def process_corpus(config):
 
         data = processor.process_json(name)
         with open(os.path.join(dst_dir, name), "w", encoding="utf8") as f:
-            json.dump(data, f, ensure_ascii=False)
+            json.dump(data, f, ensure_ascii=False, default=to_extended_json)
         print(f"  {corpus}/{name}: ok ({len(data)} documents)")
 
     if (src_dir / STATS_FILE).exists():
